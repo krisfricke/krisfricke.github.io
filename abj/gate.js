@@ -22,12 +22,16 @@
   var MSG  = "This is a non-public mockup Australian Bee Journal reader, " +
              "please enter the password";
 
+  /* ?gate on the URL: forget any earlier unlock and ask again. Useful for
+     testing, and for showing someone the gate without opening a fresh tab. */
+  var forced = location.search.indexOf("gate") >= 0;
+  if (forced) sessionStorage.removeItem(KEY);
+
   if (sessionStorage.getItem(KEY) === "1") return;
 
   /* Dormant when you are working locally, so the gate can live permanently in
      the working copy and you never have to remember to add it at deploy time.
-     Add ?gate to the URL to test the gate itself from a folder. */
-  var forced = location.search.indexOf("gate") >= 0;
+     ?gate overrides that too, so the gate itself can be tested from a folder. */
   var localish = location.protocol === "file:" ||
                  location.hostname === "localhost" ||
                  location.hostname === "127.0.0.1";
@@ -57,6 +61,13 @@
     "  justify-content:center;padding:24px;background:#16130e;",
     "  background-image:radial-gradient(ellipse at 50% 30%,#241f16 0%,#16130e 70%);",
     "  font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}",
+    /* The reader hides the system cursor (cursor:none !important on everything)
+       because the bee replaces it - but the bee is hidden behind this gate, so
+       without these you get no pointer at all. An id selector outranks the
+       reader's class selector, so these !importants win. */
+    "#abjgate,#abjgate *{cursor:default !important}",
+    "#abjgate input{cursor:text !important}",
+    "#abjgate button{cursor:pointer !important}",
     "#abjgate .card{max-width:430px;width:100%;text-align:center;color:#e9e3d2}",
     "#abjgate .mark{font:700 13px/1 system-ui,sans-serif;letter-spacing:.19em;",
     "  text-transform:uppercase;color:#f9c500;margin-bottom:22px}",
