@@ -48,7 +48,12 @@
   (document.head || document.documentElement).appendChild(meta);
 
   var CSS = [
-    "#abjgate{position:fixed;inset:0;z-index:99999;display:flex;align-items:center;",
+    /* visibility:visible is doing real work here. The early style hides <body>
+       so the issue never flashes up, and this overlay lives inside <body>, so
+       without this line it inherits the hiding and you get a blank page. A
+       child may override an ancestor's visibility:hidden; that is the one
+       property where that works. */
+    "#abjgate{visibility:visible;position:fixed;inset:0;z-index:99999;display:flex;align-items:center;",
     "  justify-content:center;padding:24px;background:#16130e;",
     "  background-image:radial-gradient(ellipse at 50% 30%,#241f16 0%,#16130e 70%);",
     "  font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}",
