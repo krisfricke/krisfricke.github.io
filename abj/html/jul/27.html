@@ -1,0 +1,58 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><style>@page{size:A4;margin:0}</style>
+<link rel="stylesheet" href="../../art_style.css"><style>a.adlink{display:inline-block;line-height:0;text-decoration:none}a.adlink:hover img{outline:2px solid rgba(249,197,0,.85);outline-offset:1px}</style></head><body>
+<div class="apage" id="pg-27">
+  <img class="tri m r40" src="../../assets/tri_copper.png" style="top:4mm;right:26mm">
+  <img class="tri s r-20" src="../../assets/tri_ltblue.png" style="top:7.5mm;right:17mm">
+  <div class="secbar"><div class="stitle">Podcasts</div>
+    <div class="right"><div class="kick">Tap a title or<br>scan to listen</div></div></div>
+  <div class="rpanel compact">
+    <div class="podshow" style="margin-top:0">What's the Buzz</div>
+    <div class="podrow"><div class="pt"><span class="date">16 June</span><a href="https://podcasts.apple.com/au/podcast/is-varroa-winning-the-war-in-queensland/id1711582028?i=1000772942705">Is Varroa Winning the War in Queensland?</a><span class="listen">Listen on Apple Podcasts / Spotify</span></div><img class="qr" src="../../assets/qr_buzz.png" alt="QR"></div>
+    <div class="podshow">Two Bees in a Podcast</div>
+    <div class="podrow"><div class="pt"><span class="date">2 June</span><a href="https://open.spotify.com/episode/4yAw7hiIyw4BMYFFZv1rTF">The Elimination of Varroa in Guam</a><span class="listen">Listen on Spotify</span></div><img class="qr" src="../../assets/qr_guam.png" alt="QR"></div>
+    <div class="podrow" style="border-bottom:none"><div class="pt"><span class="date">22 June</span><a href="https://open.spotify.com/episode/0aa2eBqR1JY2WSmj5EHOTe">Moving Wax Around the Hive</a><span class="listen">Listen on Spotify</span></div><img class="qr" src="../../assets/qr_wax.png" alt="QR"></div>
+    <div class="twbox">
+      <h4>Thriving Women 2026 Conference</h4>
+      AgriFutures is a proud sponsor of the <a href="https://agrifutures.com.au/events/thriving-women-2026-conference/">Thriving Women 2026 Conference</a>, which brings together changemakers, decision-makers and rural women to challenge thinking, expand networks and reignite motivation. <b>10&ndash;11 August 2026</b> &middot; Lansell Room, All Seasons Resort, Bendigo VIC.
+    </div>
+  </div>
+  <a class="adlink" href="../../out/steritech/index.html" target="_blank" rel="noopener sponsored" title="Visit Steritech"><img class="adwide" src="../../assets/steritech.jpg" alt="Steritech advertisement"></a>
+  <div class="afoot"><span>27</span><span class="mid">"We're beekeepers."</span><span>July 2026 &middot; Australian Bee Journal</span></div>
+</div>
+
+<style>body{margin:0;width:calc(210mm * var(--k,1));height:calc(297mm * var(--k,1));overflow:hidden}.apage{transform:scale(var(--k,1));transform-origin:top left}</style>
+<script>
+/* The reader tells this page how big to draw itself, so text is re-rendered at the new size
+   instead of being stretched as a bitmap (which is what happens when an iframe is transform-scaled). */
+(function(){
+  function setK(k){ document.documentElement.style.setProperty('--k', String(k)); }
+  window.addEventListener('message',function(e){ var m=e.data; if(m&&m.abj==='zoom'&&isFinite(m.k)&&m.k>0) setK(m.k); });
+})();
+</script>
+<style>html.bee-on,html.bee-on *{cursor:none !important}</style>
+<script>
+/* Report the pointer to the parent reader so its bee can follow across the page,
+   and hide this document's own cursor only once the parent confirms the bee is on. */
+(function(){
+  if(window.parent===window) return;
+  if(!matchMedia('(hover:hover)').matches) return;
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  window.addEventListener('message',function(e){
+    var m=e.data; if(m&&m.abj==='bee') document.documentElement.classList.toggle('bee-on',!!m.on);
+  });
+  try{ parent.postMessage({abj:'hello'},'*'); }catch(e){}
+  var raf=0,px=0,py=0,pl=false;
+  document.addEventListener('mousemove',function(e){
+    px=e.clientX; py=e.clientY;
+    /* the page hit-tests itself and tells the parent, because a parent cannot
+       look inside a same-origin iframe when both are local files */
+    pl=!!(e.target&&e.target.closest&&e.target.closest('a[href],area[href]'));
+    if(!raf) raf=requestAnimationFrame(function(){ raf=0;
+      try{ parent.postMessage({abj:'pointer',x:px,y:py,link:pl},'*'); }catch(err){} });
+  },{passive:true});
+  document.addEventListener('mouseleave',function(){
+    try{ parent.postMessage({abj:'pointerleave'},'*'); }catch(err){} });
+})();
+</script>
+</body></html>

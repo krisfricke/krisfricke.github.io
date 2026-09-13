@@ -1,0 +1,51 @@
+# Ad clickthrough redirects for the Australian Bee Journal reader.
+# Each hit is written to the normal Apache access log under /reader/out/,
+# so AWStats (cPanel > Metrics) shows a count per advertiser.
+# No cookies, no third-party analytics, no visitor tracking.
+#
+# Two patterns per advertiser: the bare slug and the explicit index.html.
+# The ad links use the explicit form so the reader also works when opened
+# from a plain folder, where a browser will not serve a directory index.
+
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule ^air-cti/?$ https://aircti.com/ [R=302,L,NE]
+  RewriteRule ^air-cti/index\.html$ https://aircti.com/ [R=302,L,NE]
+  RewriteRule ^aluen-cap/?$ https://www.capproducts.com.au/ [R=302,L,NE]
+  RewriteRule ^aluen-cap/index\.html$ https://www.capproducts.com.au/ [R=302,L,NE]
+  RewriteRule ^aussie-cti/?$ https://aussiecti.com.au/ [R=302,L,NE]
+  RewriteRule ^aussie-cti/index\.html$ https://aussiecti.com.au/ [R=302,L,NE]
+  RewriteRule ^aust-queen-bee-line/?$ https://www.australianqueenbeeline.com.au/ [R=302,L,NE]
+  RewriteRule ^aust-queen-bee-line/index\.html$ https://www.australianqueenbeeline.com.au/ [R=302,L,NE]
+  RewriteRule ^beeplas/?$ https://www.danbar.com.au/ [R=302,L,NE]
+  RewriteRule ^beeplas/index\.html$ https://www.danbar.com.au/ [R=302,L,NE]
+  RewriteRule ^bendigo-field-day/?$ https://vicbeekeepers.com.au/BendigoBranch [R=302,L,NE]
+  RewriteRule ^bendigo-field-day/index\.html$ https://vicbeekeepers.com.au/BendigoBranch [R=302,L,NE]
+  RewriteRule ^buzzbee/?$ https://buzzbee.com.au/ [R=302,L,NE]
+  RewriteRule ^buzzbee/index\.html$ https://buzzbee.com.au/ [R=302,L,NE]
+  RewriteRule ^cvaa-conference/?$ https://vicbeekeepers.com.au/Upcoming-Events [R=302,L,NE]
+  RewriteRule ^cvaa-conference/index\.html$ https://vicbeekeepers.com.au/Upcoming-Events [R=302,L,NE]
+  RewriteRule ^dalrymple-view/?$ https://www.dalrympleview.com.au/ [R=302,L,NE]
+  RewriteRule ^dalrymple-view/index\.html$ https://www.dalrympleview.com.au/ [R=302,L,NE]
+  RewriteRule ^ezyloader/?$ https://www.ezyloader.com/ [R=302,L,NE]
+  RewriteRule ^ezyloader/index\.html$ https://www.ezyloader.com/ [R=302,L,NE]
+  RewriteRule ^hivemeet/?$ https://www.youtube.com/@VictorianApiaristsAssociation/streams [R=302,L,NE]
+  RewriteRule ^hivemeet/index\.html$ https://www.youtube.com/@VictorianApiaristsAssociation/streams [R=302,L,NE]
+  RewriteRule ^kelvin-trading/?$ https://ktbeekeeping.com.au/ [R=302,L,NE]
+  RewriteRule ^kelvin-trading/index\.html$ https://ktbeekeeping.com.au/ [R=302,L,NE]
+  RewriteRule ^lyson/?$ https://www.lysonau.com.au/ [R=302,L,NE]
+  RewriteRule ^lyson/index\.html$ https://www.lysonau.com.au/ [R=302,L,NE]
+  RewriteRule ^prestige-stainless/?$ https://www.prestigestainless.com.au/ [R=302,L,NE]
+  RewriteRule ^prestige-stainless/index\.html$ https://www.prestigestainless.com.au/ [R=302,L,NE]
+  RewriteRule ^royal-show/?$ https://vicbeekeepers.com.au/Upcoming-Events [R=302,L,NE]
+  RewriteRule ^royal-show/index\.html$ https://vicbeekeepers.com.au/Upcoming-Events [R=302,L,NE]
+  RewriteRule ^steritech/?$ https://www.steritech.com.au/ [R=302,L,NE]
+  RewriteRule ^steritech/index\.html$ https://www.steritech.com.au/ [R=302,L,NE]
+  RewriteRule ^veto-pharma/?$ https://www.veto-pharma.com/ [R=302,L,NE]
+  RewriteRule ^veto-pharma/index\.html$ https://www.veto-pharma.com/ [R=302,L,NE]
+  RewriteRule ^whirrakee-woodware/?$ https://whirrakeewoodware.com.au/ [R=302,L,NE]
+  RewriteRule ^whirrakee-woodware/index\.html$ https://whirrakeewoodware.com.au/ [R=302,L,NE]
+</IfModule>
+

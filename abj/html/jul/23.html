@@ -1,0 +1,55 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><style>@page{size:A4;margin:0}</style>
+<link rel="stylesheet" href="../../art_style.css"><style>a.adlink{display:inline-block;line-height:0;text-decoration:none}a.adlink:hover img{outline:2px solid rgba(249,197,0,.85);outline-offset:1px}</style></head><body>
+<div class="apage" id="pg-23">
+  <img class="tri s r40" src="../../assets/tri_gold.png" style="top:5mm;right:18mm">
+  <img class="tri s r100" src="../../assets/tri_green.png" style="bottom:7mm;left:11mm">
+  <div style="padding:12mm 14mm 0">
+    <div class="beebits" style="font-size:9.4pt">
+      <h4>Honey bees adjust their dances based on information reliability, new study reveals</h4>
+      <p class="sum">A new study demonstrates that honey bees can evaluate the reliability of their own communication, actively adjusting the vigour of their "waggle dance" based on the truthfulness of the information they provide. By manipulating whether a dancing bee's followers successfully found food, experiments revealed that only bees with verified, "honest" information increased their recruitment effort over time when advertising a new location, whereas "liar" or "unverified" bees did not. This internal self-control mechanism naturally filters out ambiguous or misleading signals, allowing the hive to function efficiently as a cooperative superorganism.</p>
+      <p>A new study by Dr Karmi Oxman and Prof. Sharoni Shafir from the Hebrew University of Jerusalem and Prof. Ofer Feinderman from the Weizmann Institute of Science has revealed that honey bees have a remarkable ability to assess the reliability of the information they communicate to their hive. The research demonstrates that bees will actively increase their recruitment efforts when they know the directions they are providing to food sources are accurate and verified.</p>
+      <p>The famous "waggle dance" is the primary method honey bees use to share the location of profitable food sources with their nestmates, utilising vibration pulses to indicate distance and direction. However, the precision of these dances can vary from bee to bee, prompting researchers to ask how a colony manages the spread of information when the quality of that information differs.</p>
+      <p>To find out, the research team conducted an experiment at the Benjamin Triwaks Bee Research Center in Rehovot. They set up a system to manipulate the quality of information that specific "focal" bees communicated to their followers.</p>
+      <p>The scientists established three distinct scenarios for the recruits who followed the dances of the focal bees. In the "honest" treatment, the follower bees flew to the advertised location and successfully fed on sugar solution. In the "liar" treatment, the dancer had access to food, but the followers were met with an entirely empty feeder. Finally, an "unverified" treatment eliminated all feedback by having researchers safely capture the follower bees as soon as they arrived at the location, preventing them from returning to the hive. <a href="https://www.eurekalert.org/news-releases/1132291">Read the article in full here</a>.</p>
+    </div>
+  </div>
+  <div style="padding:6mm 12mm 0"><a class="adlink" href="../../out/whirrakee-woodware/index.html" target="_blank" rel="noopener sponsored" title="Visit Whirrakee Woodware"><img src="../../assets/whirrakee.jpg" alt="Whirrakee Woodware" style="width:185mm;display:block;margin-left:-2mm;border:1px solid #ddd"></a></div>
+  <div class="afoot"><span>23</span><span class="mid">"We're beekeepers."</span><span>July 2026 &middot; Australian Bee Journal</span></div>
+</div>
+
+<style>body{margin:0;width:calc(210mm * var(--k,1));height:calc(297mm * var(--k,1));overflow:hidden}.apage{transform:scale(var(--k,1));transform-origin:top left}</style>
+<script>
+/* The reader tells this page how big to draw itself, so text is re-rendered at the new size
+   instead of being stretched as a bitmap (which is what happens when an iframe is transform-scaled). */
+(function(){
+  function setK(k){ document.documentElement.style.setProperty('--k', String(k)); }
+  window.addEventListener('message',function(e){ var m=e.data; if(m&&m.abj==='zoom'&&isFinite(m.k)&&m.k>0) setK(m.k); });
+})();
+</script>
+<style>html.bee-on,html.bee-on *{cursor:none !important}</style>
+<script>
+/* Report the pointer to the parent reader so its bee can follow across the page,
+   and hide this document's own cursor only once the parent confirms the bee is on. */
+(function(){
+  if(window.parent===window) return;
+  if(!matchMedia('(hover:hover)').matches) return;
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  window.addEventListener('message',function(e){
+    var m=e.data; if(m&&m.abj==='bee') document.documentElement.classList.toggle('bee-on',!!m.on);
+  });
+  try{ parent.postMessage({abj:'hello'},'*'); }catch(e){}
+  var raf=0,px=0,py=0,pl=false;
+  document.addEventListener('mousemove',function(e){
+    px=e.clientX; py=e.clientY;
+    /* the page hit-tests itself and tells the parent, because a parent cannot
+       look inside a same-origin iframe when both are local files */
+    pl=!!(e.target&&e.target.closest&&e.target.closest('a[href],area[href]'));
+    if(!raf) raf=requestAnimationFrame(function(){ raf=0;
+      try{ parent.postMessage({abj:'pointer',x:px,y:py,link:pl},'*'); }catch(err){} });
+  },{passive:true});
+  document.addEventListener('mouseleave',function(){
+    try{ parent.postMessage({abj:'pointerleave'},'*'); }catch(err){} });
+})();
+</script>
+</body></html>

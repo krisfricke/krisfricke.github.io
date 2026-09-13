@@ -1,0 +1,6 @@
+# PROTOTYPE UNDER REVIEW -- not yet open to search engines.
+# To go live: delete the "Disallow: /" line below. Nothing else needs changing.
+User-agent: *
+Disallow: /
+
+Sitemap: https://abj.org.au/reader/sitemap.xml

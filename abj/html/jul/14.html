@@ -1,0 +1,62 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><style>@page{size:A4;margin:0}</style>
+<link rel="stylesheet" href="../../art_style.css"></head><body>
+<div class="apage" id="pg-14">
+  <img class="tri m r40" src="../../assets/tri_green.png" style="top:4mm;right:26mm">
+  <img class="tri s r-20" src="../../assets/tri_gold.png" style="top:6.5mm;right:17mm">
+  <img class="tri s r100" src="../../assets/tri_blue.png" style="bottom:6mm;left:10mm">
+  <div class="secbar"><div class="stitle">Through Fresh Eyes: My First Time As A Honey Judge</div>
+    <div class="right"><div class="kick">By Jocelyn Ho<br>VAA Conference, 5&ndash;6 June 2026</div></div></div>
+  <div class="rpanel compact"><div class="rbody" style="font-size:9pt;line-height:1.35">
+    <p class="noind">When I was asked to judge at this year's VAA Conference Honey Competition, I felt a mix of excitement and nerves. As a hobbyist beekeeper of a few years, I'm still very much on a learning journey, and stepping into the role of judge felt like a big leap into the unknown. Some months earlier, in December 2025, I had attended Honey Sensory Analysis Training in Dubai, facilitated by Raffaele and Gian Luigi from the National Register of Experts in Sensory Analysis of Honey based in Italy. Combining theory with hands-on tasting sessions, the training was a deeply humbling experience &mdash; I quickly realised just how much I didn't know. It was that sense of wonder, and that humility, that I carried into the judging room.</p>
+    <h4>A Full Sensory Experience</h4>
+    <p>The VAA Conference Honey Competition drew entries across multiple categories: liquid, creamed, crystallised, comb honey and mead, and judging each demanded far more than I expected. From the moment we began, I was examining the clarity of honeys held up to the light, inhaling subtle floral aromas, and paying close attention to texture and mouth-feel. The vocabulary used by the experienced head judge as well as my fellow associate judges was equally revelatory; a rich, precise language describing not just flavour, but aroma, viscosity and finish. Absorbing that language was an education in itself.</p>
+    <h4>What I Didn't Expect to Learn</h4>
+    <p>The biggest revelation? Presentation and clarity matter just as much as taste. A show entry is the complete package: the jar, the colour, the absence of impurities, the consistency of fill. And sitting surrounded by rows of entries, I found myself reflecting on all the work behind each one: the beekeeper, the bees, the season, the flowers. Approaching each entry with that awareness made the judging feel meaningful rather than mechanical.</p>
+    <h4>Have a Go &mdash; Your Honey Deserves to Be Seen</h4>
+    <p>Sitting on the judging side of the table gave me a whole new perspective on entering competitions, and my message to every beekeeper in our branch is this: give it a crack. Whether it's your local show, a VAA branch competition, or even an international honey competition, your honey is worth entering. You don't need to be a seasoned exhibitor or have a ribbon on the wall. Every jar tells a story of your hives, your season, and your bees, and that story deserves to be shared.</p>
+    <h4>The Judging Team</h4>
+    <p>Entering a competition is one of the best ways to learn. You'll get feedback that sharpens your eye for quality, discover aspects of your honey you'd never noticed, and connect with a community of passionate beekeepers who share your love of the craft. The standard of entries at the VAA Conference was genuinely inspiring &mdash; and every one of those exhibitors started somewhere. So have a go. You might just surprise yourself.</p>
+    <p style="font-style:italic;color:#3a4a55">If you ever get the chance to judge honey &mdash; take it. Absolutely, without hesitation. You'll taste honey differently forever.</p>
+    <figure><img src="../../assets/p14a.jpg" alt=""><figcaption>Samples of the VAA Honey Competition</figcaption></figure>
+    <figure><img src="../../assets/p14b.jpg" alt=""><figcaption>The Judging Team</figcaption></figure>
+    <div class="adbox" style="padding:34mm 4mm;font-size:9pt;break-inside:avoid">QUARTER PAGE PLACEHOLDER</div>
+  </div></div>
+  <div class="afoot"><span>14</span><span class="mid">"We're beekeepers."</span><span>July 2026 &middot; Australian Bee Journal</span></div>
+</div>
+
+<style>body{margin:0;width:calc(210mm * var(--k,1));height:calc(297mm * var(--k,1));overflow:hidden}.apage{transform:scale(var(--k,1));transform-origin:top left}</style>
+<script>
+/* The reader tells this page how big to draw itself, so text is re-rendered at the new size
+   instead of being stretched as a bitmap (which is what happens when an iframe is transform-scaled). */
+(function(){
+  function setK(k){ document.documentElement.style.setProperty('--k', String(k)); }
+  window.addEventListener('message',function(e){ var m=e.data; if(m&&m.abj==='zoom'&&isFinite(m.k)&&m.k>0) setK(m.k); });
+})();
+</script>
+<style>html.bee-on,html.bee-on *{cursor:none !important}</style>
+<script>
+/* Report the pointer to the parent reader so its bee can follow across the page,
+   and hide this document's own cursor only once the parent confirms the bee is on. */
+(function(){
+  if(window.parent===window) return;
+  if(!matchMedia('(hover:hover)').matches) return;
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  window.addEventListener('message',function(e){
+    var m=e.data; if(m&&m.abj==='bee') document.documentElement.classList.toggle('bee-on',!!m.on);
+  });
+  try{ parent.postMessage({abj:'hello'},'*'); }catch(e){}
+  var raf=0,px=0,py=0,pl=false;
+  document.addEventListener('mousemove',function(e){
+    px=e.clientX; py=e.clientY;
+    /* the page hit-tests itself and tells the parent, because a parent cannot
+       look inside a same-origin iframe when both are local files */
+    pl=!!(e.target&&e.target.closest&&e.target.closest('a[href],area[href]'));
+    if(!raf) raf=requestAnimationFrame(function(){ raf=0;
+      try{ parent.postMessage({abj:'pointer',x:px,y:py,link:pl},'*'); }catch(err){} });
+  },{passive:true});
+  document.addEventListener('mouseleave',function(){
+    try{ parent.postMessage({abj:'pointerleave'},'*'); }catch(err){} });
+})();
+</script>
+</body></html>
