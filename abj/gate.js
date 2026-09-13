@@ -99,7 +99,14 @@
         no = g.querySelector(".no");
     input.focus();
 
-    g.querySelector("form").addEventListener("submit", function (e) {
+    /* Enter in the box submits. Implicit submission should do this already,
+       but belt and braces costs nothing and nobody should be left clicking. */
+    var form = g.querySelector("form");
+    input.addEventListener("keydown", function (e) {
+      if (e.key === "Enter") { e.preventDefault(); g.querySelector("button").click(); }
+    });
+
+    form.addEventListener("submit", function (e) {
       e.preventDefault();
       /* trimmed and case-insensitive: nobody should be locked out by a capital */
       if (input.value.trim().toLowerCase() === WORD) {
