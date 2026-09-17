@@ -8,8 +8,18 @@ html,body{margin:0;padding:0;background:#fff}
 .page{position:relative;width:952px;height:1347px}
 .page img.bg{position:absolute;left:0;top:0;width:952px;height:1347px}
 p{margin:0;position:absolute}
-a{color:inherit}
+a{color:inherit;text-decoration:none}
 a:hover{text-decoration:underline}
+a.blk,a.blk:hover{text-decoration:none}
+a.blk:hover span{background:rgba(249,197,0,.22)}
+a.ixlink{text-decoration:none;color:inherit;cursor:pointer;border-bottom:1px solid rgba(11,74,114,.35)}
+a.ixlink:hover{color:#0b4a72;border-bottom-color:#0b4a72;background:rgba(249,197,0,.18);text-decoration:none}
+a.zoom{position:absolute;display:block;z-index:6;border-radius:3px;transition:box-shadow .12s}
+a.zoom:hover{box-shadow:0 0 0 2px rgba(249,197,0,.85) inset}
+a.zoom::after{content:"";position:absolute;right:6px;bottom:6px;width:26px;height:26px;border-radius:50%;background:rgba(22,19,14,.62) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f9c500' stroke-width='2.4' stroke-linecap='round'><circle cx='10.5' cy='10.5' r='6'/><path d='M15 15l5 5M8 10.5h5M10.5 8v5'/></svg>") center/16px no-repeat;opacity:0;transition:opacity .15s}
+a.zoom:hover::after{opacity:1}
+a.hot{position:absolute;display:block;z-index:4;border:none;border-radius:3px;transition:box-shadow .12s,background .12s}
+a.hot:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,0,.75) inset}
 a.adlink{position:absolute;display:block;z-index:5;text-decoration:none;border-radius:3px;transition:box-shadow .12s,background .12s}
 a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,0,.75) inset}
 @font-face{font-family:'Carlito';src:url('../../fonts/Carlito-Regular.ttf');font-weight:400;font-style:normal}
@@ -22,14 +32,14 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
 <p style="position:absolute;left:54.4px;top:110.5px;font-size:41.6px;white-space:nowrap" data-w="214.4"><span style="color:#c6671d;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">in any recipe</span></p>
 <p style="position:absolute;left:54.4px;top:172.7px;font-size:19.2px;white-space:nowrap" data-w="101.6"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">By Kris Fricke</span></p>
 <p style="position:absolute;left:77.1px;top:231.2px;font-size:16.8px;white-space:nowrap" data-w="384.7"><span style="color:#c6671d;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">I’m not much of a cook, and therefore when I do, I usually </span></p>
-<p style="position:absolute;left:54.4px;top:251.7px;font-size:16.8px;white-space:nowrap" data-w="407.4" data-j="1"><span style="color:#c6671d;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">follow the instructions with rigorous accuracy until undone </span></p>
+<p style="position:absolute;left:54.4px;top:251.6px;font-size:16.8px;white-space:nowrap" data-w="407.4" data-j="1"><span style="color:#c6671d;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">follow the instructions with rigorous accuracy until undone </span></p>
 <p style="position:absolute;left:54.4px;top:272.1px;font-size:16.8px;white-space:nowrap" data-w="407.4" data-j="1"><span style="color:#c6671d;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">by some detail the makers of recipes felt too obvious to </span></p>
 <p style="position:absolute;left:54.4px;top:292.5px;font-size:16.8px;white-space:nowrap" data-w="407.5" data-j="1"><span style="color:#c6671d;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">include. But one substitution I always make is replacing the </span></p>
 <p style="position:absolute;left:54.4px;top:313.0px;font-size:16.8px;white-space:nowrap" data-w="407.5" data-j="1"><span style="color:#c6671d;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">sugar in most recipes with honey because, well, of course I </span></p>
 <p style="position:absolute;left:54.4px;top:333.4px;font-size:16.8px;white-space:nowrap" data-w="407.4" data-j="1"><span style="color:#c6671d;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">do. One of my favourite recipes to bring to a get together is </span></p>
 <p style="position:absolute;left:54.4px;top:353.9px;font-size:16.8px;white-space:nowrap" data-w="407.5" data-j="1"><span style="color:#c6671d;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">corn bread because I can both substitute the sugar in it for </span></p>
 <p style="position:absolute;left:54.4px;top:374.3px;font-size:16.8px;white-space:nowrap" data-w="407.4" data-j="1"><span style="color:#c6671d;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">honey and it is the perfect thing to drizzle honey on top of </span></p>
-<p style="position:absolute;left:54.4px;top:394.8px;font-size:16.8px;white-space:nowrap" data-w="395.5"><span style="color:#c6671d;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">(</span><span style="font-style:italic;color:#c6671d;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">and</span><span style="color:#c6671d;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">, as an American, it’s a part of my culture I can share).</span></p>
+<p style="position:absolute;left:54.4px;top:394.7px;font-size:16.8px;white-space:nowrap" data-w="395.5"><span style="color:#c6671d;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">(</span><span style="font-style:italic;color:#c6671d;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">and</span><span style="color:#c6671d;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">, as an American, it’s a part of my culture I can share).</span></p>
 <p style="position:absolute;left:77.1px;top:429.5px;font-size:15.2px;white-space:nowrap" data-w="384.5"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">The biggest consideration in substituting honey is changing </span></p>
 <p style="position:absolute;left:54.4px;top:447.8px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">the volume. Honey contains more sugar per volume than pure </span></p>
 <p style="position:absolute;left:54.4px;top:466.2px;font-size:15.2px;white-space:nowrap" data-w="407.2" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">granulated sugar does. Yes, this is deeply counter-intuitive – but </span></p>
@@ -41,7 +51,8 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
 <p style="position:absolute;left:77.1px;top:576.4px;font-size:15.2px;white-space:nowrap" data-w="384.4"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Honey is, as you know, 13-18% water, we’ll use 15% as a nice </span></p>
 <p style="position:absolute;left:54.4px;top:594.7px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">rounded approximation. So of the 340g of honey in our cup, only </span></p>
 <p style="position:absolute;left:54.4px;top:613.1px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">290g is sugars. But our example recipe called for one cup intending </span></p>
-<p style="position:absolute;left:54.4px;top:631.5px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">200g of sugar, which means we need to use a third less honey, so </span></p>
+<p style="position:absolute;left:54.4px;top:631.5px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">200g of sugar, which means we need to use a third less honey, so 
+</span></p>
 <p style="position:absolute;left:54.4px;top:648.5px;font-size:15.2px;white-space:nowrap" data-w="364.4"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">1 cup of granulated sugar equals 2/3rds of a cup of honey.</span></p>
 <p style="position:absolute;left:77.1px;top:668.2px;font-size:15.2px;white-space:nowrap" data-w="384.4"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Okay but now we need to account for that added moisture </span></p>
 <p style="position:absolute;left:54.4px;top:686.5px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">itself, because it’s not nothing either. Of the 160ml of honey in </span></p>
@@ -49,8 +60,8 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
 <p style="position:absolute;left:54.4px;top:721.9px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">means </span><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">for every cup of sugar you’ve replaced with honey you </span></p>
 <p style="position:absolute;left:54.4px;top:740.3px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">need to reduce liquids by 35ml</span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif"> (ideally water, or milk, for other </span></p>
 <p style="position:absolute;left:54.4px;top:760.0px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">liquids you may have to further account for what flavour or other </span></p>
-<p style="position:absolute;left:54.4px;top:778.3px;font-size:15.2px;white-space:nowrap" data-w="204.0"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">effects you’re losing by reducing).</span></p>
-<p style="position:absolute;left:77.1px;top:796.7px;font-size:15.2px;white-space:nowrap" data-w="384.4"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">The next big subject is browning and caramelization. These </span></p>
+<p style="position:absolute;left:54.4px;top:778.4px;font-size:15.2px;white-space:nowrap" data-w="204.0"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">effects you’re losing by reducing).</span></p>
+<p style="position:absolute;left:77.1px;top:796.7px;font-size:15.2px;white-space:nowrap" data-w="384.4"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">The next big subject is browning and caramelisation. These </span></p>
 <p style="position:absolute;left:54.4px;top:815.1px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">things happen to honey at different temperatures and rates than to </span></p>
 <p style="position:absolute;left:54.4px;top:833.4px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">sucrose, and this is more than an aesthetic consideration because </span></p>
 <p style="position:absolute;left:54.4px;top:851.8px;font-size:15.2px;white-space:nowrap" data-w="89.1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">it affects taste.</span></p>
@@ -61,31 +72,35 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
 <p style="position:absolute;left:494.4px;top:501.5px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">regarded as a bad thing, can cause it to fail testing standards). </span></p>
 <p style="position:absolute;left:494.4px;top:520.0px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">If you have intuited that there’s a direct relationship between </span></p>
 <p style="position:absolute;left:494.4px;top:538.4px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">amount of heat applied and speed of accumulation of these </span></p>
-<p style="position:absolute;left:494.4px;top:556.9px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">things in honey, you’re right, and that’s why it’s hard to answer the </span></p>
+<p style="position:absolute;left:494.4px;top:556.8px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">things in honey, you’re right, and that’s why it’s hard to answer the </span></p>
 <p style="position:absolute;left:494.4px;top:575.3px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">question of at what temperature this begins to happen, it happens </span></p>
 <p style="position:absolute;left:494.4px;top:593.7px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">at all temperatures just at a different rate (though it does take a big </span></p>
-<p style="position:absolute;left:494.4px;top:612.2px;font-size:15.2px;white-space:nowrap" data-w="102.0"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">jump over 500C).</span></p>
+<p style="position:absolute;left:494.4px;top:612.1px;font-size:15.2px;white-space:nowrap" data-w="102.0"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">jump over 500C).</span></p>
 <p style="position:absolute;left:517.0px;top:630.6px;font-size:15.2px;white-space:nowrap" data-w="384.4"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">And sugar of course can be caramelized and browned, which </span></p>
 <p style="position:absolute;left:494.4px;top:649.0px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">does happen in any recipe in which it is baked or cooked, but </span></p>
-<p style="position:absolute;left:494.4px;top:667.5px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">one will note white granulated sugar in the bag never undergoes </span></p>
+<p style="position:absolute;left:494.4px;top:667.4px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">one will note white granulated sugar in the bag never undergoes </span></p>
 <p style="position:absolute;left:494.4px;top:685.9px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">this, no matter how long it sits at 40 degrees. The reason for this </span></p>
-<p style="position:absolute;left:494.4px;top:704.4px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">is that sucrose is glucose and fructose melded into one molecule </span></p>
+<p style="position:absolute;left:494.4px;top:704.3px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">is that sucrose is glucose and fructose melded into one molecule </span></p>
 <p style="position:absolute;left:494.4px;top:722.8px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">that can’t be browned or caramelized (a “non-reducing sugar”). </span></p>
 <p style="position:absolute;left:494.4px;top:741.2px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">When heated to 1600C it breaks down (“inverts”) into fructose </span></p>
-<p style="position:absolute;left:494.4px;top:759.7px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">and glucose (the two sugars that make up the bulk of honey), and </span></p>
+<p style="position:absolute;left:494.4px;top:759.6px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">and glucose (the two sugars that make up the bulk of honey), and </span></p>
 <p style="position:absolute;left:494.4px;top:778.1px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">fructose begins caramelizing around 1100C (and glucose at around </span></p>
 <p style="position:absolute;left:494.4px;top:796.5px;font-size:15.2px;white-space:nowrap" data-w="44.4"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">1600C).</span></p>
-<p style="position:absolute;left:517.0px;top:815.0px;font-size:15.2px;white-space:nowrap" data-w="384.4"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">So where does that leave us with practical conversion of recipes? </span></p>
-<p style="position:absolute;left:494.4px;top:833.4px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Because honey is more sensitive to browning/caramelization, the </span></p>
+<p style="position:absolute;left:517.0px;top:814.9px;font-size:15.2px;white-space:nowrap" data-w="384.4"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">So where does that leave us with practical conversion of recipes? </span></p>
+<p style="position:absolute;left:494.4px;top:833.4px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Because honey is more sensitive to browning/caramelisation, the </span></p>
 <p style="position:absolute;left:494.4px;top:850.5px;font-size:15.2px;white-space:nowrap" data-w="295.1"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">temperature should be reduced by about 150C.</span></p>
-<p style="position:absolute;left:54.4px;top:1266.8px;font-size:12.0px;white-space:nowrap" data-w="810.9" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">*160ml of honey being 227g (water content being measured by mass, which gets us our 34g of water which of course equals 34ml, and as with many numbers in this article  </span></p>
-<p style="position:absolute;left:60.3px;top:1281.2px;font-size:12.0px;white-space:nowrap" data-w="160.5"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">I’m rounding to the rounder 35ml.</span></p>
-<p style="position:absolute;left:733.8px;top:262.1px;font-size:15.2px;white-space:nowrap" data-w="118.5"><span style="font-weight:700;font-style:italic;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">“Honey cornbread,  </span></p>
+<p style="position:absolute;left:54.4px;top:1257.7px;font-size:12.0px;white-space:nowrap" data-w="810.9" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">*160ml of honey being 227g (water content being measured by mass, which gets us our 34g of water which of course equals 34ml, and as with many numbers in this article 
+</span></p>
+<p style="position:absolute;left:60.3px;top:1272.1px;font-size:12.0px;white-space:nowrap" data-w="164.0"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">I’m rounding to the rounder 35ml).</span></p>
+<p style="position:absolute;left:733.8px;top:262.1px;font-size:15.2px;white-space:nowrap" data-w="118.5"><span style="font-weight:700;font-style:italic;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">“Honey cornbread, 
+</span></p>
 <p style="position:absolute;left:711.2px;top:280.0px;font-size:15.2px;white-space:nowrap" data-w="136.3"><span style="font-weight:700;font-style:italic;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">with honey! Should be </span></p>
-<p style="position:absolute;left:711.2px;top:297.9px;font-size:15.2px;white-space:nowrap" data-w="133.3"><span style="font-weight:700;font-style:italic;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">probably twice as tall  </span></p>
+<p style="position:absolute;left:711.2px;top:297.9px;font-size:15.2px;white-space:nowrap" data-w="133.3"><span style="font-weight:700;font-style:italic;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">probably twice as tall 
+</span></p>
 <p style="position:absolute;left:711.2px;top:315.8px;font-size:15.2px;white-space:nowrap" data-w="162.4"><span style="font-weight:700;font-style:italic;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">(and sliced in half to butter </span></p>
-<p style="position:absolute;left:711.2px;top:333.8px;font-size:15.2px;white-space:nowrap" data-w="174.7" data-j="1"><span style="font-weight:700;font-style:italic;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">and put honey in the middle) </span></p>
+<p style="position:absolute;left:711.2px;top:333.7px;font-size:15.2px;white-space:nowrap" data-w="174.7" data-j="1"><span style="font-weight:700;font-style:italic;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">and put honey in the middle) </span></p>
 <p style="position:absolute;left:711.2px;top:351.7px;font-size:15.2px;white-space:nowrap" data-w="173.1"><span style="font-weight:700;font-style:italic;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">but I only had a too-big pan.”</span></p>
+<a class="zoom" href="../../assets/sep/big/p32_250.jpg" target="_blank" rel="noopener" data-src="assets/sep/big/p32_250.jpg" data-alt="Honey cornbread" data-w="1291" data-h="852" title="Click to enlarge" aria-label="Enlarge: Honey cornbread" style="left:445.0px;top:113.9px;width:461.1px;height:304.3px"></a>
 </div></div></div>
 <script>
 /* Fit each line to the width it occupied in the PDF: stretch the spaces on
@@ -99,13 +114,18 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
     var ps=document.querySelectorAll('p[data-w]');
     for(var i=0;i<ps.length;i++){
       var p=ps[i];
-      p.style.wordSpacing=''; p.style.letterSpacing='';
+      p.style.wordSpacing=''; p.style.letterSpacing=''; p.style.transform='';
       var target=parseFloat(p.getAttribute('data-w')), nat=p.offsetWidth;
       if(!target||!nat) continue;
       var d=target-nat, stretch=p.hasAttribute('data-j');
       if(Math.abs(d)<0.5) continue;
       if(d>0&&!stretch) continue;
-      if(Math.abs(d)>target*0.18){ continue; } /* too far off to fix by squeezing -- leave it alone rather than crush the spacing */
+      if(Math.abs(d)>target*0.18){
+        /* too far off to fix by spacing: a condensed face set in a substitute.
+           Squeeze the whole line to its measure instead of letting it run off
+           the page (the folio's page number was being clipped on right-hand pages). */
+        if(d<0){ p.style.transformOrigin='0 0'; p.style.transform='scaleX('+(target/nat).toFixed(4)+')'; }
+        continue; }
       var txt=p.textContent||'', sp=(txt.match(/ /g)||[]).length;
       var fs=parseFloat(getComputedStyle(p).fontSize)||12;
       if(sp>0){
@@ -125,6 +145,37 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
   if(document.fonts&&document.fonts.ready) document.fonts.ready.then(fit);
   window.addEventListener('resize',fit);
 })();
+</script>
+
+<script>
+/* An index entry asks the parent reader to jump. Falls back to the href when
+   the page is opened on its own. */
+document.addEventListener('click',function(e){
+  var a=e.target && e.target.closest ? e.target.closest('a.ixlink') : null;
+  if(!a) return;
+  var m=/#\/page\/([^\/]+)\/(\d+)/.exec(a.getAttribute('href')||'');
+  if(!m) return;
+  if(window.parent && window.parent!==window){
+    e.preventDefault();
+    try{ window.parent.postMessage({abj:'page',iss:m[1],p:parseInt(m[2],10)},'*'); }
+    catch(err){ location.href=a.getAttribute('href'); }
+  }
+},true);
+</script>
+
+<script>
+/* A picture with a bigger version asks the parent reader to open its lightbox;
+   on its own the page just opens the picture. */
+document.addEventListener('click',function(e){
+  var a=e.target && e.target.closest ? e.target.closest('a.zoom') : null;
+  if(!a) return;
+  if(window.parent && window.parent!==window){
+    e.preventDefault();
+    var m={abj:'img',src:a.getAttribute('data-src'),alt:a.getAttribute('data-alt')||'',w:+a.getAttribute('data-w')||0,h:+a.getAttribute('data-h')||0};
+    var ans=a.getAttribute('data-answers'); if(ans){ try{ m.answers=JSON.parse(ans); }catch(err){} }
+    try{ window.parent.postMessage(m,'*'); }catch(err){ location.href=a.getAttribute('href'); }
+  }
+},true);
 </script>
 
 <script>

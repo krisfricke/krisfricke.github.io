@@ -8,8 +8,18 @@ html,body{margin:0;padding:0;background:#fff}
 .page{position:relative;width:952px;height:1347px}
 .page img.bg{position:absolute;left:0;top:0;width:952px;height:1347px}
 p{margin:0;position:absolute}
-a{color:inherit}
+a{color:inherit;text-decoration:none}
 a:hover{text-decoration:underline}
+a.blk,a.blk:hover{text-decoration:none}
+a.blk:hover span{background:rgba(249,197,0,.22)}
+a.ixlink{text-decoration:none;color:inherit;cursor:pointer;border-bottom:1px solid rgba(11,74,114,.35)}
+a.ixlink:hover{color:#0b4a72;border-bottom-color:#0b4a72;background:rgba(249,197,0,.18);text-decoration:none}
+a.zoom{position:absolute;display:block;z-index:6;border-radius:3px;transition:box-shadow .12s}
+a.zoom:hover{box-shadow:0 0 0 2px rgba(249,197,0,.85) inset}
+a.zoom::after{content:"";position:absolute;right:6px;bottom:6px;width:26px;height:26px;border-radius:50%;background:rgba(22,19,14,.62) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f9c500' stroke-width='2.4' stroke-linecap='round'><circle cx='10.5' cy='10.5' r='6'/><path d='M15 15l5 5M8 10.5h5M10.5 8v5'/></svg>") center/16px no-repeat;opacity:0;transition:opacity .15s}
+a.zoom:hover::after{opacity:1}
+a.hot{position:absolute;display:block;z-index:4;border:none;border-radius:3px;transition:box-shadow .12s,background .12s}
+a.hot:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,0,.75) inset}
 a.adlink{position:absolute;display:block;z-index:5;text-decoration:none;border-radius:3px;transition:box-shadow .12s,background .12s}
 a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,0,.75) inset}
 @font-face{font-family:'Carlito';src:url('../../fonts/Carlito-Regular.ttf');font-weight:400;font-style:normal}
@@ -21,9 +31,9 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
 <p style="position:absolute;left:77.1px;top:225.8px;font-size:16.8px;white-space:nowrap" data-w="384.7"><span style="color:#6f9479;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">It was a strong second half of the season in the Central </span></p>
 <p style="position:absolute;left:54.4px;top:245.9px;font-size:16.8px;white-space:nowrap" data-w="407.4" data-j="1"><span style="color:#6f9479;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">District, especially for ironbark, which put on its best show </span></p>
 <p style="position:absolute;left:54.4px;top:266.1px;font-size:16.8px;white-space:nowrap" data-w="407.4" data-j="1"><span style="color:#6f9479;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">for some time from early summer right through to late </span></p>
-<p style="position:absolute;left:54.4px;top:286.3px;font-size:16.8px;white-space:nowrap" data-w="407.4" data-j="1"><span style="color:#6f9479;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">autumn. A dry start to 2026 didn’t seem to impact the </span></p>
+<p style="position:absolute;left:54.4px;top:286.2px;font-size:16.8px;white-space:nowrap" data-w="407.4" data-j="1"><span style="color:#6f9479;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">autumn. A dry start to 2026 didn’t seem to impact the </span></p>
 <p style="position:absolute;left:54.4px;top:306.4px;font-size:16.8px;white-space:nowrap" data-w="407.4" data-j="1"><span style="color:#6f9479;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">honey flow greatly; however, the lack of pollen significantly </span></p>
-<p style="position:absolute;left:54.4px;top:326.6px;font-size:16.8px;white-space:nowrap" data-w="407.4" data-j="1"><span style="color:#6f9479;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">reduced brood production in late summer, leading some </span></p>
+<p style="position:absolute;left:54.4px;top:326.5px;font-size:16.8px;white-space:nowrap" data-w="407.4" data-j="1"><span style="color:#6f9479;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">reduced brood production in late summer, leading some </span></p>
 <p style="position:absolute;left:54.4px;top:346.7px;font-size:16.8px;white-space:nowrap" data-w="407.4" data-j="1"><span style="color:#6f9479;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">beekeepers to head to the North East in search of better </span></p>
 <p style="position:absolute;left:54.4px;top:366.9px;font-size:16.8px;white-space:nowrap" data-w="141.0"><span style="color:#6f9479;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">breeding conditions.</span></p>
 <p style="position:absolute;left:77.1px;top:401.3px;font-size:15.2px;white-space:nowrap" data-w="384.4"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Rain in March helped bring on some much-needed pollen </span></p>
@@ -46,7 +56,8 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
 <p style="position:absolute;left:54.4px;top:708.5px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">gum. Canola has started very early throughout the region and may </span></p>
 <p style="position:absolute;left:54.4px;top:726.6px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">not hold on for long into spring, although I’ve heard the rain can </span></p>
 <p style="position:absolute;left:54.4px;top:744.7px;font-size:15.2px;white-space:nowrap" data-w="193.6"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">help extend the flowering time.</span></p>
-<p style="position:absolute;left:77.1px;top:762.8px;font-size:15.2px;white-space:nowrap" data-w="384.4"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Red box is looking very good in most areas. There is the </span></p>
+<p style="position:absolute;left:77.1px;top:762.8px;font-size:15.2px;white-space:nowrap" data-w="384.4"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Red box is looking very good in most areas. There is the 
+</span></p>
 <p style="position:absolute;left:54.4px;top:780.8px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">odd tree starting to flower now, which is common to see, so if </span></p>
 <p style="position:absolute;left:54.4px;top:798.9px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">you’re already working the yellow gum, it may be worth sticking </span></p>
 <p style="position:absolute;left:54.4px;top:817.0px;font-size:15.2px;white-space:nowrap" data-w="67.3"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">around for.</span></p>
@@ -73,33 +84,36 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
 <p style="position:absolute;left:54.4px;top:1196.5px;font-size:15.2px;white-space:nowrap" data-w="369.0"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Christmas tree. It should be promising over summer as well.</span></p>
 <p style="position:absolute;left:77.1px;top:1214.6px;font-size:15.2px;white-space:nowrap" data-w="384.5"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">For later summer and into autumn, messmate in the Wombat </span></p>
 <p style="position:absolute;left:54.4px;top:1232.6px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">is worth a closer look in each area. It appears promising along </span></p>
-<p style="position:absolute;left:54.4px;top:1250.7px;font-size:15.2px;white-space:nowrap" data-w="407.2"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">the roadsides, although it can be a bit sparser in the forest. </span></p>
+<p style="position:absolute;left:54.4px;top:1250.7px;font-size:15.2px;white-space:nowrap" data-w="407.2"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">the roadsides, although it can be a bit sparser in the forest. 
+</span></p>
 <p style="position:absolute;left:494.4px;top:227.3px;font-size:15.2px;white-space:nowrap" data-w="407.2" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Given it should be followed by manna gum, it’s likely a good </span></p>
 <p style="position:absolute;left:494.4px;top:245.3px;font-size:15.2px;white-space:nowrap" data-w="282.2"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">option, especially for building up strong hives.</span></p>
 <p style="position:absolute;left:517.0px;top:263.2px;font-size:15.2px;white-space:nowrap" data-w="384.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">So clearly, we have options this upcoming season in the Central </span></p>
 <p style="position:absolute;left:494.4px;top:281.1px;font-size:15.2px;white-space:nowrap" data-w="47.7"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">District.</span></p>
 <p style="position:absolute;left:517.0px;top:299.0px;font-size:15.2px;white-space:nowrap" data-w="384.4"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">On that topic, members may be aware that the Victorian </span></p>
-<p style="position:absolute;left:494.4px;top:317.0px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Government is currently creating several new protected areas </span></p>
+<p style="position:absolute;left:494.4px;top:316.9px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Government is currently creating several new protected areas </span></p>
 <p style="position:absolute;left:494.4px;top:334.9px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">across Central West Victoria, including the Wombat-Lerderderg </span></p>
 <p style="position:absolute;left:494.4px;top:352.8px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">National Park, Pyrenees National Park, Hepburn Conservation Park </span></p>
 <p style="position:absolute;left:494.4px;top:370.7px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">and additions to Bendigo Regional Park. Most of these land tenure </span></p>
 <p style="position:absolute;left:494.4px;top:388.6px;font-size:15.2px;white-space:nowrap" data-w="369.7"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">changes are reported to be taking effect on 5 October 2026.</span></p>
-<p style="position:absolute;left:517.0px;top:406.6px;font-size:15.2px;white-space:nowrap" data-w="384.4"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">The Government has stated that existing recreational and </span></p>
+<p style="position:absolute;left:517.0px;top:406.5px;font-size:15.2px;white-space:nowrap" data-w="384.4"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">The Government has stated that existing recreational and </span></p>
 <p style="position:absolute;left:494.4px;top:424.5px;font-size:15.2px;white-space:nowrap" data-w="407.2" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">public land uses will continue to be supported on this public land, </span></p>
 <p style="position:absolute;left:494.4px;top:442.4px;font-size:15.2px;white-space:nowrap" data-w="338.3"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">and that the current apiculture policy remains in place.</span></p>
 <p style="position:absolute;left:517.0px;top:460.3px;font-size:15.2px;white-space:nowrap" data-w="384.4"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">However, many commercial beekeepers remain concerned </span></p>
 <p style="position:absolute;left:494.4px;top:478.2px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">that, over time, these changes may lead to increased restrictions, </span></p>
-<p style="position:absolute;left:494.4px;top:496.2px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">more complex approval processes, tighter access arrangements, </span></p>
+<p style="position:absolute;left:494.4px;top:496.1px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">more complex approval processes, tighter access arrangements, </span></p>
 <p style="position:absolute;left:494.4px;top:514.1px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">track closures and greater uncertainty around long-term bee site </span></p>
 <p style="position:absolute;left:494.4px;top:532.0px;font-size:15.2px;white-space:nowrap" data-w="51.4"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">security.</span></p>
 <p style="position:absolute;left:517.0px;top:549.9px;font-size:15.2px;white-space:nowrap" data-w="384.5"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">During this transition period, if beekeepers experience any </span></p>
 <p style="position:absolute;left:494.4px;top:567.8px;font-size:15.2px;white-space:nowrap" data-w="407.2" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">apiary site access issues or management concerns within these </span></p>
-<p style="position:absolute;left:494.4px;top:585.8px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">new park areas, I’d like to encourage them to let us know so they </span></p>
+<p style="position:absolute;left:494.4px;top:585.7px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">new park areas, I’d like to encourage them to let us know so they </span></p>
 <p style="position:absolute;left:494.4px;top:603.7px;font-size:15.2px;white-space:nowrap" data-w="403.7"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">can be documented and raised through the appropriate channels.</span></p>
 <p style="position:absolute;left:54.4px;top:39.3px;font-size:60.8px;white-space:nowrap" data-w="558.1" data-j="1"><span style="font-weight:700;color:#6f9479;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">VAA Resources Report</span></p>
 <p style="position:absolute;left:54.4px;top:107.8px;font-size:38.4px;white-space:nowrap" data-w="457.5"><span style="color:#6f9479;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Central District – August 2026</span></p>
 <p style="position:absolute;left:54.4px;top:156.7px;font-size:19.2px;white-space:nowrap" data-w="117.1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">By Matt Lorenz</span></p>
 <p style="position:absolute;left:494.4px;top:1271.8px;font-size:12.0px;white-space:nowrap" data-w="296.8"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Candlebark near Ararat, Victoria, by “ninakerr01” on inaturalist.</span></p>
+<a class="hot" href="https://www.inaturalist.org/observations/232258518" target="_blank" rel="noopener" title="inaturalist.org/observations/232258518" aria-label="Link: inaturalist.org/observations/232258518" style="left:650.0px;top:1271.8px;width:141.2px;height:14.7px"></a>
+<a class="zoom" href="../../assets/sep/big/p14_75.jpg" target="_blank" rel="noopener" data-src="assets/sep/big/p14_75.jpg" data-alt="Bush at the Central District field day" data-w="835" data-h="1197" title="Click to enlarge" aria-label="Enlarge: Bush at the Central District field day" style="left:492.3px;top:683.0px;width:407.5px;height:584.2px"></a>
 </div></div></div>
 <script>
 /* Fit each line to the width it occupied in the PDF: stretch the spaces on
@@ -113,13 +127,18 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
     var ps=document.querySelectorAll('p[data-w]');
     for(var i=0;i<ps.length;i++){
       var p=ps[i];
-      p.style.wordSpacing=''; p.style.letterSpacing='';
+      p.style.wordSpacing=''; p.style.letterSpacing=''; p.style.transform='';
       var target=parseFloat(p.getAttribute('data-w')), nat=p.offsetWidth;
       if(!target||!nat) continue;
       var d=target-nat, stretch=p.hasAttribute('data-j');
       if(Math.abs(d)<0.5) continue;
       if(d>0&&!stretch) continue;
-      if(Math.abs(d)>target*0.18){ continue; } /* too far off to fix by squeezing -- leave it alone rather than crush the spacing */
+      if(Math.abs(d)>target*0.18){
+        /* too far off to fix by spacing: a condensed face set in a substitute.
+           Squeeze the whole line to its measure instead of letting it run off
+           the page (the folio's page number was being clipped on right-hand pages). */
+        if(d<0){ p.style.transformOrigin='0 0'; p.style.transform='scaleX('+(target/nat).toFixed(4)+')'; }
+        continue; }
       var txt=p.textContent||'', sp=(txt.match(/ /g)||[]).length;
       var fs=parseFloat(getComputedStyle(p).fontSize)||12;
       if(sp>0){
@@ -139,6 +158,37 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
   if(document.fonts&&document.fonts.ready) document.fonts.ready.then(fit);
   window.addEventListener('resize',fit);
 })();
+</script>
+
+<script>
+/* An index entry asks the parent reader to jump. Falls back to the href when
+   the page is opened on its own. */
+document.addEventListener('click',function(e){
+  var a=e.target && e.target.closest ? e.target.closest('a.ixlink') : null;
+  if(!a) return;
+  var m=/#\/page\/([^\/]+)\/(\d+)/.exec(a.getAttribute('href')||'');
+  if(!m) return;
+  if(window.parent && window.parent!==window){
+    e.preventDefault();
+    try{ window.parent.postMessage({abj:'page',iss:m[1],p:parseInt(m[2],10)},'*'); }
+    catch(err){ location.href=a.getAttribute('href'); }
+  }
+},true);
+</script>
+
+<script>
+/* A picture with a bigger version asks the parent reader to open its lightbox;
+   on its own the page just opens the picture. */
+document.addEventListener('click',function(e){
+  var a=e.target && e.target.closest ? e.target.closest('a.zoom') : null;
+  if(!a) return;
+  if(window.parent && window.parent!==window){
+    e.preventDefault();
+    var m={abj:'img',src:a.getAttribute('data-src'),alt:a.getAttribute('data-alt')||'',w:+a.getAttribute('data-w')||0,h:+a.getAttribute('data-h')||0};
+    var ans=a.getAttribute('data-answers'); if(ans){ try{ m.answers=JSON.parse(ans); }catch(err){} }
+    try{ window.parent.postMessage(m,'*'); }catch(err){ location.href=a.getAttribute('href'); }
+  }
+},true);
 </script>
 
 <script>

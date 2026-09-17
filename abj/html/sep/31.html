@@ -8,8 +8,18 @@ html,body{margin:0;padding:0;background:#fff}
 .page{position:relative;width:952px;height:1347px}
 .page img.bg{position:absolute;left:0;top:0;width:952px;height:1347px}
 p{margin:0;position:absolute}
-a{color:inherit}
+a{color:inherit;text-decoration:none}
 a:hover{text-decoration:underline}
+a.blk,a.blk:hover{text-decoration:none}
+a.blk:hover span{background:rgba(249,197,0,.22)}
+a.ixlink{text-decoration:none;color:inherit;cursor:pointer;border-bottom:1px solid rgba(11,74,114,.35)}
+a.ixlink:hover{color:#0b4a72;border-bottom-color:#0b4a72;background:rgba(249,197,0,.18);text-decoration:none}
+a.zoom{position:absolute;display:block;z-index:6;border-radius:3px;transition:box-shadow .12s}
+a.zoom:hover{box-shadow:0 0 0 2px rgba(249,197,0,.85) inset}
+a.zoom::after{content:"";position:absolute;right:6px;bottom:6px;width:26px;height:26px;border-radius:50%;background:rgba(22,19,14,.62) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f9c500' stroke-width='2.4' stroke-linecap='round'><circle cx='10.5' cy='10.5' r='6'/><path d='M15 15l5 5M8 10.5h5M10.5 8v5'/></svg>") center/16px no-repeat;opacity:0;transition:opacity .15s}
+a.zoom:hover::after{opacity:1}
+a.hot{position:absolute;display:block;z-index:4;border:none;border-radius:3px;transition:box-shadow .12s,background .12s}
+a.hot:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,0,.75) inset}
 a.adlink{position:absolute;display:block;z-index:5;text-decoration:none;border-radius:3px;transition:box-shadow .12s,background .12s}
 a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,0,.75) inset}
 @font-face{font-family:'Carlito';src:url('../../fonts/Carlito-Regular.ttf');font-weight:400;font-style:normal}
@@ -32,13 +42,18 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
     var ps=document.querySelectorAll('p[data-w]');
     for(var i=0;i<ps.length;i++){
       var p=ps[i];
-      p.style.wordSpacing=''; p.style.letterSpacing='';
+      p.style.wordSpacing=''; p.style.letterSpacing=''; p.style.transform='';
       var target=parseFloat(p.getAttribute('data-w')), nat=p.offsetWidth;
       if(!target||!nat) continue;
       var d=target-nat, stretch=p.hasAttribute('data-j');
       if(Math.abs(d)<0.5) continue;
       if(d>0&&!stretch) continue;
-      if(Math.abs(d)>target*0.18){ continue; } /* too far off to fix by squeezing -- leave it alone rather than crush the spacing */
+      if(Math.abs(d)>target*0.18){
+        /* too far off to fix by spacing: a condensed face set in a substitute.
+           Squeeze the whole line to its measure instead of letting it run off
+           the page (the folio's page number was being clipped on right-hand pages). */
+        if(d<0){ p.style.transformOrigin='0 0'; p.style.transform='scaleX('+(target/nat).toFixed(4)+')'; }
+        continue; }
       var txt=p.textContent||'', sp=(txt.match(/ /g)||[]).length;
       var fs=parseFloat(getComputedStyle(p).fontSize)||12;
       if(sp>0){
@@ -58,6 +73,37 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
   if(document.fonts&&document.fonts.ready) document.fonts.ready.then(fit);
   window.addEventListener('resize',fit);
 })();
+</script>
+
+<script>
+/* An index entry asks the parent reader to jump. Falls back to the href when
+   the page is opened on its own. */
+document.addEventListener('click',function(e){
+  var a=e.target && e.target.closest ? e.target.closest('a.ixlink') : null;
+  if(!a) return;
+  var m=/#\/page\/([^\/]+)\/(\d+)/.exec(a.getAttribute('href')||'');
+  if(!m) return;
+  if(window.parent && window.parent!==window){
+    e.preventDefault();
+    try{ window.parent.postMessage({abj:'page',iss:m[1],p:parseInt(m[2],10)},'*'); }
+    catch(err){ location.href=a.getAttribute('href'); }
+  }
+},true);
+</script>
+
+<script>
+/* A picture with a bigger version asks the parent reader to open its lightbox;
+   on its own the page just opens the picture. */
+document.addEventListener('click',function(e){
+  var a=e.target && e.target.closest ? e.target.closest('a.zoom') : null;
+  if(!a) return;
+  if(window.parent && window.parent!==window){
+    e.preventDefault();
+    var m={abj:'img',src:a.getAttribute('data-src'),alt:a.getAttribute('data-alt')||'',w:+a.getAttribute('data-w')||0,h:+a.getAttribute('data-h')||0};
+    var ans=a.getAttribute('data-answers'); if(ans){ try{ m.answers=JSON.parse(ans); }catch(err){} }
+    try{ window.parent.postMessage(m,'*'); }catch(err){ location.href=a.getAttribute('href'); }
+  }
+},true);
 </script>
 
 <script>

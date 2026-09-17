@@ -8,8 +8,18 @@ html,body{margin:0;padding:0;background:#fff}
 .page{position:relative;width:952px;height:1347px}
 .page img.bg{position:absolute;left:0;top:0;width:952px;height:1347px}
 p{margin:0;position:absolute}
-a{color:inherit}
+a{color:inherit;text-decoration:none}
 a:hover{text-decoration:underline}
+a.blk,a.blk:hover{text-decoration:none}
+a.blk:hover span{background:rgba(249,197,0,.22)}
+a.ixlink{text-decoration:none;color:inherit;cursor:pointer;border-bottom:1px solid rgba(11,74,114,.35)}
+a.ixlink:hover{color:#0b4a72;border-bottom-color:#0b4a72;background:rgba(249,197,0,.18);text-decoration:none}
+a.zoom{position:absolute;display:block;z-index:6;border-radius:3px;transition:box-shadow .12s}
+a.zoom:hover{box-shadow:0 0 0 2px rgba(249,197,0,.85) inset}
+a.zoom::after{content:"";position:absolute;right:6px;bottom:6px;width:26px;height:26px;border-radius:50%;background:rgba(22,19,14,.62) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f9c500' stroke-width='2.4' stroke-linecap='round'><circle cx='10.5' cy='10.5' r='6'/><path d='M15 15l5 5M8 10.5h5M10.5 8v5'/></svg>") center/16px no-repeat;opacity:0;transition:opacity .15s}
+a.zoom:hover::after{opacity:1}
+a.hot{position:absolute;display:block;z-index:4;border:none;border-radius:3px;transition:box-shadow .12s,background .12s}
+a.hot:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,0,.75) inset}
 a.adlink{position:absolute;display:block;z-index:5;text-decoration:none;border-radius:3px;transition:box-shadow .12s,background .12s}
 a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,0,.75) inset}
 @font-face{font-family:'Carlito';src:url('../../fonts/Carlito-Regular.ttf');font-weight:400;font-style:normal}
@@ -25,67 +35,70 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
 <p style="position:absolute;left:347.7px;top:333.5px;font-size:15.2px;white-space:nowrap" data-w="260.4" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">a project ends, funding changes or key </span></p>
 <p style="position:absolute;left:347.7px;top:351.4px;font-size:15.2px;white-space:nowrap" data-w="102.4"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">people move on.</span></p>
 <p style="position:absolute;left:370.4px;top:369.3px;font-size:15.2px;white-space:nowrap" data-w="237.8"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">The VBRN proposal asks whether </span></p>
-<p style="position:absolute;left:347.7px;top:387.2px;font-size:15.2px;white-space:nowrap" data-w="50.2"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Victoria </span></p>
-<p style="position:absolute;left:411.1px;top:387.2px;font-size:15.2px;white-space:nowrap" data-w="40.1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">needs </span></p>
-<p style="position:absolute;left:464.4px;top:387.2px;font-size:15.2px;white-space:nowrap" data-w="10.6"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">a </span></p>
-<p style="position:absolute;left:488.1px;top:387.2px;font-size:15.2px;white-space:nowrap" data-w="50.1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">durable </span></p>
-<p style="position:absolute;left:551.4px;top:387.2px;font-size:15.2px;white-space:nowrap" data-w="27.4"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">way </span></p>
-<p style="position:absolute;left:592.0px;top:387.2px;font-size:15.2px;white-space:nowrap" data-w="16.2"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">to </span></p>
-<p style="position:absolute;left:347.7px;top:405.2px;font-size:15.2px;white-space:nowrap" data-w="260.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">connect existing effort: queen breeders </span></p>
-<p style="position:absolute;left:347.7px;top:423.1px;font-size:15.2px;white-space:nowrap" data-w="26.4"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">and </span></p>
-<p style="position:absolute;left:386.5px;top:423.1px;font-size:15.2px;white-space:nowrap" data-w="68.5"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">producers, </span></p>
-<p style="position:absolute;left:467.3px;top:423.1px;font-size:15.2px;white-space:nowrap" data-w="78.3"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">commercial, </span></p>
-<p style="position:absolute;left:558.0px;top:423.1px;font-size:15.2px;white-space:nowrap" data-w="50.2"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">sideline </span></p>
-<p style="position:absolute;left:347.7px;top:441.0px;font-size:15.2px;white-space:nowrap" data-w="26.4"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">and </span></p>
-<p style="position:absolute;left:387.9px;top:441.0px;font-size:15.2px;white-space:nowrap" data-w="76.5"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">recreational </span></p>
-<p style="position:absolute;left:478.3px;top:441.0px;font-size:15.2px;white-space:nowrap" data-w="77.5"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">beekeepers, </span></p>
-<p style="position:absolute;left:569.6px;top:441.0px;font-size:15.2px;white-space:nowrap" data-w="38.6"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">clubs, </span></p>
+<p style="position:absolute;left:347.7px;top:387.2px;font-size:15.2px;white-space:nowrap" data-w="51.4"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Victoria </span></p>
+<p style="position:absolute;left:411.5px;top:387.2px;font-size:15.2px;white-space:nowrap" data-w="40.9"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">needs </span></p>
+<p style="position:absolute;left:464.8px;top:387.2px;font-size:15.2px;white-space:nowrap" data-w="10.7"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">a </span></p>
+<p style="position:absolute;left:488.0px;top:387.2px;font-size:15.2px;white-space:nowrap" data-w="51.2"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">durable </span></p>
+<p style="position:absolute;left:551.6px;top:387.2px;font-size:15.2px;white-space:nowrap" data-w="27.9"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">way </span></p>
+<p style="position:absolute;left:591.8px;top:387.2px;font-size:15.2px;white-space:nowrap" data-w="16.4"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">to </span></p>
+<p style="position:absolute;left:347.7px;top:405.2px;font-size:15.2px;white-space:nowrap" data-w="260.4" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">connect existing effort: queen breeders </span></p>
+<p style="position:absolute;left:347.7px;top:423.1px;font-size:15.2px;white-space:nowrap" data-w="260.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">and producers, commercial, sideline </span></p>
+<p style="position:absolute;left:347.7px;top:441.0px;font-size:15.2px;white-space:nowrap" data-w="26.9"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">and </span></p>
+<p style="position:absolute;left:386.9px;top:441.0px;font-size:15.2px;white-space:nowrap" data-w="78.2"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">recreational </span></p>
+<p style="position:absolute;left:477.4px;top:441.0px;font-size:15.2px;white-space:nowrap" data-w="79.2"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">beekeepers, </span></p>
+<p style="position:absolute;left:568.9px;top:441.0px;font-size:15.2px;white-space:nowrap" data-w="39.3"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">clubs, </span></p>
 <p style="position:absolute;left:347.7px;top:458.9px;font-size:15.2px;white-space:nowrap" data-w="260.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">researchers, assessment apiaries and </span></p>
 <p style="position:absolute;left:347.7px;top:476.8px;font-size:15.2px;white-space:nowrap" data-w="260.4" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">technical partners. It would also test how </span></p>
 <p style="position:absolute;left:347.7px;top:494.8px;font-size:15.2px;white-space:nowrap" data-w="260.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Victorian activity could connect sensibly </span></p>
-<p style="position:absolute;left:347.7px;top:512.7px;font-size:15.2px;white-space:nowrap" data-w="260.4" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">with AQBBA’s Australian VSH Collective </span></p>
-<p style="position:absolute;left:347.7px;top:530.6px;font-size:15.2px;white-space:nowrap" data-w="236.4"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">and the wider national breeding effort.</span></p>
-<p style="position:absolute;left:370.4px;top:548.5px;font-size:15.2px;white-space:nowrap" data-w="237.8"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">That does not mean bringing all </span></p>
-<p style="position:absolute;left:347.7px;top:566.5px;font-size:15.2px;white-space:nowrap" data-w="57.7"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">breeding </span></p>
-<p style="position:absolute;left:423.3px;top:566.5px;font-size:15.2px;white-space:nowrap" data-w="39.9"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">under </span></p>
-<p style="position:absolute;left:481.2px;top:566.5px;font-size:15.2px;white-space:nowrap" data-w="26.8"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">one </span></p>
-<p style="position:absolute;left:525.9px;top:566.5px;font-size:15.2px;white-space:nowrap" data-w="82.3"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">organisation. </span></p>
-<p style="position:absolute;left:347.7px;top:584.4px;font-size:15.2px;white-space:nowrap" data-w="260.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Breeders should continue to breed and </span></p>
-<p style="position:absolute;left:347.7px;top:602.3px;font-size:15.2px;white-space:nowrap" data-w="260.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">produce queens. Beekeepers should </span></p>
-<p style="position:absolute;left:347.7px;top:620.2px;font-size:15.2px;white-space:nowrap" data-w="260.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">retain a practical role in assessing what </span></p>
-<p style="position:absolute;left:347.7px;top:638.1px;font-size:15.2px;white-space:nowrap" data-w="260.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">works under their conditions. The possible </span></p>
-<p style="position:absolute;left:347.7px;top:656.1px;font-size:15.2px;white-space:nowrap" data-w="260.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">value of a network lies in shared methods, </span></p>
-<p style="position:absolute;left:347.7px;top:674.0px;font-size:15.2px;white-space:nowrap" data-w="54.0"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">training, </span></p>
-<p style="position:absolute;left:417.2px;top:674.0px;font-size:15.2px;white-space:nowrap" data-w="84.6"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">coordination, </span></p>
-<p style="position:absolute;left:517.3px;top:674.0px;font-size:15.2px;white-space:nowrap" data-w="49.0"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">records </span></p>
-<p style="position:absolute;left:581.8px;top:674.0px;font-size:15.2px;white-space:nowrap" data-w="26.4"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">and </span></p>
-<p style="position:absolute;left:347.7px;top:691.9px;font-size:15.2px;white-space:nowrap" data-w="260.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">continuity - the less glamorous parts of the </span></p>
-<p style="position:absolute;left:347.7px;top:709.8px;font-size:15.2px;white-space:nowrap" data-w="260.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">work, but often the difference between a </span></p>
-<p style="position:absolute;left:347.7px;top:727.7px;font-size:15.2px;white-space:nowrap" data-w="260.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">useful seasonal project and an enduring </span></p>
-<p style="position:absolute;left:347.7px;top:745.7px;font-size:15.2px;white-space:nowrap" data-w="114.1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">industry capability.</span></p>
-<p style="position:absolute;left:370.4px;top:794.3px;font-size:20.0px;white-space:nowrap" data-w="196.8"><span style="font-style:italic;color:#6f9479;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">“The possible value of a </span></p>
-<p style="position:absolute;left:347.7px;top:816.7px;font-size:20.0px;white-space:nowrap" data-w="261.5" data-j="1"><span style="font-style:italic;color:#6f9479;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">network lies in shared methods, </span></p>
-<p style="position:absolute;left:347.7px;top:839.1px;font-size:20.0px;white-space:nowrap" data-w="249.8"><span style="font-style:italic;color:#6f9479;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">training, coordination, records </span></p>
-<p style="position:absolute;left:347.7px;top:861.5px;font-size:20.0px;white-space:nowrap" data-w="200.1"><span style="font-style:italic;color:#6f9479;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">and continuity – the less </span></p>
-<p style="position:absolute;left:347.7px;top:883.9px;font-size:20.0px;white-space:nowrap" data-w="255.6"><span style="font-style:italic;color:#6f9479;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">glamorous parts of the work, but </span></p>
-<p style="position:absolute;left:347.7px;top:906.3px;font-size:20.0px;white-space:nowrap" data-w="251.9"><span style="font-style:italic;color:#6f9479;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">often the difference between a </span></p>
-<p style="position:absolute;left:347.7px;top:928.7px;font-size:20.0px;white-space:nowrap" data-w="250.1"><span style="font-style:italic;color:#6f9479;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">useful seasonal project and an </span></p>
-<p style="position:absolute;left:347.7px;top:951.1px;font-size:20.0px;white-space:nowrap" data-w="236.8"><span style="font-style:italic;color:#6f9479;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">enduring industry capability.”</span></p>
-<p style="position:absolute;left:370.4px;top:1006.6px;font-size:15.2px;white-space:nowrap" data-w="237.8"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">The consultation will therefore need </span></p>
-<p style="position:absolute;left:347.7px;top:1024.5px;font-size:15.2px;white-space:nowrap" data-w="260.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">to deal with practical questions, including </span></p>
-<p style="position:absolute;left:347.7px;top:1042.4px;font-size:15.2px;white-space:nowrap" data-w="260.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">what the VBRN should and should not </span></p>
-<p style="position:absolute;left:347.7px;top:1060.4px;font-size:15.2px;white-space:nowrap" data-w="260.4" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">do; how different parts of the industry </span></p>
-<p style="position:absolute;left:347.7px;top:1078.3px;font-size:15.2px;white-space:nowrap" data-w="260.4" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">could contribute; what safeguards are </span></p>
-<p style="position:absolute;left:347.7px;top:1096.2px;font-size:15.2px;white-space:nowrap" data-w="260.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">needed around genetics, data, intellectual </span></p>
-<p style="position:absolute;left:347.7px;top:1114.1px;font-size:15.2px;white-space:nowrap" data-w="260.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">property, access and conflicts of interest; </span></p>
-<p style="position:absolute;left:347.7px;top:1132.1px;font-size:15.2px;white-space:nowrap" data-w="260.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">and whether there is enough capability </span></p>
-<p style="position:absolute;left:347.7px;top:1150.0px;font-size:15.2px;white-space:nowrap" data-w="202.0"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">and support to justify continuing.</span></p>
-<p style="position:absolute;left:370.4px;top:1167.9px;font-size:15.2px;white-space:nowrap" data-w="237.8"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Not everyone needs to breed queens to </span></p>
-<p style="position:absolute;left:347.7px;top:1185.8px;font-size:15.2px;white-space:nowrap" data-w="260.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">have something useful to offer. Commercial </span></p>
-<p style="position:absolute;left:347.7px;top:1203.7px;font-size:15.2px;white-space:nowrap" data-w="260.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">operators may be able to assess colonies </span></p>
-<p style="position:absolute;left:347.7px;top:1221.7px;font-size:15.2px;white-space:nowrap" data-w="260.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">under production conditions. Clubs and </span></p>
-<p style="position:absolute;left:347.7px;top:1239.6px;font-size:15.2px;white-space:nowrap" data-w="260.4" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">recreational beekeepers may contribute </span></p>
-<p style="position:absolute;left:347.7px;top:1257.5px;font-size:15.2px;white-space:nowrap" data-w="260.5"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">observations, local knowledge, training </span></p>
+<p style="position:absolute;left:347.7px;top:512.7px;font-size:15.2px;white-space:nowrap" data-w="260.4" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">with the Australian Queen Bee Breeder’s </span></p>
+<p style="position:absolute;left:347.7px;top:530.6px;font-size:15.2px;white-space:nowrap" data-w="260.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Association (AQBBA)’s Australian VSH </span></p>
+<p style="position:absolute;left:347.7px;top:548.5px;font-size:15.2px;white-space:nowrap" data-w="63.8"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Collective </span></p>
+<p style="position:absolute;left:424.7px;top:548.5px;font-size:15.2px;white-space:nowrap" data-w="26.8"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">and </span></p>
+<p style="position:absolute;left:464.8px;top:548.5px;font-size:15.2px;white-space:nowrap" data-w="24.3"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">the </span></p>
+<p style="position:absolute;left:502.3px;top:548.5px;font-size:15.2px;white-space:nowrap" data-w="38.8"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">wider </span></p>
+<p style="position:absolute;left:554.4px;top:548.5px;font-size:15.2px;white-space:nowrap" data-w="53.8"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">national </span></p>
+<p style="position:absolute;left:347.7px;top:566.4px;font-size:15.2px;white-space:nowrap" data-w="97.4"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">breeding effort.</span></p>
+<p style="position:absolute;left:370.4px;top:584.4px;font-size:15.2px;white-space:nowrap" data-w="237.8"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">That does not mean bringing all </span></p>
+<p style="position:absolute;left:347.7px;top:602.3px;font-size:15.2px;white-space:nowrap" data-w="57.7"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">breeding </span></p>
+<p style="position:absolute;left:423.3px;top:602.3px;font-size:15.2px;white-space:nowrap" data-w="39.9"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">under </span></p>
+<p style="position:absolute;left:481.2px;top:602.3px;font-size:15.2px;white-space:nowrap" data-w="26.8"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">one </span></p>
+<p style="position:absolute;left:525.9px;top:602.3px;font-size:15.2px;white-space:nowrap" data-w="82.3"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">organisation. </span></p>
+<p style="position:absolute;left:347.7px;top:620.2px;font-size:15.2px;white-space:nowrap" data-w="260.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Breeders should continue to breed and </span></p>
+<p style="position:absolute;left:347.7px;top:638.1px;font-size:15.2px;white-space:nowrap" data-w="260.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">produce queens. Beekeepers should </span></p>
+<p style="position:absolute;left:347.7px;top:656.0px;font-size:15.2px;white-space:nowrap" data-w="260.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">retain a practical role in assessing what </span></p>
+<p style="position:absolute;left:347.7px;top:674.0px;font-size:15.2px;white-space:nowrap" data-w="260.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">works under their conditions. The possible </span></p>
+<p style="position:absolute;left:347.7px;top:691.9px;font-size:15.2px;white-space:nowrap" data-w="260.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">value of a network lies in shared methods, </span></p>
+<p style="position:absolute;left:347.7px;top:709.8px;font-size:15.2px;white-space:nowrap" data-w="54.0"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">training, </span></p>
+<p style="position:absolute;left:417.2px;top:709.8px;font-size:15.2px;white-space:nowrap" data-w="84.6"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">coordination, </span></p>
+<p style="position:absolute;left:517.3px;top:709.8px;font-size:15.2px;white-space:nowrap" data-w="49.0"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">records </span></p>
+<p style="position:absolute;left:581.8px;top:709.8px;font-size:15.2px;white-space:nowrap" data-w="26.4"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">and </span></p>
+<p style="position:absolute;left:347.7px;top:727.7px;font-size:15.2px;white-space:nowrap" data-w="260.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">continuity - the less glamorous parts of the </span></p>
+<p style="position:absolute;left:347.7px;top:745.6px;font-size:15.2px;white-space:nowrap" data-w="260.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">work, but often the difference between a </span></p>
+<p style="position:absolute;left:347.7px;top:763.6px;font-size:15.2px;white-space:nowrap" data-w="260.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">useful seasonal project and an enduring </span></p>
+<p style="position:absolute;left:347.7px;top:781.5px;font-size:15.2px;white-space:nowrap" data-w="114.1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">industry capability.</span></p>
+<p style="position:absolute;left:370.4px;top:812.2px;font-size:20.0px;white-space:nowrap" data-w="196.8"><span style="font-style:italic;color:#6f9479;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">“The possible value of a </span></p>
+<p style="position:absolute;left:347.7px;top:834.6px;font-size:20.0px;white-space:nowrap" data-w="261.5" data-j="1"><span style="font-style:italic;color:#6f9479;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">network lies in shared methods, </span></p>
+<p style="position:absolute;left:347.7px;top:857.0px;font-size:20.0px;white-space:nowrap" data-w="249.8"><span style="font-style:italic;color:#6f9479;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">training, coordination, records </span></p>
+<p style="position:absolute;left:347.7px;top:879.4px;font-size:20.0px;white-space:nowrap" data-w="200.1"><span style="font-style:italic;color:#6f9479;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">and continuity – the less </span></p>
+<p style="position:absolute;left:347.7px;top:901.8px;font-size:20.0px;white-space:nowrap" data-w="255.6"><span style="font-style:italic;color:#6f9479;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">glamorous parts of the work, but </span></p>
+<p style="position:absolute;left:347.7px;top:924.2px;font-size:20.0px;white-space:nowrap" data-w="251.9"><span style="font-style:italic;color:#6f9479;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">often the difference between a </span></p>
+<p style="position:absolute;left:347.7px;top:946.6px;font-size:20.0px;white-space:nowrap" data-w="250.1"><span style="font-style:italic;color:#6f9479;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">useful seasonal project and an </span></p>
+<p style="position:absolute;left:347.7px;top:969.0px;font-size:20.0px;white-space:nowrap" data-w="236.8"><span style="font-style:italic;color:#6f9479;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">enduring industry capability.”</span></p>
+<p style="position:absolute;left:370.4px;top:1010.9px;font-size:15.2px;white-space:nowrap" data-w="237.8"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">The consultation will therefore need </span></p>
+<p style="position:absolute;left:347.7px;top:1028.8px;font-size:15.2px;white-space:nowrap" data-w="260.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">to deal with practical questions, including </span></p>
+<p style="position:absolute;left:347.7px;top:1046.8px;font-size:15.2px;white-space:nowrap" data-w="260.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">what the VBRN should and should not </span></p>
+<p style="position:absolute;left:347.7px;top:1064.7px;font-size:15.2px;white-space:nowrap" data-w="260.4" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">do; how different parts of the industry </span></p>
+<p style="position:absolute;left:347.7px;top:1082.6px;font-size:15.2px;white-space:nowrap" data-w="260.4" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">could contribute; what safeguards are </span></p>
+<p style="position:absolute;left:347.7px;top:1100.5px;font-size:15.2px;white-space:nowrap" data-w="260.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">needed around genetics, data, intellectual </span></p>
+<p style="position:absolute;left:347.7px;top:1118.4px;font-size:15.2px;white-space:nowrap" data-w="260.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">property, access and conflicts of interest; </span></p>
+<p style="position:absolute;left:347.7px;top:1136.4px;font-size:15.2px;white-space:nowrap" data-w="260.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">and whether there is enough capability </span></p>
+<p style="position:absolute;left:347.7px;top:1154.3px;font-size:15.2px;white-space:nowrap" data-w="202.0"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">and support to justify continuing.</span></p>
+<p style="position:absolute;left:370.4px;top:1172.2px;font-size:15.2px;white-space:nowrap" data-w="237.8"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Not everyone needs to breed queens to </span></p>
+<p style="position:absolute;left:347.7px;top:1190.1px;font-size:15.2px;white-space:nowrap" data-w="260.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">have something useful to offer. Commercial </span></p>
+<p style="position:absolute;left:347.7px;top:1208.0px;font-size:15.2px;white-space:nowrap" data-w="260.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">operators may be able to assess colonies </span></p>
+<p style="position:absolute;left:347.7px;top:1226.0px;font-size:15.2px;white-space:nowrap" data-w="260.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">under production conditions. Clubs and </span></p>
+<p style="position:absolute;left:347.7px;top:1243.9px;font-size:15.2px;white-space:nowrap" data-w="260.4" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">recreational beekeepers may contribute </span></p>
+<p style="position:absolute;left:347.7px;top:1261.8px;font-size:15.2px;white-space:nowrap" data-w="260.5"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">observations, local knowledge, training </span></p>
 <p style="position:absolute;left:77.1px;top:260.2px;font-size:16.8px;white-space:nowrap" data-w="238.1"><span style="color:#6f9479;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">In the last edition of the ABJ, I put </span></p>
 <p style="position:absolute;left:54.4px;top:280.2px;font-size:16.8px;white-space:nowrap" data-w="260.8" data-j="1"><span style="color:#6f9479;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">forward the case for Victoria to take </span></p>
 <p style="position:absolute;left:54.4px;top:300.2px;font-size:16.8px;white-space:nowrap" data-w="257.0" data-j="1"><span style="color:#6f9479;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">a more organised role in the long-</span></p>
@@ -101,27 +114,27 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
 <p style="position:absolute;left:54.4px;top:508.3px;font-size:15.2px;white-space:nowrap" data-w="260.4" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">the proposed Victorian Bee Resilience </span></p>
 <p style="position:absolute;left:54.4px;top:526.2px;font-size:15.2px;white-space:nowrap" data-w="260.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Network (VBRN), under VAA stewardship. </span></p>
 <p style="position:absolute;left:54.4px;top:544.1px;font-size:15.2px;white-space:nowrap" data-w="260.4" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">This gives the Association authority to </span></p>
-<p style="position:absolute;left:54.4px;top:562.1px;font-size:15.2px;white-space:nowrap" data-w="260.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">consult the industry, test the need and </span></p>
+<p style="position:absolute;left:54.4px;top:562.0px;font-size:15.2px;white-space:nowrap" data-w="260.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">consult the industry, test the need and </span></p>
 <p style="position:absolute;left:54.4px;top:580.0px;font-size:15.2px;white-space:nowrap" data-w="260.4" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">available capability, and work through the </span></p>
 <p style="position:absolute;left:54.4px;top:597.9px;font-size:15.2px;white-space:nowrap" data-w="260.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">practical questions that would need to be </span></p>
 <p style="position:absolute;left:54.4px;top:615.8px;font-size:15.2px;white-space:nowrap" data-w="260.4" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">answered before any ongoing network </span></p>
 <p style="position:absolute;left:54.4px;top:633.7px;font-size:15.2px;white-space:nowrap" data-w="128.4"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">could be established.</span></p>
-<p style="position:absolute;left:77.1px;top:651.7px;font-size:15.2px;white-space:nowrap" data-w="237.8"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">It is equally important to be clear </span></p>
+<p style="position:absolute;left:77.1px;top:651.6px;font-size:15.2px;white-space:nowrap" data-w="237.8"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">It is equally important to be clear </span></p>
 <p style="position:absolute;left:54.4px;top:669.6px;font-size:15.2px;white-space:nowrap" data-w="260.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">about what the decision does not do. </span></p>
 <p style="position:absolute;left:54.4px;top:687.5px;font-size:15.2px;white-space:nowrap" data-w="260.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">The Board has not approved a finished </span></p>
 <p style="position:absolute;left:54.4px;top:705.4px;font-size:15.2px;white-space:nowrap" data-w="260.4" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">operating network. It has not settled </span></p>
 <p style="position:absolute;left:54.4px;top:723.3px;font-size:15.2px;white-space:nowrap" data-w="260.4" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">future governance, participation, funding, </span></p>
-<p style="position:absolute;left:54.4px;top:741.3px;font-size:15.2px;white-space:nowrap" data-w="260.4" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">data, genetics, ownership, access or </span></p>
+<p style="position:absolute;left:54.4px;top:741.2px;font-size:15.2px;white-space:nowrap" data-w="260.4" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">data, genetics, ownership, access or </span></p>
 <p style="position:absolute;left:54.4px;top:759.2px;font-size:15.2px;white-space:nowrap" data-w="260.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">commercial arrangements. It does not </span></p>
 <p style="position:absolute;left:54.4px;top:777.1px;font-size:15.2px;white-space:nowrap" data-w="260.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">establish a VAA queen-breeding business, </span></p>
 <p style="position:absolute;left:54.4px;top:795.0px;font-size:15.2px;white-space:nowrap" data-w="257.0" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">and it is not an announcement that varroa-</span></p>
 <p style="position:absolute;left:54.4px;top:812.9px;font-size:15.2px;white-space:nowrap" data-w="183.6"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">resistant queens are available.</span></p>
-<p style="position:absolute;left:77.1px;top:830.9px;font-size:15.2px;white-space:nowrap" data-w="237.8"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">The detailed proposal will return to the </span></p>
+<p style="position:absolute;left:77.1px;top:830.8px;font-size:15.2px;white-space:nowrap" data-w="237.8"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">The detailed proposal will return to the </span></p>
 <p style="position:absolute;left:54.4px;top:848.8px;font-size:15.2px;white-space:nowrap" data-w="260.4" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Board at Gate 2 on 14 December 2026. </span></p>
 <p style="position:absolute;left:54.4px;top:866.7px;font-size:15.2px;white-space:nowrap" data-w="260.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">At that point, the Board may approve, </span></p>
 <p style="position:absolute;left:54.4px;top:884.6px;font-size:15.2px;white-space:nowrap" data-w="260.4" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">amend, narrow, defer or decide not to </span></p>
 <p style="position:absolute;left:54.4px;top:902.5px;font-size:15.2px;white-space:nowrap" data-w="260.4" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">proceed. That decision will be informed by </span></p>
-<p style="position:absolute;left:54.4px;top:920.5px;font-size:15.2px;white-space:nowrap" data-w="260.4" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">what we hear during consultation and by </span></p>
+<p style="position:absolute;left:54.4px;top:920.4px;font-size:15.2px;white-space:nowrap" data-w="260.4" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">what we hear during consultation and by </span></p>
 <p style="position:absolute;left:54.4px;top:938.4px;font-size:15.2px;white-space:nowrap" data-w="239.7"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">the due-diligence work now under way.</span></p>
 <p style="position:absolute;left:77.1px;top:956.3px;font-size:15.2px;white-space:nowrap" data-w="237.8"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Why take the time to scope this </span></p>
 <p style="position:absolute;left:54.4px;top:974.2px;font-size:15.2px;white-space:nowrap" data-w="62.0"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">properly? </span></p>
@@ -130,55 +143,56 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
 <p style="position:absolute;left:222.9px;top:974.2px;font-size:15.2px;white-space:nowrap" data-w="55.3"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">changed </span></p>
 <p style="position:absolute;left:291.0px;top:974.2px;font-size:15.2px;white-space:nowrap" data-w="23.8"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">the </span></p>
 <p style="position:absolute;left:54.4px;top:992.1px;font-size:15.2px;white-space:nowrap" data-w="260.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">operating environment for Australian </span></p>
-<p style="position:absolute;left:54.4px;top:1010.1px;font-size:15.2px;white-space:nowrap" data-w="260.4" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">beekeeping, but genetic improvement </span></p>
+<p style="position:absolute;left:54.4px;top:1010.0px;font-size:15.2px;white-space:nowrap" data-w="260.4" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">beekeeping, but genetic improvement </span></p>
 <p style="position:absolute;left:54.4px;top:1028.0px;font-size:15.2px;white-space:nowrap" data-w="260.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">cannot be treated as a quick fix. Monitoring, </span></p>
 <p style="position:absolute;left:54.4px;top:1045.9px;font-size:15.2px;white-space:nowrap" data-w="260.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">effective treatment, biosecurity, education </span></p>
 <p style="position:absolute;left:54.4px;top:1063.8px;font-size:15.2px;white-space:nowrap" data-w="260.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">and sound husbandry remain essential. </span></p>
-<p style="position:absolute;left:54.4px;top:1081.8px;font-size:15.2px;white-space:nowrap" data-w="260.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Selection for resilience is a complementary, </span></p>
-<p style="position:absolute;left:54.4px;top:1099.7px;font-size:15.2px;white-space:nowrap" data-w="260.4" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">long-term pathway, measured across </span></p>
+<p style="position:absolute;left:54.4px;top:1081.7px;font-size:15.2px;white-space:nowrap" data-w="260.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Selection for resilience is a complementary, </span></p>
+<p style="position:absolute;left:54.4px;top:1099.6px;font-size:15.2px;white-space:nowrap" data-w="260.4" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">long-term pathway, measured across </span></p>
 <p style="position:absolute;left:54.4px;top:1117.6px;font-size:15.2px;white-space:nowrap" data-w="210.2"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">colonies, apiaries and generations.</span></p>
 <p style="position:absolute;left:77.1px;top:1135.5px;font-size:15.2px;white-space:nowrap" data-w="237.8"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Nor are we starting from a blank page. </span></p>
 <p style="position:absolute;left:54.4px;top:1153.4px;font-size:15.2px;white-space:nowrap" data-w="260.4" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">The scoping work draws on lessons from </span></p>
-<p style="position:absolute;left:54.4px;top:1171.4px;font-size:15.2px;white-space:nowrap" data-w="260.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">eastern and western Australian breeding </span></p>
-<p style="position:absolute;left:54.4px;top:1189.3px;font-size:15.2px;white-space:nowrap" data-w="260.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">efforts dating back to the 1980s, as well </span></p>
+<p style="position:absolute;left:54.4px;top:1171.3px;font-size:15.2px;white-space:nowrap" data-w="260.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">eastern and western Australian breeding </span></p>
+<p style="position:absolute;left:54.4px;top:1189.2px;font-size:15.2px;white-space:nowrap" data-w="260.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">efforts dating back to the 1980s, as well </span></p>
 <p style="position:absolute;left:54.4px;top:1207.2px;font-size:15.2px;white-space:nowrap" data-w="260.4" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">as Plan Bee, the National Honey Bee </span></p>
 <p style="position:absolute;left:54.4px;top:1225.1px;font-size:15.2px;white-space:nowrap" data-w="260.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Breeding Strategy 2024-2029, the 2025 </span></p>
 <p style="position:absolute;left:54.4px;top:1243.0px;font-size:15.2px;white-space:nowrap" data-w="260.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Queen Sector Analysis and discussions </span></p>
-<p style="position:absolute;left:54.4px;top:1261.0px;font-size:15.2px;white-space:nowrap" data-w="260.4"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">with beekeepers. Those efforts show that </span></p>
+<p style="position:absolute;left:54.4px;top:1260.9px;font-size:15.2px;white-space:nowrap" data-w="260.4"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">with beekeepers. Those efforts show that </span></p>
 <p style="position:absolute;left:54.4px;top:38.7px;font-size:54.4px;white-space:nowrap" data-w="859.3" data-j="1"><span style="font-weight:700;color:#6f9479;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">VAA Victorian Bee Resilience Network </span></p>
 <p style="position:absolute;left:54.4px;top:97.3px;font-size:41.6px;white-space:nowrap" data-w="529.0"><span style="color:#6f9479;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">VBRN: the discussion continues</span></p>
 <p style="position:absolute;left:54.4px;top:148.9px;font-size:28.8px;white-space:nowrap" data-w="804.5"><span style="font-weight:700;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">VAA Board endorses a time-limited scoping and consultation phase</span></p>
 <p style="position:absolute;left:54.4px;top:190.6px;font-size:19.2px;white-space:nowrap" data-w="283.9"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">By Mark Bichan, VAA Board member</span></p>
-<p style="position:absolute;left:641.0px;top:495.1px;font-size:15.2px;white-space:nowrap" data-w="260.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">support, apiary sites or carefully defined </span></p>
-<p style="position:absolute;left:641.0px;top:513.0px;font-size:15.2px;white-space:nowrap" data-w="260.4" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">assessment work. Just as importantly, </span></p>
-<p style="position:absolute;left:641.0px;top:531.0px;font-size:15.2px;white-space:nowrap" data-w="260.4" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">people may identify risks, gaps or reasons </span></p>
-<p style="position:absolute;left:641.0px;top:548.9px;font-size:15.2px;white-space:nowrap" data-w="184.3"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">the proposal needs to change.</span></p>
-<p style="position:absolute;left:663.7px;top:566.8px;font-size:15.2px;white-space:nowrap" data-w="237.8"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">VAA members will shortly be invited </span></p>
-<p style="position:absolute;left:641.0px;top:584.7px;font-size:15.2px;white-space:nowrap" data-w="260.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">to take part in the consultation. Please </span></p>
-<p style="position:absolute;left:641.0px;top:602.6px;font-size:15.2px;white-space:nowrap" data-w="260.4" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">watch your inbox and the VAA’s social </span></p>
-<p style="position:absolute;left:641.0px;top:620.6px;font-size:15.2px;white-space:nowrap" data-w="260.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">media channels for details. The invitation </span></p>
-<p style="position:absolute;left:641.0px;top:638.5px;font-size:15.2px;white-space:nowrap" data-w="260.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">is to help test and shape the proposal – </span></p>
-<p style="position:absolute;left:641.0px;top:656.4px;font-size:15.2px;white-space:nowrap" data-w="189.0"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">not to join a finished program.</span></p>
-<p style="position:absolute;left:663.7px;top:674.3px;font-size:15.2px;white-space:nowrap" data-w="237.8"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">The purpose of this phase is not to </span></p>
-<p style="position:absolute;left:641.0px;top:692.2px;font-size:15.2px;white-space:nowrap" data-w="260.4" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">persuade the industry that the answer </span></p>
-<p style="position:absolute;left:641.0px;top:710.2px;font-size:15.2px;white-space:nowrap" data-w="260.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">has already been decided. It is to find out </span></p>
-<p style="position:absolute;left:641.0px;top:728.1px;font-size:15.2px;white-space:nowrap" data-w="260.4" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">whether the VBRN would be useful, what </span></p>
-<p style="position:absolute;left:641.0px;top:746.0px;font-size:15.2px;white-space:nowrap" data-w="260.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">would make it credible and workable, and </span></p>
-<p style="position:absolute;left:641.0px;top:763.9px;font-size:15.2px;white-space:nowrap" data-w="260.4" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">whether the VAA should continue beyond </span></p>
-<p style="position:absolute;left:641.0px;top:781.8px;font-size:15.2px;white-space:nowrap" data-w="260.4" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Gate 1. If you see value in the idea, have </span></p>
-<p style="position:absolute;left:641.0px;top:799.8px;font-size:15.2px;white-space:nowrap" data-w="260.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">concerns about it or believe something </span></p>
-<p style="position:absolute;left:641.0px;top:817.7px;font-size:15.2px;white-space:nowrap" data-w="260.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">important is missing, we need to hear </span></p>
-<p style="position:absolute;left:641.0px;top:835.6px;font-size:15.2px;white-space:nowrap" data-w="58.9"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">from you.</span></p>
-<p style="position:absolute;left:674.3px;top:975.0px;font-size:9.7px;white-space:nowrap" data-w="127.1"><span style="font-weight:700;color:#6f9479;font-family:Arial,Helvetica,sans-serif">VICTORIAN BEE RESILIENCE NETWORK</span></p>
-<p style="position:absolute;left:657.3px;top:259.3px;font-size:20.0px;white-space:nowrap" data-w="194.0"><span style="font-style:italic;color:#6f9479;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">“Clubs and recreational </span></p>
-<p style="position:absolute;left:641.6px;top:281.7px;font-size:20.0px;white-space:nowrap" data-w="223.3"><span style="font-style:italic;color:#6f9479;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">beekeepers may contribute </span></p>
-<p style="position:absolute;left:641.7px;top:304.1px;font-size:20.0px;white-space:nowrap" data-w="253.1"><span style="font-style:italic;color:#6f9479;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">observations, local knowledge, </span></p>
-<p style="position:absolute;left:641.4px;top:326.5px;font-size:20.0px;white-space:nowrap" data-w="236.9"><span style="font-style:italic;color:#6f9479;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">training support, apiary sites </span></p>
-<p style="position:absolute;left:641.7px;top:348.9px;font-size:20.0px;white-space:nowrap" data-w="258.2" data-j="1"><span style="font-style:italic;color:#6f9479;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">or carefully defined assessment </span></p>
-<p style="position:absolute;left:641.1px;top:371.3px;font-size:20.0px;white-space:nowrap" data-w="211.3"><span style="font-style:italic;color:#6f9479;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">work. Just as importantly, </span></p>
-<p style="position:absolute;left:641.6px;top:393.7px;font-size:20.0px;white-space:nowrap" data-w="252.4"><span style="font-style:italic;color:#6f9479;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">people may identify risks, gaps </span></p>
-<p style="position:absolute;left:641.7px;top:416.1px;font-size:20.0px;white-space:nowrap" data-w="247.1"><span style="font-style:italic;color:#6f9479;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">or reasons the proposal needs </span></p>
-<p style="position:absolute;left:641.4px;top:438.5px;font-size:20.0px;white-space:nowrap" data-w="92.2"><span style="font-style:italic;color:#6f9479;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">to change.”</span></p>
+<p style="position:absolute;left:641.0px;top:475.9px;font-size:15.2px;white-space:nowrap" data-w="260.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">support, apiary sites or carefully defined </span></p>
+<p style="position:absolute;left:641.0px;top:493.8px;font-size:15.2px;white-space:nowrap" data-w="260.4" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">assessment work. Just as importantly, </span></p>
+<p style="position:absolute;left:641.0px;top:511.7px;font-size:15.2px;white-space:nowrap" data-w="260.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">people may identify risks, gaps or reasons </span></p>
+<p style="position:absolute;left:641.0px;top:529.7px;font-size:15.2px;white-space:nowrap" data-w="184.3"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">the proposal needs to change.</span></p>
+<p style="position:absolute;left:663.7px;top:547.6px;font-size:15.2px;white-space:nowrap" data-w="237.8"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">VAA members will shortly be invited </span></p>
+<p style="position:absolute;left:641.0px;top:565.5px;font-size:15.2px;white-space:nowrap" data-w="260.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">to take part in the consultation. Please </span></p>
+<p style="position:absolute;left:641.0px;top:583.4px;font-size:15.2px;white-space:nowrap" data-w="260.4" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">watch your inbox and the VAA’s social </span></p>
+<p style="position:absolute;left:641.0px;top:601.3px;font-size:15.2px;white-space:nowrap" data-w="260.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">media channels for details. The invitation </span></p>
+<p style="position:absolute;left:641.0px;top:619.3px;font-size:15.2px;white-space:nowrap" data-w="260.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">is to help test and shape the proposal – </span></p>
+<p style="position:absolute;left:641.0px;top:637.2px;font-size:15.2px;white-space:nowrap" data-w="189.0"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">not to join a finished program.</span></p>
+<p style="position:absolute;left:663.7px;top:655.1px;font-size:15.2px;white-space:nowrap" data-w="237.8"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">The purpose of this phase is not to </span></p>
+<p style="position:absolute;left:641.0px;top:673.0px;font-size:15.2px;white-space:nowrap" data-w="260.4" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">persuade the industry that the answer </span></p>
+<p style="position:absolute;left:641.0px;top:690.9px;font-size:15.2px;white-space:nowrap" data-w="260.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">has already been decided. It is to find out </span></p>
+<p style="position:absolute;left:641.0px;top:708.9px;font-size:15.2px;white-space:nowrap" data-w="260.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">whether the VBRN would be useful, what </span></p>
+<p style="position:absolute;left:641.0px;top:726.8px;font-size:15.2px;white-space:nowrap" data-w="260.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">would make it credible and workable, and </span></p>
+<p style="position:absolute;left:641.0px;top:744.7px;font-size:15.2px;white-space:nowrap" data-w="260.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">whether the VAA should continue beyond </span></p>
+<p style="position:absolute;left:641.0px;top:762.6px;font-size:15.2px;white-space:nowrap" data-w="260.4" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Gate 1. If you see value in the idea, have </span></p>
+<p style="position:absolute;left:641.0px;top:780.5px;font-size:15.2px;white-space:nowrap" data-w="260.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">concerns about it or believe something </span></p>
+<p style="position:absolute;left:641.0px;top:798.5px;font-size:15.2px;white-space:nowrap" data-w="260.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">important is missing, we need to hear </span></p>
+<p style="position:absolute;left:641.0px;top:816.4px;font-size:15.2px;white-space:nowrap" data-w="58.9"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">from you.</span></p>
+<p style="position:absolute;left:770.2px;top:1261.5px;font-size:9.7px;white-space:nowrap" data-w="127.1"><span style="font-weight:700;color:#6f9479;font-family:Arial,Helvetica,sans-serif">VICTORIAN BEE RESILIENCE NETWORK</span></p>
+<p style="position:absolute;left:657.2px;top:259.3px;font-size:20.0px;white-space:nowrap" data-w="194.0"><span style="font-style:italic;color:#6f9479;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">“Clubs and recreational </span></p>
+<p style="position:absolute;left:641.6px;top:281.1px;font-size:20.0px;white-space:nowrap" data-w="223.3"><span style="font-style:italic;color:#6f9479;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">beekeepers may contribute </span></p>
+<p style="position:absolute;left:641.7px;top:302.9px;font-size:20.0px;white-space:nowrap" data-w="253.1"><span style="font-style:italic;color:#6f9479;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">observations, local knowledge, </span></p>
+<p style="position:absolute;left:641.4px;top:324.6px;font-size:20.0px;white-space:nowrap" data-w="236.9"><span style="font-style:italic;color:#6f9479;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">training support, apiary sites </span></p>
+<p style="position:absolute;left:641.7px;top:346.4px;font-size:20.0px;white-space:nowrap" data-w="258.2" data-j="1"><span style="font-style:italic;color:#6f9479;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">or carefully defined assessment </span></p>
+<p style="position:absolute;left:641.1px;top:368.1px;font-size:20.0px;white-space:nowrap" data-w="211.3"><span style="font-style:italic;color:#6f9479;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">work. Just as importantly, </span></p>
+<p style="position:absolute;left:641.6px;top:389.9px;font-size:20.0px;white-space:nowrap" data-w="252.4"><span style="font-style:italic;color:#6f9479;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">people may identify risks, gaps </span></p>
+<p style="position:absolute;left:641.7px;top:411.7px;font-size:20.0px;white-space:nowrap" data-w="247.1"><span style="font-style:italic;color:#6f9479;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">or reasons the proposal needs </span></p>
+<p style="position:absolute;left:641.4px;top:433.4px;font-size:20.0px;white-space:nowrap" data-w="92.2"><span style="font-style:italic;color:#6f9479;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">to change.”</span></p>
+<a class="zoom" href="../../assets/sep/big/p13_71.jpg" target="_blank" rel="noopener" data-src="assets/sep/big/p13_71.jpg" data-alt="Bees on comb" data-w="739" data-h="793" title="Click to enlarge" aria-label="Enlarge: Bees on comb" style="left:641.0px;top:855.8px;width:257.1px;height:275.8px"></a>
 </div></div></div>
 <script>
 /* Fit each line to the width it occupied in the PDF: stretch the spaces on
@@ -192,13 +206,18 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
     var ps=document.querySelectorAll('p[data-w]');
     for(var i=0;i<ps.length;i++){
       var p=ps[i];
-      p.style.wordSpacing=''; p.style.letterSpacing='';
+      p.style.wordSpacing=''; p.style.letterSpacing=''; p.style.transform='';
       var target=parseFloat(p.getAttribute('data-w')), nat=p.offsetWidth;
       if(!target||!nat) continue;
       var d=target-nat, stretch=p.hasAttribute('data-j');
       if(Math.abs(d)<0.5) continue;
       if(d>0&&!stretch) continue;
-      if(Math.abs(d)>target*0.18){ continue; } /* too far off to fix by squeezing -- leave it alone rather than crush the spacing */
+      if(Math.abs(d)>target*0.18){
+        /* too far off to fix by spacing: a condensed face set in a substitute.
+           Squeeze the whole line to its measure instead of letting it run off
+           the page (the folio's page number was being clipped on right-hand pages). */
+        if(d<0){ p.style.transformOrigin='0 0'; p.style.transform='scaleX('+(target/nat).toFixed(4)+')'; }
+        continue; }
       var txt=p.textContent||'', sp=(txt.match(/ /g)||[]).length;
       var fs=parseFloat(getComputedStyle(p).fontSize)||12;
       if(sp>0){
@@ -218,6 +237,37 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
   if(document.fonts&&document.fonts.ready) document.fonts.ready.then(fit);
   window.addEventListener('resize',fit);
 })();
+</script>
+
+<script>
+/* An index entry asks the parent reader to jump. Falls back to the href when
+   the page is opened on its own. */
+document.addEventListener('click',function(e){
+  var a=e.target && e.target.closest ? e.target.closest('a.ixlink') : null;
+  if(!a) return;
+  var m=/#\/page\/([^\/]+)\/(\d+)/.exec(a.getAttribute('href')||'');
+  if(!m) return;
+  if(window.parent && window.parent!==window){
+    e.preventDefault();
+    try{ window.parent.postMessage({abj:'page',iss:m[1],p:parseInt(m[2],10)},'*'); }
+    catch(err){ location.href=a.getAttribute('href'); }
+  }
+},true);
+</script>
+
+<script>
+/* A picture with a bigger version asks the parent reader to open its lightbox;
+   on its own the page just opens the picture. */
+document.addEventListener('click',function(e){
+  var a=e.target && e.target.closest ? e.target.closest('a.zoom') : null;
+  if(!a) return;
+  if(window.parent && window.parent!==window){
+    e.preventDefault();
+    var m={abj:'img',src:a.getAttribute('data-src'),alt:a.getAttribute('data-alt')||'',w:+a.getAttribute('data-w')||0,h:+a.getAttribute('data-h')||0};
+    var ans=a.getAttribute('data-answers'); if(ans){ try{ m.answers=JSON.parse(ans); }catch(err){} }
+    try{ window.parent.postMessage(m,'*'); }catch(err){ location.href=a.getAttribute('href'); }
+  }
+},true);
 </script>
 
 <script>

@@ -1,40 +1,365 @@
 [
- {"t": "Cover", "p": 1, "end": 1, "author": "", "tags": ["Cover", "photos"]},
- {"t": "Page 2", "p": 2, "end": 2, "author": "", "tags": ["Advertisements"]},
- {"t": "It's your industry. It's your VAA.", "p": 3, "end": 3, "author": "", "tags": ["VAA Advertisements"]},
- {"t": "Be part of the VAA movement", "p": 4, "end": 5, "author": "", "tags": ["VAA Advertisements", "VAA activities", "HiveMeet"]},
- {"t": "The Victorian Apiarists' Association", "p": 6, "end": 6, "author": "", "tags": ["Association"]},
- {"t": "2026 September index", "p": 7, "end": 7, "author": "", "tags": ["indexes"]},
- {"t": "President's Report", "p": 8, "end": 9, "author": "Lindsay Callaway", "tags": ["President's Reports", "Official Reports"]},
- {"t": "VAA Chemical Working Group", "p": 10, "end": 10, "author": "", "tags": ["VAA Chemical Working Group", "VAA activities", "Official Reports", "Varroa control: chemical", "miticides"]},
- {"t": "Bendigo Branch Report", "p": 11, "end": 11, "author": "Peta Dawe", "tags": ["Branches", "Bendigo Branch", "Official Reports"]},
- {"t": "Advertisement", "p": 12, "end": 12, "author": "", "tags": ["Advertisements"]},
- {"t": "VBRN: The Discussion Continues", "p": 13, "end": 13, "author": "Mark Bichan", "tags": ["VBRN", "VAA activities", "Biosecurity", "Varroa"]},
- {"t": "Resources Report: Central District", "p": 14, "end": 14, "author": "Matt Lorenz", "tags": ["Resource Subcommittee", "Flowering", "Beekeeper Reports", "Official Reports"]},
- {"t": "Find the Queen", "p": 15, "end": 15, "author": "", "tags": ["photos"]},
- {"t": "Almond Pollination 2026: A Changing Landscape", "p": 16, "end": 17, "author": "Lindsay Callaway, Jana Hamilton", "tags": ["pollination", "Industry"]},
- {"t": "Swanpool Beekeeping Field Day", "p": 18, "end": 18, "author": "", "tags": ["Events", "Advertisements"]},
- {"t": "A Bird's-Eye View of Almond Pollination", "p": 19, "end": 19, "author": "Jana Hamilton", "tags": ["pollination", "Beekeeper Reports"]},
- {"t": "AHBIC Chair Report", "p": 20, "end": 20, "author": "AHBIC", "tags": ["AHBIC", "Industry", "Official Reports"]},
- {"t": "New RD&E Plan for the Honeybee Industry", "p": 21, "end": 21, "author": "Agrifutures", "tags": ["Agrifutures", "Research", "Industry"]},
- {"t": "2026 Australian Colony Loss Survey", "p": 22, "end": 22, "author": "AHBIC", "tags": ["AHBIC", "COLOSS", "Research"]},
- {"t": "Don't Be Surprised by AFB This Spring", "p": 23, "end": 25, "author": "Shannon Holt", "tags": ["AFB", "Biosecurity", "AHBIC"]},
- {"t": "John Edmonds' August 2026 Diary", "p": 26, "end": 29, "skip": [28], "author": "John Edmonds", "tags": ["Beekeeper Reports", "Flowering"]},
- {"t": "Varroa Spread Map: August", "p": 28, "end": 28, "author": "Kris Fricke", "tags": ["Varroa", "Biosecurity", "Varroa Spread"]},
- {"t": "Advertisements", "p": 30, "end": 30, "author": "", "tags": ["Advertisements"]},
- {"t": "Advertisements", "p": 31, "end": 31, "author": "", "tags": ["Advertisements"]},
- {"t": "Replacing Sugar With Honey in Any Recipe", "p": 32, "end": 33, "author": "Kris Fricke", "tags": ["Honey", "Nutrition", "Recipes"]},
- {"t": "Planned Burning and Bushfire Risk", "p": 34, "end": 35, "author": "Karl Just", "tags": ["Flowering", "landcare", "Research", "Bushfire"]},
- {"t": "Advertisements", "p": 36, "end": 36, "author": "", "tags": ["Advertisements"]},
- {"t": "Spider Venom vs Varroa", "p": 37, "end": 37, "author": "Kris Fricke", "tags": ["Varroa", "Varroa Control", "Research"]},
- {"t": "Advertisements", "p": 38, "end": 38, "author": "", "tags": ["Advertisements"]},
- {"t": "Webcasts & Podcasts", "p": 39, "end": 39, "author": "", "tags": ["Media", "webcasts", "podcasts", "mediacasts"]},
- {"t": "Bee Bit: Bee Thermotolerance", "p": 40, "end": 40, "author": "", "tags": ["Bee Bits", "Research", "Bee biology"], "item": 1},
- {"t": "Bee Bit: Varroa Could Learn to Avoid Acaricides", "p": 40, "end": 40, "author": "", "tags": ["Bee Bits", "Research", "Varroa", "Varroa control: chemical"], "item": 2},
- {"t": "Bee Bit: Trapping Varroa in Drone Brood", "p": 40, "end": 40, "author": "", "tags": ["Bee Bits", "Research", "Varroa control: mechanical"], "item": 3},
- {"t": "Bee Bit: Nutrition and Division of Labor", "p": 40, "end": 40, "author": "", "tags": ["Bee Bits", "Research", "Nutrition", "Bee biology"], "item": 4},
- {"t": "Bee Bit: Dietary Supplements and Heat Stress", "p": 40, "end": 40, "author": "", "tags": ["Bee Bits", "Research", "Nutrition"], "item": 5},
- {"t": "Classifieds & Index of Advertisers", "p": 41, "end": 41, "author": "", "tags": ["Classifieds", "Advertisements"]},
- {"t": "Contacts", "p": 42, "end": 43, "author": "", "tags": []},
- {"t": "Advertisement", "p": 44, "end": 44, "author": "", "tags": ["Advertisements"]}
+ {
+  "t": "Cover",
+  "p": 1,
+  "end": 1,
+  "author": "",
+  "tags": [
+   "Cover",
+   "photos"
+  ]
+ },
+ {
+  "t": "Page 2",
+  "p": 2,
+  "end": 2,
+  "author": "",
+  "tags": [
+   "Advertisements"
+  ]
+ },
+ {
+  "t": "It's your industry. It's your VAA.",
+  "p": 3,
+  "end": 3,
+  "author": "",
+  "tags": [
+   "VAA Advertisements"
+  ]
+ },
+ {
+  "t": "Be part of the VAA movement",
+  "p": 4,
+  "end": 5,
+  "author": "",
+  "tags": [
+   "VAA Advertisements",
+   "VAA activities",
+   "HiveMeet"
+  ]
+ },
+ {
+  "t": "The Victorian Apiarists' Association",
+  "p": 6,
+  "end": 6,
+  "author": "",
+  "tags": [
+   "Association"
+  ]
+ },
+ {
+  "t": "2026 September index",
+  "p": 7,
+  "end": 7,
+  "author": "",
+  "tags": [
+   "indexes"
+  ]
+ },
+ {
+  "t": "President's Report",
+  "p": 8,
+  "end": 9,
+  "author": "Lindsay Callaway",
+  "tags": [
+   "President's Reports",
+   "Official Reports"
+  ]
+ },
+ {
+  "t": "VAA Chemical Working Group",
+  "p": 10,
+  "end": 10,
+  "author": "",
+  "tags": [
+   "VAA Chemical Working Group",
+   "VAA activities",
+   "Official Reports",
+   "Varroa control: chemical",
+   "miticides"
+  ]
+ },
+ {
+  "t": "Bendigo Branch Report",
+  "p": 11,
+  "end": 11,
+  "author": "Peta Dawe",
+  "tags": [
+   "Branches",
+   "Bendigo Branch",
+   "Official Reports"
+  ]
+ },
+ {
+  "t": "Advertisement",
+  "p": 12,
+  "end": 12,
+  "author": "",
+  "tags": [
+   "Advertisements"
+  ]
+ },
+ {
+  "t": "VBRN: The Discussion Continues",
+  "p": 13,
+  "end": 13,
+  "author": "Mark Bichan",
+  "tags": [
+   "VBRN",
+   "VAA activities",
+   "Biosecurity",
+   "Varroa"
+  ]
+ },
+ {
+  "t": "Resources Report: Central District",
+  "p": 14,
+  "end": 14,
+  "author": "Matt Lorenz",
+  "tags": [
+   "Resource Subcommittee",
+   "Flowering",
+   "Beekeeper Reports",
+   "Official Reports"
+  ]
+ },
+ {
+  "t": "Find the Queen",
+  "p": 15,
+  "end": 15,
+  "author": "",
+  "tags": [
+   "photos"
+  ]
+ },
+ {
+  "t": "Almond Pollination 2026: A Changing Landscape",
+  "p": 16,
+  "end": 17,
+  "author": "Lindsay Callaway, Jana Hamilton",
+  "tags": [
+   "pollination",
+   "Industry"
+  ]
+ },
+ {
+  "t": "Swanpool Beekeeping Field Day",
+  "p": 18,
+  "end": 18,
+  "author": "",
+  "tags": [
+   "Events",
+   "Advertisements"
+  ]
+ },
+ {
+  "t": "A Bird's-Eye View of Almond Pollination",
+  "p": 19,
+  "end": 19,
+  "author": "Jana Hamilton",
+  "tags": [
+   "pollination",
+   "Beekeeper Reports"
+  ]
+ },
+ {
+  "t": "AHBIC Chair Report",
+  "p": 20,
+  "end": 20,
+  "author": "AHBIC",
+  "tags": [
+   "AHBIC",
+   "Industry",
+   "Official Reports"
+  ]
+ },
+ {
+  "t": "New RD&E Plan for the Honeybee Industry",
+  "p": 21,
+  "end": 21,
+  "author": "Agrifutures",
+  "tags": [
+   "Agrifutures",
+   "Research",
+   "Industry"
+  ]
+ },
+ {
+  "t": "2026 Australian Colony Loss Survey",
+  "p": 22,
+  "end": 22,
+  "author": "AHBIC",
+  "tags": [
+   "AHBIC",
+   "COLOSS",
+   "Research"
+  ]
+ },
+ {
+  "t": "Don't Be Surprised by AFB This Spring",
+  "p": 23,
+  "end": 25,
+  "author": "Shannon Holt",
+  "tags": [
+   "AFB",
+   "Biosecurity",
+   "AHBIC"
+  ]
+ },
+ {
+  "t": "John Edmonds' August 2026 Diary",
+  "p": 26,
+  "end": 29,
+  "skip": [
+   28
+  ],
+  "author": "John Edmonds",
+  "tags": [
+   "Beekeeper Reports",
+   "Flowering"
+  ]
+ },
+ {
+  "t": "Varroa Spread Map: August",
+  "p": 28,
+  "end": 28,
+  "author": "Kris Fricke",
+  "tags": [
+   "Varroa",
+   "Biosecurity",
+   "Varroa Spread"
+  ]
+ },
+ {
+  "t": "Bee Bits",
+  "p": 29,
+  "end": 29,
+  "author": "",
+  "tags": [
+   "Bee Bits",
+   "Research",
+   "Bee biology",
+   "Varroa",
+   "Varroa control: chemical",
+   "Varroa control: mechanical",
+   "Nutrition"
+  ]
+ },
+ {
+  "t": "Advertisements",
+  "p": 30,
+  "end": 30,
+  "author": "",
+  "tags": [
+   "Advertisements"
+  ]
+ },
+ {
+  "t": "Advertisements",
+  "p": 31,
+  "end": 31,
+  "author": "",
+  "tags": [
+   "Advertisements"
+  ]
+ },
+ {
+  "t": "Replacing Sugar With Honey in Any Recipe",
+  "p": 32,
+  "end": 33,
+  "author": "Kris Fricke",
+  "tags": [
+   "Honey",
+   "Nutrition",
+   "Recipes"
+  ]
+ },
+ {
+  "t": "Planned Burning and Bushfire Risk",
+  "p": 34,
+  "end": 35,
+  "author": "Karl Just",
+  "tags": [
+   "Flowering",
+   "landcare",
+   "Research",
+   "Bushfire"
+  ]
+ },
+ {
+  "t": "Advertisements",
+  "p": 36,
+  "end": 36,
+  "author": "",
+  "tags": [
+   "Advertisements"
+  ]
+ },
+ {
+  "t": "Spider Venom vs Varroa",
+  "p": 37,
+  "end": 37,
+  "author": "Kris Fricke",
+  "tags": [
+   "Varroa",
+   "Varroa Control",
+   "Research"
+  ]
+ },
+ {
+  "t": "Advertisements",
+  "p": 38,
+  "end": 38,
+  "author": "",
+  "tags": [
+   "Advertisements"
+  ]
+ },
+ {
+  "t": "Advertisement",
+  "p": 39,
+  "end": 39,
+  "tags": [
+   "Advertisements"
+  ],
+  "author": ""
+ },
+ {
+  "t": "Contacts",
+  "p": 40,
+  "end": 41,
+  "author": "",
+  "tags": []
+ },
+ {
+  "t": "Classifieds & Index of Advertisers",
+  "p": 42,
+  "end": 42,
+  "author": "",
+  "tags": [
+   "Classifieds",
+   "Advertisements"
+  ]
+ },
+ {
+  "t": "Webcasts & Podcasts",
+  "p": 43,
+  "end": 43,
+  "author": "",
+  "tags": [
+   "Media",
+   "webcasts",
+   "podcasts",
+   "mediacasts"
+  ]
+ },
+ {
+  "t": "Advertisement",
+  "p": 44,
+  "end": 44,
+  "author": "",
+  "tags": [
+   "Advertisements"
+  ]
+ }
 ]

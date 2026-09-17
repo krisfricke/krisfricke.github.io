@@ -8,8 +8,18 @@ html,body{margin:0;padding:0;background:#fff}
 .page{position:relative;width:952px;height:1347px}
 .page img.bg{position:absolute;left:0;top:0;width:952px;height:1347px}
 p{margin:0;position:absolute}
-a{color:inherit}
+a{color:inherit;text-decoration:none}
 a:hover{text-decoration:underline}
+a.blk,a.blk:hover{text-decoration:none}
+a.blk:hover span{background:rgba(249,197,0,.22)}
+a.ixlink{text-decoration:none;color:inherit;cursor:pointer;border-bottom:1px solid rgba(11,74,114,.35)}
+a.ixlink:hover{color:#0b4a72;border-bottom-color:#0b4a72;background:rgba(249,197,0,.18);text-decoration:none}
+a.zoom{position:absolute;display:block;z-index:6;border-radius:3px;transition:box-shadow .12s}
+a.zoom:hover{box-shadow:0 0 0 2px rgba(249,197,0,.85) inset}
+a.zoom::after{content:"";position:absolute;right:6px;bottom:6px;width:26px;height:26px;border-radius:50%;background:rgba(22,19,14,.62) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f9c500' stroke-width='2.4' stroke-linecap='round'><circle cx='10.5' cy='10.5' r='6'/><path d='M15 15l5 5M8 10.5h5M10.5 8v5'/></svg>") center/16px no-repeat;opacity:0;transition:opacity .15s}
+a.zoom:hover::after{opacity:1}
+a.hot{position:absolute;display:block;z-index:4;border:none;border-radius:3px;transition:box-shadow .12s,background .12s}
+a.hot:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,0,.75) inset}
 a.adlink{position:absolute;display:block;z-index:5;text-decoration:none;border-radius:3px;transition:box-shadow .12s,background .12s}
 a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,0,.75) inset}
 @font-face{font-family:'Carlito';src:url('../../fonts/Carlito-Regular.ttf');font-weight:400;font-style:normal}
@@ -18,63 +28,123 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
 </style></head><body><div class="sheet"><div class="scaler"><div class="page">
 <img class="bg" src="pg007.jpg" alt="">
 <p style="position:absolute;left:525.6px;top:1311.0px;font-size:13.6px;white-space:nowrap" data-w="372.4"><span style="font-family:Arial,Helvetica,sans-serif">VAA AUSTRALIAN BEE JOURNAL  |  </span><span style="font-family:Arial,Helvetica,sans-serif">VOL. 109 No. 09 September 2026</span><span style="font-family:Arial,Helvetica,sans-serif">  |  7</span></p>
-<p style="position:absolute;left:67.6px;top:1084.1px;font-size:16.0px;white-space:nowrap" data-w="373.6" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">The Australian Bee Journal seeks to publish contributions </span></p>
-<p style="position:absolute;left:67.6px;top:1103.3px;font-size:16.0px;white-space:nowrap" data-w="250.3"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">dealing with all aspects of beekeeping.</span></p>
-<p style="position:absolute;left:67.6px;top:1122.3px;font-size:16.0px;white-space:nowrap" data-w="331.8"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Deadline for copy for the October 2026 journal is: </span></p>
-<p style="position:absolute;left:67.6px;top:1141.5px;font-size:16.0px;white-space:nowrap" data-w="261.5"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">10pm on Thursday 1st of October 2026.</span></p>
-<p style="position:absolute;left:67.6px;top:1160.2px;font-size:13.6px;white-space:nowrap" data-w="374.9" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Statements expressed by contributors do not necessarily reflect the </span></p>
-<p style="position:absolute;left:67.6px;top:1176.1px;font-size:13.6px;white-space:nowrap" data-w="187.1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">views of the VAA Inc or the editor.</span></p>
-<p style="position:absolute;left:67.6px;top:1192.7px;font-size:16.0px;white-space:nowrap" data-w="334.1"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Contact the Editor for ads, photos, classifieds and  </span></p>
-<p style="position:absolute;left:67.6px;top:1211.9px;font-size:16.0px;white-space:nowrap" data-w="128.5"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">article information:</span></p>
-<p style="position:absolute;left:67.6px;top:1231.3px;font-size:16.0px;white-space:nowrap" data-w="372.8" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">The Editor, Australian Bee Journal, P.O. Box 42 Newstead, </span></p>
-<p style="position:absolute;left:67.6px;top:1250.5px;font-size:16.0px;white-space:nowrap" data-w="330.5"><a href="mailto:abjeditor@vicbeekeepers.com.au" target="_blank" rel="noopener"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">VIC. 3462 Email: abjeditor@vicbeekeepers.com.au </span></a></p>
-<p style="position:absolute;left:503.7px;top:1086.1px;font-size:16.0px;white-space:nowrap" data-w="373.2"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">VAA AUSTRALIAN BEE JOURNAL ADVERTISING RATES</span></p>
-<p style="position:absolute;left:639.5px;top:1114.2px;font-size:13.6px;white-space:nowrap" data-w="48.7" data-j="1"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">12 MTH	</span></p>
-<p style="position:absolute;left:707.5px;top:1114.2px;font-size:13.6px;white-space:nowrap" data-w="41.8"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">6 MTH	</span></p>
-<p style="position:absolute;left:775.6px;top:1114.2px;font-size:13.6px;white-space:nowrap" data-w="41.8"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">3 MTH	</span></p>
-<p style="position:absolute;left:843.6px;top:1114.2px;font-size:13.6px;white-space:nowrap" data-w="38.5"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">1 MTH</span></p>
-<p style="position:absolute;left:503.4px;top:1139.8px;font-size:13.6px;white-space:nowrap" data-w="40.4"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Colour</span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">	</span></p>
-<p style="position:absolute;left:557.9px;top:1139.8px;font-size:13.6px;white-space:nowrap" data-w="53.5" data-j="1"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Full page</span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">	</span></p>
-<p style="position:absolute;left:639.5px;top:1139.9px;font-size:13.6px;white-space:nowrap" data-w="40.9"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">$3,000	</span></p>
-<p style="position:absolute;left:707.5px;top:1139.9px;font-size:13.6px;white-space:nowrap" data-w="40.9"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">$1,980	</span></p>
-<p style="position:absolute;left:775.6px;top:1139.9px;font-size:13.6px;white-space:nowrap" data-w="40.9"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">$1,185	</span></p>
-<p style="position:absolute;left:843.6px;top:1139.9px;font-size:13.6px;white-space:nowrap" data-w="27.6"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">$450</span></p>
-<p style="position:absolute;left:557.9px;top:1165.4px;font-size:13.6px;white-space:nowrap" data-w="62.6"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">(2-page ad	</span></p>
-<p style="position:absolute;left:639.5px;top:1165.4px;font-size:13.6px;white-space:nowrap" data-w="240.3"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">$4,800  Available for 12 Mth contract only)</span></p>
-<p style="position:absolute;left:557.9px;top:1191.0px;font-size:13.6px;white-space:nowrap" data-w="52.9" data-j="1"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">1/2 page</span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">	</span></p>
-<p style="position:absolute;left:639.5px;top:1191.1px;font-size:13.6px;white-space:nowrap" data-w="40.9"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">$2,100	</span></p>
-<p style="position:absolute;left:707.5px;top:1191.1px;font-size:13.6px;white-space:nowrap" data-w="44.0"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif"> $1,170	</span></p>
-<p style="position:absolute;left:775.5px;top:1191.1px;font-size:13.6px;white-space:nowrap" data-w="30.7"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">$660	</span></p>
-<p style="position:absolute;left:843.6px;top:1191.1px;font-size:13.6px;white-space:nowrap" data-w="27.6"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">$280</span></p>
-<p style="position:absolute;left:557.9px;top:1216.6px;font-size:13.6px;white-space:nowrap" data-w="52.9" data-j="1"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">1/4 page</span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">	</span></p>
-<p style="position:absolute;left:639.5px;top:1216.7px;font-size:13.6px;white-space:nowrap" data-w="40.9"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">$1,188	</span></p>
-<p style="position:absolute;left:707.5px;top:1216.7px;font-size:13.6px;white-space:nowrap" data-w="30.7"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">$690	</span></p>
-<p style="position:absolute;left:775.5px;top:1216.7px;font-size:13.6px;white-space:nowrap" data-w="30.7"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">$405	</span></p>
-<p style="position:absolute;left:843.6px;top:1216.7px;font-size:13.6px;white-space:nowrap" data-w="27.6"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">$200</span></p>
-<p style="position:absolute;left:557.9px;top:1242.2px;font-size:13.6px;white-space:nowrap" data-w="42.4" data-j="1"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">B/Card</span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">	</span></p>
-<p style="position:absolute;left:639.5px;top:1242.3px;font-size:13.6px;white-space:nowrap" data-w="30.7"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">$960	</span></p>
-<p style="position:absolute;left:707.5px;top:1242.3px;font-size:13.6px;white-space:nowrap" data-w="30.7"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">$600	</span></p>
-<p style="position:absolute;left:775.6px;top:1242.3px;font-size:13.6px;white-space:nowrap" data-w="30.7"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">$360	</span></p>
-<p style="position:absolute;left:843.6px;top:1242.3px;font-size:13.6px;white-space:nowrap" data-w="27.6"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">$150</span></p>
-<p style="position:absolute;left:508.2px;top:61.5px;font-size:41.6px;white-space:nowrap" data-w="182.8"><span style="font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">CONTENTS</span></p>
-<p style="position:absolute;left:502.8px;top:140.5px;font-size:15.2px;white-space:nowrap" data-w="219.2"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">** Will complete at end of Drafts **</span></p>
-<p style="position:absolute;left:508.6px;top:182.5px;font-size:16.0px;white-space:nowrap" data-w="361.5"><span style="font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">President’s Report ....................................................... 00</span></p>
-<p style="position:absolute;left:508.3px;top:233.7px;font-size:16.0px;white-space:nowrap" data-w="362.1"><span style="font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Contacts .................................................................32/33</span></p>
-<p style="position:absolute;left:508.3px;top:259.3px;font-size:16.0px;white-space:nowrap" data-w="362.2"><span style="font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Classifieds / Members / Index of Advertisers ............. 34</span></p>
-<p style="position:absolute;left:73.6px;top:61.9px;font-size:41.6px;white-space:nowrap" data-w="212.8"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Contributors</span></p>
-<p style="position:absolute;left:68.1px;top:140.9px;font-size:15.2px;white-space:nowrap" data-w="144.2"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">** Please Supply List **</span></p>
-<p style="position:absolute;left:74.0px;top:176.4px;font-size:15.2px;white-space:nowrap" data-w="41.2"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Editor </span></p>
-<p style="position:absolute;left:73.7px;top:196.1px;font-size:15.2px;white-space:nowrap" data-w="61.0"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Kris Fricke</span></p>
-<p style="position:absolute;left:74.0px;top:231.6px;font-size:15.2px;white-space:nowrap" data-w="93.3" data-j="1"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Editorial Team </span></p>
-<p style="position:absolute;left:74.1px;top:251.3px;font-size:15.2px;white-space:nowrap" data-w="19.1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">xxx</span></p>
-<p style="position:absolute;left:73.6px;top:378.8px;font-size:15.2px;white-space:nowrap" data-w="110.0"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Creative Director </span></p>
-<p style="position:absolute;left:73.7px;top:398.5px;font-size:15.2px;white-space:nowrap" data-w="194.2"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Barry Robinson (Activist Pty Ltd)</span></p>
-<p style="position:absolute;left:73.6px;top:434.0px;font-size:15.2px;white-space:nowrap" data-w="111.0"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Graphic Designer </span></p>
-<p style="position:absolute;left:73.7px;top:453.7px;font-size:15.2px;white-space:nowrap" data-w="196.5"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Natalie Leys (Jump Rope Design)</span></p>
-<p style="position:absolute;left:74.0px;top:489.2px;font-size:15.2px;white-space:nowrap" data-w="46.8" data-j="1"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Printer </span></p>
-<p style="position:absolute;left:74.1px;top:508.9px;font-size:15.2px;white-space:nowrap" data-w="19.1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">xxx</span></p>
-<p style="position:absolute;left:73.6px;top:544.4px;font-size:15.2px;white-space:nowrap" data-w="80.9" data-j="1"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Cover photo </span></p>
-<p style="position:absolute;left:74.1px;top:564.1px;font-size:15.2px;white-space:nowrap" data-w="19.1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">xxx</span></p>
+<p style="position:absolute;left:508.0px;top:737.7px;font-size:16.0px;white-space:nowrap" data-w="313.6"><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">The VAA Australian Bee Journal seeks to publish </span></p>
+<p style="position:absolute;left:508.0px;top:756.9px;font-size:16.0px;white-space:nowrap" data-w="340.7"><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">contributions dealing with all aspects of beekeeping.</span></p>
+<p style="position:absolute;left:508.0px;top:785.0px;font-size:16.0px;white-space:nowrap" data-w="323.8" data-j="1"><span style="font-weight:700;color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Deadline for copy is the last day of every month 
+</span></p>
+<p style="position:absolute;left:508.0px;top:804.2px;font-size:16.0px;white-space:nowrap" data-w="176.5"><span style="font-weight:700;color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">for the next month’s issue.</span></p>
+<p style="position:absolute;left:508.0px;top:831.9px;font-size:13.6px;white-space:nowrap" data-w="352.9"><span style="font-style:italic;color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Views expressed are the authors’ own and not necessarily those </span></p>
+<p style="position:absolute;left:508.0px;top:847.9px;font-size:13.6px;white-space:nowrap" data-w="364.7"><span style="font-style:italic;color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">of the Victorian Apiarists’ Association, the editor or other authors. </span></p>
+<p style="position:absolute;left:508.0px;top:863.9px;font-size:13.6px;white-space:nowrap" data-w="373.3" data-j="1"><span style="font-style:italic;color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">While every care is taken, the VAA gives no warranty as to accuracy </span></p>
+<p style="position:absolute;left:508.0px;top:879.9px;font-size:13.6px;white-space:nowrap" data-w="356.4"><span style="font-style:italic;color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">and accepts no liability for loss arising from reliance on anything </span></p>
+<p style="position:absolute;left:508.0px;top:895.9px;font-size:13.6px;white-space:nowrap" data-w="323.5"><span style="font-style:italic;color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">published here. Advertisements do not imply endorsement.</span></p>
+<p style="position:absolute;left:508.0px;top:921.5px;font-size:16.0px;white-space:nowrap" data-w="334.6" data-j="1"><span style="font-weight:700;color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Contact the editor for ads, photos, classifieds and 
+</span></p>
+<p style="position:absolute;left:508.0px;top:940.7px;font-size:16.0px;white-space:nowrap" data-w="132.1"><span style="font-weight:700;color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">article information:</span><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">
+</span></p>
+<p style="position:absolute;left:508.0px;top:960.1px;font-size:16.0px;white-space:nowrap" data-w="255.1"><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">The Editor, VAA Australian Bee Journal 
+</span></p>
+<p style="position:absolute;left:508.0px;top:979.3px;font-size:16.0px;white-space:nowrap" data-w="265.2"><a href="mailto:abjeditor@vicbeekeepers.com.au" target="_blank" rel="noopener"><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Email: abjeditor@vicbeekeepers.com.au </span></a></p>
+<p style="position:absolute;left:506.1px;top:1080.4px;font-size:16.0px;white-space:nowrap" data-w="373.2"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">VAA AUSTRALIAN BEE JOURNAL ADVERTISING RATES</span></p>
+<p style="position:absolute;left:618.9px;top:1108.5px;font-size:13.6px;white-space:nowrap" data-w="48.7" data-j="1"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">12 MTH	</span></p>
+<p style="position:absolute;left:693.8px;top:1108.5px;font-size:13.6px;white-space:nowrap" data-w="41.8"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">6 MTH	</span></p>
+<p style="position:absolute;left:761.9px;top:1108.5px;font-size:13.6px;white-space:nowrap" data-w="41.8"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">3 MTH	</span></p>
+<p style="position:absolute;left:829.9px;top:1108.5px;font-size:13.6px;white-space:nowrap" data-w="38.5"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">1 MTH</span></p>
+<p style="position:absolute;left:505.8px;top:1134.1px;font-size:13.6px;white-space:nowrap" data-w="53.5" data-j="1"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Full page</span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">	</span></p>
+<p style="position:absolute;left:626.7px;top:1134.2px;font-size:13.6px;white-space:nowrap" data-w="40.9"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">$3,000	</span></p>
+<p style="position:absolute;left:694.7px;top:1134.2px;font-size:13.6px;white-space:nowrap" data-w="40.9"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">$1,980	</span></p>
+<p style="position:absolute;left:762.8px;top:1134.2px;font-size:13.6px;white-space:nowrap" data-w="40.9"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">$1,185	</span></p>
+<p style="position:absolute;left:841.1px;top:1134.2px;font-size:13.6px;white-space:nowrap" data-w="27.6"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">$450</span></p>
+<p style="position:absolute;left:505.8px;top:1159.7px;font-size:13.6px;white-space:nowrap" data-w="369.8"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">(2-page advertisement $4,800 available for 12 MTH contract only)</span></p>
+<p style="position:absolute;left:505.8px;top:1185.3px;font-size:13.6px;white-space:nowrap" data-w="52.9" data-j="1"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">1/2 page</span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">	</span></p>
+<p style="position:absolute;left:626.7px;top:1185.4px;font-size:13.6px;white-space:nowrap" data-w="40.9"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">$2,100	</span></p>
+<p style="position:absolute;left:691.7px;top:1185.4px;font-size:13.6px;white-space:nowrap" data-w="44.0"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif"> $1,170	</span></p>
+<p style="position:absolute;left:773.1px;top:1185.4px;font-size:13.6px;white-space:nowrap" data-w="30.7"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">$660	</span></p>
+<p style="position:absolute;left:841.1px;top:1185.4px;font-size:13.6px;white-space:nowrap" data-w="27.6"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">$280</span></p>
+<p style="position:absolute;left:505.8px;top:1210.9px;font-size:13.6px;white-space:nowrap" data-w="52.9" data-j="1"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">1/4 page</span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">	</span></p>
+<p style="position:absolute;left:626.7px;top:1211.0px;font-size:13.6px;white-space:nowrap" data-w="40.9"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">$1,188	</span></p>
+<p style="position:absolute;left:705.0px;top:1211.0px;font-size:13.6px;white-space:nowrap" data-w="30.7"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">$690	</span></p>
+<p style="position:absolute;left:773.1px;top:1211.0px;font-size:13.6px;white-space:nowrap" data-w="30.7"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">$405	</span></p>
+<p style="position:absolute;left:841.1px;top:1211.0px;font-size:13.6px;white-space:nowrap" data-w="27.6"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">$200</span></p>
+<p style="position:absolute;left:505.8px;top:1236.5px;font-size:13.6px;white-space:nowrap" data-w="42.4" data-j="1"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">B/Card</span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">	</span></p>
+<p style="position:absolute;left:637.0px;top:1236.6px;font-size:13.6px;white-space:nowrap" data-w="30.7"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">$960	</span></p>
+<p style="position:absolute;left:705.0px;top:1236.6px;font-size:13.6px;white-space:nowrap" data-w="30.7"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">$600	</span></p>
+<p style="position:absolute;left:773.1px;top:1236.6px;font-size:13.6px;white-space:nowrap" data-w="30.7"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">$360	</span></p>
+<p style="position:absolute;left:841.1px;top:1236.6px;font-size:13.6px;white-space:nowrap" data-w="27.6"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">$150</span></p>
+<p style="position:absolute;left:508.2px;top:61.1px;font-size:41.6px;white-space:nowrap" data-w="161.9"><span style="font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Contents.</span></p>
+<p style="position:absolute;left:508.6px;top:147.0px;font-size:16.0px;white-space:nowrap" data-w="361.5"><a class="ixlink" href="../../#/page/sep/8" target="_top" title="Go to page 8"><span style="font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">President’s Report ......................................................... 8</span></a></p>
+<p style="position:absolute;left:508.3px;top:176.4px;font-size:16.0px;white-space:nowrap" data-w="361.7"><a class="ixlink" href="../../#/page/sep/10" target="_top" title="Go to page 10"><span style="font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">VAA Chemical Working Group..................................... 10</span></a></p>
+<p style="position:absolute;left:508.3px;top:205.9px;font-size:16.0px;white-space:nowrap" data-w="362.9"><a class="ixlink" href="../../#/page/sep/11" target="_top" title="Go to page 11"><span style="font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">VAA Bendigo Branch Report........................................ 11</span></a></p>
+<p style="position:absolute;left:508.3px;top:235.4px;font-size:16.0px;white-space:nowrap" data-w="362.1"><a class="ixlink" href="../../#/page/sep/13" target="_top" title="Go to page 13"><span style="font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">VAA Victorian Bee Resilience Network........................ 13</span></a></p>
+<p style="position:absolute;left:508.3px;top:264.8px;font-size:16.0px;white-space:nowrap" data-w="362.2"><a class="ixlink" href="../../#/page/sep/14" target="_top" title="Go to page 14"><span style="font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">VAA Resources Report................................................. 14</span></a></p>
+<p style="position:absolute;left:508.6px;top:294.3px;font-size:16.0px;white-space:nowrap" data-w="362.1"><a class="ixlink" href="../../#/page/sep/15" target="_top" title="Go to page 15"><span style="font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Find the Queen............................................................ 15</span></a></p>
+<p style="position:absolute;left:507.6px;top:323.8px;font-size:16.0px;white-space:nowrap" data-w="362.9"><a class="ixlink" href="../../#/page/sep/16" target="_top" title="Go to page 16"><span style="font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Almond Pollination 2026.............................................. 16</span></a></p>
+<p style="position:absolute;left:508.6px;top:353.2px;font-size:16.0px;white-space:nowrap" data-w="361.5"><a class="ixlink" href="../../#/page/sep/20" target="_top" title="Go to page 20"><span style="font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Industry Updates from the AHBIC Newsletter............. 20</span></a></p>
+<p style="position:absolute;left:507.8px;top:382.7px;font-size:16.0px;white-space:nowrap" data-w="362.7"><a class="ixlink" href="../../#/page/sep/26" target="_top" title="Go to page 26"><span style="font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">John Edmonds’ Monthly Diary..................................... 26</span></a></p>
+<p style="position:absolute;left:508.6px;top:412.2px;font-size:16.0px;white-space:nowrap" data-w="361.7"><a class="ixlink" href="../../#/page/sep/29" target="_top" title="Go to page 29"><span style="font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Bee Bits........................................................................ 29</span></a></p>
+<p style="position:absolute;left:508.6px;top:441.6px;font-size:16.0px;white-space:nowrap" data-w="362.3"><a class="ixlink" href="../../#/page/sep/32" target="_top" title="Go to page 32"><span style="font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Replacing Sugar with Honey........................................ 32</span></a></p>
+<p style="position:absolute;left:508.5px;top:500.6px;font-size:16.0px;white-space:nowrap" data-w="362.7"><a class="ixlink" href="../../#/page/sep/37" target="_top" title="Go to page 37"><span style="font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Spider Venom Vs Varroa.............................................. 37</span></a></p>
+<p style="position:absolute;left:508.3px;top:530.0px;font-size:16.0px;white-space:nowrap" data-w="363.0"><a class="ixlink" href="../../#/page/sep/40" target="_top" title="Go to page 40"><span style="font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Contacts .................................................................40/41</span></a></p>
+<p style="position:absolute;left:508.3px;top:559.5px;font-size:16.0px;white-space:nowrap" data-w="366.2"><a class="ixlink" href="../../#/page/sep/42" target="_top" title="Go to page 42"><span style="font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Classifieds / Honey Buyers........................................... 42
+</span></a></p>
+<p style="position:absolute;left:508.6px;top:586.7px;font-size:16.0px;white-space:nowrap" data-w="362.3"><a class="ixlink" href="../../#/page/sep/42" target="_top" title="Go to page 42"><span style="font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Index of Advertisers .................................................... 42</span></a></p>
+<p style="position:absolute;left:508.3px;top:616.2px;font-size:16.0px;white-space:nowrap" data-w="362.0"><a class="ixlink" href="../../#/page/sep/43" target="_top" title="Go to page 43"><span style="font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Webcasts / Podcasts.................................................... 43</span></a></p>
+<p style="position:absolute;left:73.8px;top:65.0px;font-size:28.8px;white-space:nowrap" data-w="159.4"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Contributors.</span></p>
+<p style="position:absolute;left:74.0px;top:115.7px;font-size:16.0px;white-space:nowrap" data-w="43.4"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Editor
+</span></p>
+<p style="position:absolute;left:73.8px;top:136.3px;font-size:16.0px;white-space:nowrap" data-w="64.2"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Kris Fricke</span></p>
+<p style="position:absolute;left:74.0px;top:166.9px;font-size:16.0px;white-space:nowrap" data-w="98.3"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Editorial Team
+</span></p>
+<p style="position:absolute;left:73.8px;top:187.5px;font-size:16.0px;white-space:nowrap" data-w="153.5"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Lindsay Callaway (Chair)</span></p>
+<p style="position:absolute;left:73.8px;top:206.7px;font-size:16.0px;white-space:nowrap" data-w="80.3"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Mark Bichan</span></p>
+<p style="position:absolute;left:72.9px;top:225.9px;font-size:16.0px;white-space:nowrap" data-w="81.0"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Tino Corsetti</span></p>
+<p style="position:absolute;left:73.6px;top:245.1px;font-size:16.0px;white-space:nowrap" data-w="185.3" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Olivia Ducommun-Dit-Verron</span></p>
+<p style="position:absolute;left:72.9px;top:264.3px;font-size:16.0px;white-space:nowrap" data-w="110.1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Andrew Wootton</span></p>
+<p style="position:absolute;left:73.8px;top:294.9px;font-size:16.0px;white-space:nowrap" data-w="115.8" data-j="1"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Creative Director
+</span></p>
+<p style="position:absolute;left:73.8px;top:315.5px;font-size:16.0px;white-space:nowrap" data-w="104.9"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Barry Robinson,
+</span></p>
+<p style="position:absolute;left:72.9px;top:334.7px;font-size:16.0px;white-space:nowrap" data-w="93.8"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Activist Pty Ltd</span></p>
+<p style="position:absolute;left:73.6px;top:365.3px;font-size:16.0px;white-space:nowrap" data-w="116.8"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Graphic Designer
+</span></p>
+<p style="position:absolute;left:72.9px;top:385.9px;font-size:16.0px;white-space:nowrap" data-w="124.9"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Jump Rope Design,
+</span></p>
+<p style="position:absolute;left:73.5px;top:405.1px;font-size:16.0px;white-space:nowrap" data-w="165.9"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">(jumpropedesign.com.au)</span></p>
+<p style="position:absolute;left:74.0px;top:435.7px;font-size:16.0px;white-space:nowrap" data-w="49.3"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Printer
+</span></p>
+<p style="position:absolute;left:73.6px;top:456.3px;font-size:16.0px;white-space:nowrap" data-w="124.1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Sunnyland, Mildura</span></p>
+<p style="position:absolute;left:73.8px;top:486.9px;font-size:16.0px;white-space:nowrap" data-w="85.2"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Cover photo
+</span></p>
+<p style="position:absolute;left:73.4px;top:507.5px;font-size:16.0px;white-space:nowrap" data-w="281.0" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Gareth Maunder – Commercial Beekeeper, 
+</span></p>
+<p style="position:absolute;left:74.0px;top:526.7px;font-size:16.0px;white-space:nowrap" data-w="181.2"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">by Liam Lynch Photography,
+</span></p>
+<p style="position:absolute;left:73.5px;top:545.9px;font-size:16.0px;white-space:nowrap" data-w="203.1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">(liamlynchphotography.com.au)</span></p>
+<p style="position:absolute;left:73.2px;top:764.8px;font-size:16.0px;white-space:nowrap" data-w="306.1" data-j="1"><span style="font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">For beekeepers wanting further information on </span></p>
+<p style="position:absolute;left:73.4px;top:784.0px;font-size:16.0px;white-space:nowrap" data-w="309.6" data-j="1"><span style="font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">the treatment options discussed in this edition, </span></p>
+<p style="position:absolute;left:73.3px;top:803.2px;font-size:16.0px;white-space:nowrap" data-w="296.3"><span style="font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">manufacturer guidance is available for both 
+</span></p>
+<p style="position:absolute;left:72.7px;top:822.4px;font-size:16.0px;white-space:nowrap" data-w="168.3"><span style="font-style:italic;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Formic Pro </span><span style="font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">and </span><span style="font-style:italic;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Apiguard</span><span style="font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">.</span></p>
+<p style="position:absolute;left:72.6px;top:1143.4px;font-size:13.6px;white-space:nowrap" data-w="331.3"><span style="font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">These links provide additional manufacturer information on </span></p>
+<p style="position:absolute;left:73.3px;top:1159.4px;font-size:13.6px;white-space:nowrap" data-w="363.1" data-j="1"><span style="font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">reduced-dose treatment options. They are provided as a practical </span></p>
+<p style="position:absolute;left:73.3px;top:1175.4px;font-size:13.6px;white-space:nowrap" data-w="324.2"><span style="font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">reference to accompany the VAA Chemical Working Group </span></p>
+<p style="position:absolute;left:73.0px;top:1191.4px;font-size:13.6px;white-space:nowrap" data-w="355.4"><span style="font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">article on page 10. Australian product labels may differ from the </span></p>
+<p style="position:absolute;left:73.0px;top:1207.4px;font-size:13.6px;white-space:nowrap" data-w="276.7"><span style="font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">application methods described in these resources.</span></p>
+<p style="position:absolute;left:229.2px;top:1009.9px;font-size:19.2px;white-space:nowrap" data-w="85.8"><span style="font-weight:700;font-style:italic;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">APIGUARD</span></p>
+<p style="position:absolute;left:122.1px;top:1037.1px;font-size:16.0px;white-space:nowrap" data-w="196.8"><span style="font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Scan the QR code for Vita Bee </span></p>
+<p style="position:absolute;left:98.7px;top:1056.3px;font-size:16.0px;white-space:nowrap" data-w="223.8" data-j="1"><span style="font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Health’s information on </span><span style="font-style:italic;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Apiguard</span><span style="font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">, </span></p>
+<p style="position:absolute;left:97.9px;top:1075.5px;font-size:16.0px;white-space:nowrap" data-w="221.4"><span style="font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">including information on reduced-</span></p>
+<p style="position:absolute;left:207.9px;top:1094.7px;font-size:16.0px;white-space:nowrap" data-w="110.4"><span style="font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">dose application.</span></p>
+<p style="position:absolute;left:205.6px;top:869.3px;font-size:19.2px;white-space:nowrap" data-w="102.2"><span style="font-weight:700;font-style:italic;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">FORMIC PRO</span></p>
+<p style="position:absolute;left:205.8px;top:896.5px;font-size:16.0px;white-space:nowrap" data-w="219.2"><span style="font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Scan the QR code for NOD Apiary </span></p>
+<p style="position:absolute;left:205.9px;top:915.7px;font-size:16.0px;white-space:nowrap" data-w="233.2" data-j="1"><span style="font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Products’ information on </span><span style="font-style:italic;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Formic Pro</span><span style="font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif"> </span></p>
+<p style="position:absolute;left:205.9px;top:934.9px;font-size:16.0px;white-space:nowrap" data-w="217.0"><span style="font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">application, including single-strip </span></p>
+<p style="position:absolute;left:206.1px;top:954.1px;font-size:16.0px;white-space:nowrap" data-w="122.3"><span style="font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">treatment options.</span></p>
+<p style="position:absolute;left:73.2px;top:735.4px;font-size:19.2px;white-space:nowrap" data-w="248.8"><span style="font-weight:700;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Further treatment information.</span></p>
+<p style="position:absolute;left:508.6px;top:471.1px;font-size:16.0px;white-space:nowrap" data-w="361.9"><a class="ixlink" href="../../#/page/sep/34" target="_top" title="Go to page 34"><span style="font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Planned Burning and Bushfire Risk ............................. 34</span></a></p>
+<p style="position:absolute;left:72.5px;top:665.1px;font-size:41.6px;white-space:nowrap" data-w="186.4"><span style="font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Stop Press:</span></p>
+<a class="hot" href="https://nodglobal.com/formic-pro-application/" target="_blank" rel="noopener" title="nodglobal.com/formic-pro-application" aria-label="Link: nodglobal.com/formic-pro-application" style="left:73.8px;top:865.6px;width:114.2px;height:114.2px"></a>
+<a class="hot" href="https://www.vita-europe.com/beehealth/wp-content/uploads/apiguard-faq.pdf" target="_blank" rel="noopener" title="vita-europe.com/beehealth/wp-content/uploads/apiguard-faq.pdf" aria-label="Link: vita-europe.com/beehealth/wp-content/uploads/apiguard-faq.pdf" style="left:333.6px;top:1006.2px;width:114.2px;height:114.1px"></a>
 </div></div></div>
 <script>
 /* Fit each line to the width it occupied in the PDF: stretch the spaces on
@@ -88,13 +158,18 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
     var ps=document.querySelectorAll('p[data-w]');
     for(var i=0;i<ps.length;i++){
       var p=ps[i];
-      p.style.wordSpacing=''; p.style.letterSpacing='';
+      p.style.wordSpacing=''; p.style.letterSpacing=''; p.style.transform='';
       var target=parseFloat(p.getAttribute('data-w')), nat=p.offsetWidth;
       if(!target||!nat) continue;
       var d=target-nat, stretch=p.hasAttribute('data-j');
       if(Math.abs(d)<0.5) continue;
       if(d>0&&!stretch) continue;
-      if(Math.abs(d)>target*0.18){ continue; } /* too far off to fix by squeezing -- leave it alone rather than crush the spacing */
+      if(Math.abs(d)>target*0.18){
+        /* too far off to fix by spacing: a condensed face set in a substitute.
+           Squeeze the whole line to its measure instead of letting it run off
+           the page (the folio's page number was being clipped on right-hand pages). */
+        if(d<0){ p.style.transformOrigin='0 0'; p.style.transform='scaleX('+(target/nat).toFixed(4)+')'; }
+        continue; }
       var txt=p.textContent||'', sp=(txt.match(/ /g)||[]).length;
       var fs=parseFloat(getComputedStyle(p).fontSize)||12;
       if(sp>0){
@@ -114,6 +189,37 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
   if(document.fonts&&document.fonts.ready) document.fonts.ready.then(fit);
   window.addEventListener('resize',fit);
 })();
+</script>
+
+<script>
+/* An index entry asks the parent reader to jump. Falls back to the href when
+   the page is opened on its own. */
+document.addEventListener('click',function(e){
+  var a=e.target && e.target.closest ? e.target.closest('a.ixlink') : null;
+  if(!a) return;
+  var m=/#\/page\/([^\/]+)\/(\d+)/.exec(a.getAttribute('href')||'');
+  if(!m) return;
+  if(window.parent && window.parent!==window){
+    e.preventDefault();
+    try{ window.parent.postMessage({abj:'page',iss:m[1],p:parseInt(m[2],10)},'*'); }
+    catch(err){ location.href=a.getAttribute('href'); }
+  }
+},true);
+</script>
+
+<script>
+/* A picture with a bigger version asks the parent reader to open its lightbox;
+   on its own the page just opens the picture. */
+document.addEventListener('click',function(e){
+  var a=e.target && e.target.closest ? e.target.closest('a.zoom') : null;
+  if(!a) return;
+  if(window.parent && window.parent!==window){
+    e.preventDefault();
+    var m={abj:'img',src:a.getAttribute('data-src'),alt:a.getAttribute('data-alt')||'',w:+a.getAttribute('data-w')||0,h:+a.getAttribute('data-h')||0};
+    var ans=a.getAttribute('data-answers'); if(ans){ try{ m.answers=JSON.parse(ans); }catch(err){} }
+    try{ window.parent.postMessage(m,'*'); }catch(err){ location.href=a.getAttribute('href'); }
+  }
+},true);
 </script>
 
 <script>

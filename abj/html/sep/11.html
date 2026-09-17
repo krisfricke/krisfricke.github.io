@@ -8,8 +8,18 @@ html,body{margin:0;padding:0;background:#fff}
 .page{position:relative;width:952px;height:1347px}
 .page img.bg{position:absolute;left:0;top:0;width:952px;height:1347px}
 p{margin:0;position:absolute}
-a{color:inherit}
+a{color:inherit;text-decoration:none}
 a:hover{text-decoration:underline}
+a.blk,a.blk:hover{text-decoration:none}
+a.blk:hover span{background:rgba(249,197,0,.22)}
+a.ixlink{text-decoration:none;color:inherit;cursor:pointer;border-bottom:1px solid rgba(11,74,114,.35)}
+a.ixlink:hover{color:#0b4a72;border-bottom-color:#0b4a72;background:rgba(249,197,0,.18);text-decoration:none}
+a.zoom{position:absolute;display:block;z-index:6;border-radius:3px;transition:box-shadow .12s}
+a.zoom:hover{box-shadow:0 0 0 2px rgba(249,197,0,.85) inset}
+a.zoom::after{content:"";position:absolute;right:6px;bottom:6px;width:26px;height:26px;border-radius:50%;background:rgba(22,19,14,.62) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f9c500' stroke-width='2.4' stroke-linecap='round'><circle cx='10.5' cy='10.5' r='6'/><path d='M15 15l5 5M8 10.5h5M10.5 8v5'/></svg>") center/16px no-repeat;opacity:0;transition:opacity .15s}
+a.zoom:hover::after{opacity:1}
+a.hot{position:absolute;display:block;z-index:4;border:none;border-radius:3px;transition:box-shadow .12s,background .12s}
+a.hot:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,0,.75) inset}
 a.adlink{position:absolute;display:block;z-index:5;text-decoration:none;border-radius:3px;transition:box-shadow .12s,background .12s}
 a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,0,.75) inset}
 @font-face{font-family:'Carlito';src:url('../../fonts/Carlito-Regular.ttf');font-weight:400;font-style:normal}
@@ -33,9 +43,11 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
 <p style="position:absolute;left:494.4px;top:445.1px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">canteen run by our dedicated volunteers. We continue to support </span></p>
 <p style="position:absolute;left:494.4px;top:463.0px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">the Harcourt community after the devastating fires. We are so </span></p>
 <p style="position:absolute;left:494.4px;top:480.9px;font-size:15.2px;white-space:nowrap" data-w="346.4"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">lucky that the recreation reserve was mostly untouched.</span></p>
-<p style="position:absolute;left:494.4px;top:520.3px;font-size:25.6px;white-space:nowrap" data-w="374.3" data-j="1"><span style="font-weight:700;font-style:italic;color:#6f9479;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Don’t forget to put it in your diary  </span></p>
-<p style="position:absolute;left:494.4px;top:549.1px;font-size:25.6px;white-space:nowrap" data-w="371.7" data-j="1"><span style="font-weight:700;font-style:italic;color:#6f9479;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">annual Field Day 11 October 2026  </span></p>
-<p style="position:absolute;left:494.4px;top:577.9px;font-size:25.6px;white-space:nowrap" data-w="359.9"><span style="font-weight:700;font-style:italic;color:#6f9479;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">at Harcourt Recreational Reserve.</span></p>
+<p style="position:absolute;left:494.4px;top:520.3px;font-size:25.6px;white-space:nowrap" data-w="374.3" data-j="1"><a class="blk" href="https://vicbeekeepers.com.au/BendigoBranch" target="_blank" rel="noopener"><span style="font-weight:700;font-style:italic;color:#6f9479;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Don’t forget to put it in your diary 
+</span></a></p>
+<p style="position:absolute;left:494.4px;top:549.1px;font-size:25.6px;white-space:nowrap" data-w="371.7" data-j="1"><a class="blk" href="https://vicbeekeepers.com.au/BendigoBranch" target="_blank" rel="noopener"><span style="font-weight:700;font-style:italic;color:#6f9479;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">annual Field Day 11 October 2026 
+</span></a></p>
+<p style="position:absolute;left:494.4px;top:577.9px;font-size:25.6px;white-space:nowrap" data-w="359.9"><a class="blk" href="https://vicbeekeepers.com.au/BendigoBranch" target="_blank" rel="noopener"><span style="font-weight:700;font-style:italic;color:#6f9479;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">at Harcourt Recreational Reserve.</span></a></p>
 <p style="position:absolute;left:77.1px;top:219.4px;font-size:16.8px;white-space:nowrap" data-w="384.8"><span style="color:#6f9479;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Despite the arrival of winter in Bendigo, our dedicated </span></p>
 <p style="position:absolute;left:54.4px;top:239.4px;font-size:16.8px;white-space:nowrap" data-w="407.4" data-j="1"><span style="color:#6f9479;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">members still enjoy catching up at our regular monthly </span></p>
 <p style="position:absolute;left:54.4px;top:259.4px;font-size:16.8px;white-space:nowrap" data-w="407.4" data-j="1"><span style="color:#6f9479;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">information evenings. Our August meeting was well </span></p>
@@ -44,30 +56,22 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
 <p style="position:absolute;left:54.4px;top:319.4px;font-size:16.8px;white-space:nowrap" data-w="407.5" data-j="1"><span style="color:#6f9479;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">the International Youth Beekeepers, Elan Myer. Elan and two </span></p>
 <p style="position:absolute;left:54.4px;top:339.4px;font-size:16.8px;white-space:nowrap" data-w="407.4" data-j="1"><span style="color:#6f9479;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">other Australians recipients travelled to Northern Ireland </span></p>
 <p style="position:absolute;left:54.4px;top:359.4px;font-size:16.8px;white-space:nowrap" data-w="407.4" data-j="1"><span style="color:#6f9479;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">for the conference. Elan gave an excellent presentation on </span></p>
-<p style="position:absolute;left:54.4px;top:379.3px;font-size:16.8px;white-space:nowrap" data-w="407.4" data-j="1"><span style="color:#6f9479;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">all the activities they covered whilst in Northern Ireland as </span></p>
-<p style="position:absolute;left:54.4px;top:399.3px;font-size:16.8px;white-space:nowrap" data-w="322.0"><span style="color:#6f9479;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">well as in other countries after the conference. </span></p>
+<p style="position:absolute;left:54.4px;top:379.4px;font-size:16.8px;white-space:nowrap" data-w="407.4" data-j="1"><span style="color:#6f9479;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">all the activities they covered whilst in Northern Ireland as </span></p>
+<p style="position:absolute;left:54.4px;top:399.4px;font-size:16.8px;white-space:nowrap" data-w="322.0"><span style="color:#6f9479;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">well as in other countries after the conference. </span></p>
 <p style="position:absolute;left:77.1px;top:433.7px;font-size:15.2px;white-space:nowrap" data-w="384.4"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">One of the Bendigo Branch members, Scott Wright won the </span></p>
 <p style="position:absolute;left:54.4px;top:451.6px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">“best value added product” at the most recent VAA conference, </span></p>
 <p style="position:absolute;left:54.4px;top:469.5px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">with his chilli-infused honey. Scott brought it and his creamed </span></p>
 <p style="position:absolute;left:54.4px;top:487.5px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">honey to the Bendigo Branch August meeting for our members </span></p>
-<p style="position:absolute;left:54.4px;top:505.4px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">to taste. Everyone really enjoyed his creamed honey, so next year </span></p>
-<p style="position:absolute;left:54.4px;top:523.3px;font-size:15.2px;white-space:nowrap" data-w="234.5"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Richard Collins may have a competitor.</span></p>
-<p style="position:absolute;left:77.1px;top:541.2px;font-size:15.2px;white-space:nowrap" data-w="384.4"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Bendigo has a member on the Resources Committee, Jake </span></p>
-<p style="position:absolute;left:54.4px;top:559.2px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Nixon, and he provided a brief update on what is happening in </span></p>
-<p style="position:absolute;left:54.4px;top:577.1px;font-size:15.2px;white-space:nowrap" data-w="98.0"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">that committee.</span></p>
+<p style="position:absolute;left:54.4px;top:505.4px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><a class="blk" href="https://vicbeekeepers.com.au/BendigoBranch" target="_blank" rel="noopener"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">to taste. Everyone really enjoyed his creamed honey, so next year </span></a></p>
+<p style="position:absolute;left:54.4px;top:523.3px;font-size:15.2px;white-space:nowrap" data-w="234.5"><a class="blk" href="https://vicbeekeepers.com.au/BendigoBranch" target="_blank" rel="noopener"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Richard Collins may have a competitor.</span></a></p>
+<p style="position:absolute;left:77.1px;top:541.2px;font-size:15.2px;white-space:nowrap" data-w="384.4"><a class="blk" href="https://vicbeekeepers.com.au/BendigoBranch" target="_blank" rel="noopener"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Bendigo has a member on the Resources Subcommittee, 
+</span></a></p>
+<p style="position:absolute;left:54.4px;top:559.1px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><a class="blk" href="https://vicbeekeepers.com.au/BendigoBranch" target="_blank" rel="noopener"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Jake Nixon, and he provided a brief update on what is happening 
+</span></a></p>
+<p style="position:absolute;left:54.4px;top:577.1px;font-size:15.2px;white-space:nowrap" data-w="112.7"><a class="blk" href="https://vicbeekeepers.com.au/BendigoBranch" target="_blank" rel="noopener"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">in that committee.</span></a></p>
 <p style="position:absolute;left:54.4px;top:38.7px;font-size:54.4px;white-space:nowrap" data-w="632.6" data-j="1"><span style="font-weight:700;color:#6f9479;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">VAA Bendigo Branch Report </span></p>
 <p style="position:absolute;left:54.4px;top:100.6px;font-size:38.4px;white-space:nowrap" data-w="192.7"><span style="color:#6f9479;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">August 2026</span></p>
 <p style="position:absolute;left:54.4px;top:149.5px;font-size:19.2px;white-space:nowrap" data-w="110.3"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">By Peta Dawe </span></p>
-<p style="position:absolute;left:84.2px;top:919.9px;font-size:62.3px;white-space:nowrap" data-w="784.5" data-j="1"><span style="font-weight:700;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Bendigo Branch VAA Field Day</span></p>
-<p style="position:absolute;left:84.2px;top:919.9px;font-size:62.3px;white-space:nowrap" data-w="784.5"><span style="font-weight:700;color:#fefefe;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Bendigo Branch VAA Field Day</span></p>
-<p style="position:absolute;left:174.5px;top:977.7px;font-size:54.8px;white-space:nowrap" data-w="603.9"><span style="font-weight:700;color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Sunday October 11th 2026</span></p>
-<p style="position:absolute;left:244.4px;top:1046.0px;font-size:37.7px;white-space:nowrap" data-w="449.8"><span style="font-weight:700;color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Harcourt Recreation Reserve</span></p>
-<p style="position:absolute;left:237.7px;top:1152.7px;font-size:33.6px;white-space:nowrap" data-w="477.5"><span style="font-weight:700;color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Gate price Adults $20 Concession $10</span></p>
-<p style="position:absolute;left:321.7px;top:1084.3px;font-size:33.1px;white-space:nowrap" data-w="309.5"><span style="font-weight:700;color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Earlybird price Adult $15</span></p>
-<p style="position:absolute;left:329.3px;top:1116.3px;font-size:33.1px;white-space:nowrap" data-w="294.4"><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">available until Sept 30th</span></p>
-<p style="position:absolute;left:289.8px;top:1190.7px;font-size:34.8px;white-space:nowrap" data-w="373.1"><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Presentations   Kids Activities</span></p>
-<p style="position:absolute;left:159.2px;top:1239.2px;font-size:25.2px;white-space:nowrap" data-w="634.4"><a href="mailto:bbvaasecretary@gmail.com" target="_blank" rel="noopener"><span style="font-weight:700;color:#ffffff;font-family:Arial,Helvetica,sans-serif">Enquiries - Peta Dawe    bbvaasecretary@gmail.com</span></a></p>
-<p style="position:absolute;left:76.8px;top:698.2px;font-size:50.0px;white-space:nowrap" data-w="202.5"><span style="font-weight:700;color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Kids free! </span></p>
 <a class="adlink" href="../../out/bendigo-field-day/index.html" target="_blank" rel="noopener sponsored" style="left:4.70%;top:38.00%;width:90.60%;height:48.00%" title="Visit Bendigo Branch Field Day" aria-label="Advertisement: Bendigo Branch Field Day"></a>
 </div></div></div>
 <script>
@@ -82,13 +86,18 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
     var ps=document.querySelectorAll('p[data-w]');
     for(var i=0;i<ps.length;i++){
       var p=ps[i];
-      p.style.wordSpacing=''; p.style.letterSpacing='';
+      p.style.wordSpacing=''; p.style.letterSpacing=''; p.style.transform='';
       var target=parseFloat(p.getAttribute('data-w')), nat=p.offsetWidth;
       if(!target||!nat) continue;
       var d=target-nat, stretch=p.hasAttribute('data-j');
       if(Math.abs(d)<0.5) continue;
       if(d>0&&!stretch) continue;
-      if(Math.abs(d)>target*0.18){ continue; } /* too far off to fix by squeezing -- leave it alone rather than crush the spacing */
+      if(Math.abs(d)>target*0.18){
+        /* too far off to fix by spacing: a condensed face set in a substitute.
+           Squeeze the whole line to its measure instead of letting it run off
+           the page (the folio's page number was being clipped on right-hand pages). */
+        if(d<0){ p.style.transformOrigin='0 0'; p.style.transform='scaleX('+(target/nat).toFixed(4)+')'; }
+        continue; }
       var txt=p.textContent||'', sp=(txt.match(/ /g)||[]).length;
       var fs=parseFloat(getComputedStyle(p).fontSize)||12;
       if(sp>0){
@@ -108,6 +117,37 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
   if(document.fonts&&document.fonts.ready) document.fonts.ready.then(fit);
   window.addEventListener('resize',fit);
 })();
+</script>
+
+<script>
+/* An index entry asks the parent reader to jump. Falls back to the href when
+   the page is opened on its own. */
+document.addEventListener('click',function(e){
+  var a=e.target && e.target.closest ? e.target.closest('a.ixlink') : null;
+  if(!a) return;
+  var m=/#\/page\/([^\/]+)\/(\d+)/.exec(a.getAttribute('href')||'');
+  if(!m) return;
+  if(window.parent && window.parent!==window){
+    e.preventDefault();
+    try{ window.parent.postMessage({abj:'page',iss:m[1],p:parseInt(m[2],10)},'*'); }
+    catch(err){ location.href=a.getAttribute('href'); }
+  }
+},true);
+</script>
+
+<script>
+/* A picture with a bigger version asks the parent reader to open its lightbox;
+   on its own the page just opens the picture. */
+document.addEventListener('click',function(e){
+  var a=e.target && e.target.closest ? e.target.closest('a.zoom') : null;
+  if(!a) return;
+  if(window.parent && window.parent!==window){
+    e.preventDefault();
+    var m={abj:'img',src:a.getAttribute('data-src'),alt:a.getAttribute('data-alt')||'',w:+a.getAttribute('data-w')||0,h:+a.getAttribute('data-h')||0};
+    var ans=a.getAttribute('data-answers'); if(ans){ try{ m.answers=JSON.parse(ans); }catch(err){} }
+    try{ window.parent.postMessage(m,'*'); }catch(err){ location.href=a.getAttribute('href'); }
+  }
+},true);
 </script>
 
 <script>

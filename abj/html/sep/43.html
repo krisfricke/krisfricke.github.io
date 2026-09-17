@@ -8,8 +8,18 @@ html,body{margin:0;padding:0;background:#fff}
 .page{position:relative;width:952px;height:1347px}
 .page img.bg{position:absolute;left:0;top:0;width:952px;height:1347px}
 p{margin:0;position:absolute}
-a{color:inherit}
+a{color:inherit;text-decoration:none}
 a:hover{text-decoration:underline}
+a.blk,a.blk:hover{text-decoration:none}
+a.blk:hover span{background:rgba(249,197,0,.22)}
+a.ixlink{text-decoration:none;color:inherit;cursor:pointer;border-bottom:1px solid rgba(11,74,114,.35)}
+a.ixlink:hover{color:#0b4a72;border-bottom-color:#0b4a72;background:rgba(249,197,0,.18);text-decoration:none}
+a.zoom{position:absolute;display:block;z-index:6;border-radius:3px;transition:box-shadow .12s}
+a.zoom:hover{box-shadow:0 0 0 2px rgba(249,197,0,.85) inset}
+a.zoom::after{content:"";position:absolute;right:6px;bottom:6px;width:26px;height:26px;border-radius:50%;background:rgba(22,19,14,.62) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f9c500' stroke-width='2.4' stroke-linecap='round'><circle cx='10.5' cy='10.5' r='6'/><path d='M15 15l5 5M8 10.5h5M10.5 8v5'/></svg>") center/16px no-repeat;opacity:0;transition:opacity .15s}
+a.zoom:hover::after{opacity:1}
+a.hot{position:absolute;display:block;z-index:4;border:none;border-radius:3px;transition:box-shadow .12s,background .12s}
+a.hot:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,0,.75) inset}
 a.adlink{position:absolute;display:block;z-index:5;text-decoration:none;border-radius:3px;transition:box-shadow .12s,background .12s}
 a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,0,.75) inset}
 @font-face{font-family:'Carlito';src:url('../../fonts/Carlito-Regular.ttf');font-weight:400;font-style:normal}
@@ -17,146 +27,90 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
 @font-face{font-family:'Carlito';src:url('../../fonts/Carlito-Italic.ttf');font-weight:400;font-style:italic}
 </style></head><body><div class="sheet"><div class="scaler"><div class="page">
 <img class="bg" src="pg043.jpg" alt="">
+<p style="position:absolute;left:439.9px;top:1157.9px;font-size:16.0px;white-space:nowrap" data-w="134.9"><a href="https://open.spotify.com/episode/4em6wdqQGgH9p3dEyLeqB0" target="_blank" rel="noopener"><span style="font-weight:700;color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Beekeeping Today – 
+</span></a></p>
+<p style="position:absolute;left:445.1px;top:1177.1px;font-size:16.0px;white-space:nowrap" data-w="126.0"><a href="https://open.spotify.com/episode/4em6wdqQGgH9p3dEyLeqB0" target="_blank" rel="noopener"><span style="font-weight:700;color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Using CO2 to Fight 
+</span></a></p>
+<p style="position:absolute;left:481.6px;top:1196.3px;font-size:16.0px;white-space:nowrap" data-w="85.5"><a href="https://open.spotify.com/episode/4em6wdqQGgH9p3dEyLeqB0" target="_blank" rel="noopener"><span style="font-weight:700;color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Varroa Mites</span></a></p>
+<p style="position:absolute;left:470.3px;top:149.6px;font-size:16.0px;white-space:nowrap" data-w="104.4"><span style="font-weight:700;color:#c6671d;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">VAA HiveMeet, </span></p>
+<p style="position:absolute;left:460.9px;top:168.8px;font-size:16.0px;white-space:nowrap" data-w="113.9"><span style="font-weight:700;color:#c6671d;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">September 3rd – 
+</span></p>
+<p style="position:absolute;left:427.9px;top:188.0px;font-size:16.0px;white-space:nowrap" data-w="142.9"><span style="font-weight:700;color:#c6671d;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Dr Fleur Ponton talks </span></p>
+<p style="position:absolute;left:419.8px;top:207.2px;font-size:16.0px;white-space:nowrap" data-w="150.7"><span style="font-weight:700;color:#c6671d;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">about entopathogenic </span></p>
+<p style="position:absolute;left:413.3px;top:226.4px;font-size:16.0px;white-space:nowrap" data-w="153.9"><span style="font-weight:700;color:#c6671d;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">fungi for varroa control</span></p>
+<p style="position:absolute;left:444.5px;top:707.7px;font-size:16.0px;white-space:nowrap" data-w="126.3"><a href="https://www.youtube.com/watch?v=of-zbGr9LvQ" target="_blank" rel="noopener"><span style="font-weight:700;color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">BeeFit Beekeeping </span></a></p>
+<p style="position:absolute;left:429.9px;top:726.9px;font-size:16.0px;white-space:nowrap" data-w="141.0"><a href="https://www.youtube.com/watch?v=of-zbGr9LvQ" target="_blank" rel="noopener"><span style="font-weight:700;color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">— 7 Years of Amitraz </span></a></p>
+<p style="position:absolute;left:458.7px;top:746.1px;font-size:16.0px;white-space:nowrap" data-w="112.7"><a href="https://www.youtube.com/watch?v=of-zbGr9LvQ" target="_blank" rel="noopener"><span style="font-weight:700;color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Resistance Data: </span></a></p>
+<p style="position:absolute;left:450.2px;top:765.3px;font-size:16.0px;white-space:nowrap" data-w="120.6"><a href="https://www.youtube.com/watch?v=of-zbGr9LvQ" target="_blank" rel="noopener"><span style="font-weight:700;color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">What Beekeepers </span></a></p>
+<p style="position:absolute;left:473.2px;top:784.5px;font-size:16.0px;white-space:nowrap" data-w="94.1"><a href="https://www.youtube.com/watch?v=of-zbGr9LvQ" target="_blank" rel="noopener"><span style="font-weight:700;color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Need to Know</span></a></p>
+<p style="position:absolute;left:718.2px;top:893.4px;font-size:16.0px;white-space:nowrap" data-w="80.3"><a href="https://www.youtube.com/watch?v=mA3K44zj_i0" target="_blank" rel="noopener"><span style="font-weight:700;color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Sustainable </span></a></p>
+<p style="position:absolute;left:718.2px;top:912.6px;font-size:16.0px;white-space:nowrap" data-w="123.0"><a href="https://www.youtube.com/watch?v=mA3K44zj_i0" target="_blank" rel="noopener"><span style="font-weight:700;color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Beekeepers Guild 
+</span></a></p>
+<p style="position:absolute;left:718.3px;top:931.8px;font-size:16.0px;white-space:nowrap" data-w="103.5"><a href="https://www.youtube.com/watch?v=mA3K44zj_i0" target="_blank" rel="noopener"><span style="font-weight:700;color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">of Michigan — 
+</span></a></p>
+<p style="position:absolute;left:718.2px;top:951.0px;font-size:16.0px;white-space:nowrap" data-w="132.3" data-j="1"><a href="https://www.youtube.com/watch?v=mA3K44zj_i0" target="_blank" rel="noopener"><span style="font-weight:700;color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Bawden Assay with </span></a></p>
+<p style="position:absolute;left:717.6px;top:970.2px;font-size:16.0px;white-space:nowrap" data-w="99.7"><a href="https://www.youtube.com/watch?v=mA3K44zj_i0" target="_blank" rel="noopener"><span style="font-weight:700;color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Trevor Bawden</span></a></p>
+<p style="position:absolute;left:718.2px;top:541.3px;font-size:16.0px;white-space:nowrap" data-w="84.4"><a href="https://www.youtube.com/watch?v=FhZ5KI6hgFs" target="_blank" rel="noopener"><span style="font-weight:700;color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Beekeeping 
+</span></a></p>
+<p style="position:absolute;left:718.1px;top:560.5px;font-size:16.0px;white-space:nowrap" data-w="119.0" data-j="1"><a href="https://www.youtube.com/watch?v=FhZ5KI6hgFs" target="_blank" rel="noopener"><span style="font-weight:700;color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Chat — Interview </span></a></p>
+<p style="position:absolute;left:718.4px;top:579.7px;font-size:16.0px;white-space:nowrap" data-w="118.7"><a href="https://www.youtube.com/watch?v=FhZ5KI6hgFs" target="_blank" rel="noopener"><span style="font-weight:700;color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">with Randy Oliver</span></a></p>
+<p style="position:absolute;left:90.9px;top:522.3px;font-size:16.0px;white-space:nowrap" data-w="253.2"><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Wildwoods Beekeeping sits down with </span></p>
+<p style="position:absolute;left:79.1px;top:541.5px;font-size:16.0px;white-space:nowrap" data-w="268.7"><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Randy Oliver, from Scientific Beekeeping, </span></p>
+<p style="position:absolute;left:133.6px;top:560.7px;font-size:16.0px;white-space:nowrap" data-w="211.0"><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">to talk about Varroa mites, mite-</span></p>
+<p style="position:absolute;left:149.2px;top:579.9px;font-size:16.0px;white-space:nowrap" data-w="195.3"><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">resistant bees, and the future 
+</span></p>
+<p style="position:absolute;left:243.3px;top:599.1px;font-size:16.0px;white-space:nowrap" data-w="100.3"><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">of mite control.</span></p>
+<p style="position:absolute;left:122.7px;top:708.0px;font-size:16.0px;white-space:nowrap" data-w="221.4"><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">BeeFit Beekeeping sits down with </span></p>
+<p style="position:absolute;left:119.2px;top:727.2px;font-size:16.0px;white-space:nowrap" data-w="225.4"><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Dr Frank Rinkevich, who has spent </span></p>
+<p style="position:absolute;left:102.9px;top:746.4px;font-size:16.0px;white-space:nowrap" data-w="241.8"><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">the last seven years studying amitraz </span></p>
+<p style="position:absolute;left:114.5px;top:765.6px;font-size:16.0px;white-space:nowrap" data-w="229.8"><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">resistance and watching how it has </span></p>
+<p style="position:absolute;left:218.7px;top:784.8px;font-size:16.0px;white-space:nowrap" data-w="124.9"><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">changed over time.</span></p>
+<p style="position:absolute;left:111.4px;top:893.6px;font-size:16.0px;white-space:nowrap" data-w="232.9"><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Trevor Bawden of Lloyd Street Bees </span></p>
+<p style="position:absolute;left:105.1px;top:912.8px;font-size:16.0px;white-space:nowrap" data-w="239.2"><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">introduces the Bawden Assay, a new </span></p>
+<p style="position:absolute;left:117.2px;top:932.0px;font-size:16.0px;white-space:nowrap" data-w="227.2"><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">brood-based method for assessing </span></p>
+<p style="position:absolute;left:124.6px;top:951.2px;font-size:16.0px;white-space:nowrap" data-w="219.8"><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Varroa infestation and identifying </span></p>
+<p style="position:absolute;left:161.1px;top:970.4px;font-size:16.0px;white-space:nowrap" data-w="183.6"><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">colonies with mite-resistant 
+</span></p>
+<p style="position:absolute;left:219.8px;top:989.6px;font-size:16.0px;white-space:nowrap" data-w="127.5"><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">breeding potential. </span></p>
+<p style="position:absolute;left:141.0px;top:149.8px;font-size:16.0px;white-space:nowrap" data-w="203.5"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Victorian Apiarists’ Association 
+</span></p>
+<p style="position:absolute;left:164.9px;top:169.0px;font-size:16.0px;white-space:nowrap" data-w="178.8"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">HiveMeet September 2026.</span></p>
+<p style="position:absolute;left:110.7px;top:188.2px;font-size:16.0px;white-space:nowrap" data-w="233.5"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Healthy Hives: Sustainable Pest and </span></p>
+<p style="position:absolute;left:97.0px;top:207.4px;font-size:16.0px;white-space:nowrap" data-w="246.6"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Disease Management for Honey Bees.</span></p>
+<p style="position:absolute;left:641.7px;top:42.4px;font-size:41.6px;white-space:nowrap" data-w="164.3"><span style="font-weight:700;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Webcasts</span></p>
+<p style="position:absolute;left:655.0px;top:1040.5px;font-size:41.6px;white-space:nowrap" data-w="151.0"><span style="font-weight:700;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Podcasts</span></p>
+<p style="position:absolute;left:470.3px;top:335.5px;font-size:16.0px;white-space:nowrap" data-w="104.4"><span style="font-weight:700;color:#c6671d;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">VAA HiveMeet, 
+</span></p>
+<p style="position:absolute;left:482.3px;top:354.7px;font-size:16.0px;white-space:nowrap" data-w="92.5"><span style="font-weight:700;color:#c6671d;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">October 1st –
+</span></p>
+<p style="position:absolute;left:426.7px;top:373.9px;font-size:16.0px;white-space:nowrap" data-w="144.5" data-j="1"><span style="font-weight:700;color:#c6671d;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Dr John Roberts talks 
+</span></p>
+<p style="position:absolute;left:424.5px;top:393.1px;font-size:16.0px;white-space:nowrap" data-w="146.6"><span style="font-weight:700;color:#c6671d;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">about tracking varroa 
+</span></p>
+<p style="position:absolute;left:450.0px;top:412.3px;font-size:16.0px;white-space:nowrap" data-w="121.2"><span style="font-weight:700;color:#c6671d;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">driven virus shifts 
+</span></p>
+<p style="position:absolute;left:492.0px;top:431.5px;font-size:16.0px;white-space:nowrap" data-w="78.8"><span style="font-weight:700;color:#c6671d;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">in Australia </span></p>
+<p style="position:absolute;left:141.0px;top:335.7px;font-size:16.0px;white-space:nowrap" data-w="203.5"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Victorian Apiarists’ Association 
+</span></p>
+<p style="position:absolute;left:183.4px;top:354.9px;font-size:16.0px;white-space:nowrap" data-w="160.2"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">HiveMeet October 2026.</span></p>
+<p style="position:absolute;left:161.8px;top:374.1px;font-size:16.0px;white-space:nowrap" data-w="182.8"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Going Viral: Tracking Varroa 
+</span></p>
+<p style="position:absolute;left:145.0px;top:393.3px;font-size:16.0px;white-space:nowrap" data-w="198.6"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Driven Virus Shifts in Australia.</span></p>
+<p style="position:absolute;left:120.6px;top:1147.6px;font-size:16.0px;white-space:nowrap" data-w="224.6"><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">What if carbon dioxide could offer </span></p>
+<p style="position:absolute;left:113.7px;top:1166.8px;font-size:16.0px;white-space:nowrap" data-w="230.4"><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">beekeepers another way to control </span></p>
+<p style="position:absolute;left:251.6px;top:1186.0px;font-size:16.0px;white-space:nowrap" data-w="89.7"><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Varroa mites?</span></p>
 <p style="position:absolute;left:518.4px;top:1311.0px;font-size:13.6px;white-space:nowrap" data-w="379.6"><span style="font-family:Arial,Helvetica,sans-serif">VAA AUSTRALIAN BEE JOURNAL  |  </span><span style="font-family:Arial,Helvetica,sans-serif">VOL. 109 No. 09 September 2026</span><span style="font-family:Arial,Helvetica,sans-serif">  |  43</span></p>
-<p style="position:absolute;left:55.0px;top:130.5px;font-size:19.2px;white-space:nowrap" data-w="56.7"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">DEECA </span></p>
-<p style="position:absolute;left:55.5px;top:153.1px;font-size:14.4px;white-space:nowrap" data-w="163.1"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">for bee sites on Crown land</span></p>
-<p style="position:absolute;left:54.0px;top:178.8px;font-size:14.4px;white-space:nowrap" data-w="156.3"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">All enquiries should go to:  </span></p>
-<p style="position:absolute;left:54.8px;top:196.4px;font-size:14.4px;white-space:nowrap" data-w="203.9"><a href="mailto:adminhub@deeca.vic.gov.au" target="_blank" rel="noopener"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Email: adminhub@deeca.vic.gov.au</span></a></p>
-<p style="position:absolute;left:54.9px;top:228.9px;font-size:19.2px;white-space:nowrap" data-w="117.5"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Other contacts</span></p>
-<p style="position:absolute;left:54.4px;top:258.3px;font-size:14.4px;white-space:nowrap" data-w="231.7" data-j="1"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Australian Honey Bee Industry Council </span></p>
-<p style="position:absolute;left:54.9px;top:275.9px;font-size:14.4px;white-space:nowrap" data-w="50.3"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">(AHBIC):</span></p>
-<p style="position:absolute;left:54.5px;top:294.8px;font-size:14.4px;white-space:nowrap" data-w="126.4"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">CEO: Danny Le Feuvre</span></p>
-<p style="position:absolute;left:54.9px;top:312.4px;font-size:14.4px;white-space:nowrap" data-w="79.5"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">0402 467 780</span></p>
-<p style="position:absolute;left:54.8px;top:330.0px;font-size:14.4px;white-space:nowrap" data-w="180.4"><a href="mailto:ahbic@honeybee.org.au" target="_blank" rel="noopener"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Email: ahbic@honeybee.org.au</span></a></p>
-<p style="position:absolute;left:55.0px;top:347.5px;font-size:14.4px;white-space:nowrap" data-w="130.7"><a href="http://www.honeybee.org.au" target="_blank" rel="noopener"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">www.honeybee.org.au</span></a></p>
-<p style="position:absolute;left:54.7px;top:373.5px;font-size:14.4px;white-space:nowrap" data-w="188.2"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Crop Pollination Association Inc</span></p>
-<p style="position:absolute;left:54.8px;top:392.3px;font-size:14.4px;white-space:nowrap" data-w="128.8"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">President: Steve Fuller</span></p>
-<p style="position:absolute;left:54.9px;top:409.9px;font-size:14.4px;white-space:nowrap" data-w="79.5"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">0488 434 498</span></p>
-<p style="position:absolute;left:54.8px;top:427.5px;font-size:14.4px;white-space:nowrap" data-w="219.9"><a href="mailto:president.cpaa.aus@gmail.com" target="_blank" rel="noopener"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Email: president.cpaa.aus@gmail.com</span></a></p>
-<p style="position:absolute;left:54.7px;top:449.7px;font-size:14.4px;white-space:nowrap" data-w="126.7"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Secretary: Janet Clyde</span></p>
-<p style="position:absolute;left:54.9px;top:467.3px;font-size:14.4px;white-space:nowrap" data-w="79.5"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">0417 494 867</span></p>
-<p style="position:absolute;left:54.8px;top:484.9px;font-size:14.4px;white-space:nowrap" data-w="175.2"><a href="mailto:jclyde.cpaa@gmail.com" target="_blank" rel="noopener"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Email: jclyde.cpaa@gmail.com</span></a></p>
-<p style="position:absolute;left:54.4px;top:510.8px;font-size:14.4px;white-space:nowrap" data-w="154.6"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Agrifutures Honey Bee &amp;  </span></p>
-<p style="position:absolute;left:55.2px;top:528.4px;font-size:14.4px;white-space:nowrap" data-w="118.4"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Pollination Program</span></p>
-<p style="position:absolute;left:54.0px;top:547.3px;font-size:14.4px;white-space:nowrap" data-w="86.7"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Annie Stoddart</span></p>
-<p style="position:absolute;left:54.8px;top:564.9px;font-size:14.4px;white-space:nowrap" data-w="177.1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Program Coordinator Research</span></p>
-<p style="position:absolute;left:54.9px;top:582.5px;font-size:14.4px;white-space:nowrap" data-w="76.3"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">02 69236918</span></p>
-<p style="position:absolute;left:54.8px;top:600.1px;font-size:14.4px;white-space:nowrap" data-w="248.5"><a href="mailto:Annie.stoddart@agrifutures.com.au" target="_blank" rel="noopener"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Email: annie.stoddart@agrifutures.com.au </span></a></p>
-<p style="position:absolute;left:54.9px;top:626.0px;font-size:14.4px;white-space:nowrap" data-w="177.1" data-j="1"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">VFF State Beekeeping Branch:</span></p>
-<p style="position:absolute;left:54.7px;top:644.9px;font-size:14.4px;white-space:nowrap" data-w="162.1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Secretary: Gail Rochelmeyer</span></p>
-<p style="position:absolute;left:54.9px;top:662.4px;font-size:14.4px;white-space:nowrap" data-w="79.5"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">0408 592 091</span></p>
-<p style="position:absolute;left:54.7px;top:688.4px;font-size:14.4px;white-space:nowrap" data-w="212.1"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Collingwood Children’s Farm Apiary</span></p>
-<p style="position:absolute;left:54.1px;top:707.2px;font-size:14.4px;white-space:nowrap" data-w="233.0"><span style="font-style:italic;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Open 2nd &amp; 4th Sunday of each month,  </span></p>
-<p style="position:absolute;left:55.0px;top:724.8px;font-size:14.4px;white-space:nowrap" data-w="135.0"><span style="font-style:italic;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">from 10.30am-3.30pm.</span></p>
-<p style="position:absolute;left:54.8px;top:742.4px;font-size:14.4px;white-space:nowrap" data-w="208.1" data-j="1"><a href="mailto:collingwoodbees@gmail.com" target="_blank" rel="noopener"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Email: collingwoodbees@gmail.com</span></a></p>
-<p style="position:absolute;left:55.0px;top:760.0px;font-size:14.4px;white-space:nowrap" data-w="210.2"><a href="http://www.facebook.com/collingwoodbee" target="_blank" rel="noopener"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">www.facebook.com/collingwoodbee</span></a></p>
-<p style="position:absolute;left:344.6px;top:130.5px;font-size:19.2px;white-space:nowrap" data-w="186.6"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Affiliated Organisations</span></p>
-<p style="position:absolute;left:345.0px;top:159.9px;font-size:14.4px;white-space:nowrap" data-w="149.2"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">The Beekeepers Club Inc.</span></p>
-<p style="position:absolute;left:345.0px;top:178.8px;font-size:14.4px;white-space:nowrap" data-w="147.7"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Secretary: Theresa Brown</span></p>
-<p style="position:absolute;left:345.1px;top:196.4px;font-size:14.4px;white-space:nowrap" data-w="211.7"><a href="mailto:secretary@beekeepers.org.au" target="_blank" rel="noopener"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Email: secretary@beekeepers.org.au</span></a></p>
-<p style="position:absolute;left:344.6px;top:223.6px;font-size:14.4px;white-space:nowrap" data-w="229.5" data-j="1"><span style="font-style:italic;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Meetings: 3rd Thursday of each month. </span></p>
-<p style="position:absolute;left:344.8px;top:241.1px;font-size:14.4px;white-space:nowrap" data-w="206.0"><span style="font-style:italic;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Location: NewHope Baptist Church, </span></p>
-<p style="position:absolute;left:344.3px;top:258.7px;font-size:14.4px;white-space:nowrap" data-w="204.8"><span style="font-style:italic;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">3 Springfield Road, Blackburn North</span></p>
-<p style="position:absolute;left:345.0px;top:284.7px;font-size:14.4px;white-space:nowrap" data-w="159.4"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Central Victorian Apiarists’</span></p>
-<p style="position:absolute;left:344.6px;top:302.3px;font-size:14.4px;white-space:nowrap" data-w="93.1"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Association Inc.</span></p>
-<p style="position:absolute;left:345.1px;top:321.1px;font-size:14.4px;white-space:nowrap" data-w="111.4"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Millie Enbom-Goad</span></p>
-<p style="position:absolute;left:345.2px;top:338.7px;font-size:14.4px;white-space:nowrap" data-w="79.5"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">0400 083 582</span></p>
-<p style="position:absolute;left:345.1px;top:356.3px;font-size:14.4px;white-space:nowrap" data-w="173.9"><a href="mailto:cvaa_inc@outlook.com" target="_blank" rel="noopener"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Email: cvaa_inc@outlook.com</span></a></p>
-<p style="position:absolute;left:345.0px;top:382.3px;font-size:14.4px;white-space:nowrap" data-w="151.9"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Geelong Beekeepers Club</span></p>
-<p style="position:absolute;left:345.1px;top:401.1px;font-size:14.4px;white-space:nowrap" data-w="158.4"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">President: Nathan Whitford</span></p>
-<p style="position:absolute;left:345.2px;top:418.7px;font-size:14.4px;white-space:nowrap" data-w="79.5"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">0403 807 224</span></p>
-<p style="position:absolute;left:345.1px;top:436.3px;font-size:14.4px;white-space:nowrap" data-w="253.8"><a href="mailto:info@geelongbeekeepersclub.org.au" target="_blank" rel="noopener"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Email: info@geelongbeekeepersclub.org.au </span></a></p>
-<p style="position:absolute;left:344.6px;top:463.5px;font-size:14.4px;white-space:nowrap" data-w="211.9" data-j="1"><span style="font-style:italic;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Meetings: 3rd Friday of each month. </span></p>
-<p style="position:absolute;left:344.8px;top:481.1px;font-size:14.4px;white-space:nowrap" data-w="207.3"><span style="font-style:italic;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Location: Belmont Masonic Centre,  </span></p>
-<p style="position:absolute;left:343.8px;top:498.7px;font-size:14.4px;white-space:nowrap" data-w="150.3"><span style="font-style:italic;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">25 Regent Street, Belmont</span></p>
-<p style="position:absolute;left:345.0px;top:524.7px;font-size:14.4px;white-space:nowrap" data-w="218.6" data-j="1"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Gippsland Apiarists’ Association Inc. </span></p>
-<p style="position:absolute;left:345.1px;top:543.5px;font-size:14.4px;white-space:nowrap" data-w="142.0"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">President: Stan Glowacki</span></p>
-<p style="position:absolute;left:345.2px;top:561.1px;font-size:14.4px;white-space:nowrap" data-w="79.5"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">0413 136 878</span></p>
-<p style="position:absolute;left:345.1px;top:578.7px;font-size:14.4px;white-space:nowrap" data-w="215.7"><a href="mailto:jeeralangapiary@bigpond.com" target="_blank" rel="noopener"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Email: jeeralangapiary@bigpond.com</span></a></p>
-<p style="position:absolute;left:345.0px;top:600.8px;font-size:14.4px;white-space:nowrap" data-w="164.2"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Secretary: Lorraine Glowacki</span></p>
-<p style="position:absolute;left:345.2px;top:618.4px;font-size:14.4px;white-space:nowrap" data-w="79.5"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">0402 026 111</span></p>
-<p style="position:absolute;left:345.1px;top:636.0px;font-size:14.4px;white-space:nowrap" data-w="213.4"><a href="mailto:secretarygaa1966@gmail.com" target="_blank" rel="noopener"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Email: secretarygaa1966@gmail.com</span></a></p>
-<p style="position:absolute;left:345.0px;top:662.0px;font-size:14.4px;white-space:nowrap" data-w="132.0"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">J Beekeeping Club Inc.</span></p>
-<p style="position:absolute;left:345.0px;top:680.8px;font-size:14.4px;white-space:nowrap" data-w="152.5"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Secretary: Kevin O’Sullivan</span></p>
-<p style="position:absolute;left:345.2px;top:698.4px;font-size:14.4px;white-space:nowrap" data-w="79.5"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">0400 667 125</span></p>
-<p style="position:absolute;left:345.1px;top:716.0px;font-size:14.4px;white-space:nowrap" data-w="197.5"><a href="mailto:enquiries@jbeekeeping.org" target="_blank" rel="noopener"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Email: enquiries@jbeekeeping.org</span></a></p>
-<p style="position:absolute;left:344.6px;top:743.2px;font-size:14.4px;white-space:nowrap" data-w="222.2"><span style="font-style:italic;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Meetings: 2nd Tuesday of each month </span></p>
-<p style="position:absolute;left:344.8px;top:760.8px;font-size:14.4px;white-space:nowrap" data-w="218.3"><span style="font-style:italic;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">(Except January). Meeting at 7.00pm. </span></p>
-<p style="position:absolute;left:344.8px;top:778.4px;font-size:14.4px;white-space:nowrap" data-w="249.2" data-j="1"><span style="font-style:italic;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Location: Goonawarra Community Centre,  </span></p>
-<p style="position:absolute;left:343.8px;top:796.0px;font-size:14.4px;white-space:nowrap" data-w="214.2"><span style="font-style:italic;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">20 Dornoch Drive, Sunbury, VIC 3429.</span></p>
-<p style="position:absolute;left:345.5px;top:822.0px;font-size:14.4px;white-space:nowrap" data-w="198.4"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Latrobe Valley Beekeepers Assoc.</span></p>
-<p style="position:absolute;left:345.1px;top:840.8px;font-size:14.4px;white-space:nowrap" data-w="154.8"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">President: Sean-Paul Smith</span></p>
-<p style="position:absolute;left:345.2px;top:858.4px;font-size:14.4px;white-space:nowrap" data-w="79.5"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">0466 041 199</span></p>
-<p style="position:absolute;left:345.1px;top:876.0px;font-size:14.4px;white-space:nowrap" data-w="216.5"><a href="mailto:LatrobeValleyBees@gmail.com" target="_blank" rel="noopener"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Email: LatrobeValleyBees@gmail.com</span></a></p>
-<p style="position:absolute;left:344.6px;top:903.2px;font-size:14.4px;white-space:nowrap" data-w="221.2"><span style="font-style:italic;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Meetings: 1st Tuesday of each month. </span></p>
-<p style="position:absolute;left:344.6px;top:920.8px;font-size:14.4px;white-space:nowrap" data-w="225.9" data-j="1"><span style="font-style:italic;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Meeting at 7.00pm. Location: Old Moe </span></p>
-<p style="position:absolute;left:344.6px;top:938.4px;font-size:14.4px;white-space:nowrap" data-w="222.7"><span style="font-style:italic;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Netball Courts, 99 Savages Road, Moe.</span></p>
-<p style="position:absolute;left:345.5px;top:964.4px;font-size:14.4px;white-space:nowrap" data-w="193.7"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Melbourne Beekeepers Club Inc.</span></p>
-<p style="position:absolute;left:345.0px;top:983.2px;font-size:14.4px;white-space:nowrap" data-w="135.8"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Secretary: Anita Conroy</span></p>
-<p style="position:absolute;left:345.1px;top:1000.8px;font-size:14.4px;white-space:nowrap" data-w="41.9"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Email:  </span></p>
-<p style="position:absolute;left:345.2px;top:1018.4px;font-size:14.4px;white-space:nowrap" data-w="261.1" data-j="1"><a href="mailto:secretary@melbournebeekeepersclub.org.au" target="_blank" rel="noopener"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">secretary@melbournebeekeepersclub.org.au</span></a></p>
-<p style="position:absolute;left:345.3px;top:1036.0px;font-size:14.4px;white-space:nowrap" data-w="227.8"><a href="https://www.melbournebeekeepersclub.org.au" target="_blank" rel="noopener"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">www.melbournebeekeepersclub.org.au</span></a></p>
-<p style="position:absolute;left:345.5px;top:1066.5px;font-size:14.4px;white-space:nowrap" data-w="139.0"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Mornington Peninsula  </span></p>
-<p style="position:absolute;left:345.5px;top:1084.1px;font-size:14.4px;white-space:nowrap" data-w="144.2"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Beekeepers Association </span></p>
-<p style="position:absolute;left:345.0px;top:1102.9px;font-size:14.4px;white-space:nowrap" data-w="211.0" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Vice-President: Bryannah Downward</span></p>
-<p style="position:absolute;left:345.2px;top:1120.5px;font-size:14.4px;white-space:nowrap" data-w="79.5"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">0401 965 558</span></p>
-<p style="position:absolute;left:345.1px;top:1138.1px;font-size:14.4px;white-space:nowrap" data-w="161.2"><a href="mailto:admin@mpba.org.au" target="_blank" rel="noopener"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Email: admin@mpba.org.au</span></a></p>
-<p style="position:absolute;left:344.6px;top:1165.3px;font-size:14.4px;white-space:nowrap" data-w="239.6"><span style="font-style:italic;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Meetings: 4th Wednesday of each month </span></p>
-<p style="position:absolute;left:344.8px;top:1182.9px;font-size:14.4px;white-space:nowrap" data-w="234.8"><span style="font-style:italic;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">(except June and December). Meeting at </span></p>
-<p style="position:absolute;left:343.4px;top:1200.5px;font-size:14.4px;white-space:nowrap" data-w="258.8" data-j="1"><span style="font-style:italic;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">7.00pm. Location: Mornington Park Pavilion, </span></p>
-<p style="position:absolute;left:344.5px;top:1218.1px;font-size:14.4px;white-space:nowrap" data-w="225.5"><span style="font-style:italic;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">9 Flinders Drive, Mornington, VIC 3931.</span></p>
-<p style="position:absolute;left:635.7px;top:131.9px;font-size:14.4px;white-space:nowrap" data-w="219.7" data-j="1"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Moonee Valley Beekeepers Club Inc. </span></p>
-<p style="position:absolute;left:635.2px;top:150.8px;font-size:14.4px;white-space:nowrap" data-w="128.1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Secretary: Paul Kucera</span></p>
-<p style="position:absolute;left:635.3px;top:168.3px;font-size:14.4px;white-space:nowrap" data-w="219.5"><a href="mailto:mvbeekeepersclub@gmail.com" target="_blank" rel="noopener"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Email: mvbeekeepersclub@gmail.com</span></a></p>
-<p style="position:absolute;left:634.9px;top:195.5px;font-size:14.4px;white-space:nowrap" data-w="266.2" data-j="1"><span style="font-style:italic;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Meetings: 2nd Tuesday of each month (except </span></p>
-<p style="position:absolute;left:634.3px;top:213.1px;font-size:14.4px;white-space:nowrap" data-w="258.7"><span style="font-style:italic;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">January). Meeting at 7.30pm. Location: Hall, </span></p>
-<p style="position:absolute;left:633.6px;top:230.7px;font-size:14.4px;white-space:nowrap" data-w="240.0"><span style="font-style:italic;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">195 Holmes Rd, Moonee Ponds, VIC 3039.</span></p>
-<p style="position:absolute;left:635.7px;top:256.7px;font-size:14.4px;white-space:nowrap" data-w="238.1" data-j="1"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">North Eastern Apiarists’ Association Inc.</span></p>
-<p style="position:absolute;left:635.3px;top:275.5px;font-size:14.4px;white-space:nowrap" data-w="153.4"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Secretary: Moss McCallum</span></p>
-<p style="position:absolute;left:635.4px;top:293.1px;font-size:14.4px;white-space:nowrap" data-w="195.1"><a href="mailto:secretary.neaa@gmail.com" target="_blank" rel="noopener"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Email: secretary.neaa@gmail.com</span></a></p>
-<p style="position:absolute;left:635.7px;top:319.1px;font-size:14.4px;white-space:nowrap" data-w="163.7"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Northwestern Bee Club Inc.</span></p>
-<p style="position:absolute;left:635.4px;top:337.9px;font-size:14.4px;white-space:nowrap" data-w="145.3"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">President: Roger Mitchell</span></p>
-<p style="position:absolute;left:635.5px;top:355.5px;font-size:14.4px;white-space:nowrap" data-w="79.5"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">0407 427 431</span></p>
-<p style="position:absolute;left:635.4px;top:373.1px;font-size:14.4px;white-space:nowrap" data-w="235.8" data-j="1"><a href="mailto:northwesternbeeclub@gmail.com" target="_blank" rel="noopener"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Email: northwesternbeeclub@gmail.com</span></a></p>
-<p style="position:absolute;left:635.6px;top:390.7px;font-size:14.4px;white-space:nowrap" data-w="129.2"><a href="https://www.nwbeeclub.store" target="_blank" rel="noopener"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">www.nwbeeclub.store</span></a></p>
-<p style="position:absolute;left:635.6px;top:416.7px;font-size:14.4px;white-space:nowrap" data-w="198.6"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">South Gippsland Beekeepers Inc. </span></p>
-<p style="position:absolute;left:635.3px;top:435.5px;font-size:14.4px;white-space:nowrap" data-w="126.6"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Secretary: Anna Jones</span></p>
-<p style="position:absolute;left:635.5px;top:453.1px;font-size:14.4px;white-space:nowrap" data-w="79.5"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">0411 770 062</span></p>
-<p style="position:absolute;left:635.4px;top:470.7px;font-size:14.4px;white-space:nowrap" data-w="224.0"><a href="mailto:secretary@sgbeekeepers.org.au" target="_blank" rel="noopener"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Email: secretary@sgbeekeepers.org.au</span></a></p>
-<p style="position:absolute;left:635.6px;top:488.3px;font-size:14.4px;white-space:nowrap" data-w="227.9"><a href="http://www.southgippslandbeekeepers.org.au/" target="_blank" rel="noopener"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">www.southgippslandbeekeepers.org.au</span></a></p>
-<p style="position:absolute;left:634.9px;top:515.5px;font-size:14.4px;white-space:nowrap" data-w="231.9"><span style="font-style:italic;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Meetings: 2nd Thursday of each month. </span></p>
-<p style="position:absolute;left:635.1px;top:533.1px;font-size:14.4px;white-space:nowrap" data-w="256.4" data-j="1"><span style="font-style:italic;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Location: St Peters Anglican Church Hall, cnr </span></p>
-<p style="position:absolute;left:634.9px;top:550.7px;font-size:14.4px;white-space:nowrap" data-w="244.8"><span style="font-style:italic;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">McCartin Street &amp; Bruce Street, Leongatha</span></p>
-<p style="position:absolute;left:635.6px;top:576.7px;font-size:14.4px;white-space:nowrap" data-w="161.6"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Southside Beekeepers Club</span></p>
-<p style="position:absolute;left:635.3px;top:595.5px;font-size:14.4px;white-space:nowrap" data-w="119.3"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Secretary: Ted Cottle</span></p>
-<p style="position:absolute;left:635.5px;top:613.1px;font-size:14.4px;white-space:nowrap" data-w="79.5"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">0428 429 547</span></p>
-<p style="position:absolute;left:635.4px;top:630.7px;font-size:14.4px;white-space:nowrap" data-w="242.8"><a href="mailto:ted@southsidebeekeepers.com.au" target="_blank" rel="noopener"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Email: ted@southsidebeekeepers.com.au </span></a></p>
-<p style="position:absolute;left:634.9px;top:657.9px;font-size:14.4px;white-space:nowrap" data-w="231.9" data-j="1"><span style="font-style:italic;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Meetings: 2nd Thursday of each month. </span></p>
-<p style="position:absolute;left:634.9px;top:675.5px;font-size:14.4px;white-space:nowrap" data-w="232.3" data-j="1"><span style="font-style:italic;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Meeting at 7.30pm. Location: Monterey </span></p>
-<p style="position:absolute;left:634.8px;top:693.1px;font-size:14.4px;white-space:nowrap" data-w="226.6"><span style="font-style:italic;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Secondary College, 21 Silvertop Street,  </span></p>
-<p style="position:absolute;left:634.9px;top:710.7px;font-size:14.4px;white-space:nowrap" data-w="155.1"><span style="font-style:italic;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Frankston North, VIC 3200.</span></p>
-<p style="position:absolute;left:635.5px;top:736.6px;font-size:14.4px;white-space:nowrap" data-w="93.4"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">WerriBeeks Inc.</span></p>
-<p style="position:absolute;left:635.4px;top:755.5px;font-size:14.4px;white-space:nowrap" data-w="160.6"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">President: Marthinus Noyce</span></p>
-<p style="position:absolute;left:635.4px;top:773.1px;font-size:14.4px;white-space:nowrap" data-w="177.5"><a href="mailto:Info@werribeeks.org.au" target="_blank" rel="noopener"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Email: info@werribeeks.org.au</span></a></p>
-<p style="position:absolute;left:634.9px;top:790.7px;font-size:14.4px;white-space:nowrap" data-w="224.2"><span style="font-style:italic;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Meetings: 3rd Monday of each month. </span></p>
-<p style="position:absolute;left:634.9px;top:808.3px;font-size:14.4px;white-space:nowrap" data-w="264.4"><span style="font-style:italic;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Meeting at 7.00pm. Location: Wyndham Park </span></p>
-<p style="position:absolute;left:634.7px;top:825.9px;font-size:14.4px;white-space:nowrap" data-w="270.1" data-j="1"><span style="font-style:italic;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Community Centre, 55/57 Kookaburra Avenue, </span></p>
-<p style="position:absolute;left:634.6px;top:843.5px;font-size:14.4px;white-space:nowrap" data-w="56.1"><span style="font-style:italic;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Werribee.</span></p>
-<p style="position:absolute;left:635.6px;top:861.1px;font-size:14.4px;white-space:nowrap" data-w="136.3"><a href="https://www.werribeeks.org.au" target="_blank" rel="noopener"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">www.werribeeks.org.au</span></a></p>
-<p style="position:absolute;left:635.5px;top:895.0px;font-size:14.4px;white-space:nowrap" data-w="183.3"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Woodend Bee-Friendly Society</span></p>
-<p style="position:absolute;left:634.2px;top:912.8px;font-size:14.4px;white-space:nowrap" data-w="237.4"><span style="font-style:italic;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">An action group of the Macedon Ranges </span></p>
-<p style="position:absolute;left:635.1px;top:930.4px;font-size:14.4px;white-space:nowrap" data-w="117.5"><span style="font-style:italic;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Sustainability Group</span></p>
-<p style="position:absolute;left:634.6px;top:949.1px;font-size:14.4px;white-space:nowrap" data-w="212.6" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Action Group Lead: Matthew Croatto</span></p>
-<p style="position:absolute;left:635.4px;top:966.7px;font-size:14.4px;white-space:nowrap" data-w="147.2"><a href="mailto:wbfs@mrsg.org.au" target="_blank" rel="noopener"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Email: wbfs@mrsg.org.au</span></a></p>
-<p style="position:absolute;left:635.6px;top:984.3px;font-size:14.4px;white-space:nowrap" data-w="173.5"><a href="https://www.mrsg.org.au/beekeeping" target="_blank" rel="noopener"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">www.mrsg.org.au/beekeeping</span></a></p>
-<p style="position:absolute;left:634.9px;top:1011.5px;font-size:14.4px;white-space:nowrap" data-w="259.4" data-j="1"><span style="font-style:italic;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Meetings: 3rd Sunday of each month (except </span></p>
-<p style="position:absolute;left:635.1px;top:1029.0px;font-size:14.4px;white-space:nowrap" data-w="242.9"><span style="font-style:italic;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">December). Meeting at 3.00pm. Location: </span></p>
-<p style="position:absolute;left:634.6px;top:1046.6px;font-size:14.4px;white-space:nowrap" data-w="250.6"><span style="font-style:italic;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Woodend Neighbourhood House, 47 Forest </span></p>
-<p style="position:absolute;left:634.8px;top:1064.2px;font-size:14.4px;white-space:nowrap" data-w="158.1"><span style="font-style:italic;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Street, Woodend, VIC 3442.</span></p>
-<p style="position:absolute;left:646.4px;top:1144.5px;font-size:14.4px;white-space:nowrap" data-w="220.3"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">If any contact details or information  </span></p>
-<p style="position:absolute;left:646.2px;top:1162.1px;font-size:14.4px;white-space:nowrap" data-w="203.7"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">on these pages is incorrect please </span></p>
-<p style="position:absolute;left:646.4px;top:1179.7px;font-size:14.4px;white-space:nowrap" data-w="103.0"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">advise the Editor.</span></p>
-<p style="position:absolute;left:646.1px;top:1197.5px;font-size:14.4px;white-space:nowrap" data-w="235.4"><a href="mailto:abjeditor@vicbeekeepers.com.au" target="_blank" rel="noopener"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Email: abjeditor@vicbeekeepers.com.au</span></a></p>
+<p style="position:absolute;left:718.1px;top:522.3px;font-size:16.0px;white-space:nowrap" data-w="79.1"><span style="font-weight:700;color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Wildwood’s</span></p>
+<a class="hot" href="https://www.youtube.com/watch?v=FhZ5KI6hgFs" target="_blank" rel="noopener" title="youtube.com/watch?v=FhZ5KI6hgFs" aria-label="Link: youtube.com/watch?v=FhZ5KI6hgFs" style="left:167.3px;top:522.3px;width:75.3px;height:21.3px"></a>
+<a class="hot" href="https://www.youtube.com/watch?v=FhZ5KI6hgFs" target="_blank" rel="noopener" title="youtube.com/watch?v=FhZ5KI6hgFs" aria-label="Link: youtube.com/watch?v=FhZ5KI6hgFs" style="left:264.7px;top:541.5px;width:75.3px;height:21.3px"></a>
+<a class="hot" href="https://www.youtube.com/watch?v=FhZ5KI6hgFs" target="_blank" rel="noopener" title="youtube.com/watch?v=FhZ5KI6hgFs" aria-label="Link: youtube.com/watch?v=FhZ5KI6hgFs" style="left:311.7px;top:522.3px;width:32.5px;height:21.3px"></a>
+<a class="hot" href="https://www.youtube.com/watch?v=FhZ5KI6hgFs" target="_blank" rel="noopener" title="youtube.com/watch?v=FhZ5KI6hgFs" aria-label="Link: youtube.com/watch?v=FhZ5KI6hgFs" style="left:79.1px;top:541.5px;width:82.6px;height:21.3px"></a>
+<a class="hot" href="https://www.youtube.com/watch?v=IprkCX27hs0" target="_blank" rel="noopener" title="youtube.com/watch?v=IprkCX27hs0" aria-label="Link: youtube.com/watch?v=IprkCX27hs0" style="left:585.8px;top:144.8px;width:114.1px;height:114.1px"></a>
+<a class="hot" href="https://www.youtube.com/watch?v=6QLYj8LDbns" target="_blank" rel="noopener" title="youtube.com/watch?v=6QLYj8LDbns" aria-label="Link: youtube.com/watch?v=6QLYj8LDbns" style="left:585.8px;top:330.7px;width:114.1px;height:114.1px"></a>
+<a class="hot" href="https://www.youtube.com/watch?v=FhZ5KI6hgFs" target="_blank" rel="noopener" title="youtube.com/watch?v=FhZ5KI6hgFs" aria-label="Link: youtube.com/watch?v=FhZ5KI6hgFs" style="left:585.8px;top:517.3px;width:114.1px;height:114.1px"></a>
+<a class="hot" href="https://www.youtube.com/watch?v=of-zbGr9LvQ" target="_blank" rel="noopener" title="youtube.com/watch?v=of-zbGr9LvQ" aria-label="Link: youtube.com/watch?v=of-zbGr9LvQ" style="left:585.8px;top:702.9px;width:114.1px;height:114.2px"></a>
+<a class="hot" href="https://www.youtube.com/watch?v=mA3K44zj_i0" target="_blank" rel="noopener" title="youtube.com/watch?v=mA3K44zj_i0" aria-label="Link: youtube.com/watch?v=mA3K44zj_i0" style="left:585.8px;top:888.5px;width:114.1px;height:114.2px"></a>
+<a class="hot" href="https://open.spotify.com/episode/4em6wdqQGgH9p3dEyLeqB0" target="_blank" rel="noopener" title="open.spotify.com/episode/4em6wdqQGgH9p3dEyLeqB0" aria-label="Link: open.spotify.com/episode/4em6wdqQGgH9p3dEyLeqB0" style="left:585.6px;top:1142.6px;width:114.2px;height:114.1px"></a>
 </div></div></div>
 <script>
 /* Fit each line to the width it occupied in the PDF: stretch the spaces on
@@ -170,13 +124,18 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
     var ps=document.querySelectorAll('p[data-w]');
     for(var i=0;i<ps.length;i++){
       var p=ps[i];
-      p.style.wordSpacing=''; p.style.letterSpacing='';
+      p.style.wordSpacing=''; p.style.letterSpacing=''; p.style.transform='';
       var target=parseFloat(p.getAttribute('data-w')), nat=p.offsetWidth;
       if(!target||!nat) continue;
       var d=target-nat, stretch=p.hasAttribute('data-j');
       if(Math.abs(d)<0.5) continue;
       if(d>0&&!stretch) continue;
-      if(Math.abs(d)>target*0.18){ continue; } /* too far off to fix by squeezing -- leave it alone rather than crush the spacing */
+      if(Math.abs(d)>target*0.18){
+        /* too far off to fix by spacing: a condensed face set in a substitute.
+           Squeeze the whole line to its measure instead of letting it run off
+           the page (the folio's page number was being clipped on right-hand pages). */
+        if(d<0){ p.style.transformOrigin='0 0'; p.style.transform='scaleX('+(target/nat).toFixed(4)+')'; }
+        continue; }
       var txt=p.textContent||'', sp=(txt.match(/ /g)||[]).length;
       var fs=parseFloat(getComputedStyle(p).fontSize)||12;
       if(sp>0){
@@ -196,6 +155,37 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
   if(document.fonts&&document.fonts.ready) document.fonts.ready.then(fit);
   window.addEventListener('resize',fit);
 })();
+</script>
+
+<script>
+/* An index entry asks the parent reader to jump. Falls back to the href when
+   the page is opened on its own. */
+document.addEventListener('click',function(e){
+  var a=e.target && e.target.closest ? e.target.closest('a.ixlink') : null;
+  if(!a) return;
+  var m=/#\/page\/([^\/]+)\/(\d+)/.exec(a.getAttribute('href')||'');
+  if(!m) return;
+  if(window.parent && window.parent!==window){
+    e.preventDefault();
+    try{ window.parent.postMessage({abj:'page',iss:m[1],p:parseInt(m[2],10)},'*'); }
+    catch(err){ location.href=a.getAttribute('href'); }
+  }
+},true);
+</script>
+
+<script>
+/* A picture with a bigger version asks the parent reader to open its lightbox;
+   on its own the page just opens the picture. */
+document.addEventListener('click',function(e){
+  var a=e.target && e.target.closest ? e.target.closest('a.zoom') : null;
+  if(!a) return;
+  if(window.parent && window.parent!==window){
+    e.preventDefault();
+    var m={abj:'img',src:a.getAttribute('data-src'),alt:a.getAttribute('data-alt')||'',w:+a.getAttribute('data-w')||0,h:+a.getAttribute('data-h')||0};
+    var ans=a.getAttribute('data-answers'); if(ans){ try{ m.answers=JSON.parse(ans); }catch(err){} }
+    try{ window.parent.postMessage(m,'*'); }catch(err){ location.href=a.getAttribute('href'); }
+  }
+},true);
 </script>
 
 <script>

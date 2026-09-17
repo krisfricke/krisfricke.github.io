@@ -8,8 +8,18 @@ html,body{margin:0;padding:0;background:#fff}
 .page{position:relative;width:952px;height:1347px}
 .page img.bg{position:absolute;left:0;top:0;width:952px;height:1347px}
 p{margin:0;position:absolute}
-a{color:inherit}
+a{color:inherit;text-decoration:none}
 a:hover{text-decoration:underline}
+a.blk,a.blk:hover{text-decoration:none}
+a.blk:hover span{background:rgba(249,197,0,.22)}
+a.ixlink{text-decoration:none;color:inherit;cursor:pointer;border-bottom:1px solid rgba(11,74,114,.35)}
+a.ixlink:hover{color:#0b4a72;border-bottom-color:#0b4a72;background:rgba(249,197,0,.18);text-decoration:none}
+a.zoom{position:absolute;display:block;z-index:6;border-radius:3px;transition:box-shadow .12s}
+a.zoom:hover{box-shadow:0 0 0 2px rgba(249,197,0,.85) inset}
+a.zoom::after{content:"";position:absolute;right:6px;bottom:6px;width:26px;height:26px;border-radius:50%;background:rgba(22,19,14,.62) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f9c500' stroke-width='2.4' stroke-linecap='round'><circle cx='10.5' cy='10.5' r='6'/><path d='M15 15l5 5M8 10.5h5M10.5 8v5'/></svg>") center/16px no-repeat;opacity:0;transition:opacity .15s}
+a.zoom:hover::after{opacity:1}
+a.hot{position:absolute;display:block;z-index:4;border:none;border-radius:3px;transition:box-shadow .12s,background .12s}
+a.hot:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,0,.75) inset}
 a.adlink{position:absolute;display:block;z-index:5;text-decoration:none;border-radius:3px;transition:box-shadow .12s,background .12s}
 a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,0,.75) inset}
 @font-face{font-family:'Carlito';src:url('../../fonts/Carlito-Regular.ttf');font-weight:400;font-style:normal}
@@ -19,57 +29,69 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
 <img class="bg" src="pg024.jpg" alt="">
 <p style="position:absolute;left:648.9px;top:201.1px;font-size:28.8px;white-space:nowrap" data-w="140.5" data-j="1"><span style="font-weight:700;color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Biosecurity </span></p>
 <p style="position:absolute;left:649.1px;top:233.1px;font-size:28.8px;white-space:nowrap" data-w="122.4"><span style="font-weight:700;color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">reminders</span></p>
-<p style="position:absolute;left:693.9px;top:301.7px;font-size:19.2px;white-space:nowrap" data-w="128.1"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif"> Maintain clear  </span></p>
+<p style="position:absolute;left:693.9px;top:301.7px;font-size:19.2px;white-space:nowrap" data-w="128.1"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif"> Maintain clear 
+</span></p>
 <p style="position:absolute;left:699.0px;top:324.1px;font-size:19.2px;white-space:nowrap" data-w="156.8"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">hive-group barriers </span></p>
 <p style="position:absolute;left:699.1px;top:346.5px;font-size:19.2px;white-space:nowrap" data-w="162.5"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">and avoid swapping </span></p>
 <p style="position:absolute;left:699.1px;top:368.9px;font-size:19.2px;white-space:nowrap" data-w="147.1"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">supers, frames, or </span></p>
 <p style="position:absolute;left:699.1px;top:391.3px;font-size:19.2px;white-space:nowrap" data-w="171.4" data-j="1"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">comb between these </span></p>
-<p style="position:absolute;left:699.0px;top:413.8px;font-size:19.2px;white-space:nowrap" data-w="97.2"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">hive groups.</span></p>
-<p style="position:absolute;left:693.9px;top:472.4px;font-size:19.2px;white-space:nowrap" data-w="134.8"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif"> Clean hive tools </span></p>
-<p style="position:absolute;left:699.0px;top:494.8px;font-size:19.2px;white-space:nowrap" data-w="124.5" data-j="1"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">between hives  </span></p>
-<p style="position:absolute;left:699.1px;top:517.2px;font-size:19.2px;white-space:nowrap" data-w="123.1"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">or hive groups. </span></p>
-<p style="position:absolute;left:693.9px;top:575.6px;font-size:19.2px;white-space:nowrap" data-w="145.4"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif"> Carefully inspect  </span></p>
+<p style="position:absolute;left:699.0px;top:413.7px;font-size:19.2px;white-space:nowrap" data-w="97.2"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">hive groups.</span></p>
+<p style="position:absolute;left:693.9px;top:472.4px;font-size:19.2px;white-space:nowrap" data-w="134.8"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif"> Clean hive tools </span></p>
+<p style="position:absolute;left:699.0px;top:494.8px;font-size:19.2px;white-space:nowrap" data-w="124.6" data-j="1"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">between hives 
+</span></p>
+<p style="position:absolute;left:699.1px;top:517.2px;font-size:19.2px;white-space:nowrap" data-w="123.1"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">or hive groups.
+</span></p>
+<p style="position:absolute;left:693.9px;top:575.6px;font-size:19.2px;white-space:nowrap" data-w="145.4"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif"> Carefully inspect 
+</span></p>
 <p style="position:absolute;left:699.0px;top:598.0px;font-size:19.2px;white-space:nowrap" data-w="108.1"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">brood during </span></p>
 <p style="position:absolute;left:699.1px;top:620.4px;font-size:19.2px;white-space:nowrap" data-w="124.5"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">spring build-up </span></p>
 <p style="position:absolute;left:699.1px;top:642.8px;font-size:19.2px;white-space:nowrap" data-w="124.9"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">and investigate </span></p>
 <p style="position:absolute;left:699.1px;top:665.2px;font-size:19.2px;white-space:nowrap" data-w="152.5" data-j="1"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">any unusual brood </span></p>
-<p style="position:absolute;left:699.0px;top:687.6px;font-size:19.2px;white-space:nowrap" data-w="140.4"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">patterns or signs  </span></p>
+<p style="position:absolute;left:699.0px;top:687.6px;font-size:19.2px;white-space:nowrap" data-w="140.4"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">patterns or signs 
+</span></p>
 <p style="position:absolute;left:699.1px;top:710.0px;font-size:19.2px;white-space:nowrap" data-w="85.0"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">of disease.</span></p>
 <p style="position:absolute;left:54.4px;top:1311.0px;font-size:13.6px;white-space:nowrap" data-w="279.5"><span style="font-family:Arial,Helvetica,sans-serif">24  |  </span><span style="font-family:Arial,Helvetica,sans-serif">Published since 1918 by the VAA – founded in 1892</span></p>
-<p style="position:absolute;left:54.4px;top:22.9px;font-size:13.6px;white-space:nowrap" data-w="277.6"><span style="color:#ffffff;font-family:Arial,Helvetica,sans-serif">INDUSTRY UPDATES FROM THE AHBIC NEWSLETTER</span></p>
-<p style="position:absolute;left:77.7px;top:97.2px;font-size:25.6px;white-space:nowrap" data-w="343.1"><span style="font-weight:700;color:#fbaa19;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Recognising AFB: Common signs</span></p>
-<p style="position:absolute;left:76.9px;top:135.6px;font-size:16.8px;white-space:nowrap" data-w="433.7"><span style="font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">The following signs commonly occur in colonies affected by AFB,  </span></p>
+<p style="position:absolute;left:77.7px;top:97.2px;font-size:25.6px;white-space:nowrap" data-w="340.1"><span style="font-weight:700;color:#fbaa19;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Recognising AFB: common signs</span></p>
+<p style="position:absolute;left:76.9px;top:135.6px;font-size:16.8px;white-space:nowrap" data-w="433.7"><span style="font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">The following signs commonly occur in colonies affected by AFB, 
+</span></p>
 <p style="position:absolute;left:77.9px;top:155.6px;font-size:16.8px;white-space:nowrap" data-w="400.8"><span style="font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">although not every infected colony will display all of them. </span></p>
-<p style="position:absolute;left:367.0px;top:195.6px;font-size:16.8px;white-space:nowrap" data-w="152.3"><span style="color:#fbaa19;font-family:Arial,Helvetica,sans-serif">n </span><span style="font-weight:700;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif"> Spotty or irregular </span></p>
+<p style="position:absolute;left:367.0px;top:195.6px;font-size:16.8px;white-space:nowrap" data-w="152.3"><span style="color:#fbaa19;font-family:Arial,Helvetica,sans-serif">n </span><span style="font-weight:700;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif"> Spotty or irregular </span></p>
 <p style="position:absolute;left:388.3px;top:215.6px;font-size:16.8px;white-space:nowrap" data-w="140.5" data-j="1"><span style="font-weight:700;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">brood pattern, with </span></p>
 <p style="position:absolute;left:388.3px;top:235.6px;font-size:16.8px;white-space:nowrap" data-w="123.8"><span style="font-weight:700;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">perforated brood </span></p>
 <p style="position:absolute;left:388.3px;top:255.6px;font-size:16.8px;white-space:nowrap" data-w="136.6"><span style="font-weight:700;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">cappings, holes are </span></p>
 <p style="position:absolute;left:388.3px;top:275.6px;font-size:16.8px;white-space:nowrap" data-w="113.6"><span style="font-weight:700;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">often off-centre.</span></p>
-<p style="position:absolute;left:87.0px;top:361.2px;font-size:12.0px;white-space:nowrap" data-w="108.6"><span style="font-style:italic;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Photo credit_DPIRDWA</span></p>
-<p style="position:absolute;left:367.0px;top:603.3px;font-size:16.8px;white-space:nowrap" data-w="180.8"><span style="color:#fbaa19;font-family:Arial,Helvetica,sans-serif">n </span><span style="font-weight:700;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif"> Dark, sunken cappings </span></p>
-<p style="position:absolute;left:388.3px;top:623.3px;font-size:16.8px;white-space:nowrap" data-w="118.9" data-j="1"><span style="font-weight:700;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">that may appear </span></p>
-<p style="position:absolute;left:388.3px;top:643.3px;font-size:16.8px;white-space:nowrap" data-w="48.4"><span style="font-weight:700;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">greasy.</span></p>
-<p style="position:absolute;left:87.0px;top:768.8px;font-size:12.0px;white-space:nowrap" data-w="255.2" data-j="1"><span style="font-style:italic;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Courtesy The Animal and Plant Health Agency (APHA), </span></p>
-<p style="position:absolute;left:87.0px;top:783.2px;font-size:12.0px;white-space:nowrap" data-w="78.2"><span style="font-style:italic;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Crown Copyright</span></p>
-<p style="position:absolute;left:367.0px;top:816.2px;font-size:16.8px;white-space:nowrap" data-w="175.4"><span style="color:#fbaa19;font-family:Arial,Helvetica,sans-serif">n </span><span style="font-weight:700;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif"> Decaying Larvae form </span></p>
+<p style="position:absolute;left:77.9px;top:361.2px;font-size:12.0px;white-space:nowrap" data-w="105.3"><span style="font-style:italic;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Photo credit DPIRDWA</span></p>
+<p style="position:absolute;left:367.0px;top:603.3px;font-size:16.8px;white-space:nowrap" data-w="180.8"><span style="color:#fbaa19;font-family:Arial,Helvetica,sans-serif">n </span><span style="font-weight:700;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif"> Dark, sunken cappings </span></p>
+<p style="position:absolute;left:388.3px;top:623.3px;font-size:16.8px;white-space:nowrap" data-w="163.5"><span style="font-weight:700;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">that may appear greasy.</span></p>
+<p style="position:absolute;left:77.9px;top:768.8px;font-size:12.0px;white-space:nowrap" data-w="255.2" data-j="1"><span style="font-style:italic;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Courtesy The Animal and Plant Health Agency (APHA), </span></p>
+<p style="position:absolute;left:77.9px;top:783.2px;font-size:12.0px;white-space:nowrap" data-w="78.2"><span style="font-style:italic;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Crown Copyright</span></p>
+<p style="position:absolute;left:367.0px;top:816.2px;font-size:16.8px;white-space:nowrap" data-w="172.4"><span style="color:#fbaa19;font-family:Arial,Helvetica,sans-serif">n </span><span style="font-weight:700;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif"> Decaying larvae form </span></p>
 <p style="position:absolute;left:388.3px;top:836.2px;font-size:16.8px;white-space:nowrap" data-w="153.9"><span style="font-weight:700;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">a light to dark brown, </span></p>
 <p style="position:absolute;left:388.3px;top:856.2px;font-size:16.8px;white-space:nowrap" data-w="157.9" data-j="1"><span style="font-weight:700;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">semi-fluid mass which </span></p>
 <p style="position:absolute;left:388.3px;top:876.2px;font-size:16.8px;white-space:nowrap" data-w="123.5"><span style="font-weight:700;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">can stretch into a </span></p>
 <p style="position:absolute;left:388.3px;top:896.2px;font-size:16.8px;white-space:nowrap" data-w="145.5"><span style="font-weight:700;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">smooth, elastic rope </span></p>
 <p style="position:absolute;left:388.3px;top:916.2px;font-size:16.8px;white-space:nowrap" data-w="137.7"><span style="font-weight:700;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">when tested with a </span></p>
 <p style="position:absolute;left:388.3px;top:936.2px;font-size:16.8px;white-space:nowrap" data-w="139.2"><span style="font-weight:700;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">stick (ropiness test).</span></p>
-<p style="position:absolute;left:86.4px;top:981.8px;font-size:12.0px;white-space:nowrap" data-w="92.1"><span style="font-style:italic;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Photo credit_DPIRD</span></p>
-<p style="position:absolute;left:367.0px;top:1011.0px;font-size:16.8px;white-space:nowrap" data-w="161.3"><span style="color:#fbaa19;font-family:Arial,Helvetica,sans-serif">n </span><span style="font-weight:700;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif"> A distinctive rotten  </span></p>
+<p style="position:absolute;left:77.4px;top:981.8px;font-size:12.0px;white-space:nowrap" data-w="88.9"><span style="font-style:italic;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Photo credit DPIRD</span></p>
+<p style="position:absolute;left:367.0px;top:1011.0px;font-size:16.8px;white-space:nowrap" data-w="161.3"><span style="color:#fbaa19;font-family:Arial,Helvetica,sans-serif">n </span><span style="font-weight:700;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif"> A distinctive rotten 
+</span></p>
 <p style="position:absolute;left:388.3px;top:1031.0px;font-size:16.8px;white-space:nowrap" data-w="142.1"><span style="font-weight:700;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">or sulphurous odour</span></p>
-<p style="position:absolute;left:86.4px;top:1176.5px;font-size:12.0px;white-space:nowrap" data-w="255.2" data-j="1"><span style="font-style:italic;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Courtesy The Animal and Plant Health Agency (APHA), </span></p>
-<p style="position:absolute;left:86.4px;top:1190.9px;font-size:12.0px;white-space:nowrap" data-w="172.8"><span style="font-style:italic;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Crown Copyright. Adapted by author.</span></p>
-<p style="position:absolute;left:86.4px;top:555.9px;font-size:12.0px;white-space:nowrap" data-w="255.2" data-j="1"><span style="font-style:italic;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Courtesy The Animal and Plant Health Agency (APHA), </span></p>
-<p style="position:absolute;left:86.4px;top:570.3px;font-size:12.0px;white-space:nowrap" data-w="80.9"><span style="font-style:italic;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Crown Copyright </span></p>
-<p style="position:absolute;left:367.0px;top:390.4px;font-size:16.8px;white-space:nowrap" data-w="143.0"><span style="color:#fbaa19;font-family:Arial,Helvetica,sans-serif">n </span><span style="font-weight:700;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif"> Protruding pupal </span></p>
-<p style="position:absolute;left:388.3px;top:410.4px;font-size:16.8px;white-space:nowrap" data-w="116.2"><span style="font-weight:700;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">‘tongue’, where  </span></p>
-<p style="position:absolute;left:388.3px;top:430.4px;font-size:16.8px;white-space:nowrap" data-w="150.5" data-j="1"><span style="font-weight:700;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">brood has developed </span></p>
+<p style="position:absolute;left:77.4px;top:1176.5px;font-size:12.0px;white-space:nowrap" data-w="255.2" data-j="1"><span style="font-style:italic;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Courtesy The Animal and Plant Health Agency (APHA), </span></p>
+<p style="position:absolute;left:77.4px;top:1190.9px;font-size:12.0px;white-space:nowrap" data-w="172.8"><span style="font-style:italic;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Crown Copyright. Adapted by author.</span></p>
+<p style="position:absolute;left:77.4px;top:555.9px;font-size:12.0px;white-space:nowrap" data-w="255.2" data-j="1"><span style="font-style:italic;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Courtesy The Animal and Plant Health Agency (APHA), </span></p>
+<p style="position:absolute;left:77.4px;top:570.3px;font-size:12.0px;white-space:nowrap" data-w="80.9"><span style="font-style:italic;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Crown Copyright </span></p>
+<p style="position:absolute;left:367.0px;top:390.4px;font-size:16.8px;white-space:nowrap" data-w="143.0"><span style="color:#fbaa19;font-family:Arial,Helvetica,sans-serif">n </span><span style="font-weight:700;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif"> Protruding pupal </span></p>
+<p style="position:absolute;left:388.3px;top:410.4px;font-size:16.8px;white-space:nowrap" data-w="116.2"><span style="font-weight:700;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">‘tongue’, where 
+</span></p>
+<p style="position:absolute;left:388.3px;top:430.4px;font-size:16.8px;white-space:nowrap" data-w="150.6" data-j="1"><span style="font-weight:700;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">brood has developed
+</span></p>
 <p style="position:absolute;left:388.3px;top:450.4px;font-size:16.8px;white-space:nowrap" data-w="129.3"><span style="font-weight:700;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">to the pupal stage </span></p>
 <p style="position:absolute;left:388.3px;top:470.4px;font-size:16.8px;white-space:nowrap" data-w="92.1"><span style="font-weight:700;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">before dying.</span></p>
+<a class="zoom" href="../../assets/sep/big/p24_163.jpg" target="_blank" rel="noopener" data-src="assets/sep/big/p24_163.jpg" data-alt="Brood comb showing the spotty, irregular pattern of American foulbrood, with perforated cappings, one of them ringed for emphasis" data-w="604" data-h="360" title="Click to enlarge" aria-label="Enlarge: Brood comb showing the spotty, irregular pattern of American foulbrood, with perforated cappings, one of them ringed for emphasis" style="left:77.9px;top:189.3px;width:280.0px;height:167.0px"></a>
+<a class="zoom" href="../../assets/sep/big/p24_171.jpg" target="_blank" rel="noopener" data-src="assets/sep/big/p24_171.jpg" data-alt="A brood cell opened to show the pupal ‘tongue’ protruding, where the larva reached the pupal stage before dying" data-w="361" data-h="215" title="Click to enlarge" aria-label="Enlarge: A brood cell opened to show the pupal ‘tongue’ protruding, where the larva reached the pupal stage before dying" style="left:77.9px;top:384.3px;width:280.0px;height:166.7px"></a>
+<a class="zoom" href="../../assets/sep/big/p24_165.jpg" target="_blank" rel="noopener" data-src="assets/sep/big/p24_165.jpg" data-alt="Dark, sunken brood cappings with a greasy sheen" data-w="800" data-h="476" title="Click to enlarge" aria-label="Enlarge: Dark, sunken brood cappings with a greasy sheen" style="left:77.9px;top:597.3px;width:280.0px;height:166.6px"></a>
+<a class="zoom" href="../../assets/sep/big/p24_167.jpg" target="_blank" rel="noopener" data-src="assets/sep/big/p24_167.jpg" data-alt="A beekeeper draws a matchstick from a brood cell, pulling the decayed larva into a smooth elastic rope — the ropiness test" data-w="604" data-h="360" title="Click to enlarge" aria-label="Enlarge: A beekeeper draws a matchstick from a brood cell, pulling the decayed larva into a smooth elastic rope — the ropiness test" style="left:77.9px;top:810.1px;width:280.0px;height:166.9px"></a>
+<a class="zoom" href="../../assets/sep/big/p24_169.jpg" target="_blank" rel="noopener" data-src="assets/sep/big/p24_169.jpg" data-alt="Unhealthy-looking brood cells symptomatic of American foulbrood" data-w="730" data-h="434" title="Click to enlarge" aria-label="Enlarge: Unhealthy-looking brood cells symptomatic of American foulbrood" style="left:77.9px;top:1005.0px;width:280.0px;height:166.6px"></a>
 </div></div></div>
 <script>
 /* Fit each line to the width it occupied in the PDF: stretch the spaces on
@@ -83,13 +105,18 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
     var ps=document.querySelectorAll('p[data-w]');
     for(var i=0;i<ps.length;i++){
       var p=ps[i];
-      p.style.wordSpacing=''; p.style.letterSpacing='';
+      p.style.wordSpacing=''; p.style.letterSpacing=''; p.style.transform='';
       var target=parseFloat(p.getAttribute('data-w')), nat=p.offsetWidth;
       if(!target||!nat) continue;
       var d=target-nat, stretch=p.hasAttribute('data-j');
       if(Math.abs(d)<0.5) continue;
       if(d>0&&!stretch) continue;
-      if(Math.abs(d)>target*0.18){ continue; } /* too far off to fix by squeezing -- leave it alone rather than crush the spacing */
+      if(Math.abs(d)>target*0.18){
+        /* too far off to fix by spacing: a condensed face set in a substitute.
+           Squeeze the whole line to its measure instead of letting it run off
+           the page (the folio's page number was being clipped on right-hand pages). */
+        if(d<0){ p.style.transformOrigin='0 0'; p.style.transform='scaleX('+(target/nat).toFixed(4)+')'; }
+        continue; }
       var txt=p.textContent||'', sp=(txt.match(/ /g)||[]).length;
       var fs=parseFloat(getComputedStyle(p).fontSize)||12;
       if(sp>0){
@@ -109,6 +136,37 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
   if(document.fonts&&document.fonts.ready) document.fonts.ready.then(fit);
   window.addEventListener('resize',fit);
 })();
+</script>
+
+<script>
+/* An index entry asks the parent reader to jump. Falls back to the href when
+   the page is opened on its own. */
+document.addEventListener('click',function(e){
+  var a=e.target && e.target.closest ? e.target.closest('a.ixlink') : null;
+  if(!a) return;
+  var m=/#\/page\/([^\/]+)\/(\d+)/.exec(a.getAttribute('href')||'');
+  if(!m) return;
+  if(window.parent && window.parent!==window){
+    e.preventDefault();
+    try{ window.parent.postMessage({abj:'page',iss:m[1],p:parseInt(m[2],10)},'*'); }
+    catch(err){ location.href=a.getAttribute('href'); }
+  }
+},true);
+</script>
+
+<script>
+/* A picture with a bigger version asks the parent reader to open its lightbox;
+   on its own the page just opens the picture. */
+document.addEventListener('click',function(e){
+  var a=e.target && e.target.closest ? e.target.closest('a.zoom') : null;
+  if(!a) return;
+  if(window.parent && window.parent!==window){
+    e.preventDefault();
+    var m={abj:'img',src:a.getAttribute('data-src'),alt:a.getAttribute('data-alt')||'',w:+a.getAttribute('data-w')||0,h:+a.getAttribute('data-h')||0};
+    var ans=a.getAttribute('data-answers'); if(ans){ try{ m.answers=JSON.parse(ans); }catch(err){} }
+    try{ window.parent.postMessage(m,'*'); }catch(err){ location.href=a.getAttribute('href'); }
+  }
+},true);
 </script>
 
 <script>

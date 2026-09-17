@@ -8,8 +8,18 @@ html,body{margin:0;padding:0;background:#fff}
 .page{position:relative;width:952px;height:1347px}
 .page img.bg{position:absolute;left:0;top:0;width:952px;height:1347px}
 p{margin:0;position:absolute}
-a{color:inherit}
+a{color:inherit;text-decoration:none}
 a:hover{text-decoration:underline}
+a.blk,a.blk:hover{text-decoration:none}
+a.blk:hover span{background:rgba(249,197,0,.22)}
+a.ixlink{text-decoration:none;color:inherit;cursor:pointer;border-bottom:1px solid rgba(11,74,114,.35)}
+a.ixlink:hover{color:#0b4a72;border-bottom-color:#0b4a72;background:rgba(249,197,0,.18);text-decoration:none}
+a.zoom{position:absolute;display:block;z-index:6;border-radius:3px;transition:box-shadow .12s}
+a.zoom:hover{box-shadow:0 0 0 2px rgba(249,197,0,.85) inset}
+a.zoom::after{content:"";position:absolute;right:6px;bottom:6px;width:26px;height:26px;border-radius:50%;background:rgba(22,19,14,.62) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f9c500' stroke-width='2.4' stroke-linecap='round'><circle cx='10.5' cy='10.5' r='6'/><path d='M15 15l5 5M8 10.5h5M10.5 8v5'/></svg>") center/16px no-repeat;opacity:0;transition:opacity .15s}
+a.zoom:hover::after{opacity:1}
+a.hot{position:absolute;display:block;z-index:4;border:none;border-radius:3px;transition:box-shadow .12s,background .12s}
+a.hot:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,0,.75) inset}
 a.adlink{position:absolute;display:block;z-index:5;text-decoration:none;border-radius:3px;transition:box-shadow .12s,background .12s}
 a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,0,.75) inset}
 @font-face{font-family:'Carlito';src:url('../../fonts/Carlito-Regular.ttf');font-weight:400;font-style:normal}
@@ -18,29 +28,29 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
 </style></head><body><div class="sheet"><div class="scaler"><div class="page">
 <img class="bg" src="pg023.jpg" alt="">
 <p style="position:absolute;left:518.5px;top:1311.0px;font-size:13.6px;white-space:nowrap" data-w="379.5"><span style="font-family:Arial,Helvetica,sans-serif">VAA AUSTRALIAN BEE JOURNAL  |  </span><span style="font-family:Arial,Helvetica,sans-serif">VOL. 109 No. 09 September 2026</span><span style="font-family:Arial,Helvetica,sans-serif">  |  23</span></p>
-<p style="position:absolute;left:620.4px;top:22.9px;font-size:13.6px;white-space:nowrap" data-w="277.6"><span style="color:#ffffff;font-family:Arial,Helvetica,sans-serif">INDUSTRY UPDATES FROM THE AHBIC NEWSLETTER</span></p>
 <p style="position:absolute;left:77.4px;top:243.7px;font-size:15.2px;white-space:nowrap" data-w="388.1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Spring is one of the busiest times in the apiary. Colonies are </span></p>
 <p style="position:absolute;left:54.9px;top:261.6px;font-size:15.2px;white-space:nowrap" data-w="411.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">expanding rapidly, brood nests are growing and management </span></p>
 <p style="position:absolute;left:54.7px;top:279.5px;font-size:15.2px;white-space:nowrap" data-w="410.8" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">activities are ramping up. While colonies may appear healthy and </span></p>
-<p style="position:absolute;left:55.1px;top:297.5px;font-size:15.2px;white-space:nowrap" data-w="410.4" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">productive, hidden problems can also emerge, particularly American </span></p>
+<p style="position:absolute;left:55.1px;top:297.4px;font-size:15.2px;white-space:nowrap" data-w="410.4" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">productive, hidden problems can also emerge, particularly American </span></p>
 <p style="position:absolute;left:55.2px;top:315.4px;font-size:15.2px;white-space:nowrap" data-w="410.4" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">foulbrood disease (AFB), caused by the bacterium, </span><span style="font-style:italic;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Paenibacillus </span></p>
 <p style="position:absolute;left:55.1px;top:333.3px;font-size:15.2px;white-space:nowrap" data-w="410.5" data-j="1"><span style="font-style:italic;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">larvae</span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">. However, AFB doesn’t always present in the textbook way </span></p>
 <p style="position:absolute;left:55.1px;top:351.2px;font-size:15.2px;white-space:nowrap" data-w="410.9" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">many beekeepers expect. Knowing what to look for and carrying out </span></p>
 <p style="position:absolute;left:55.2px;top:369.1px;font-size:15.2px;white-space:nowrap" data-w="410.3" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">thorough brood inspections in spring can make all the difference to </span></p>
-<p style="position:absolute;left:54.9px;top:387.1px;font-size:15.2px;white-space:nowrap" data-w="197.5"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">detecting AFB before it spreads. </span></p>
-<p style="position:absolute;left:77.4px;top:403.9px;font-size:15.2px;white-space:nowrap" data-w="388.2"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Best practice, as outlined in the </span><a href="http://www.honeybee.org.au/wp-content/uploads/2026/04/260421-Code-of-Practice.pdf" target="_blank" rel="noopener"><span style="color:#3c2414;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Biosecurity Code of Practice</span></a><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">, is </span></p>
+<p style="position:absolute;left:54.9px;top:387.0px;font-size:15.2px;white-space:nowrap" data-w="197.5"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">detecting AFB before it spreads. </span></p>
+<p style="position:absolute;left:77.4px;top:403.8px;font-size:15.2px;white-space:nowrap" data-w="388.2"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Best practice, as outlined in the </span><a href="http://www.honeybee.org.au/wp-content/uploads/2026/04/260421-Code-of-Practice.pdf" target="_blank" rel="noopener"><span style="color:#3c2414;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Biosecurity Code of Practice</span></a><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">, is </span></p>
 <p style="position:absolute;left:55.2px;top:422.9px;font-size:15.2px;white-space:nowrap" data-w="411.0" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">to conduct detailed brood inspections at least three times a year: </span></p>
 <p style="position:absolute;left:54.8px;top:440.8px;font-size:15.2px;white-space:nowrap" data-w="410.8" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">spring, summer and autumn. Spring inspections are particularly </span></p>
 <p style="position:absolute;left:55.0px;top:458.7px;font-size:15.2px;white-space:nowrap" data-w="410.4" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">important because they often provide the first opportunity to </span></p>
-<p style="position:absolute;left:54.9px;top:476.7px;font-size:15.2px;white-space:nowrap" data-w="173.7"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">detect AFB following winter. </span></p>
+<p style="position:absolute;left:54.9px;top:476.6px;font-size:15.2px;white-space:nowrap" data-w="173.7"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">detect AFB following winter. </span></p>
 <p style="position:absolute;left:77.4px;top:530.6px;font-size:15.2px;white-space:nowrap" data-w="388.2"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Spring doesn’t cause AFB infections. However, seasonal changes </span></p>
-<p style="position:absolute;left:55.0px;top:548.5px;font-size:15.2px;white-space:nowrap" data-w="410.4" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">in colony behaviour and increased management activities can make </span></p>
+<p style="position:absolute;left:55.0px;top:548.5px;font-size:15.2px;white-space:nowrap" data-w="410.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">in colony behaviour and increased management activities can make </span></p>
 <p style="position:absolute;left:55.1px;top:566.4px;font-size:15.2px;white-space:nowrap" data-w="410.9" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">previously hidden infections more obvious and increase the risk of </span></p>
 <p style="position:absolute;left:54.9px;top:584.3px;font-size:15.2px;white-space:nowrap" data-w="215.5"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">disease spreading within an apiary. </span></p>
 <p style="position:absolute;left:77.4px;top:638.3px;font-size:15.2px;white-space:nowrap" data-w="391.4"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">If AFB spores are present in a colony’s honey or pollen stores, </span></p>
 <p style="position:absolute;left:55.2px;top:656.2px;font-size:15.2px;white-space:nowrap" data-w="410.3" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">the rapid increase in brood rearing during spring increases the </span></p>
 <p style="position:absolute;left:55.1px;top:674.1px;font-size:15.2px;white-space:nowrap" data-w="410.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">likelihood they will be fed to young larvae. Research shows as </span></p>
-<p style="position:absolute;left:55.1px;top:692.0px;font-size:15.2px;white-space:nowrap" data-w="413.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">little as 6–10 spores may be sufficient to infect a one-day-old larva. </span></p>
+<p style="position:absolute;left:55.1px;top:692.0px;font-size:15.2px;white-space:nowrap" data-w="413.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">little as 6–10 spores may be sufficient to infect a one-day-old larva. 
+</span></p>
 <p style="position:absolute;left:54.0px;top:709.9px;font-size:15.2px;white-space:nowrap" data-w="411.5"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">As nurse bees feed larvae and clean brood cells, they can </span></p>
 <p style="position:absolute;left:55.0px;top:727.9px;font-size:15.2px;white-space:nowrap" data-w="413.2"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">inadvertently distribute spores more widely through the brood nest. </span></p>
 <p style="position:absolute;left:77.4px;top:745.8px;font-size:15.2px;white-space:nowrap" data-w="388.2"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Spring can also bring periods of nutritional stress due to variable </span></p>
@@ -63,37 +73,44 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
 <p style="position:absolute;left:512.8px;top:243.7px;font-size:15.2px;white-space:nowrap" data-w="388.1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Ropiness is a useful field diagnostic because no other brood </span></p>
 <p style="position:absolute;left:490.3px;top:261.6px;font-size:15.2px;white-space:nowrap" data-w="410.7" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">disease produces the same characteristic rope. It occurs only during </span></p>
 <p style="position:absolute;left:490.1px;top:279.5px;font-size:15.2px;white-space:nowrap" data-w="410.8" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">a specific stage of larval decomposition, when diseased brood </span></p>
-<p style="position:absolute;left:490.5px;top:297.5px;font-size:15.2px;white-space:nowrap" data-w="247.9"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">breaks down into a sticky, glue-like mass.</span></p>
+<p style="position:absolute;left:490.5px;top:297.4px;font-size:15.2px;white-space:nowrap" data-w="247.9"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">breaks down into a sticky, glue-like mass.</span></p>
 <p style="position:absolute;left:512.0px;top:315.4px;font-size:15.2px;white-space:nowrap" data-w="390.0"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">To perform the test, insert a matchstick into a suspect cell, stir </span></p>
 <p style="position:absolute;left:490.4px;top:333.3px;font-size:15.2px;white-space:nowrap" data-w="410.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">gently, then slowly withdraw it. If the brown larval remains stretch </span></p>
 <p style="position:absolute;left:490.4px;top:351.2px;font-size:15.2px;white-space:nowrap" data-w="397.9"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">into a smooth rope approximately 3–5 cm long, AFB is confirmed.</span></p>
-<p style="position:absolute;left:512.0px;top:405.1px;font-size:15.2px;white-space:nowrap" data-w="388.9" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">There is only a limited period during which infected larvae </span></p>
+<p style="position:absolute;left:512.0px;top:405.1px;font-size:15.2px;white-space:nowrap" data-w="389.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">There is only a limited period during which infected larvae 
+</span></p>
 <p style="position:absolute;left:490.4px;top:423.1px;font-size:15.2px;white-space:nowrap" data-w="57.8"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">will rope:</span></p>
-<p style="position:absolute;left:507.5px;top:439.7px;font-size:15.2px;white-space:nowrap" data-w="361.4" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">•  </span><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Too early: </span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">the larva has not yet reached the ropey stage  </span></p>
+<p style="position:absolute;left:507.5px;top:439.7px;font-size:15.2px;white-space:nowrap" data-w="361.4" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">•  </span><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Too early: </span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">the larva has not yet reached the ropey stage 
+</span></p>
 <p style="position:absolute;left:522.2px;top:458.9px;font-size:15.2px;white-space:nowrap" data-w="290.4"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">(commonly less than 8–12 days post-infection*)</span></p>
-<p style="position:absolute;left:507.5px;top:475.5px;font-size:15.2px;white-space:nowrap" data-w="358.3" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">•  </span><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Too late:</span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif"> the larval remains have dried into a hard scale  </span></p>
+<p style="position:absolute;left:507.5px;top:475.5px;font-size:15.2px;white-space:nowrap" data-w="358.3" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">•  </span><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Too late:</span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif"> the larval remains have dried into a hard scale 
+</span></p>
 <p style="position:absolute;left:522.2px;top:494.7px;font-size:15.2px;white-space:nowrap" data-w="304.9"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">(commonly more than 3–4 weeks after infection*)</span></p>
-<p style="position:absolute;left:507.3px;top:512.7px;font-size:15.2px;white-space:nowrap" data-w="360.3" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">*Disease progression also depends on the age of the larva  </span></p>
+<p style="position:absolute;left:507.3px;top:512.7px;font-size:15.2px;white-space:nowrap" data-w="360.3" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">*Disease progression also depends on the age of the larva 
+</span></p>
 <p style="position:absolute;left:490.1px;top:530.6px;font-size:15.2px;white-space:nowrap" data-w="240.9"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">at infection, spore dose and AFB strain. </span></p>
 <p style="position:absolute;left:512.8px;top:848.8px;font-size:15.2px;white-space:nowrap" data-w="341.3"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">If you suspect AFB, even if larval remains are not roping:</span></p>
-<p style="position:absolute;left:507.5px;top:866.7px;font-size:15.2px;white-space:nowrap" data-w="270.9"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">•  Look for other symptoms described above</span></p>
-<p style="position:absolute;left:507.5px;top:884.7px;font-size:15.2px;white-space:nowrap" data-w="378.6"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">•  Examine multiple cells, as some may be at a different stage  </span></p>
+<p style="position:absolute;left:507.5px;top:866.7px;font-size:15.2px;white-space:nowrap" data-w="270.9"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">•  Look for other symptoms described above</span></p>
+<p style="position:absolute;left:507.5px;top:884.7px;font-size:15.2px;white-space:nowrap" data-w="378.6"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">•  Examine multiple cells, as some may be at a different stage 
+</span></p>
 <p style="position:absolute;left:522.3px;top:902.6px;font-size:15.2px;white-space:nowrap" data-w="213.3"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">of infection and more likely to rope</span></p>
-<p style="position:absolute;left:507.5px;top:920.5px;font-size:15.2px;white-space:nowrap" data-w="344.0"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">•  Recheck suspect frames for ropiness several days later</span></p>
-<p style="position:absolute;left:507.5px;top:938.4px;font-size:15.2px;white-space:nowrap" data-w="385.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">•  Isolate the hive and reduce the entrance to minimise robbing</span></p>
-<p style="position:absolute;left:507.5px;top:956.3px;font-size:15.2px;white-space:nowrap" data-w="277.9"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">•  Avoid moving equipment between colonies</span></p>
-<p style="position:absolute;left:507.5px;top:974.3px;font-size:15.2px;white-space:nowrap" data-w="373.8"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">•  Clean tools and hands or gloves before working other hives</span></p>
-<p style="position:absolute;left:507.5px;top:992.2px;font-size:15.2px;white-space:nowrap" data-w="358.8"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">•  Contact DPIRD for assistance with sample collection and </span></p>
+<p style="position:absolute;left:507.5px;top:920.5px;font-size:15.2px;white-space:nowrap" data-w="344.0"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">•  Recheck suspect frames for ropiness several days later</span></p>
+<p style="position:absolute;left:507.5px;top:938.4px;font-size:15.2px;white-space:nowrap" data-w="385.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">•  Isolate the hive and reduce the entrance to minimise robbing</span></p>
+<p style="position:absolute;left:507.5px;top:956.3px;font-size:15.2px;white-space:nowrap" data-w="277.9"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">•  Avoid moving equipment between colonies</span></p>
+<p style="position:absolute;left:507.5px;top:974.3px;font-size:15.2px;white-space:nowrap" data-w="373.8"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">•  Clean tools and hands or gloves before working other hives</span></p>
+<p style="position:absolute;left:507.5px;top:992.2px;font-size:15.2px;white-space:nowrap" data-w="358.8"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">•  Contact DPIRD for assistance with sample collection and </span></p>
 <p style="position:absolute;left:522.7px;top:1010.1px;font-size:15.2px;white-space:nowrap" data-w="111.6"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">laboratory testing.</span></p>
-<p style="position:absolute;left:489.8px;top:814.9px;font-size:12.0px;white-space:nowrap" data-w="193.9"><span style="font-style:italic;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Watery AFB_cropped_Photo credit DPIRD</span></p>
-<p style="position:absolute;left:104.3px;top:1101.7px;font-size:16.8px;white-space:nowrap" data-w="770.4" data-j="1"><span style="font-weight:700;color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">If AFB is confirmed, either through visual diagnosis or laboratory testing, the affected hive must be euthanised </span></p>
-<p style="position:absolute;left:96.7px;top:1121.7px;font-size:16.8px;white-space:nowrap" data-w="762.9"><span style="font-weight:700;color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif"> and all associated equipment destroyed or appropriately sterilised. AFB is a declared and reportable disease, </span></p>
-<p style="position:absolute;left:236.7px;top:1141.6px;font-size:16.8px;white-space:nowrap" data-w="479.0"><span style="font-weight:700;color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif"> and all detections must be reported to DPIRD as soon as practicable.</span></p>
-<p style="position:absolute;left:55.1px;top:225.5px;font-size:19.2px;white-space:nowrap" data-w="288.4"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Spring&#160;build‐up…or&#160;hidden&#160;trouble?&#160;</span></p>
-<p style="position:absolute;left:54.6px;top:512.4px;font-size:19.2px;white-space:nowrap" data-w="298.9"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Why&#160;spring&#160;reveals&#160;what&#160;winter&#160;hides</span></p>
-<p style="position:absolute;left:55.0px;top:620.1px;font-size:19.2px;white-space:nowrap" data-w="138.5"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Colony&#160;dynamics&#160;</span></p>
-<p style="position:absolute;left:490.0px;top:225.5px;font-size:19.2px;white-space:nowrap" data-w="354.4"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">What&#160;if&#160;you&#160;suspect&#160;AFB&#160;but&#160;it&#160;doesn’t&#160;rope?</span></p>
-<p style="position:absolute;left:489.7px;top:386.9px;font-size:19.2px;white-space:nowrap" data-w="376.4"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">A&#160;negative&#160;ropiness&#160;test&#160;does&#160;not&#160;rule&#160;out&#160;AFB.&#160;</span></p>
+<p style="position:absolute;left:489.8px;top:814.9px;font-size:12.0px;white-space:nowrap" data-w="151.1"><span style="font-style:italic;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">AFB roping – photo credit DPIRD</span></p>
+<p style="position:absolute;left:104.3px;top:1101.7px;font-size:16.8px;white-space:nowrap" data-w="770.4" data-j="1"><span style="font-weight:700;color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">If AFB is confirmed, either through visual diagnosis or laboratory testing, the affected hive must be euthanised
+</span></p>
+<p style="position:absolute;left:96.7px;top:1121.7px;font-size:16.8px;white-space:nowrap" data-w="762.9"><span style="font-weight:700;color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif"> and all associated equipment destroyed or appropriately sterilised. AFB is a declared and reportable disease,
+</span></p>
+<p style="position:absolute;left:236.7px;top:1141.7px;font-size:16.8px;white-space:nowrap" data-w="479.0"><span style="font-weight:700;color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif"> and all detections must be reported to DPIRD as soon as practicable.</span></p>
+<p style="position:absolute;left:55.1px;top:220.2px;font-size:19.2px;white-space:nowrap" data-w="288.4"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Spring build-up…or hidden trouble? </span></p>
+<p style="position:absolute;left:54.6px;top:507.1px;font-size:19.2px;white-space:nowrap" data-w="298.9"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Why spring reveals what winter hides</span></p>
+<p style="position:absolute;left:55.0px;top:614.8px;font-size:19.2px;white-space:nowrap" data-w="138.5"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Colony dynamics </span></p>
+<p style="position:absolute;left:490.0px;top:220.2px;font-size:19.2px;white-space:nowrap" data-w="354.4"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">What if you suspect AFB but it doesn’t rope?</span></p>
+<p style="position:absolute;left:489.7px;top:381.6px;font-size:19.2px;white-space:nowrap" data-w="376.4"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">A negative ropiness test does not rule out AFB. </span></p>
 </div></div></div>
 <script>
 /* Fit each line to the width it occupied in the PDF: stretch the spaces on
@@ -107,13 +124,18 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
     var ps=document.querySelectorAll('p[data-w]');
     for(var i=0;i<ps.length;i++){
       var p=ps[i];
-      p.style.wordSpacing=''; p.style.letterSpacing='';
+      p.style.wordSpacing=''; p.style.letterSpacing=''; p.style.transform='';
       var target=parseFloat(p.getAttribute('data-w')), nat=p.offsetWidth;
       if(!target||!nat) continue;
       var d=target-nat, stretch=p.hasAttribute('data-j');
       if(Math.abs(d)<0.5) continue;
       if(d>0&&!stretch) continue;
-      if(Math.abs(d)>target*0.18){ continue; } /* too far off to fix by squeezing -- leave it alone rather than crush the spacing */
+      if(Math.abs(d)>target*0.18){
+        /* too far off to fix by spacing: a condensed face set in a substitute.
+           Squeeze the whole line to its measure instead of letting it run off
+           the page (the folio's page number was being clipped on right-hand pages). */
+        if(d<0){ p.style.transformOrigin='0 0'; p.style.transform='scaleX('+(target/nat).toFixed(4)+')'; }
+        continue; }
       var txt=p.textContent||'', sp=(txt.match(/ /g)||[]).length;
       var fs=parseFloat(getComputedStyle(p).fontSize)||12;
       if(sp>0){
@@ -133,6 +155,37 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
   if(document.fonts&&document.fonts.ready) document.fonts.ready.then(fit);
   window.addEventListener('resize',fit);
 })();
+</script>
+
+<script>
+/* An index entry asks the parent reader to jump. Falls back to the href when
+   the page is opened on its own. */
+document.addEventListener('click',function(e){
+  var a=e.target && e.target.closest ? e.target.closest('a.ixlink') : null;
+  if(!a) return;
+  var m=/#\/page\/([^\/]+)\/(\d+)/.exec(a.getAttribute('href')||'');
+  if(!m) return;
+  if(window.parent && window.parent!==window){
+    e.preventDefault();
+    try{ window.parent.postMessage({abj:'page',iss:m[1],p:parseInt(m[2],10)},'*'); }
+    catch(err){ location.href=a.getAttribute('href'); }
+  }
+},true);
+</script>
+
+<script>
+/* A picture with a bigger version asks the parent reader to open its lightbox;
+   on its own the page just opens the picture. */
+document.addEventListener('click',function(e){
+  var a=e.target && e.target.closest ? e.target.closest('a.zoom') : null;
+  if(!a) return;
+  if(window.parent && window.parent!==window){
+    e.preventDefault();
+    var m={abj:'img',src:a.getAttribute('data-src'),alt:a.getAttribute('data-alt')||'',w:+a.getAttribute('data-w')||0,h:+a.getAttribute('data-h')||0};
+    var ans=a.getAttribute('data-answers'); if(ans){ try{ m.answers=JSON.parse(ans); }catch(err){} }
+    try{ window.parent.postMessage(m,'*'); }catch(err){ location.href=a.getAttribute('href'); }
+  }
+},true);
 </script>
 
 <script>

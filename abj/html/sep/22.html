@@ -8,8 +8,18 @@ html,body{margin:0;padding:0;background:#fff}
 .page{position:relative;width:952px;height:1347px}
 .page img.bg{position:absolute;left:0;top:0;width:952px;height:1347px}
 p{margin:0;position:absolute}
-a{color:inherit}
+a{color:inherit;text-decoration:none}
 a:hover{text-decoration:underline}
+a.blk,a.blk:hover{text-decoration:none}
+a.blk:hover span{background:rgba(249,197,0,.22)}
+a.ixlink{text-decoration:none;color:inherit;cursor:pointer;border-bottom:1px solid rgba(11,74,114,.35)}
+a.ixlink:hover{color:#0b4a72;border-bottom-color:#0b4a72;background:rgba(249,197,0,.18);text-decoration:none}
+a.zoom{position:absolute;display:block;z-index:6;border-radius:3px;transition:box-shadow .12s}
+a.zoom:hover{box-shadow:0 0 0 2px rgba(249,197,0,.85) inset}
+a.zoom::after{content:"";position:absolute;right:6px;bottom:6px;width:26px;height:26px;border-radius:50%;background:rgba(22,19,14,.62) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f9c500' stroke-width='2.4' stroke-linecap='round'><circle cx='10.5' cy='10.5' r='6'/><path d='M15 15l5 5M8 10.5h5M10.5 8v5'/></svg>") center/16px no-repeat;opacity:0;transition:opacity .15s}
+a.zoom:hover::after{opacity:1}
+a.hot{position:absolute;display:block;z-index:4;border:none;border-radius:3px;transition:box-shadow .12s,background .12s}
+a.hot:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,0,.75) inset}
 a.adlink{position:absolute;display:block;z-index:5;text-decoration:none;border-radius:3px;transition:box-shadow .12s,background .12s}
 a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,0,.75) inset}
 @font-face{font-family:'Carlito';src:url('../../fonts/Carlito-Regular.ttf');font-weight:400;font-style:normal}
@@ -18,32 +28,36 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
 </style></head><body><div class="sheet"><div class="scaler"><div class="page">
 <img class="bg" src="pg022.jpg" alt="">
 <p style="position:absolute;left:54.4px;top:1311.0px;font-size:13.6px;white-space:nowrap" data-w="279.4"><span style="font-family:Arial,Helvetica,sans-serif">22  |  </span><span style="font-family:Arial,Helvetica,sans-serif">Published since 1918 by the VAA – founded in 1892</span></p>
-<p style="position:absolute;left:54.4px;top:22.9px;font-size:13.6px;white-space:nowrap" data-w="277.6"><span style="color:#ffffff;font-family:Arial,Helvetica,sans-serif">INDUSTRY UPDATES FROM THE AHBIC NEWSLETTER</span></p>
-<p style="position:absolute;left:54.4px;top:73.3px;font-size:28.8px;white-space:nowrap" data-w="443.5" data-j="1"><span style="font-weight:700;color:#c6671d;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">2026 Australian Colony Loss Survey:  </span></p>
+<p style="position:absolute;left:54.4px;top:73.3px;font-size:28.8px;white-space:nowrap" data-w="443.5" data-j="1"><span style="font-weight:700;color:#c6671d;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">2026 Australian Colony Loss Survey: 
+</span></p>
 <p style="position:absolute;left:54.4px;top:105.3px;font-size:28.8px;white-space:nowrap" data-w="172.0"><span style="font-weight:700;color:#c6671d;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">opening soon!</span></p>
 <p style="position:absolute;left:54.4px;top:156.8px;font-size:19.2px;white-space:nowrap" data-w="306.2"><span style="font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Australian Honey Bee Industry Council</span><span style="font-weight:700;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif"> </span><span style="font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif"> </span></p>
 <p style="position:absolute;left:54.4px;top:209.0px;font-size:25.6px;white-space:nowrap" data-w="494.9"><span style="font-style:italic;color:#c6671d;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">The 2026 Australian Colony Loss Survey is back!</span></p>
-<p style="position:absolute;left:77.1px;top:247.1px;font-size:16.8px;white-space:nowrap" data-w="534.4"><span style="color:#c6671d;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">The Australian Colony Loss Survey established in 2025, provides empirical </span></p>
+<p style="position:absolute;left:77.1px;top:247.1px;font-size:16.8px;white-space:nowrap" data-w="534.4"><span style="color:#c6671d;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">The Australian Colony Loss Survey, established in 2025, provides empirical </span></p>
 <p style="position:absolute;left:54.4px;top:267.1px;font-size:16.8px;white-space:nowrap" data-w="557.1" data-j="1"><span style="color:#c6671d;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">data to support Australian beekeepers to make informed business decisions, </span></p>
-<p style="position:absolute;left:54.4px;top:287.1px;font-size:16.8px;white-space:nowrap" data-w="557.1" data-j="1"><span style="color:#c6671d;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">particularly regarding the management of honey bee pests and diseases.  The </span></p>
-<p style="position:absolute;left:54.4px;top:307.1px;font-size:16.8px;white-space:nowrap" data-w="553.3" data-j="1"><span style="color:#c6671d;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">results of the survey are used to facilitate national extension efforts and peer-</span></p>
-<p style="position:absolute;left:54.4px;top:327.1px;font-size:16.8px;white-space:nowrap" data-w="557.1" data-j="1"><span style="color:#c6671d;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">to-peer learning and knowledge transfer from beekeeper to beekeeper.  The </span></p>
-<p style="position:absolute;left:54.4px;top:347.1px;font-size:16.8px;white-space:nowrap" data-w="557.1" data-j="1"><span style="color:#c6671d;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">survey provides a baseline for colony health and management practices, allowing </span></p>
-<p style="position:absolute;left:54.4px;top:367.0px;font-size:16.8px;white-space:nowrap" data-w="557.1" data-j="1"><span style="color:#c6671d;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">beekeepers to benchmark their own operations and help them to adopt best </span></p>
-<p style="position:absolute;left:54.4px;top:387.0px;font-size:16.8px;white-space:nowrap" data-w="152.9"><span style="color:#c6671d;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">practice management.</span></p>
-<p style="position:absolute;left:367.4px;top:421.4px;font-size:15.2px;white-space:nowrap" data-w="243.8"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Through fit for purpose extension </span></p>
-<p style="position:absolute;left:344.7px;top:439.3px;font-size:15.2px;white-space:nowrap" data-w="266.6" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">materials, and clarity in messaging for </span></p>
+<p style="position:absolute;left:54.4px;top:287.1px;font-size:16.8px;white-space:nowrap" data-w="557.1" data-j="1"><span style="color:#c6671d;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">particularly regarding the management of honey bee pests and diseases. 
+</span></p>
+<p style="position:absolute;left:54.4px;top:307.1px;font-size:16.8px;white-space:nowrap" data-w="557.1" data-j="1"><span style="color:#c6671d;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">The results of the survey are used to facilitate national extension efforts and </span></p>
+<p style="position:absolute;left:54.4px;top:327.1px;font-size:16.8px;white-space:nowrap" data-w="557.1" data-j="1"><span style="color:#c6671d;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">peer-to-peer learning and knowledge transfer from beekeeper to beekeeper. 
+</span></p>
+<p style="position:absolute;left:54.4px;top:347.1px;font-size:16.8px;white-space:nowrap" data-w="557.1" data-j="1"><span style="color:#c6671d;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">The survey provides a baseline for colony health and management practices, </span></p>
+<p style="position:absolute;left:54.4px;top:367.1px;font-size:16.8px;white-space:nowrap" data-w="557.1" data-j="1"><span style="color:#c6671d;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">allowing beekeepers to benchmark their own operations and help them to adopt </span></p>
+<p style="position:absolute;left:54.4px;top:387.1px;font-size:16.8px;white-space:nowrap" data-w="185.9"><span style="color:#c6671d;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">best practice management.</span></p>
+<p style="position:absolute;left:367.4px;top:421.4px;font-size:15.2px;white-space:nowrap" data-w="54.5"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Through </span></p>
+<p style="position:absolute;left:439.3px;top:421.4px;font-size:15.2px;white-space:nowrap" data-w="92.0"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">fit-for-purpose </span></p>
+<p style="position:absolute;left:548.7px;top:421.4px;font-size:15.2px;white-space:nowrap" data-w="62.5"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">extension </span></p>
+<p style="position:absolute;left:344.7px;top:439.3px;font-size:15.2px;white-space:nowrap" data-w="266.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">materials, and clarity in messaging for </span></p>
 <p style="position:absolute;left:344.7px;top:457.2px;font-size:15.2px;white-space:nowrap" data-w="266.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">specific target audiences (e.g. commercial </span></p>
 <p style="position:absolute;left:344.7px;top:475.1px;font-size:15.2px;white-space:nowrap" data-w="266.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">beekeepers), this project will demonstrate </span></p>
-<p style="position:absolute;left:344.7px;top:493.1px;font-size:15.2px;white-space:nowrap" data-w="33.4"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">what </span></p>
-<p style="position:absolute;left:395.8px;top:493.1px;font-size:15.2px;white-space:nowrap" data-w="44.4"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">impact </span></p>
-<p style="position:absolute;left:458.0px;top:493.1px;font-size:15.2px;white-space:nowrap" data-w="38.2"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">pests, </span></p>
-<p style="position:absolute;left:514.1px;top:493.1px;font-size:15.2px;white-space:nowrap" data-w="53.3"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">diseases </span></p>
-<p style="position:absolute;left:585.1px;top:493.1px;font-size:15.2px;white-space:nowrap" data-w="26.1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">and </span></p>
+<p style="position:absolute;left:344.7px;top:493.1px;font-size:15.2px;white-space:nowrap" data-w="34.0"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">what </span></p>
+<p style="position:absolute;left:395.4px;top:493.1px;font-size:15.2px;white-space:nowrap" data-w="45.3"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">impact </span></p>
+<p style="position:absolute;left:457.6px;top:493.1px;font-size:15.2px;white-space:nowrap" data-w="39.1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">pests, </span></p>
+<p style="position:absolute;left:513.5px;top:493.1px;font-size:15.2px;white-space:nowrap" data-w="54.5"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">diseases </span></p>
+<p style="position:absolute;left:584.8px;top:493.1px;font-size:15.2px;white-space:nowrap" data-w="26.4"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">and </span></p>
 <p style="position:absolute;left:344.7px;top:511.0px;font-size:15.2px;white-space:nowrap" data-w="266.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">management practices are having on hive </span></p>
 <p style="position:absolute;left:344.7px;top:528.9px;font-size:15.2px;white-space:nowrap" data-w="266.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">health, and what mitigation techniques are </span></p>
-<p style="position:absolute;left:344.7px;top:546.8px;font-size:15.2px;white-space:nowrap" data-w="143.7"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">working for beekeepers.</span></p>
-<p style="position:absolute;left:367.4px;top:564.8px;font-size:15.2px;white-space:nowrap" data-w="243.8"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Over 750 beekeepers from across </span></p>
+<p style="position:absolute;left:344.7px;top:546.8px;font-size:15.2px;white-space:nowrap" data-w="147.0"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">working for beekeepers.</span></p>
+<p style="position:absolute;left:367.4px;top:564.7px;font-size:15.2px;white-space:nowrap" data-w="243.8"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Over 750 beekeepers from across </span></p>
 <p style="position:absolute;left:344.7px;top:582.7px;font-size:15.2px;white-space:nowrap" data-w="266.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Australia took part in the 2025 Survey, </span></p>
 <p style="position:absolute;left:344.7px;top:600.6px;font-size:15.2px;white-space:nowrap" data-w="266.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">giving us vital information about the </span></p>
 <p style="position:absolute;left:344.7px;top:618.5px;font-size:15.2px;white-space:nowrap" data-w="34.1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">most </span></p>
@@ -53,13 +67,13 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
 <p style="position:absolute;left:596.5px;top:618.5px;font-size:15.2px;white-space:nowrap" data-w="14.7"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">in </span></p>
 <p style="position:absolute;left:344.7px;top:636.4px;font-size:15.2px;white-space:nowrap" data-w="266.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Australian beekeeping. In this 2026 round, </span></p>
 <p style="position:absolute;left:344.7px;top:653.0px;font-size:15.2px;white-space:nowrap" data-w="266.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">we’re hoping to hear from </span><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">even more </span></p>
-<p style="position:absolute;left:344.7px;top:671.0px;font-size:15.2px;white-space:nowrap" data-w="81.1"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">beekeepers! </span></p>
+<p style="position:absolute;left:344.7px;top:670.9px;font-size:15.2px;white-space:nowrap" data-w="81.1"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">beekeepers! </span></p>
 <p style="position:absolute;left:77.1px;top:718.5px;font-size:15.2px;white-space:nowrap" data-w="534.1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">The Survey is your chance to tell the industry, government and researchers about the </span></p>
-<p style="position:absolute;left:54.4px;top:736.4px;font-size:15.2px;white-space:nowrap" data-w="556.8" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">biggest challenges you faced as a beekeeper in 2026.  Together, we can work out management </span></p>
+<p style="position:absolute;left:54.4px;top:736.4px;font-size:15.2px;white-space:nowrap" data-w="556.8" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">biggest challenges you faced as a beekeeper in 2026. Together, we can work out management </span></p>
 <p style="position:absolute;left:54.4px;top:754.3px;font-size:15.2px;white-space:nowrap" data-w="548.2"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">strategies for them that will ensure a vibrant Australian honey bee industry for the future. </span></p>
 <p style="position:absolute;left:77.1px;top:772.2px;font-size:15.2px;white-space:nowrap" data-w="534.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">The survey is for anyone and everyone who keeps bees anywhere in Australia and is </span></p>
-<p style="position:absolute;left:54.4px;top:790.2px;font-size:15.2px;white-space:nowrap" data-w="145.5"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">completely anonymous.</span></p>
-<p style="position:absolute;left:77.1px;top:808.1px;font-size:15.2px;white-space:nowrap" data-w="534.1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">The Project will be led by Bianca Giggins from the Australian Honey Bee industry </span></p>
+<p style="position:absolute;left:54.4px;top:790.1px;font-size:15.2px;white-space:nowrap" data-w="145.5"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">completely anonymous.</span></p>
+<p style="position:absolute;left:77.1px;top:808.1px;font-size:15.2px;white-space:nowrap" data-w="534.1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">The Project will be led by Bianca Giggins from the Australian Honey Bee Industry </span></p>
 <p style="position:absolute;left:54.4px;top:826.0px;font-size:15.2px;white-space:nowrap" data-w="556.8" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Council, and the team will build on previous surveys to further refine the questions to </span></p>
 <p style="position:absolute;left:54.4px;top:843.9px;font-size:15.2px;white-space:nowrap" data-w="556.9" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">provide invaluable longitudinal data allowing industry and researchers to track and identify </span></p>
 <p style="position:absolute;left:54.4px;top:861.8px;font-size:15.2px;white-space:nowrap" data-w="179.1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">emerging threats and trends.</span></p>
@@ -68,17 +82,24 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
 <p style="position:absolute;left:635.0px;top:264.1px;font-size:24.0px;white-space:nowrap" data-w="264.3" data-j="1"><span style="font-weight:700;color:#c6671d;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">alcohol/detergent washing </span></p>
 <p style="position:absolute;left:635.0px;top:291.3px;font-size:24.0px;white-space:nowrap" data-w="259.1"><span style="font-weight:700;color:#c6671d;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">to monitor mites.</span><span style="font-weight:700;color:#5f636a;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif"> </span><span style="font-weight:700;color:#5f636a;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">(2025 Results)</span></p>
 <p style="position:absolute;left:632.2px;top:343.3px;font-size:66.9px;white-space:nowrap" data-w="128.6"><span style="font-weight:700;color:#c6671d;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">30% </span></p>
-<p style="position:absolute;left:759.8px;top:387.8px;font-size:24.0px;white-space:nowrap" data-w="111.9"><span style="font-weight:700;color:#c6671d;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">are relying  </span></p>
-<p style="position:absolute;left:635.0px;top:415.0px;font-size:24.0px;white-space:nowrap" data-w="230.3"><span style="font-weight:700;color:#c6671d;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">on visual inspections of </span></p>
+<p style="position:absolute;left:759.8px;top:387.8px;font-size:24.0px;white-space:nowrap" data-w="111.9"><span style="font-weight:700;color:#c6671d;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">are relying 
+</span></p>
+<p style="position:absolute;left:635.0px;top:415.0px;font-size:24.0px;white-space:nowrap" data-w="230.3" data-j="1"><span style="font-weight:700;color:#c6671d;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">on visual inspections of </span></p>
 <p style="position:absolute;left:635.0px;top:442.2px;font-size:24.0px;white-space:nowrap" data-w="197.4"><span style="font-weight:700;color:#c6671d;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">adult bees.</span><span style="font-weight:700;color:#5f636a;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif"> </span><span style="font-weight:700;color:#5f636a;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">(2025 Results)</span></p>
-<p style="position:absolute;left:678.8px;top:934.4px;font-size:15.2px;white-space:nowrap" data-w="86.6"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Register your </span></p>
-<p style="position:absolute;left:677.1px;top:952.4px;font-size:15.2px;white-space:nowrap" data-w="88.3"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">interest here: </span></p>
+<p style="position:absolute;left:678.8px;top:934.4px;font-size:15.2px;white-space:nowrap" data-w="86.6"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Register your 
+</span></p>
+<p style="position:absolute;left:677.1px;top:952.4px;font-size:15.2px;white-space:nowrap" data-w="88.3"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">interest here: </span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">
+</span></p>
 <p style="position:absolute;left:624.4px;top:970.5px;font-size:15.2px;white-space:nowrap" data-w="141.0"><a href="https://forms.cloud.microsoft/r/YuFTCczHt9" target="_blank" rel="noopener"><span style="color:#3c2414;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Australian Colony Loss </span></a></p>
-<p style="position:absolute;left:622.0px;top:988.4px;font-size:15.2px;white-space:nowrap" data-w="143.4" data-j="1"><a href="https://forms.cloud.microsoft/r/YuFTCczHt9" target="_blank" rel="noopener"><span style="color:#3c2414;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Survey 2026 – Register </span></a></p>
-<p style="position:absolute;left:620.5px;top:1006.3px;font-size:15.2px;white-space:nowrap" data-w="144.9"><a href="https://forms.cloud.microsoft/r/YuFTCczHt9" target="_blank" rel="noopener"><span style="color:#3c2414;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">for further Information </span></a></p>
+<p style="position:absolute;left:622.0px;top:988.4px;font-size:15.2px;white-space:nowrap" data-w="143.4" data-j="1"><a href="https://forms.cloud.microsoft/r/YuFTCczHt9" target="_blank" rel="noopener"><span style="color:#3c2414;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Survey 2026 – Register 
+</span></a></p>
+<p style="position:absolute;left:620.8px;top:1006.3px;font-size:15.2px;white-space:nowrap" data-w="144.6"><a href="https://agrifutures.com.au/funding-opportunity/request-for-quote-deliver-practical-impacts-for-the-honey-bee-and-pollination-industry/" target="_blank" rel="noopener"><span style="color:#3c2414;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">for further information 
+</span></a></p>
 <p style="position:absolute;left:675.8px;top:1024.2px;font-size:15.2px;white-space:nowrap" data-w="86.2"><a href="https://forms.cloud.microsoft/r/YuFTCczHt9" target="_blank" rel="noopener"><span style="color:#3c2414;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">– Fill out form</span></a></p>
-<p style="position:absolute;left:739.3px;top:1087.6px;font-size:15.2px;white-space:nowrap" data-w="114.5"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Last years results  </span></p>
-<p style="position:absolute;left:739.3px;top:1105.5px;font-size:15.2px;white-space:nowrap" data-w="63.6"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">are here:  </span></p>
+<p style="position:absolute;left:739.3px;top:1087.6px;font-size:15.2px;white-space:nowrap" data-w="118.3"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Last year’s results 
+</span></p>
+<p style="position:absolute;left:739.3px;top:1105.5px;font-size:15.2px;white-space:nowrap" data-w="63.6"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">are here: 
+</span></p>
 <p style="position:absolute;left:739.3px;top:1123.6px;font-size:15.2px;white-space:nowrap" data-w="135.7"><a href="https://agrifutures.com.au/product/australian-honey-bee-pollination-industry-national-colony-loss-survey-2024-and-2025-key-results/" target="_blank" rel="noopener"><span style="color:#3c2414;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Australian Honey Bee </span></a></p>
 <p style="position:absolute;left:739.3px;top:1141.6px;font-size:15.2px;white-space:nowrap" data-w="137.2"><a href="https://agrifutures.com.au/product/australian-honey-bee-pollination-industry-national-colony-loss-survey-2024-and-2025-key-results/" target="_blank" rel="noopener"><span style="color:#3c2414;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">&amp; Pollination Industry </span></a></p>
 <p style="position:absolute;left:739.3px;top:1159.5px;font-size:15.2px;white-space:nowrap" data-w="131.0"><a href="https://agrifutures.com.au/product/australian-honey-bee-pollination-industry-national-colony-loss-survey-2024-and-2025-key-results/" target="_blank" rel="noopener"><span style="color:#3c2414;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">National Colony Loss </span></a></p>
@@ -86,11 +107,18 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
 <p style="position:absolute;left:739.3px;top:1195.3px;font-size:15.2px;white-space:nowrap" data-w="65.3"><a href="https://agrifutures.com.au/product/australian-honey-bee-pollination-industry-national-colony-loss-survey-2024-and-2025-key-results/" target="_blank" rel="noopener"><span style="color:#3c2414;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">key results</span></a></p>
 <p style="position:absolute;left:658.5px;top:511.1px;font-size:15.2px;white-space:nowrap" data-w="238.7"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">International Winter Loss Comparison</span></p>
 <p style="position:absolute;left:344.7px;top:930.5px;font-size:28.8px;white-space:nowrap" data-w="201.0"><span style="font-weight:700;color:#fbaa19;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">AHBIC will bring </span></p>
-<p style="position:absolute;left:344.7px;top:962.5px;font-size:28.8px;white-space:nowrap" data-w="193.5"><span style="font-weight:700;color:#fbaa19;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">more details in  </span></p>
-<p style="position:absolute;left:344.7px;top:994.5px;font-size:28.8px;white-space:nowrap" data-w="230.7" data-j="1"><span style="font-weight:700;color:#fbaa19;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">the coming weeks  </span></p>
-<p style="position:absolute;left:344.7px;top:1026.5px;font-size:28.8px;white-space:nowrap" data-w="190.4"><span style="font-weight:700;color:#fbaa19;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">as we are busy  </span></p>
-<p style="position:absolute;left:344.7px;top:1058.5px;font-size:28.8px;white-space:nowrap" data-w="212.2"><span style="font-weight:700;color:#fbaa19;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">preparing for the </span></p>
-<p style="position:absolute;left:344.7px;top:1090.5px;font-size:28.8px;white-space:nowrap" data-w="155.6"><span style="font-weight:700;color:#fbaa19;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">2026 launch!</span></p>
+<p style="position:absolute;left:344.7px;top:960.9px;font-size:28.8px;white-space:nowrap" data-w="193.5"><span style="font-weight:700;color:#fbaa19;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">more details in 
+</span></p>
+<p style="position:absolute;left:344.7px;top:991.3px;font-size:28.8px;white-space:nowrap" data-w="230.7" data-j="1"><span style="font-weight:700;color:#fbaa19;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">the coming weeks 
+</span></p>
+<p style="position:absolute;left:344.7px;top:1021.7px;font-size:28.8px;white-space:nowrap" data-w="190.4"><span style="font-weight:700;color:#fbaa19;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">as we are busy 
+</span></p>
+<p style="position:absolute;left:344.7px;top:1052.1px;font-size:28.8px;white-space:nowrap" data-w="212.2"><span style="font-weight:700;color:#fbaa19;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">preparing for the </span></p>
+<p style="position:absolute;left:344.7px;top:1082.5px;font-size:28.8px;white-space:nowrap" data-w="155.6"><span style="font-weight:700;color:#fbaa19;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">2026 launch!</span></p>
+<a class="hot" href="https://forms.cloud.microsoft/r/YuFTCczHt9" target="_blank" rel="noopener" title="forms.cloud.microsoft/r/YuFTCczHt9" aria-label="Link: forms.cloud.microsoft/r/YuFTCczHt9" style="left:620.8px;top:1006.3px;width:141.1px;height:20.3px"></a>
+<a class="hot" href="https://forms.cloud.microsoft/pages/responsepage.aspx?id=F-oMI_lh70mz-Dhwb-aAvDeXuEV11wpDhNs5D8o_I99UQzVXUDhXQlBTQ0pZMFJJTEhORkxaVkZMQy4u&amp;route=shorturl" target="_blank" rel="noopener" title="forms.cloud.microsoft/pages/responsepage.aspx?id=F-oMI_lh70mz-Dhwb-aAvDeXuEV11wpDhNs5D8o_I99UQzVXUDhXQlBTQ0pZMFJJTEhORkxaVkZMQy4u&amp;route=shorturl" aria-label="Link: forms.cloud.microsoft/pages/responsepage.aspx?id=F-oMI_lh70mz-Dhwb-aAvDeXuEV11wpDhNs5D8o_I99UQzVXUDhXQlBTQ0pZMFJJTEhORkxaVkZMQy4u&amp;route=shorturl" style="left:779.7px;top:938.4px;width:114.2px;height:114.2px"></a>
+<a class="hot" href="https://agrifutures.com.au/product/australian-honey-bee-pollination-industry-national-colony-loss-survey-2024-and-2025-key-results/" target="_blank" rel="noopener" title="agrifutures.com.au/product/australian-honey-bee-pollination-industry-national-colony-loss-survey-2024-and-2025-key-results" aria-label="Link: agrifutures.com.au/product/australian-honey-bee-pollination-industry-national-colony-loss-survey-2024-and-2025-key-results" style="left:607.4px;top:1091.5px;width:114.2px;height:114.2px"></a>
+<a class="zoom" href="../../assets/sep/big/p22_155.jpg" target="_blank" rel="noopener" data-src="assets/sep/big/p22_155.jpg" data-alt="Winter colony losses chart: Australia, NZ, USA, Canada" data-w="654" data-h="350" title="Click to enlarge" aria-label="Enlarge: Winter colony losses chart: Australia, NZ, USA, Canada" style="left:633.3px;top:541.4px;width:266.6px;height:142.7px"></a>
 </div></div></div>
 <script>
 /* Fit each line to the width it occupied in the PDF: stretch the spaces on
@@ -104,13 +132,18 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
     var ps=document.querySelectorAll('p[data-w]');
     for(var i=0;i<ps.length;i++){
       var p=ps[i];
-      p.style.wordSpacing=''; p.style.letterSpacing='';
+      p.style.wordSpacing=''; p.style.letterSpacing=''; p.style.transform='';
       var target=parseFloat(p.getAttribute('data-w')), nat=p.offsetWidth;
       if(!target||!nat) continue;
       var d=target-nat, stretch=p.hasAttribute('data-j');
       if(Math.abs(d)<0.5) continue;
       if(d>0&&!stretch) continue;
-      if(Math.abs(d)>target*0.18){ continue; } /* too far off to fix by squeezing -- leave it alone rather than crush the spacing */
+      if(Math.abs(d)>target*0.18){
+        /* too far off to fix by spacing: a condensed face set in a substitute.
+           Squeeze the whole line to its measure instead of letting it run off
+           the page (the folio's page number was being clipped on right-hand pages). */
+        if(d<0){ p.style.transformOrigin='0 0'; p.style.transform='scaleX('+(target/nat).toFixed(4)+')'; }
+        continue; }
       var txt=p.textContent||'', sp=(txt.match(/ /g)||[]).length;
       var fs=parseFloat(getComputedStyle(p).fontSize)||12;
       if(sp>0){
@@ -130,6 +163,37 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
   if(document.fonts&&document.fonts.ready) document.fonts.ready.then(fit);
   window.addEventListener('resize',fit);
 })();
+</script>
+
+<script>
+/* An index entry asks the parent reader to jump. Falls back to the href when
+   the page is opened on its own. */
+document.addEventListener('click',function(e){
+  var a=e.target && e.target.closest ? e.target.closest('a.ixlink') : null;
+  if(!a) return;
+  var m=/#\/page\/([^\/]+)\/(\d+)/.exec(a.getAttribute('href')||'');
+  if(!m) return;
+  if(window.parent && window.parent!==window){
+    e.preventDefault();
+    try{ window.parent.postMessage({abj:'page',iss:m[1],p:parseInt(m[2],10)},'*'); }
+    catch(err){ location.href=a.getAttribute('href'); }
+  }
+},true);
+</script>
+
+<script>
+/* A picture with a bigger version asks the parent reader to open its lightbox;
+   on its own the page just opens the picture. */
+document.addEventListener('click',function(e){
+  var a=e.target && e.target.closest ? e.target.closest('a.zoom') : null;
+  if(!a) return;
+  if(window.parent && window.parent!==window){
+    e.preventDefault();
+    var m={abj:'img',src:a.getAttribute('data-src'),alt:a.getAttribute('data-alt')||'',w:+a.getAttribute('data-w')||0,h:+a.getAttribute('data-h')||0};
+    var ans=a.getAttribute('data-answers'); if(ans){ try{ m.answers=JSON.parse(ans); }catch(err){} }
+    try{ window.parent.postMessage(m,'*'); }catch(err){ location.href=a.getAttribute('href'); }
+  }
+},true);
 </script>
 
 <script>

@@ -8,8 +8,18 @@ html,body{margin:0;padding:0;background:#fff}
 .page{position:relative;width:952px;height:1347px}
 .page img.bg{position:absolute;left:0;top:0;width:952px;height:1347px}
 p{margin:0;position:absolute}
-a{color:inherit}
+a{color:inherit;text-decoration:none}
 a:hover{text-decoration:underline}
+a.blk,a.blk:hover{text-decoration:none}
+a.blk:hover span{background:rgba(249,197,0,.22)}
+a.ixlink{text-decoration:none;color:inherit;cursor:pointer;border-bottom:1px solid rgba(11,74,114,.35)}
+a.ixlink:hover{color:#0b4a72;border-bottom-color:#0b4a72;background:rgba(249,197,0,.18);text-decoration:none}
+a.zoom{position:absolute;display:block;z-index:6;border-radius:3px;transition:box-shadow .12s}
+a.zoom:hover{box-shadow:0 0 0 2px rgba(249,197,0,.85) inset}
+a.zoom::after{content:"";position:absolute;right:6px;bottom:6px;width:26px;height:26px;border-radius:50%;background:rgba(22,19,14,.62) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f9c500' stroke-width='2.4' stroke-linecap='round'><circle cx='10.5' cy='10.5' r='6'/><path d='M15 15l5 5M8 10.5h5M10.5 8v5'/></svg>") center/16px no-repeat;opacity:0;transition:opacity .15s}
+a.zoom:hover::after{opacity:1}
+a.hot{position:absolute;display:block;z-index:4;border:none;border-radius:3px;transition:box-shadow .12s,background .12s}
+a.hot:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,0,.75) inset}
 a.adlink{position:absolute;display:block;z-index:5;text-decoration:none;border-radius:3px;transition:box-shadow .12s,background .12s}
 a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,0,.75) inset}
 @font-face{font-family:'Carlito';src:url('../../fonts/Carlito-Regular.ttf');font-weight:400;font-style:normal}
@@ -28,83 +38,92 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
 <p style="position:absolute;left:54.4px;top:371.8px;font-size:15.2px;white-space:nowrap" data-w="296.7" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">trees in Victoria. It was a bucket-list experience </span></p>
 <p style="position:absolute;left:54.4px;top:390.1px;font-size:15.2px;white-space:nowrap" data-w="191.2"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">that certainly didn’t disappoint.</span></p>
 <p style="position:absolute;left:77.1px;top:408.4px;font-size:15.2px;white-space:nowrap" data-w="274.1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">From above, the orchard seems almost </span></p>
-<p style="position:absolute;left:54.4px;top:426.8px;font-size:15.2px;white-space:nowrap" data-w="296.7" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">endless. Row after row of trees covered in </span></p>
-<p style="position:absolute;left:54.4px;top:445.1px;font-size:15.2px;white-space:nowrap" data-w="296.7" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">delicate white and pale pink blossom. From the </span></p>
+<p style="position:absolute;left:54.4px;top:426.7px;font-size:15.2px;white-space:nowrap" data-w="296.7" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">endless. Row after row of trees covered in </span></p>
+<p style="position:absolute;left:54.4px;top:445.0px;font-size:15.2px;white-space:nowrap" data-w="296.7" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">delicate white and pale pink blossom. From the </span></p>
 <p style="position:absolute;left:54.4px;top:463.4px;font-size:15.2px;white-space:nowrap" data-w="296.7" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">ground, it is breathtaking. A carpet of petals and </span></p>
 <p style="position:absolute;left:54.4px;top:481.7px;font-size:15.2px;white-space:nowrap" data-w="296.7" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">rows that can draw you in as if they lead to a </span></p>
 <p style="position:absolute;left:54.4px;top:500.0px;font-size:15.2px;white-space:nowrap" data-w="221.9"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">secret garden. It is truly spectacular. </span></p>
-<p style="position:absolute;left:77.1px;top:518.3px;font-size:15.2px;white-space:nowrap" data-w="274.1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">I couldn’t help but be completely mesmerised </span></p>
-<p style="position:absolute;left:54.4px;top:536.7px;font-size:15.2px;white-space:nowrap" data-w="296.7" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">but I wasn’t just seeing flowers. I was seeing </span></p>
-<p style="position:absolute;left:54.4px;top:555.0px;font-size:15.2px;white-space:nowrap" data-w="296.7" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">an enormous food source, a huge pollination </span></p>
-<p style="position:absolute;left:54.4px;top:573.3px;font-size:15.2px;white-space:nowrap" data-w="296.7" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">opportunity and thousands upon thousands of </span></p>
-<p style="position:absolute;left:54.4px;top:591.6px;font-size:15.2px;white-space:nowrap" data-w="162.9"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">bees working the blossom.</span></p>
-<p style="position:absolute;left:77.1px;top:609.9px;font-size:15.2px;white-space:nowrap" data-w="274.1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">One of the things I found particularly </span></p>
+<p style="position:absolute;left:77.1px;top:518.3px;font-size:15.2px;white-space:nowrap" data-w="7.1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">I </span></p>
+<p style="position:absolute;left:98.1px;top:518.3px;font-size:15.2px;white-space:nowrap" data-w="53.5"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">couldn’t </span></p>
+<p style="position:absolute;left:165.5px;top:518.3px;font-size:15.2px;white-space:nowrap" data-w="30.1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">help </span></p>
+<p style="position:absolute;left:209.5px;top:518.3px;font-size:15.2px;white-space:nowrap" data-w="24.2"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">but </span></p>
+<p style="position:absolute;left:247.6px;top:518.3px;font-size:15.2px;white-space:nowrap" data-w="18.8"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">be </span></p>
+<p style="position:absolute;left:280.4px;top:518.3px;font-size:15.2px;white-space:nowrap" data-w="70.8"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">completely </span></p>
+<p style="position:absolute;left:54.4px;top:536.6px;font-size:15.2px;white-space:nowrap" data-w="296.7" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">mesmerised, but I wasn’t just seeing flowers. 
+</span></p>
+<p style="position:absolute;left:54.4px;top:554.9px;font-size:15.2px;white-space:nowrap" data-w="296.7" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">I was seeing an enormous food source, a huge </span></p>
+<p style="position:absolute;left:54.4px;top:573.2px;font-size:15.2px;white-space:nowrap" data-w="296.7" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">pollination opportunity and thousands upon </span></p>
+<p style="position:absolute;left:54.4px;top:591.5px;font-size:15.2px;white-space:nowrap" data-w="245.6"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">thousands of bees working the blossom.</span></p>
+<p style="position:absolute;left:77.1px;top:609.8px;font-size:15.2px;white-space:nowrap" data-w="274.1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">One of the things I found particularly </span></p>
 <p style="position:absolute;left:54.4px;top:628.2px;font-size:15.2px;white-space:nowrap" data-w="296.8" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">fascinating was learning how closely pollen </span></p>
-<p style="position:absolute;left:54.4px;top:646.6px;font-size:15.2px;white-space:nowrap" data-w="296.8" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">production is linked to the rising sun, with the </span></p>
-<p style="position:absolute;left:54.4px;top:664.9px;font-size:15.2px;white-space:nowrap" data-w="296.8" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">morning light triggering the flowers to begin </span></p>
-<p style="position:absolute;left:54.4px;top:683.2px;font-size:15.2px;white-space:nowrap" data-w="296.8" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">releasing their pollen. As the day warms the bees </span></p>
-<p style="position:absolute;left:54.4px;top:701.5px;font-size:15.2px;white-space:nowrap" data-w="296.8" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">get busy collecting that pollen throughout the </span></p>
-<p style="position:absolute;left:54.4px;top:719.8px;font-size:15.2px;white-space:nowrap" data-w="296.7" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">morning and into the early afternoon. Nectar </span></p>
-<p style="position:absolute;left:54.4px;top:738.1px;font-size:15.2px;white-space:nowrap" data-w="296.8" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">production however doesn’t start until the </span></p>
-<p style="position:absolute;left:54.4px;top:756.5px;font-size:15.2px;white-space:nowrap" data-w="296.8" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">flowers are warm, generally late morning. I found </span></p>
-<p style="position:absolute;left:54.4px;top:774.8px;font-size:15.2px;white-space:nowrap" data-w="296.8" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">the nectar had a surprisingly distinctive flavour — </span></p>
-<p style="position:absolute;left:54.4px;top:793.1px;font-size:15.2px;white-space:nowrap" data-w="296.8" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">freshly secreted nectar is sweet, bitter and acidic </span></p>
-<p style="position:absolute;left:54.4px;top:811.4px;font-size:15.2px;white-space:nowrap" data-w="237.0"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">with a clean and mildly cleansing finish.</span></p>
-<p style="position:absolute;left:77.1px;top:829.7px;font-size:15.2px;white-space:nowrap" data-w="274.1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Coming from the wet tropics, where the </span></p>
-<p style="position:absolute;left:54.4px;top:848.0px;font-size:15.2px;white-space:nowrap" data-w="296.7" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">conditions and pollination crops couldn’t be </span></p>
-<p style="position:absolute;left:54.4px;top:866.3px;font-size:15.2px;white-space:nowrap" data-w="296.7" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">more different, it was fascinating to learn about </span></p>
-<p style="position:absolute;left:54.4px;top:884.7px;font-size:15.2px;white-space:nowrap" data-w="296.7" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">the almonds and see colonies thriving despite </span></p>
-<p style="position:absolute;left:54.4px;top:903.0px;font-size:15.2px;white-space:nowrap" data-w="145.9"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">varroa mites’ presence. </span></p>
-<p style="position:absolute;left:77.1px;top:921.3px;font-size:15.2px;white-space:nowrap" data-w="274.1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">I am yet to detect varroa in my colonies </span></p>
-<p style="position:absolute;left:54.4px;top:939.6px;font-size:15.2px;white-space:nowrap" data-w="296.7" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">back in Far North Queensland, but seeing </span></p>
-<p style="position:absolute;left:54.4px;top:957.9px;font-size:15.2px;white-space:nowrap" data-w="296.7" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">healthy, strong colonies being carefully managed </span></p>
-<p style="position:absolute;left:54.4px;top:976.2px;font-size:15.2px;white-space:nowrap" data-w="296.7" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">for varroa gave me a real appreciation for </span></p>
-<p style="position:absolute;left:54.4px;top:994.6px;font-size:15.2px;white-space:nowrap" data-w="296.7" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">the importance of staying vigilant and being </span></p>
-<p style="position:absolute;left:54.4px;top:1012.9px;font-size:15.2px;white-space:nowrap" data-w="63.1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">prepared. </span></p>
-<p style="position:absolute;left:77.1px;top:1031.2px;font-size:15.2px;white-space:nowrap" data-w="274.1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">It was also encouraging to hear how closely </span></p>
-<p style="position:absolute;left:54.4px;top:1049.5px;font-size:15.2px;white-space:nowrap" data-w="296.7" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">farmers and beekeepers are working together so </span></p>
-<p style="position:absolute;left:54.4px;top:1067.8px;font-size:15.2px;white-space:nowrap" data-w="296.7" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">that both parties achieve their desired outcome. </span></p>
-<p style="position:absolute;left:54.4px;top:1086.1px;font-size:15.2px;white-space:nowrap" data-w="296.7" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">That kind of communication and cooperation </span></p>
-<p style="position:absolute;left:54.4px;top:1104.5px;font-size:15.2px;white-space:nowrap" data-w="296.7" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">is essential for supporting healthy colonies, </span></p>
-<p style="position:absolute;left:54.4px;top:1122.8px;font-size:15.2px;white-space:nowrap" data-w="275.7"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">effective pollination and productive orchards.</span></p>
-<p style="position:absolute;left:77.1px;top:1141.1px;font-size:15.2px;white-space:nowrap" data-w="274.0"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">As beekeepers, we can’t afford to become </span></p>
-<p style="position:absolute;left:54.4px;top:1159.4px;font-size:15.2px;white-space:nowrap" data-w="296.8" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">complacent. Varroa isn’t just a beekeeping issue. </span></p>
-<p style="position:absolute;left:54.4px;top:1177.7px;font-size:15.2px;white-space:nowrap" data-w="296.7" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">What happens to our bees has a ripple effect </span></p>
-<p style="position:absolute;left:54.4px;top:1196.0px;font-size:15.2px;white-space:nowrap" data-w="296.7" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">far beyond the hive — affecting the people who </span></p>
-<p style="position:absolute;left:54.4px;top:1214.4px;font-size:15.2px;white-space:nowrap" data-w="296.7" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">rely on them for pollination, the crops they help </span></p>
-<p style="position:absolute;left:54.4px;top:1232.7px;font-size:15.2px;white-space:nowrap" data-w="296.8" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">produce, and ultimately what we see available </span></p>
-<p style="position:absolute;left:54.4px;top:1251.0px;font-size:15.2px;white-space:nowrap" data-w="296.7" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">(and pay for) at the checkout. Healthy bees </span></p>
-<p style="position:absolute;left:54.4px;top:1269.3px;font-size:15.2px;white-space:nowrap" data-w="182.9"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">support healthy food systems.</span></p>
-<p style="position:absolute;left:627.6px;top:202.4px;font-size:15.2px;white-space:nowrap" data-w="273.8"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">A honey bee doesn’t know she’s providing </span></p>
-<p style="position:absolute;left:605.0px;top:220.3px;font-size:15.2px;white-space:nowrap" data-w="296.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">an essential agricultural service. She’s simply </span></p>
-<p style="position:absolute;left:605.0px;top:238.3px;font-size:15.2px;white-space:nowrap" data-w="296.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">out looking for food. And this is the part of </span></p>
-<p style="position:absolute;left:605.0px;top:256.2px;font-size:15.2px;white-space:nowrap" data-w="296.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">beekeeping I love. Watching bees do what they </span></p>
-<p style="position:absolute;left:605.0px;top:274.1px;font-size:15.2px;white-space:nowrap" data-w="296.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">do best, while knowing that their little daily </span></p>
-<p style="position:absolute;left:605.0px;top:292.0px;font-size:15.2px;white-space:nowrap" data-w="296.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">adventures have a much bigger impact than </span></p>
-<p style="position:absolute;left:605.0px;top:310.0px;font-size:15.2px;white-space:nowrap" data-w="296.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">they realise. For my first experience of almond </span></p>
-<p style="position:absolute;left:605.0px;top:327.9px;font-size:15.2px;white-space:nowrap" data-w="296.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">pollination, I couldn’t have asked for a more </span></p>
-<p style="position:absolute;left:605.0px;top:345.8px;font-size:15.2px;white-space:nowrap" data-w="296.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">beautiful classroom. Thousands of trees, millions </span></p>
-<p style="position:absolute;left:605.0px;top:363.7px;font-size:15.2px;white-space:nowrap" data-w="296.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">of flowers and a whole lot of fun with the bees </span></p>
-<p style="position:absolute;left:605.0px;top:381.6px;font-size:15.2px;white-space:nowrap" data-w="133.1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">— what’s not to love?</span></p>
+<p style="position:absolute;left:54.4px;top:646.5px;font-size:15.2px;white-space:nowrap" data-w="296.8" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">production is linked to the rising sun, with the </span></p>
+<p style="position:absolute;left:54.4px;top:664.8px;font-size:15.2px;white-space:nowrap" data-w="296.8" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">morning light triggering the flowers to begin </span></p>
+<p style="position:absolute;left:54.4px;top:683.1px;font-size:15.2px;white-space:nowrap" data-w="296.8" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">releasing their pollen. As the day warms, the </span></p>
+<p style="position:absolute;left:54.4px;top:701.4px;font-size:15.2px;white-space:nowrap" data-w="296.8" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">bees get busy collecting that pollen throughout </span></p>
+<p style="position:absolute;left:54.4px;top:719.7px;font-size:15.2px;white-space:nowrap" data-w="296.8" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">the morning and into the early afternoon. Nectar </span></p>
+<p style="position:absolute;left:54.4px;top:738.0px;font-size:15.2px;white-space:nowrap" data-w="296.8" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">production, however, doesn’t start until the </span></p>
+<p style="position:absolute;left:54.4px;top:756.3px;font-size:15.2px;white-space:nowrap" data-w="296.8" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">flowers are warm, generally late morning. I found </span></p>
+<p style="position:absolute;left:54.4px;top:774.7px;font-size:15.2px;white-space:nowrap" data-w="296.8" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">the nectar had a surprisingly distinctive flavour — </span></p>
+<p style="position:absolute;left:54.4px;top:793.0px;font-size:15.2px;white-space:nowrap" data-w="296.8" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">freshly secreted nectar is sweet, bitter and acidic </span></p>
+<p style="position:absolute;left:54.4px;top:811.3px;font-size:15.2px;white-space:nowrap" data-w="237.0"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">with a clean and mildly cleansing finish.</span></p>
+<p style="position:absolute;left:77.1px;top:829.6px;font-size:15.2px;white-space:nowrap" data-w="274.1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Coming from the wet tropics, where the </span></p>
+<p style="position:absolute;left:54.4px;top:847.9px;font-size:15.2px;white-space:nowrap" data-w="296.7" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">conditions and pollination crops couldn’t be </span></p>
+<p style="position:absolute;left:54.4px;top:866.2px;font-size:15.2px;white-space:nowrap" data-w="296.7" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">more different, it was fascinating to learn about </span></p>
+<p style="position:absolute;left:54.4px;top:884.5px;font-size:15.2px;white-space:nowrap" data-w="296.7" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">the almonds and see colonies thriving despite </span></p>
+<p style="position:absolute;left:54.4px;top:902.8px;font-size:15.2px;white-space:nowrap" data-w="145.9"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">varroa mites’ presence. </span></p>
+<p style="position:absolute;left:77.1px;top:921.1px;font-size:15.2px;white-space:nowrap" data-w="274.1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">I am yet to detect varroa in my colonies </span></p>
+<p style="position:absolute;left:54.4px;top:939.5px;font-size:15.2px;white-space:nowrap" data-w="296.7" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">back in Far North Queensland, but seeing </span></p>
+<p style="position:absolute;left:54.4px;top:957.8px;font-size:15.2px;white-space:nowrap" data-w="296.7" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">healthy, strong colonies being carefully managed </span></p>
+<p style="position:absolute;left:54.4px;top:976.1px;font-size:15.2px;white-space:nowrap" data-w="296.7" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">for varroa gave me a real appreciation for </span></p>
+<p style="position:absolute;left:54.4px;top:994.4px;font-size:15.2px;white-space:nowrap" data-w="296.7" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">the importance of staying vigilant and being </span></p>
+<p style="position:absolute;left:54.4px;top:1012.7px;font-size:15.2px;white-space:nowrap" data-w="63.1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">prepared. </span></p>
+<p style="position:absolute;left:77.1px;top:1031.0px;font-size:15.2px;white-space:nowrap" data-w="274.1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">It was also encouraging to hear how closely </span></p>
+<p style="position:absolute;left:54.4px;top:1049.3px;font-size:15.2px;white-space:nowrap" data-w="296.7" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">farmers and beekeepers are working together so </span></p>
+<p style="position:absolute;left:54.4px;top:1067.6px;font-size:15.2px;white-space:nowrap" data-w="296.7" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">that both parties achieve their desired outcome. </span></p>
+<p style="position:absolute;left:54.4px;top:1085.9px;font-size:15.2px;white-space:nowrap" data-w="296.7" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">That kind of communication and cooperation </span></p>
+<p style="position:absolute;left:54.4px;top:1104.3px;font-size:15.2px;white-space:nowrap" data-w="296.7" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">is essential for supporting healthy colonies, </span></p>
+<p style="position:absolute;left:54.4px;top:1122.6px;font-size:15.2px;white-space:nowrap" data-w="275.7"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">effective pollination and productive orchards.</span></p>
+<p style="position:absolute;left:77.1px;top:1140.9px;font-size:15.2px;white-space:nowrap" data-w="274.0"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">As beekeepers, we can’t afford to become </span></p>
+<p style="position:absolute;left:54.4px;top:1159.2px;font-size:15.2px;white-space:nowrap" data-w="296.8" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">complacent. Varroa isn’t just a beekeeping issue. </span></p>
+<p style="position:absolute;left:54.4px;top:1177.5px;font-size:15.2px;white-space:nowrap" data-w="296.7" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">What happens to our bees has a ripple effect </span></p>
+<p style="position:absolute;left:54.4px;top:1195.8px;font-size:15.2px;white-space:nowrap" data-w="296.7" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">far beyond the hive — affecting the people who </span></p>
+<p style="position:absolute;left:54.4px;top:1214.1px;font-size:15.2px;white-space:nowrap" data-w="296.7" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">rely on them for pollination, the crops they help </span></p>
+<p style="position:absolute;left:54.4px;top:1232.4px;font-size:15.2px;white-space:nowrap" data-w="296.8" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">produce, and ultimately what we see available </span></p>
+<p style="position:absolute;left:54.4px;top:1250.7px;font-size:15.2px;white-space:nowrap" data-w="296.7" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">(and pay for) at the checkout. Healthy bees </span></p>
+<p style="position:absolute;left:54.4px;top:1269.1px;font-size:15.2px;white-space:nowrap" data-w="182.9"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">support healthy food systems.</span></p>
+<p style="position:absolute;left:627.6px;top:202.2px;font-size:15.2px;white-space:nowrap" data-w="273.8"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">A honey bee doesn’t know she’s providing </span></p>
+<p style="position:absolute;left:605.0px;top:220.1px;font-size:15.2px;white-space:nowrap" data-w="296.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">an essential agricultural service. She’s simply </span></p>
+<p style="position:absolute;left:605.0px;top:238.0px;font-size:15.2px;white-space:nowrap" data-w="296.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">out looking for food. And this is the part of </span></p>
+<p style="position:absolute;left:605.0px;top:255.9px;font-size:15.2px;white-space:nowrap" data-w="296.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">beekeeping I love. Watching bees do what they </span></p>
+<p style="position:absolute;left:605.0px;top:273.9px;font-size:15.2px;white-space:nowrap" data-w="296.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">do best, while knowing that their little daily </span></p>
+<p style="position:absolute;left:605.0px;top:291.8px;font-size:15.2px;white-space:nowrap" data-w="296.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">adventures have a much bigger impact than </span></p>
+<p style="position:absolute;left:605.0px;top:309.7px;font-size:15.2px;white-space:nowrap" data-w="296.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">they realise. For my first experience of almond </span></p>
+<p style="position:absolute;left:605.0px;top:327.6px;font-size:15.2px;white-space:nowrap" data-w="296.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">pollination, I couldn’t have asked for a more </span></p>
+<p style="position:absolute;left:605.0px;top:345.5px;font-size:15.2px;white-space:nowrap" data-w="296.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">beautiful classroom. Thousands of trees, millions </span></p>
+<p style="position:absolute;left:605.0px;top:363.5px;font-size:15.2px;white-space:nowrap" data-w="296.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">of flowers and a whole lot of fun with the bees </span></p>
+<p style="position:absolute;left:605.0px;top:381.4px;font-size:15.2px;white-space:nowrap" data-w="133.1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">— what’s not to love?</span></p>
 <p style="position:absolute;left:54.4px;top:42.9px;font-size:41.6px;white-space:nowrap" data-w="664.3" data-j="1"><span style="color:#650038;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">A Bird’s-Eye View of Almond Pollination</span></p>
 <p style="position:absolute;left:54.4px;top:94.6px;font-size:25.6px;white-space:nowrap" data-w="391.8"><span style="font-weight:700;color:#650038;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">My First Almond Orchard Experience</span></p>
-<p style="position:absolute;left:54.4px;top:133.0px;font-size:19.2px;white-space:nowrap" data-w="134.0"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">By Jana Hamilton</span></p>
+<p style="position:absolute;left:54.4px;top:133.0px;font-size:19.2px;white-space:nowrap" data-w="335.6"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">By Jana Hamilton, Chasing Flowers Apiaries</span></p>
 <p style="position:absolute;left:400.2px;top:431.5px;font-size:20.0px;white-space:nowrap" data-w="127.2"><span style="font-style:italic;color:#650038;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">“I couldn’t help </span></p>
 <p style="position:absolute;left:384.6px;top:453.9px;font-size:20.0px;white-space:nowrap" data-w="148.8"><span style="font-style:italic;color:#650038;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">but be completely </span></p>
-<p style="position:absolute;left:384.6px;top:476.3px;font-size:20.0px;white-space:nowrap" data-w="143.5"><span style="font-style:italic;color:#650038;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">mesmerised but I </span></p>
+<p style="position:absolute;left:384.6px;top:476.3px;font-size:20.0px;white-space:nowrap" data-w="148.5"><span style="font-style:italic;color:#650038;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">mesmerised, but I </span></p>
 <p style="position:absolute;left:384.1px;top:498.7px;font-size:20.0px;white-space:nowrap" data-w="149.3"><span style="font-style:italic;color:#650038;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">wasn’t just seeing </span></p>
 <p style="position:absolute;left:384.7px;top:521.1px;font-size:20.0px;white-space:nowrap" data-w="115.3"><span style="font-style:italic;color:#650038;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">flowers. I was </span></p>
 <p style="position:absolute;left:384.4px;top:543.5px;font-size:20.0px;white-space:nowrap" data-w="167.3"><span style="font-style:italic;color:#650038;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">seeing an enormous </span></p>
-<p style="position:absolute;left:384.4px;top:565.9px;font-size:20.0px;white-space:nowrap" data-w="118.4"><span style="font-style:italic;color:#650038;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">food source, a </span></p>
+<p style="position:absolute;left:384.4px;top:565.9px;font-size:20.0px;white-space:nowrap" data-w="118.5"><span style="font-style:italic;color:#650038;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">food source, a </span></p>
 <p style="position:absolute;left:384.6px;top:588.3px;font-size:20.0px;white-space:nowrap" data-w="136.0"><span style="font-style:italic;color:#650038;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">huge pollination </span></p>
 <p style="position:absolute;left:384.7px;top:610.7px;font-size:20.0px;white-space:nowrap" data-w="135.3"><span style="font-style:italic;color:#650038;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">opportunity and </span></p>
-<p style="position:absolute;left:384.3px;top:633.1px;font-size:20.0px;white-space:nowrap" data-w="134.1"><span style="font-style:italic;color:#650038;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">thousands upon </span></p>
-<p style="position:absolute;left:384.3px;top:655.5px;font-size:20.0px;white-space:nowrap" data-w="151.0"><span style="font-style:italic;color:#650038;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">thousands of bees </span></p>
+<p style="position:absolute;left:384.4px;top:633.1px;font-size:20.0px;white-space:nowrap" data-w="134.1"><span style="font-style:italic;color:#650038;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">thousands upon </span></p>
+<p style="position:absolute;left:384.4px;top:655.5px;font-size:20.0px;white-space:nowrap" data-w="151.0"><span style="font-style:italic;color:#650038;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">thousands of bees </span></p>
 <p style="position:absolute;left:384.1px;top:677.9px;font-size:20.0px;white-space:nowrap" data-w="180.0"><span style="font-style:italic;color:#650038;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">working the blossom.”</span></p>
-<p style="position:absolute;left:604.7px;top:705.5px;font-size:12.8px;white-space:nowrap" data-w="205.6" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Jana Hamilton, Commercial Beekeeper,  </span></p>
+<p style="position:absolute;left:604.7px;top:705.5px;font-size:12.8px;white-space:nowrap" data-w="205.6" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Jana Hamilton, Commercial Beekeeper, 
+</span></p>
 <p style="position:absolute;left:604.7px;top:719.9px;font-size:12.8px;white-space:nowrap" data-w="113.5"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Far North Queensland</span></p>
 <p style="position:absolute;left:520.8px;top:1311.0px;font-size:13.6px;white-space:nowrap" data-w="377.2"><span style="font-family:Arial,Helvetica,sans-serif">VAA AUSTRALIAN BEE JOURNAL  |  </span><span style="font-family:Arial,Helvetica,sans-serif">VOL. 109 No. 09 September 2026</span><span style="font-family:Arial,Helvetica,sans-serif">  |  19</span></p>
 <p style="position:absolute;left:679.7px;top:1257.7px;font-size:12.8px;white-space:nowrap" data-w="204.7"><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">An Almond Blossom, by Lindsay Callaway</span></p>
+<a class="zoom" href="../../assets/sep/big/p19_133.jpg" target="_blank" rel="noopener" data-src="assets/sep/big/p19_133.jpg" data-alt="Hives in the almonds" data-w="1200" data-h="1600" title="Click to enlarge" aria-label="Enlarge: Hives in the almonds" style="left:384.0px;top:742.6px;width:514.1px;height:543.0px"></a>
+<a class="zoom" href="../../assets/sep/big/p19_135.jpg" target="_blank" rel="noopener" data-src="assets/sep/big/p19_135.jpg" data-alt="Beekeeper with a hive" data-w="764" data-h="718" title="Click to enlarge" aria-label="Enlarge: Beekeeper with a hive" style="left:606.2px;top:424.5px;width:293.3px;height:275.7px"></a>
 </div></div></div>
 <script>
 /* Fit each line to the width it occupied in the PDF: stretch the spaces on
@@ -118,13 +137,18 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
     var ps=document.querySelectorAll('p[data-w]');
     for(var i=0;i<ps.length;i++){
       var p=ps[i];
-      p.style.wordSpacing=''; p.style.letterSpacing='';
+      p.style.wordSpacing=''; p.style.letterSpacing=''; p.style.transform='';
       var target=parseFloat(p.getAttribute('data-w')), nat=p.offsetWidth;
       if(!target||!nat) continue;
       var d=target-nat, stretch=p.hasAttribute('data-j');
       if(Math.abs(d)<0.5) continue;
       if(d>0&&!stretch) continue;
-      if(Math.abs(d)>target*0.18){ continue; } /* too far off to fix by squeezing -- leave it alone rather than crush the spacing */
+      if(Math.abs(d)>target*0.18){
+        /* too far off to fix by spacing: a condensed face set in a substitute.
+           Squeeze the whole line to its measure instead of letting it run off
+           the page (the folio's page number was being clipped on right-hand pages). */
+        if(d<0){ p.style.transformOrigin='0 0'; p.style.transform='scaleX('+(target/nat).toFixed(4)+')'; }
+        continue; }
       var txt=p.textContent||'', sp=(txt.match(/ /g)||[]).length;
       var fs=parseFloat(getComputedStyle(p).fontSize)||12;
       if(sp>0){
@@ -144,6 +168,37 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
   if(document.fonts&&document.fonts.ready) document.fonts.ready.then(fit);
   window.addEventListener('resize',fit);
 })();
+</script>
+
+<script>
+/* An index entry asks the parent reader to jump. Falls back to the href when
+   the page is opened on its own. */
+document.addEventListener('click',function(e){
+  var a=e.target && e.target.closest ? e.target.closest('a.ixlink') : null;
+  if(!a) return;
+  var m=/#\/page\/([^\/]+)\/(\d+)/.exec(a.getAttribute('href')||'');
+  if(!m) return;
+  if(window.parent && window.parent!==window){
+    e.preventDefault();
+    try{ window.parent.postMessage({abj:'page',iss:m[1],p:parseInt(m[2],10)},'*'); }
+    catch(err){ location.href=a.getAttribute('href'); }
+  }
+},true);
+</script>
+
+<script>
+/* A picture with a bigger version asks the parent reader to open its lightbox;
+   on its own the page just opens the picture. */
+document.addEventListener('click',function(e){
+  var a=e.target && e.target.closest ? e.target.closest('a.zoom') : null;
+  if(!a) return;
+  if(window.parent && window.parent!==window){
+    e.preventDefault();
+    var m={abj:'img',src:a.getAttribute('data-src'),alt:a.getAttribute('data-alt')||'',w:+a.getAttribute('data-w')||0,h:+a.getAttribute('data-h')||0};
+    var ans=a.getAttribute('data-answers'); if(ans){ try{ m.answers=JSON.parse(ans); }catch(err){} }
+    try{ window.parent.postMessage(m,'*'); }catch(err){ location.href=a.getAttribute('href'); }
+  }
+},true);
 </script>
 
 <script>

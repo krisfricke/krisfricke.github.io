@@ -1,0 +1,296 @@
+{
+ "9": [
+  {
+   "rect": [
+    307.9,
+    404.4,
+    429.1,
+    558.6
+   ],
+   "src": "assets/sep/big/p09_49.jpg",
+   "w": 506,
+   "h": 643,
+   "alt": "Lindsay Callaway"
+  }
+ ],
+ "10": [
+  {
+   "rect": [
+    34.0,
+    579.9,
+    562.3,
+    803.5
+   ],
+   "src": "assets/sep/big/p10_54.jpg",
+   "w": 1595,
+   "h": 675,
+   "alt": "Bee on wattle blossom"
+  }
+ ],
+ "13": [
+  {
+   "rect": [
+    400.6,
+    534.9,
+    561.3,
+    707.3
+   ],
+   "src": "assets/sep/big/p13_71.jpg",
+   "w": 739,
+   "h": 793,
+   "alt": "Bees on comb"
+  }
+ ],
+ "14": [
+  {
+   "rect": [
+    307.7,
+    426.9,
+    562.4,
+    792.0
+   ],
+   "src": "assets/sep/big/p14_75.jpg",
+   "w": 835,
+   "h": 1197,
+   "alt": "Bush at the Central District field day"
+  }
+ ],
+ "15": [
+  {
+   "rect": [
+    85.4,
+    129.2,
+    509.7,
+    645.2
+   ],
+   "src": "assets/sep/big/p15_115.jpg",
+   "w": 1305,
+   "h": 1587,
+   "alt": "Find the queen: a frame covered in bees",
+   "answers": [
+    {
+     "x": 40.63,
+     "y": 54.12,
+     "r": 5.0
+    },
+    {
+     "x": 53.6,
+     "y": 68.0,
+     "r": 4.3
+    }
+   ]
+  }
+ ],
+ "16": [
+  {
+   "rect": [
+    -1.2,
+    -1.1,
+    596.3,
+    372.5
+   ],
+   "src": "assets/sep/big/p16_118.jpg",
+   "w": 2041,
+   "h": 1276,
+   "alt": "Almond orchard in bloom"
+  }
+ ],
+ "17": [
+  {
+   "rect": [
+    308.9,
+    380.3,
+    561.3,
+    716.0
+   ],
+   "src": "assets/sep/big/p17_121.jpg",
+   "w": 949,
+   "h": 1262,
+   "alt": "Hives in the almond orchard"
+  }
+ ],
+ "19": [
+  {
+   "rect": [
+    240.0,
+    464.1,
+    561.3,
+    803.5
+   ],
+   "src": "assets/sep/big/p19_133.jpg",
+   "w": 1200,
+   "h": 1600,
+   "alt": "Hives in the almonds"
+  },
+  {
+   "rect": [
+    378.9,
+    265.3,
+    562.2,
+    437.6
+   ],
+   "src": "assets/sep/big/p19_135.jpg",
+   "w": 764,
+   "h": 718,
+   "alt": "Beekeeper with a hive"
+  }
+ ],
+ "22": [
+  {
+   "rect": [
+    395.8,
+    338.4,
+    562.4,
+    427.6
+   ],
+   "src": "assets/sep/big/p22_155.jpg",
+   "w": 654,
+   "h": 350,
+   "alt": "Winter colony losses chart: Australia, NZ, USA, Canada"
+  }
+ ],
+ "24": [
+  {
+   "rect": [
+    48.7,
+    118.3,
+    223.7,
+    222.7
+   ],
+   "src": "assets/sep/big/p24_163.jpg",
+   "w": 604,
+   "h": 360,
+   "alt": "Brood comb showing the spotty, irregular pattern of American foulbrood, with perforated cappings, one of them ringed for emphasis"
+  },
+  {
+   "rect": [
+    48.7,
+    240.2,
+    223.7,
+    344.4
+   ],
+   "src": "assets/sep/big/p24_171.jpg",
+   "w": 361,
+   "h": 215,
+   "alt": "A brood cell opened to show the pupal \u2018tongue\u2019 protruding, where the larva reached the pupal stage before dying"
+  },
+  {
+   "rect": [
+    48.7,
+    373.3,
+    223.7,
+    477.4
+   ],
+   "src": "assets/sep/big/p24_165.jpg",
+   "w": 800,
+   "h": 476,
+   "alt": "Dark, sunken brood cappings with a greasy sheen"
+  },
+  {
+   "rect": [
+    48.7,
+    506.3,
+    223.7,
+    610.6
+   ],
+   "src": "assets/sep/big/p24_167.jpg",
+   "w": 604,
+   "h": 360,
+   "alt": "A beekeeper draws a matchstick from a brood cell, pulling the decayed larva into a smooth elastic rope \u2014 the ropiness test"
+  },
+  {
+   "rect": [
+    48.7,
+    628.1,
+    223.7,
+    732.2
+   ],
+   "src": "assets/sep/big/p24_169.jpg",
+   "w": 730,
+   "h": 434,
+   "alt": "Unhealthy-looking brood cells symptomatic of American foulbrood"
+  }
+ ],
+ "26": [
+  {
+   "rect": [
+    309.0,
+    143.0,
+    561.3,
+    462.7
+   ],
+   "src": "assets/sep/big/p26_186.jpg",
+   "w": 1052,
+   "h": 1333,
+   "alt": "John Edmonds diary photo"
+  },
+  {
+   "rect": [
+    309.0,
+    493.3,
+    561.3,
+    791.9
+   ],
+   "src": "assets/sep/big/p26_188.jpg",
+   "w": 1300,
+   "h": 1539,
+   "alt": "John Edmonds diary photo"
+  }
+ ],
+ "27": [
+  {
+   "rect": [
+    0.0,
+    -1.1,
+    596.3,
+    269.0
+   ],
+   "src": "assets/sep/big/p27_193.jpg",
+   "w": 2200,
+   "h": 996,
+   "alt": "John Edmonds diary panorama"
+  }
+ ],
+ "32": [
+  {
+   "rect": [
+    278.1,
+    71.2,
+    566.3,
+    261.4
+   ],
+   "src": "assets/sep/big/p32_250.jpg",
+   "w": 1291,
+   "h": 852,
+   "alt": "Honey cornbread"
+  }
+ ],
+ "37": [
+  {
+   "rect": [
+    20.8,
+    -1.2,
+    596.5,
+    283.0
+   ],
+   "src": "assets/sep/big/p37_270.jpg",
+   "w": 1280,
+   "h": 849,
+   "alt": "Spider venom research photo"
+  }
+ ],
+ "44": [
+  {
+   "rect": [
+    44.9,
+    461.9,
+    550.6,
+    722.4
+   ],
+   "src": "assets/sep/big/p44_385.jpg",
+   "w": 2200,
+   "h": 1133,
+   "alt": "Melbourne Royal Show site map"
+  }
+ ]
+}

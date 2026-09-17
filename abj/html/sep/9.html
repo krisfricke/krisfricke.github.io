@@ -8,8 +8,18 @@ html,body{margin:0;padding:0;background:#fff}
 .page{position:relative;width:952px;height:1347px}
 .page img.bg{position:absolute;left:0;top:0;width:952px;height:1347px}
 p{margin:0;position:absolute}
-a{color:inherit}
+a{color:inherit;text-decoration:none}
 a:hover{text-decoration:underline}
+a.blk,a.blk:hover{text-decoration:none}
+a.blk:hover span{background:rgba(249,197,0,.22)}
+a.ixlink{text-decoration:none;color:inherit;cursor:pointer;border-bottom:1px solid rgba(11,74,114,.35)}
+a.ixlink:hover{color:#0b4a72;border-bottom-color:#0b4a72;background:rgba(249,197,0,.18);text-decoration:none}
+a.zoom{position:absolute;display:block;z-index:6;border-radius:3px;transition:box-shadow .12s}
+a.zoom:hover{box-shadow:0 0 0 2px rgba(249,197,0,.85) inset}
+a.zoom::after{content:"";position:absolute;right:6px;bottom:6px;width:26px;height:26px;border-radius:50%;background:rgba(22,19,14,.62) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f9c500' stroke-width='2.4' stroke-linecap='round'><circle cx='10.5' cy='10.5' r='6'/><path d='M15 15l5 5M8 10.5h5M10.5 8v5'/></svg>") center/16px no-repeat;opacity:0;transition:opacity .15s}
+a.zoom:hover::after{opacity:1}
+a.hot{position:absolute;display:block;z-index:4;border:none;border-radius:3px;transition:box-shadow .12s,background .12s}
+a.hot:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,0,.75) inset}
 a.adlink{position:absolute;display:block;z-index:5;text-decoration:none;border-radius:3px;transition:box-shadow .12s,background .12s}
 a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,0,.75) inset}
 @font-face{font-family:'Carlito';src:url('../../fonts/Carlito-Regular.ttf');font-weight:400;font-style:normal}
@@ -25,8 +35,33 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
 <img class="bg" src="pg009.jpg" alt="">
 <p style="position:absolute;left:525.0px;top:1311.0px;font-size:13.6px;white-space:nowrap" data-w="373.0"><span style="font-family:Arial,Helvetica,sans-serif">VAA AUSTRALIAN BEE JOURNAL  |  </span><span style="font-family:Arial,Helvetica,sans-serif">VOL. 109 No. 09 September 2026</span><span style="font-family:Arial,Helvetica,sans-serif">  |  9</span></p>
 <p style="position:absolute;left:494.4px;top:224.9px;font-size:19.2px;white-space:nowrap" data-w="131.7"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Our opportunity</span></p>
-<p style="position:absolute;left:703.0px;top:739.1px;font-size:15.2px;white-space:nowrap" data-w="106.0"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Lindsay Callaway </span></p>
-<p style="position:absolute;left:703.0px;top:755.7px;font-size:15.2px;white-space:nowrap" data-w="67.5"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">President  </span></p>
+<p style="position:absolute;left:517.0px;top:255.1px;font-size:15.2px;white-space:nowrap" data-w="384.5"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Despite all of this, I don’t see our future as doom and gloom. </span></p>
+<p style="position:absolute;left:494.4px;top:273.0px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Quite the opposite. There has probably never been a time when </span></p>
+<p style="position:absolute;left:494.4px;top:290.9px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">the contribution of beekeepers has been better understood </span></p>
+<p style="position:absolute;left:494.4px;top:308.8px;font-size:15.2px;white-space:nowrap" data-w="157.5"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">outside our own industry.</span></p>
+<p style="position:absolute;left:517.0px;top:326.8px;font-size:15.2px;white-space:nowrap" data-w="384.4"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Pollination-dependent industries are engaging. Governments </span></p>
+<p style="position:absolute;left:494.4px;top:344.7px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">are listening. Researchers are working on solutions. And beekeepers </span></p>
+<p style="position:absolute;left:494.4px;top:362.6px;font-size:15.2px;white-space:nowrap" data-w="219.8"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">are adapting extraordinarily quickly.</span></p>
+<p style="position:absolute;left:517.0px;top:380.5px;font-size:15.2px;white-space:nowrap" data-w="384.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Our job now is to turn that attention into lasting change. And </span></p>
+<p style="position:absolute;left:494.4px;top:398.4px;font-size:15.2px;white-space:nowrap" data-w="312.1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">that brings me back to the journal you are holding.</span></p>
+<p style="position:absolute;left:517.0px;top:416.4px;font-size:15.2px;white-space:nowrap" data-w="380.8" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">The Australian Bee Journal has served beekeepers since 1918.</span></p>
+<p style="position:absolute;left:517.0px;top:434.3px;font-size:15.2px;white-space:nowrap" data-w="384.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Its next chapter should absolutely continue to put 
+</span></p>
+<p style="position:absolute;left:494.4px;top:450.9px;font-size:15.2px;white-space:nowrap" data-w="107.3"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">beekeepers first.</span></p>
+<p style="position:absolute;left:517.0px;top:470.1px;font-size:15.2px;white-space:nowrap" data-w="384.5"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">But I also hope it increasingly finds its way onto the desks 
+</span></p>
+<p style="position:absolute;left:494.4px;top:488.0px;font-size:15.2px;white-space:nowrap" data-w="407.2" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">of growers, researchers, agricultural leaders, Ministers and </span></p>
+<p style="position:absolute;left:494.4px;top:506.0px;font-size:15.2px;white-space:nowrap" data-w="103.5"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">decision-makers.</span></p>
+<p style="position:absolute;left:517.0px;top:523.9px;font-size:15.2px;white-space:nowrap" data-w="384.4"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Because the story of Australian beekeeping is no longer </span></p>
+<p style="position:absolute;left:494.4px;top:541.8px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">only a story about honey. It is a story about people, agriculture, </span></p>
+<p style="position:absolute;left:494.4px;top:559.7px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">biosecurity, pollination, resilience and food security. The bees — </span></p>
+<p style="position:absolute;left:494.4px;top:577.6px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">and the beekeepers who care for them — have moved from the </span></p>
+<p style="position:absolute;left:494.4px;top:595.6px;font-size:15.2px;white-space:nowrap" data-w="269.2"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">back fence to the front line of food security.</span></p>
+<p style="position:absolute;left:517.0px;top:612.1px;font-size:15.2px;white-space:nowrap" data-w="312.2"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Let’s make sure the beekeeper comes with them.</span></p>
+<p style="position:absolute;left:703.0px;top:739.1px;font-size:15.2px;white-space:nowrap" data-w="106.0"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Lindsay Callaway
+</span></p>
+<p style="position:absolute;left:703.0px;top:755.7px;font-size:15.2px;white-space:nowrap" data-w="67.5"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">President 
+</span></p>
 <p style="position:absolute;left:703.0px;top:773.7px;font-size:15.2px;white-space:nowrap" data-w="124.4" data-j="1"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Victorian Apiarists’ </span></p>
 <p style="position:absolute;left:703.0px;top:791.6px;font-size:15.2px;white-space:nowrap" data-w="72.9"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Association</span></p>
 <p style="position:absolute;left:77.1px;top:227.3px;font-size:15.2px;white-space:nowrap" data-w="384.5"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">That fundamentally changes the complexity, labour and cost </span></p>
@@ -34,7 +69,7 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
 <p style="position:absolute;left:54.4px;top:263.2px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">monitoring, treatment rotation, genetics, nutrition and access </span></p>
 <p style="position:absolute;left:54.4px;top:281.1px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">to practical treatment options more important than ever. It also </span></p>
 <p style="position:absolute;left:54.4px;top:299.0px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">reinforces why we cannot simply tell beekeepers to “learn to live </span></p>
-<p style="position:absolute;left:54.4px;top:317.0px;font-size:15.2px;white-space:nowrap" data-w="245.1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">with varroa” and consider the job done.</span></p>
+<p style="position:absolute;left:54.4px;top:316.9px;font-size:15.2px;white-space:nowrap" data-w="245.2"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">with varroa” and consider the job done.</span></p>
 <p style="position:absolute;left:77.1px;top:370.9px;font-size:15.2px;white-space:nowrap" data-w="384.4"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">The recent AHBIC national roundtable was an important </span></p>
 <p style="position:absolute;left:54.4px;top:388.8px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">exercise. Fifty-five proposed actions across ten themes were </span></p>
 <p style="position:absolute;left:54.4px;top:406.7px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">considered and ultimately distilled into 11 priority actions for </span></p>
@@ -53,8 +88,9 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
 <p style="position:absolute;left:54.4px;top:639.7px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">into billions of dollars, the question should not simply be whether </span></p>
 <p style="position:absolute;left:54.4px;top:657.6px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">government has already spent money. The better question is </span></p>
 <p style="position:absolute;left:54.4px;top:675.5px;font-size:15.2px;white-space:nowrap" data-w="349.9"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">whether our response is proportionate to the risk ahead.</span></p>
-<p style="position:absolute;left:77.1px;top:693.4px;font-size:15.2px;white-space:nowrap" data-w="384.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">From my perspective, it isn’t yet. Recognition is welcome. But </span></p>
-<p style="position:absolute;left:54.4px;top:711.4px;font-size:15.2px;white-space:nowrap" data-w="230.0"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">recognition is not the same as action.</span></p>
+<p style="position:absolute;left:77.1px;top:693.4px;font-size:15.2px;white-space:nowrap" data-w="384.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">From my perspective, it isn’t yet. Recognition is welcome. 
+</span></p>
+<p style="position:absolute;left:54.4px;top:711.4px;font-size:15.2px;white-space:nowrap" data-w="254.7"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">But recognition is not the same as action.</span></p>
 <p style="position:absolute;left:77.1px;top:765.3px;font-size:15.2px;white-space:nowrap" data-w="384.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">There is another part of pollination security we don’t talk </span></p>
 <p style="position:absolute;left:54.4px;top:783.2px;font-size:15.2px;white-space:nowrap" data-w="139.8"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">about enough: People.</span></p>
 <p style="position:absolute;left:77.1px;top:801.1px;font-size:15.2px;white-space:nowrap" data-w="384.5"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">We cannot wait until there is a pollination shortage and </span></p>
@@ -68,8 +104,8 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
 <p style="position:absolute;left:77.1px;top:944.5px;font-size:15.2px;white-space:nowrap" data-w="384.4"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">That should concern everyone who depends upon managed </span></p>
 <p style="position:absolute;left:54.4px;top:962.4px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">pollination. Our objective should not simply be helping beekeepers </span></p>
 <p style="position:absolute;left:54.4px;top:980.3px;font-size:15.2px;white-space:nowrap" data-w="407.2" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">survive varroa. It should be ensuring Victoria retains sufficient </span></p>
-<p style="position:absolute;left:54.4px;top:998.3px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">healthy, commercially viable and professionally managed honey </span></p>
-<p style="position:absolute;left:54.4px;top:1014.9px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">bee colonies — </span><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">and the beekeepers required to manage them</span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif"> — </span></p>
+<p style="position:absolute;left:54.4px;top:998.2px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">healthy, commercially viable and professionally managed honey </span></p>
+<p style="position:absolute;left:54.4px;top:1014.8px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">bee colonies — </span><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">and the beekeepers required to manage them</span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif"> — </span></p>
 <p style="position:absolute;left:54.4px;top:1034.1px;font-size:15.2px;white-space:nowrap" data-w="127.5"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">to secure our future.</span></p>
 <p style="position:absolute;left:54.4px;top:1199.1px;font-size:12.0px;white-space:nowrap" data-w="53.5"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">References</span></p>
 <p style="position:absolute;left:54.4px;top:1214.5px;font-size:12.0px;white-space:nowrap" data-w="623.7"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">1.  Victorian Apiarists’ Association. “</span><span style="font-style:italic;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Request for 3-year Grant Support for Victorian Beekeepers Managing Varroa Mite</span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">,” 2026 June 3rd</span></p>
@@ -83,32 +119,13 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
 <p style="position:absolute;left:55.1px;top:127.3px;font-size:20.0px;white-space:nowrap" data-w="203.9"><span style="font-style:italic;color:#3885b7;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">of Victorian agriculture.”</span></p>
 <p style="position:absolute;left:510.6px;top:920.2px;font-size:20.0px;white-space:nowrap" data-w="309.4"><span style="font-style:italic;color:#3885b7;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">“Pollination-dependent industries are </span></p>
 <p style="position:absolute;left:495.1px;top:942.6px;font-size:20.0px;white-space:nowrap" data-w="310.7"><span style="font-style:italic;color:#3885b7;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">engaging. Governments are listening. </span></p>
-<p style="position:absolute;left:494.6px;top:965.0px;font-size:20.0px;white-space:nowrap" data-w="318.5" data-j="1"><span style="font-style:italic;color:#3885b7;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Researchers are working on solutions.  </span></p>
+<p style="position:absolute;left:494.6px;top:965.0px;font-size:20.0px;white-space:nowrap" data-w="318.5" data-j="1"><span style="font-style:italic;color:#3885b7;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Researchers are working on solutions. 
+</span></p>
 <p style="position:absolute;left:493.9px;top:987.4px;font-size:20.0px;white-space:nowrap" data-w="243.5"><span style="font-style:italic;color:#3885b7;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">And beekeepers are adapting </span></p>
 <p style="position:absolute;left:495.1px;top:1009.8px;font-size:20.0px;white-space:nowrap" data-w="193.2"><span style="font-style:italic;color:#3885b7;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">extraordinarily quickly.”</span></p>
-<p style="position:absolute;left:54.4px;top:352.7px;font-size:19.2px;white-space:nowrap" data-w="292.1"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Recognition&#160;needs&#160;to&#160;become&#160;action</span></p>
-<p style="position:absolute;left:54.4px;top:747.1px;font-size:19.2px;white-space:nowrap" data-w="304.9"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Protect&#160;the&#160;people&#160;as&#160;well&#160;as&#160;the&#160;bees</span></p>
-<p style="position:absolute;left:517.0px;top:251.7px;font-size:15.2px;white-space:nowrap" data-w="384.5"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Despite&#160;all&#160;of&#160;this,&#160;I&#160;don’t&#160;see&#160;our&#160;future&#160;as&#160;doom&#160;and&#160;gloom.&#160;</span></p>
-<p style="position:absolute;left:494.4px;top:269.6px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Quite&#160;the&#160;opposite.&#160;There&#160;has&#160;probably&#160;never&#160;been&#160;a&#160;time&#160;when&#160;</span></p>
-<p style="position:absolute;left:494.4px;top:287.5px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">the&#160;</span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif"> </span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">contribution&#160;</span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif"> </span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">of&#160;</span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif"> </span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">beekeepers&#160;</span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif"> </span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">has&#160;</span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif"> </span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">been&#160;</span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif"> </span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">better&#160;</span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif"> </span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">understood&#160;</span></p>
-<p style="position:absolute;left:494.4px;top:305.5px;font-size:15.2px;white-space:nowrap" data-w="157.5"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">outside&#160;our&#160;own&#160;industry.</span></p>
-<p style="position:absolute;left:517.0px;top:323.4px;font-size:15.2px;white-space:nowrap" data-w="384.4"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Pollination‐dependent&#160;industries&#160;are&#160;engaging.&#160;Governments&#160;</span></p>
-<p style="position:absolute;left:494.4px;top:341.3px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">are&#160;</span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif"> </span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">listening.&#160;</span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif"> </span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Researchers&#160;</span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif"> </span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">are&#160;</span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif"> </span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">working&#160;</span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif"> </span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">on&#160;</span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif"> </span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">solutions.&#160;</span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif"> </span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">And&#160;</span></p>
-<p style="position:absolute;left:494.4px;top:359.2px;font-size:15.2px;white-space:nowrap" data-w="294.4"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">beekeepers&#160;are&#160;adapting&#160;extraordinarily&#160;quickly.</span></p>
-<p style="position:absolute;left:517.0px;top:377.1px;font-size:15.2px;white-space:nowrap" data-w="384.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Our&#160;job&#160;now&#160;is&#160;to&#160;turn&#160;that&#160;attention&#160;into&#160;lasting&#160;change.&#160;And&#160;</span></p>
-<p style="position:absolute;left:494.4px;top:395.1px;font-size:15.2px;white-space:nowrap" data-w="312.1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">that&#160;brings&#160;me&#160;back&#160;to&#160;the&#160;journal&#160;you&#160;are&#160;holding.</span></p>
-<p style="position:absolute;left:517.0px;top:413.0px;font-size:15.2px;white-space:nowrap" data-w="380.8" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">The&#160;Australian&#160;Bee&#160;Journal&#160;has&#160;served&#160;beekeepers&#160;since&#160;1918.</span></p>
-<p style="position:absolute;left:517.0px;top:430.9px;font-size:15.2px;white-space:nowrap" data-w="384.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Its&#160;</span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif"> </span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">next&#160;</span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif"> </span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">chapter&#160;</span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif"> </span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">should&#160;</span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif"> </span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">absolutely&#160;</span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif"> </span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">continue&#160;</span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif"> </span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">to&#160;</span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif"> </span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">put&#160;</span></p>
-<p style="position:absolute;left:494.4px;top:448.8px;font-size:15.2px;white-space:nowrap" data-w="107.3"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">beekeepers&#160;first.</span></p>
-<p style="position:absolute;left:517.0px;top:466.7px;font-size:15.2px;white-space:nowrap" data-w="384.5"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">But&#160;I&#160;also&#160;hope&#160;it&#160;increasingly&#160;finds&#160;its&#160;way&#160;onto&#160;the&#160;desks&#160;of&#160;</span></p>
-<p style="position:absolute;left:494.4px;top:484.7px;font-size:15.2px;white-space:nowrap" data-w="403.8" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">growers,&#160;researchers,&#160;agricultural&#160;leaders,&#160;Ministers&#160;and&#160;decision‐</span></p>
-<p style="position:absolute;left:494.4px;top:502.6px;font-size:15.2px;white-space:nowrap" data-w="47.9"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">makers.</span></p>
-<p style="position:absolute;left:517.0px;top:520.5px;font-size:15.2px;white-space:nowrap" data-w="384.4"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Because&#160;</span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif"> </span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">the&#160;</span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif"> </span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">story&#160;</span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif"> </span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">of&#160;</span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif"> </span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Australian&#160;</span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif"> </span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">beekeeping&#160;</span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif"> </span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">is&#160;</span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif"> </span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">no&#160;</span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif"> </span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">longer&#160;</span></p>
-<p style="position:absolute;left:494.4px;top:538.4px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">only&#160;a&#160;story&#160;about&#160;honey.&#160;It&#160;is&#160;a&#160;story&#160;about&#160;people,&#160;agriculture,&#160;</span></p>
-<p style="position:absolute;left:494.4px;top:556.4px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">biosecurity,&#160;pollination,&#160;resilience&#160;and&#160;food&#160;security.&#160;The&#160;bees&#160;—&#160;</span></p>
-<p style="position:absolute;left:494.4px;top:574.3px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">and&#160;the&#160;beekeepers&#160;who&#160;care&#160;for&#160;them&#160;—&#160;have&#160;moved&#160;from&#160;the&#160;</span></p>
-<p style="position:absolute;left:494.4px;top:592.2px;font-size:15.2px;white-space:nowrap" data-w="269.2"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">back&#160;fence&#160;to&#160;the&#160;front&#160;line&#160;of&#160;food&#160;security.</span></p>
-<p style="position:absolute;left:517.0px;top:610.1px;font-size:15.2px;white-space:nowrap" data-w="312.2"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Let’s&#160;make&#160;sure&#160;the&#160;beekeeper&#160;comes&#160;with&#160;them.</span></p>
+<p style="position:absolute;left:54.4px;top:347.4px;font-size:19.2px;white-space:nowrap" data-w="292.1"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Recognition needs to become action</span></p>
+<p style="position:absolute;left:54.4px;top:741.8px;font-size:19.2px;white-space:nowrap" data-w="304.9"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Protect the people as well as the bees</span></p>
+<a class="zoom" href="../../assets/sep/big/p09_49.jpg" target="_blank" rel="noopener" data-src="assets/sep/big/p09_49.jpg" data-alt="Lindsay Callaway" data-w="506" data-h="643" title="Click to enlarge" aria-label="Enlarge: Lindsay Callaway" style="left:492.6px;top:647.0px;width:193.9px;height:246.7px"></a>
 </div></div></div>
 <script>
 /* Fit each line to the width it occupied in the PDF: stretch the spaces on
@@ -122,13 +139,18 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
     var ps=document.querySelectorAll('p[data-w]');
     for(var i=0;i<ps.length;i++){
       var p=ps[i];
-      p.style.wordSpacing=''; p.style.letterSpacing='';
+      p.style.wordSpacing=''; p.style.letterSpacing=''; p.style.transform='';
       var target=parseFloat(p.getAttribute('data-w')), nat=p.offsetWidth;
       if(!target||!nat) continue;
       var d=target-nat, stretch=p.hasAttribute('data-j');
       if(Math.abs(d)<0.5) continue;
       if(d>0&&!stretch) continue;
-      if(Math.abs(d)>target*0.18){ continue; } /* too far off to fix by squeezing -- leave it alone rather than crush the spacing */
+      if(Math.abs(d)>target*0.18){
+        /* too far off to fix by spacing: a condensed face set in a substitute.
+           Squeeze the whole line to its measure instead of letting it run off
+           the page (the folio's page number was being clipped on right-hand pages). */
+        if(d<0){ p.style.transformOrigin='0 0'; p.style.transform='scaleX('+(target/nat).toFixed(4)+')'; }
+        continue; }
       var txt=p.textContent||'', sp=(txt.match(/ /g)||[]).length;
       var fs=parseFloat(getComputedStyle(p).fontSize)||12;
       if(sp>0){
@@ -148,6 +170,37 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
   if(document.fonts&&document.fonts.ready) document.fonts.ready.then(fit);
   window.addEventListener('resize',fit);
 })();
+</script>
+
+<script>
+/* An index entry asks the parent reader to jump. Falls back to the href when
+   the page is opened on its own. */
+document.addEventListener('click',function(e){
+  var a=e.target && e.target.closest ? e.target.closest('a.ixlink') : null;
+  if(!a) return;
+  var m=/#\/page\/([^\/]+)\/(\d+)/.exec(a.getAttribute('href')||'');
+  if(!m) return;
+  if(window.parent && window.parent!==window){
+    e.preventDefault();
+    try{ window.parent.postMessage({abj:'page',iss:m[1],p:parseInt(m[2],10)},'*'); }
+    catch(err){ location.href=a.getAttribute('href'); }
+  }
+},true);
+</script>
+
+<script>
+/* A picture with a bigger version asks the parent reader to open its lightbox;
+   on its own the page just opens the picture. */
+document.addEventListener('click',function(e){
+  var a=e.target && e.target.closest ? e.target.closest('a.zoom') : null;
+  if(!a) return;
+  if(window.parent && window.parent!==window){
+    e.preventDefault();
+    var m={abj:'img',src:a.getAttribute('data-src'),alt:a.getAttribute('data-alt')||'',w:+a.getAttribute('data-w')||0,h:+a.getAttribute('data-h')||0};
+    var ans=a.getAttribute('data-answers'); if(ans){ try{ m.answers=JSON.parse(ans); }catch(err){} }
+    try{ window.parent.postMessage(m,'*'); }catch(err){ location.href=a.getAttribute('href'); }
+  }
+},true);
 </script>
 
 <script>

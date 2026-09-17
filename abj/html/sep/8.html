@@ -8,8 +8,18 @@ html,body{margin:0;padding:0;background:#fff}
 .page{position:relative;width:952px;height:1347px}
 .page img.bg{position:absolute;left:0;top:0;width:952px;height:1347px}
 p{margin:0;position:absolute}
-a{color:inherit}
+a{color:inherit;text-decoration:none}
 a:hover{text-decoration:underline}
+a.blk,a.blk:hover{text-decoration:none}
+a.blk:hover span{background:rgba(249,197,0,.22)}
+a.ixlink{text-decoration:none;color:inherit;cursor:pointer;border-bottom:1px solid rgba(11,74,114,.35)}
+a.ixlink:hover{color:#0b4a72;border-bottom-color:#0b4a72;background:rgba(249,197,0,.18);text-decoration:none}
+a.zoom{position:absolute;display:block;z-index:6;border-radius:3px;transition:box-shadow .12s}
+a.zoom:hover{box-shadow:0 0 0 2px rgba(249,197,0,.85) inset}
+a.zoom::after{content:"";position:absolute;right:6px;bottom:6px;width:26px;height:26px;border-radius:50%;background:rgba(22,19,14,.62) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f9c500' stroke-width='2.4' stroke-linecap='round'><circle cx='10.5' cy='10.5' r='6'/><path d='M15 15l5 5M8 10.5h5M10.5 8v5'/></svg>") center/16px no-repeat;opacity:0;transition:opacity .15s}
+a.zoom:hover::after{opacity:1}
+a.hot{position:absolute;display:block;z-index:4;border:none;border-radius:3px;transition:box-shadow .12s,background .12s}
+a.hot:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,0,.75) inset}
 a.adlink{position:absolute;display:block;z-index:5;text-decoration:none;border-radius:3px;transition:box-shadow .12s,background .12s}
 a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,0,.75) inset}
 @font-face{font-family:'Carlito';src:url('../../fonts/Carlito-Regular.ttf');font-weight:400;font-style:normal}
@@ -26,10 +36,10 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
 <p style="position:absolute;left:54.4px;top:1311.0px;font-size:13.6px;white-space:nowrap" data-w="273.0"><span style="font-family:Arial,Helvetica,sans-serif">8  |  </span><span style="font-family:Arial,Helvetica,sans-serif">Published since 1918 by the VAA – founded in 1892</span></p>
 <p style="position:absolute;left:77.1px;top:225.8px;font-size:16.8px;white-space:nowrap" data-w="384.7" data-j="1"><span style="color:#3885b7;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">There is something fitting about this edition of the </span></p>
 <p style="position:absolute;left:54.4px;top:245.8px;font-size:16.8px;white-space:nowrap" data-w="157.8"><span style="color:#3885b7;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Australian Bee Journal.</span></p>
-<p style="position:absolute;left:77.1px;top:274.8px;font-size:16.8px;white-space:nowrap" data-w="384.7"><span style="color:#3885b7;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">A new look. A new editor. A new chapter for a journal </span></p>
-<p style="position:absolute;left:54.4px;top:294.8px;font-size:16.8px;white-space:nowrap" data-w="407.4" data-j="1"><span style="color:#3885b7;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">that has been documenting Australian beekeeping for </span></p>
-<p style="position:absolute;left:54.4px;top:314.8px;font-size:16.8px;white-space:nowrap" data-w="407.3" data-j="1"><span style="color:#3885b7;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">more than a century. But the change happening around the </span></p>
-<p style="position:absolute;left:54.4px;top:334.8px;font-size:16.8px;white-space:nowrap" data-w="389.2"><span style="color:#3885b7;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Australian Bee Journal is much bigger than a new layout.</span></p>
+<p style="position:absolute;left:77.1px;top:274.9px;font-size:16.8px;white-space:nowrap" data-w="384.7"><span style="color:#3885b7;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">A new look. A new editor. A new chapter for a journal </span></p>
+<p style="position:absolute;left:54.4px;top:294.9px;font-size:16.8px;white-space:nowrap" data-w="407.4" data-j="1"><span style="color:#3885b7;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">that has been documenting Australian beekeeping for </span></p>
+<p style="position:absolute;left:54.4px;top:314.9px;font-size:16.8px;white-space:nowrap" data-w="407.3" data-j="1"><span style="color:#3885b7;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">more than a century. But the change happening around the </span></p>
+<p style="position:absolute;left:54.4px;top:334.9px;font-size:16.8px;white-space:nowrap" data-w="389.2"><span style="color:#3885b7;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Australian Bee Journal is much bigger than a new layout.</span></p>
 <p style="position:absolute;left:77.1px;top:405.2px;font-size:15.2px;white-space:nowrap" data-w="384.5"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">For generations, ours has been an industry that has largely </span></p>
 <p style="position:absolute;left:54.4px;top:423.1px;font-size:15.2px;white-space:nowrap" data-w="407.2" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">gone about its business quietly. We worked the bush, produced </span></p>
 <p style="position:absolute;left:54.4px;top:441.0px;font-size:15.2px;white-space:nowrap" data-w="407.0" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">honey, moved bees onto crops and played an enormous role in </span></p>
@@ -41,7 +51,8 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
 <p style="position:absolute;left:54.4px;top:548.5px;font-size:15.2px;white-space:nowrap" data-w="234.9"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">the media and the halls of Parliament.</span></p>
 <p style="position:absolute;left:77.1px;top:566.4px;font-size:15.2px;white-space:nowrap" data-w="381.0"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Unfortunately, it has taken varroa to bring much of that attention.</span></p>
 <p style="position:absolute;left:77.1px;top:620.4px;font-size:15.2px;white-space:nowrap" data-w="384.4"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Before talking about billions of dollars of agriculture, food </span></p>
-<p style="position:absolute;left:54.4px;top:638.3px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">security and pollination-dependent crops, I think it is important that </span></p>
+<p style="position:absolute;left:54.4px;top:638.3px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">security and pollination-dependent crops, I think it is important that 
+</span></p>
 <p style="position:absolute;left:54.4px;top:654.9px;font-size:15.2px;white-space:nowrap" data-w="388.3"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">we remember where this conversation starts: </span><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">with beekeepers.</span></p>
 <p style="position:absolute;left:77.1px;top:674.1px;font-size:15.2px;white-space:nowrap" data-w="233.8"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">The VAA’s purpose is </span><span style="font-style:italic;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Beekeepers First</span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">.</span></p>
 <p style="position:absolute;left:77.1px;top:692.0px;font-size:15.2px;white-space:nowrap" data-w="384.4"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">That does not mean beekeepers at the expense of growers, </span></p>
@@ -65,12 +76,12 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
 <p style="position:absolute;left:54.4px;top:907.1px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">and managing treatment resistance are becoming permanent </span></p>
 <p style="position:absolute;left:54.4px;top:925.0px;font-size:15.2px;white-space:nowrap" data-w="244.5"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">parts of running a beekeeping business.</span></p>
 <p style="position:absolute;left:77.1px;top:942.9px;font-size:15.2px;white-space:nowrap" data-w="384.4"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Our own VAA briefing to government estimated an additional </span></p>
-<p style="position:absolute;left:54.4px;top:960.9px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">varroa management burden in the order of $80–$100 per </span></p>
+<p style="position:absolute;left:54.4px;top:960.8px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">varroa management burden in the order of $80–$100 per </span></p>
 <p style="position:absolute;left:54.4px;top:978.8px;font-size:15.2px;white-space:nowrap" data-w="407.2" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">hive annually when treatment, labour and increased queen </span></p>
 <p style="position:absolute;left:54.4px;top:996.7px;font-size:15.2px;white-space:nowrap" data-w="176.7"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">replacement are considered.</span></p>
 <p style="position:absolute;left:77.1px;top:1014.6px;font-size:15.2px;white-space:nowrap" data-w="384.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">For a commercial beekeeper running 1,000 hives, that is </span></p>
 <p style="position:absolute;left:54.4px;top:1032.5px;font-size:15.2px;white-space:nowrap" data-w="307.8"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">potentially another $80,000–$100,000 every year.</span></p>
-<p style="position:absolute;left:77.1px;top:1050.5px;font-size:15.2px;white-space:nowrap" data-w="384.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">That is why supporting the beekeeper must remain at the </span></p>
+<p style="position:absolute;left:77.1px;top:1050.4px;font-size:15.2px;white-space:nowrap" data-w="384.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">That is why supporting the beekeeper must remain at the </span></p>
 <p style="position:absolute;left:54.4px;top:1068.4px;font-size:15.2px;white-space:nowrap" data-w="165.9"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">centre of the conversation.</span></p>
 <p style="position:absolute;left:77.1px;top:1122.3px;font-size:15.2px;white-space:nowrap" data-w="384.4"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">The numbers explain why the conversation around us is </span></p>
 <p style="position:absolute;left:54.4px;top:1140.2px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">getting louder. Honey bees support billions of dollars of Australian </span></p>
@@ -81,11 +92,12 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
 <p style="position:absolute;left:54.4px;top:1229.8px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">on honey bee pollination are included.</span><span class="fn" tabindex="0" data-n="1" data-note="Victorian Apiarists’ Association. “Request for 3-year Grant Support for Victorian Beekeepers Managing Varroa Mite,” 2026 June 3rd" aria-label="Note 1: Victorian Apiarists’ Association. “Request for 3-year Grant Support for Victorian Beekeepers Managing Varroa Mite,” 2026 June 3rd"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif;vertical-align:super;font-size:.7em">1</span></span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif"> Yet the commercial </span></p>
 <p style="position:absolute;left:54.4px;top:1247.7px;font-size:15.2px;white-space:nowrap" data-w="407.1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">beekeeping industry responsible for maintaining much of that </span></p>
 <p style="position:absolute;left:494.4px;top:227.3px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">pollination capacity is comparatively tiny, currently sitting at </span></p>
-<p style="position:absolute;left:494.4px;top:245.3px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">around 100 commercial beekeepers in Victoria. That imbalance </span></p>
+<p style="position:absolute;left:494.4px;top:245.3px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">around 100 commercial beekeepers in Victoria. That imbalance 
+</span></p>
 <p style="position:absolute;left:494.4px;top:263.2px;font-size:15.2px;white-space:nowrap" data-w="78.4"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">is important.</span></p>
 <p style="position:absolute;left:517.0px;top:281.1px;font-size:15.2px;white-space:nowrap" data-w="384.4"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">We are not asking government to protect the value of the </span></p>
 <p style="position:absolute;left:494.4px;top:299.0px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">honey crop. We are asking government to recognise and help </span></p>
-<p style="position:absolute;left:494.4px;top:317.0px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">protect the beekeepers and the pollination capacity behind </span></p>
+<p style="position:absolute;left:494.4px;top:316.9px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">protect the beekeepers and the pollination capacity behind </span></p>
 <p style="position:absolute;left:494.4px;top:334.9px;font-size:15.2px;white-space:nowrap" data-w="253.4"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">billions of dollars of Victorian agriculture.</span></p>
 <p style="position:absolute;left:517.0px;top:388.8px;font-size:15.2px;white-space:nowrap" data-w="384.4"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">In recent months, fellow VAA Board member Monré Meyer </span></p>
 <p style="position:absolute;left:494.4px;top:406.7px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">and I have continued taking this case directly to Victorian </span></p>
@@ -110,18 +122,22 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
 <p style="position:absolute;left:494.4px;top:783.2px;font-size:15.2px;white-space:nowrap" data-w="376.8"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">provided pollination to Australian agriculture for generations.</span></p>
 <p style="position:absolute;left:517.0px;top:801.1px;font-size:15.2px;white-space:nowrap" data-w="384.4" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Nobody sent an invoice. Nobody booked the hive. Nobody </span></p>
 <p style="position:absolute;left:494.4px;top:819.0px;font-size:15.2px;white-space:nowrap" data-w="135.4"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">measured the frames.</span></p>
-<p style="position:absolute;left:517.0px;top:837.0px;font-size:15.2px;white-space:nowrap" data-w="372.9"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">And for the most part, nobody placed a value on the service.</span></p>
-<p style="position:absolute;left:517.0px;top:854.9px;font-size:15.2px;white-space:nowrap" data-w="384.5"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">The Australian Government reports that in other countries, </span></p>
-<p style="position:absolute;left:494.4px;top:872.8px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">feral European honey bee populations fell by more than 90 percent </span></p>
-<p style="position:absolute;left:494.4px;top:890.7px;font-size:15.2px;white-space:nowrap" data-w="407.2" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">following the establishment of varroa. Australia is now beginning </span></p>
-<p style="position:absolute;left:494.4px;top:908.7px;font-size:15.2px;white-space:nowrap" data-w="407.2" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">that transition. As unmanaged colonies decline, growers who have </span></p>
-<p style="position:absolute;left:494.4px;top:926.6px;font-size:15.2px;white-space:nowrap" data-w="407.2" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">historically benefited from incidental pollination will increasingly </span></p>
-<p style="position:absolute;left:494.4px;top:944.5px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">need to rely upon professionally managed colonies. We may </span></p>
-<p style="position:absolute;left:494.4px;top:961.1px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">only fully understand the value of that invisible workforce </span><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">as it </span></p>
-<p style="position:absolute;left:494.4px;top:979.0px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">disappears.</span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif"> And as unmanaged colonies disappear, the value of </span></p>
-<p style="position:absolute;left:494.4px;top:998.3px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">the colonies that remain alive — because somebody monitors </span></p>
-<p style="position:absolute;left:494.4px;top:1016.2px;font-size:15.2px;white-space:nowrap" data-w="407.2" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">them, treats them, feeds them, breeds them and manages them </span></p>
-<p style="position:absolute;left:494.4px;top:1034.1px;font-size:15.2px;white-space:nowrap" data-w="78.4"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">— increases.</span></p>
+<p style="position:absolute;left:517.0px;top:837.0px;font-size:15.2px;white-space:nowrap" data-w="368.3"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">And for the most part, nobody placed a value on the service.</span></p>
+<p style="position:absolute;left:517.0px;top:854.9px;font-size:15.2px;white-space:nowrap" data-w="384.4"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">The Australian Government reports that in other countries, </span></p>
+<p style="position:absolute;left:494.4px;top:872.8px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">feral European honey bee populations fell by more than 
+</span></p>
+<p style="position:absolute;left:494.4px;top:890.7px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">90 percent following the establishment of varroa. Australia is 
+</span></p>
+<p style="position:absolute;left:494.4px;top:908.6px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">now beginning that transition. As unmanaged colonies decline, </span></p>
+<p style="position:absolute;left:494.4px;top:926.6px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">growers who have historically benefited from incidental 
+</span></p>
+<p style="position:absolute;left:494.4px;top:944.5px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">pollination will increasingly need to rely upon professionally </span></p>
+<p style="position:absolute;left:494.4px;top:962.4px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">managed colonies. We may only fully understand the value of 
+</span></p>
+<p style="position:absolute;left:494.4px;top:979.0px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">that invisible workforce </span><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">as it disappears.</span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif"> And as unmanaged </span></p>
+<p style="position:absolute;left:494.4px;top:998.2px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">colonies disappear, the value of the colonies that remain alive </span></p>
+<p style="position:absolute;left:494.4px;top:1016.2px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">— because somebody monitors them, treats them, feeds them, </span></p>
+<p style="position:absolute;left:494.4px;top:1034.1px;font-size:15.2px;white-space:nowrap" data-w="278.9"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">breeds them and manages them — increases.</span></p>
 <p style="position:absolute;left:517.0px;top:1052.0px;font-size:15.2px;white-space:nowrap" data-w="282.4"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">So too does the importance of the beekeeper.</span></p>
 <p style="position:absolute;left:517.0px;top:1105.9px;font-size:15.2px;white-space:nowrap" data-w="384.5"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Australia’s challenge has also changed extraordinarily quickly. </span></p>
 <p style="position:absolute;left:494.4px;top:1123.8px;font-size:15.2px;white-space:nowrap" data-w="407.2" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">It was difficult enough learning to live with varroa. We are now </span></p>
@@ -129,18 +145,18 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
 <p style="position:absolute;left:494.4px;top:1159.7px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">that were supposed to provide our most convenient line of </span></p>
 <p style="position:absolute;left:494.4px;top:1177.6px;font-size:15.2px;white-space:nowrap" data-w="53.0"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">defence.</span></p>
 <p style="position:absolute;left:517.0px;top:1195.5px;font-size:15.2px;white-space:nowrap" data-w="384.4"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Here in Victoria, Agriculture Victoria has confirmed mites </span></p>
-<p style="position:absolute;left:494.4px;top:1213.5px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">resistant to both pyrethroid and formamidine treatments. This </span></p>
+<p style="position:absolute;left:494.4px;top:1213.4px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">resistant to both pyrethroid and formamidine treatments. This </span></p>
 <p style="position:absolute;left:494.4px;top:1231.4px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">means some mites are resistant to all four currently permitted </span></p>
 <p style="position:absolute;left:494.4px;top:1249.3px;font-size:15.2px;white-space:nowrap" data-w="184.2"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">synthetic miticide treatments.</span></p>
 <p style="position:absolute;left:54.4px;top:39.3px;font-size:60.8px;white-space:nowrap" data-w="477.1"><span style="font-weight:700;color:#3885b7;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">President’s Report </span></p>
 <p style="position:absolute;left:54.4px;top:107.8px;font-size:38.4px;white-space:nowrap" data-w="842.5"><span style="color:#3885b7;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">From the Back Fence to the Front Line of Food Security</span></p>
 <p style="position:absolute;left:54.4px;top:156.7px;font-size:19.2px;white-space:nowrap" data-w="483.8"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">By Lindsay Callaway, President, Victorian Apiarists’ Association</span></p>
-<p style="position:absolute;left:54.4px;top:386.9px;font-size:19.2px;white-space:nowrap" data-w="236.7"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Beekeeping&#160;itself&#160;is&#160;changing.</span></p>
-<p style="position:absolute;left:54.4px;top:602.1px;font-size:19.2px;white-space:nowrap" data-w="132.3"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Beekeepers&#160;First</span></p>
-<p style="position:absolute;left:54.4px;top:1104.1px;font-size:19.2px;white-space:nowrap" data-w="241.7"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">The&#160;conversation&#160;has&#160;changed</span></p>
-<p style="position:absolute;left:494.4px;top:370.6px;font-size:19.2px;white-space:nowrap" data-w="354.8"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Taking&#160;that&#160;message&#160;to&#160;both&#160;sides&#160;of&#160;politics</span></p>
-<p style="position:absolute;left:494.4px;top:693.3px;font-size:19.2px;white-space:nowrap" data-w="290.5"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">The&#160;free&#160;service&#160;we&#160;never&#160;measured</span></p>
-<p style="position:absolute;left:494.4px;top:1087.7px;font-size:19.2px;white-space:nowrap" data-w="111.0"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">A&#160;harder&#160;mite</span></p>
+<p style="position:absolute;left:54.4px;top:381.6px;font-size:19.2px;white-space:nowrap" data-w="236.7"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Beekeeping itself is changing.</span></p>
+<p style="position:absolute;left:54.4px;top:596.9px;font-size:19.2px;white-space:nowrap" data-w="132.3"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Beekeepers First</span></p>
+<p style="position:absolute;left:54.4px;top:1098.8px;font-size:19.2px;white-space:nowrap" data-w="241.7"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">The conversation has changed</span></p>
+<p style="position:absolute;left:494.4px;top:365.3px;font-size:19.2px;white-space:nowrap" data-w="354.8"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Taking that message to both sides of politics</span></p>
+<p style="position:absolute;left:494.4px;top:688.0px;font-size:19.2px;white-space:nowrap" data-w="290.5"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">The free service we never measured</span></p>
+<p style="position:absolute;left:494.4px;top:1082.4px;font-size:19.2px;white-space:nowrap" data-w="111.0"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">A harder mite</span></p>
 </div></div></div>
 <script>
 /* Fit each line to the width it occupied in the PDF: stretch the spaces on
@@ -154,13 +170,18 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
     var ps=document.querySelectorAll('p[data-w]');
     for(var i=0;i<ps.length;i++){
       var p=ps[i];
-      p.style.wordSpacing=''; p.style.letterSpacing='';
+      p.style.wordSpacing=''; p.style.letterSpacing=''; p.style.transform='';
       var target=parseFloat(p.getAttribute('data-w')), nat=p.offsetWidth;
       if(!target||!nat) continue;
       var d=target-nat, stretch=p.hasAttribute('data-j');
       if(Math.abs(d)<0.5) continue;
       if(d>0&&!stretch) continue;
-      if(Math.abs(d)>target*0.18){ continue; } /* too far off to fix by squeezing -- leave it alone rather than crush the spacing */
+      if(Math.abs(d)>target*0.18){
+        /* too far off to fix by spacing: a condensed face set in a substitute.
+           Squeeze the whole line to its measure instead of letting it run off
+           the page (the folio's page number was being clipped on right-hand pages). */
+        if(d<0){ p.style.transformOrigin='0 0'; p.style.transform='scaleX('+(target/nat).toFixed(4)+')'; }
+        continue; }
       var txt=p.textContent||'', sp=(txt.match(/ /g)||[]).length;
       var fs=parseFloat(getComputedStyle(p).fontSize)||12;
       if(sp>0){
@@ -180,6 +201,37 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
   if(document.fonts&&document.fonts.ready) document.fonts.ready.then(fit);
   window.addEventListener('resize',fit);
 })();
+</script>
+
+<script>
+/* An index entry asks the parent reader to jump. Falls back to the href when
+   the page is opened on its own. */
+document.addEventListener('click',function(e){
+  var a=e.target && e.target.closest ? e.target.closest('a.ixlink') : null;
+  if(!a) return;
+  var m=/#\/page\/([^\/]+)\/(\d+)/.exec(a.getAttribute('href')||'');
+  if(!m) return;
+  if(window.parent && window.parent!==window){
+    e.preventDefault();
+    try{ window.parent.postMessage({abj:'page',iss:m[1],p:parseInt(m[2],10)},'*'); }
+    catch(err){ location.href=a.getAttribute('href'); }
+  }
+},true);
+</script>
+
+<script>
+/* A picture with a bigger version asks the parent reader to open its lightbox;
+   on its own the page just opens the picture. */
+document.addEventListener('click',function(e){
+  var a=e.target && e.target.closest ? e.target.closest('a.zoom') : null;
+  if(!a) return;
+  if(window.parent && window.parent!==window){
+    e.preventDefault();
+    var m={abj:'img',src:a.getAttribute('data-src'),alt:a.getAttribute('data-alt')||'',w:+a.getAttribute('data-w')||0,h:+a.getAttribute('data-h')||0};
+    var ans=a.getAttribute('data-answers'); if(ans){ try{ m.answers=JSON.parse(ans); }catch(err){} }
+    try{ window.parent.postMessage(m,'*'); }catch(err){ location.href=a.getAttribute('href'); }
+  }
+},true);
 </script>
 
 <script>

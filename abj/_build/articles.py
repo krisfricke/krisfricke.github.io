@@ -12,6 +12,7 @@ Reads _build/<issue>_arts.json (title, p, end, skip, author, tags; an optional
 
     python articles.py <reader dir> <issue id> "<label>"
 """
+import difflib
 import datetime, html, json, os, re, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import issue_record
@@ -49,13 +50,37 @@ def article_blocks(rec, text):
         paras.sort(key=lambda p: (p['x'] > 300, p['y']))   # left column, then right
         bs = body_size(paras)
         if rec.get('item'):
-            # one of several short items on the page: its slice runs from its
-            # own heading (dropped) to the next heading
-            heads = [i for i, p in enumerate(paras) if 11.5 <= p['size'] < 15 and len(p['t']) < 120]
-            n = rec['item'] - 1
-            if n < len(heads):
-                stop = heads[n + 1] if n + 1 < len(heads) else len(paras)
-                paras = paras[heads[n] + 1:stop]
+            # One of several short items sharing a page. Its slice runs from its
+            # own heading to the next one.
+            #
+            # Headings are found by size RELATIVE to the body text, not by a
+            # fixed 11.5-15pt band: September set the Bee Bits headings at
+            # 18-30pt, the band matched nothing, and all five items silently
+            # received the whole page. A heading may also wrap over several
+            # paragraphs, so consecutive big ones are grouped into one.
+            big = [i for i, p in enumerate(paras)
+                   if p['size'] >= max(11.5, 1.6 * bs) and len(p['t']) < 120]
+            groups = []
+            for i in big:
+                if groups and i == groups[-1][-1] + 1:
+                    groups[-1].append(i)
+                else:
+                    groups.append([i])
+            # Match this record to ITS heading by title rather than by ordinal.
+            # The ordinal assumes a column order that re-layout can change.
+            want = norm(re.sub(r'^Bee Bit:\s*', '', rec['t'])).lower()
+            best, score = None, 0.0
+            for gi, g in enumerate(groups):
+                cand = norm(' '.join(paras[j]['t'] for j in g)).lower()
+                r1 = difflib.SequenceMatcher(None, want, cand).ratio()
+                r2 = difflib.SequenceMatcher(None, want[:len(cand)], cand).ratio()
+                sc = max(r1, r2)
+                if sc > score:
+                    best, score = gi, sc
+            n = best if (best is not None and score >= 0.45) else rec['item'] - 1
+            if n is not None and n < len(groups):
+                stop = groups[n + 1][0] if n + 1 < len(groups) else len(paras)
+                paras = paras[groups[n][-1] + 1:stop]
         for p in paras:
             t = p['t'].replace('\xa0', ' ').strip()
             if not t:
@@ -130,9 +155,19 @@ def main(reader, iid, label):
     adir = os.path.join(reader, 'article')
     for d in os.listdir(adir):
         if d.startswith(iid + '-') and d not in keep and os.path.isdir(os.path.join(adir, d)):
-            os.remove(os.path.join(adir, d, 'index.html'))
-            os.rmdir(os.path.join(adir, d))
-            print('   removed stale article folder', d)
+            try:
+                os.remove(os.path.join(adir, d, 'index.html'))
+                os.rmdir(os.path.join(adir, d))
+                print('   removed stale article folder', d)
+            except OSError:
+                # the folder cannot be deleted from here (Windows-backed mount):
+                # leave a redirect to the issue's article list so an old link
+                # still lands somewhere sensible, and say so
+                open(os.path.join(adir, d, 'index.html'), 'w', encoding='utf-8').write(
+                    '<!DOCTYPE html><meta charset="utf-8"><meta name="robots" content="noindex">'
+                    '<meta http-equiv="refresh" content="0;url=../index.html"><title>Moved</title>'
+                    '<a href="../index.html">This article has moved</a>')
+                print('   STALE article folder %s could not be deleted - left a redirect; delete it by hand' % d)
 
     # 1. records in D, August's key order
     path, s, m, D = issue_record.load(reader)

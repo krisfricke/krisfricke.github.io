@@ -8,8 +8,18 @@ html,body{margin:0;padding:0;background:#fff}
 .page{position:relative;width:952px;height:1347px}
 .page img.bg{position:absolute;left:0;top:0;width:952px;height:1347px}
 p{margin:0;position:absolute}
-a{color:inherit}
+a{color:inherit;text-decoration:none}
 a:hover{text-decoration:underline}
+a.blk,a.blk:hover{text-decoration:none}
+a.blk:hover span{background:rgba(249,197,0,.22)}
+a.ixlink{text-decoration:none;color:inherit;cursor:pointer;border-bottom:1px solid rgba(11,74,114,.35)}
+a.ixlink:hover{color:#0b4a72;border-bottom-color:#0b4a72;background:rgba(249,197,0,.18);text-decoration:none}
+a.zoom{position:absolute;display:block;z-index:6;border-radius:3px;transition:box-shadow .12s}
+a.zoom:hover{box-shadow:0 0 0 2px rgba(249,197,0,.85) inset}
+a.zoom::after{content:"";position:absolute;right:6px;bottom:6px;width:26px;height:26px;border-radius:50%;background:rgba(22,19,14,.62) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f9c500' stroke-width='2.4' stroke-linecap='round'><circle cx='10.5' cy='10.5' r='6'/><path d='M15 15l5 5M8 10.5h5M10.5 8v5'/></svg>") center/16px no-repeat;opacity:0;transition:opacity .15s}
+a.zoom:hover::after{opacity:1}
+a.hot{position:absolute;display:block;z-index:4;border:none;border-radius:3px;transition:box-shadow .12s,background .12s}
+a.hot:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,0,.75) inset}
 a.adlink{position:absolute;display:block;z-index:5;text-decoration:none;border-radius:3px;transition:box-shadow .12s,background .12s}
 a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,0,.75) inset}
 @font-face{font-family:'Carlito';src:url('../../fonts/Carlito-Regular.ttf');font-weight:400;font-style:normal}
@@ -18,25 +28,46 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
 </style></head><body><div class="sheet"><div class="scaler"><div class="page">
 <img class="bg" src="pg001.jpg" alt="">
 <p style="position:absolute;left:527.3px;top:1311.0px;font-size:13.6px;white-space:nowrap" data-w="370.7"><a href="https://www.vicbeekeepers.com.au" target="_blank" rel="noopener"><span style="font-family:Arial,Helvetica,sans-serif">VAA AUSTRALIAN BEE JOURNAL  |  </span></a><span style="font-family:Arial,Helvetica,sans-serif">VOL. 109 No. 09 September 2026</span><span style="font-family:Arial,Helvetica,sans-serif">  |  1</span></p>
-<p style="position:absolute;left:49.6px;top:847.5px;font-size:72.0px;white-space:nowrap" data-w="267.2" data-j="1"><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Planned  </span></p>
-<p style="position:absolute;left:49.6px;top:905.1px;font-size:72.0px;white-space:nowrap" data-w="246.5"><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Burning </span></p>
-<p style="position:absolute;left:51.9px;top:979.7px;font-size:30.4px;white-space:nowrap" data-w="232.7"><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Are we asking the  </span></p>
-<p style="position:absolute;left:51.9px;top:1005.1px;font-size:41.6px;white-space:nowrap" data-w="274.0"><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">right questions?</span></p>
+<p style="position:absolute;left:49.6px;top:811.6px;font-size:72.0px;white-space:nowrap" data-w="267.2" data-j="1"><a class="ixlink" href="../../#/page/sep/34" target="_top" title="Go to page 34"><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Planned 
+</span></a></p>
+<p style="position:absolute;left:49.6px;top:869.2px;font-size:72.0px;white-space:nowrap" data-w="246.5"><a class="ixlink" href="../../#/page/sep/34" target="_top" title="Go to page 34"><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Burning </span></a></p>
+<p style="position:absolute;left:51.9px;top:943.9px;font-size:27.2px;white-space:nowrap" data-w="208.2"><a class="ixlink" href="../../#/page/sep/34" target="_top" title="Go to page 34"><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Are we asking the 
+</span></a></p>
+<p style="position:absolute;left:51.9px;top:965.9px;font-size:41.6px;white-space:nowrap" data-w="274.0"><a class="ixlink" href="../../#/page/sep/34" target="_top" title="Go to page 34"><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">right questions?</span></a></p>
 <p style="position:absolute;left:213.0px;top:1302.9px;font-size:17.3px;white-space:nowrap" data-w="526.4"><span style="font-weight:700;color:#ffffff;font-family:Arial,Helvetica,sans-serif">VAA – the home of Victoria’s beekeepers. www.vicbeekeepers.com.au</span></p>
-<p style="position:absolute;left:800.1px;top:762.2px;font-size:14.4px;white-space:nowrap" data-w="109.2"><span style="font-weight:700;color:#ffffff;font-family:Arial,Helvetica,sans-serif">GARETH MAUNDER </span></p>
-<p style="position:absolute;left:762.4px;top:778.2px;font-size:14.4px;white-space:nowrap" data-w="144.0"><span style="font-weight:700;color:#ffffff;font-family:Arial,Helvetica,sans-serif">(Commercial Beekeeper)</span></p>
-<p style="position:absolute;left:773.9px;top:212.0px;font-size:10.4px;white-space:nowrap" data-w="63.6"><span style="color:#ffffff;font-family:Arial,Helvetica,sans-serif">ISSN 0046-0294</span></p>
-<p style="position:absolute;left:621.5px;top:203.3px;font-size:144.0px;white-space:nowrap" data-w="307.7"><span style="font-weight:700;color:#fac408;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">BEES</span><span style="font-weight:700;color:#fac408;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif"> </span></p>
-<p style="position:absolute;left:502.8px;top:330.0px;font-size:96.0px;white-space:nowrap" data-w="428.2"><span style="font-weight:700;color:#fac408;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">ON SHOW </span></p>
-<p style="position:absolute;left:569.0px;top:427.0px;font-size:43.2px;white-space:nowrap" data-w="350.1"><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Come and say hello </span></p>
-<p style="position:absolute;left:606.8px;top:468.6px;font-size:43.2px;white-space:nowrap" data-w="312.3"><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">at the VAA stand. </span></p>
-<p style="position:absolute;left:654.3px;top:515.4px;font-size:27.2px;white-space:nowrap" data-w="261.2"><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Melbourne Royal Show </span></p>
-<p style="position:absolute;left:795.8px;top:535.5px;font-size:56.0px;white-space:nowrap" data-w="113.6"><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">2026</span></p>
-<p style="position:absolute;left:49.6px;top:1066.5px;font-size:72.0px;white-space:nowrap" data-w="315.0"><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Formic Pro</span></p>
-<p style="position:absolute;left:53.3px;top:1139.4px;font-size:35.2px;white-space:nowrap" data-w="348.3" data-j="1"><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Single Pad Applications   </span></p>
-<p style="position:absolute;left:53.3px;top:1178.9px;font-size:26.4px;white-space:nowrap" data-w="336.1"><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">VAA Chemical Working Group  </span></p>
-<p style="position:absolute;left:634.9px;top:189.2px;font-size:15.2px;white-space:nowrap" data-w="202.6"><span style="color:#ffffff;font-family:Arial,Helvetica,sans-serif">VOL. 109 | NO. 9 | SEPTEMBER 2026</span></p>
-<a class="adlink" href="../../out/royal-show/index.html" target="_blank" rel="noopener sponsored" style="left:40.00%;top:18.00%;width:55.00%;height:24.00%" title="Visit Melbourne Royal Show" aria-label="Advertisement: Melbourne Royal Show"></a>
+<p style="position:absolute;left:800.1px;top:804.3px;font-size:14.4px;white-space:nowrap" data-w="109.2"><span style="font-weight:700;color:#ffffff;font-family:Arial,Helvetica,sans-serif">GARETH MAUNDER
+</span></p>
+<p style="position:absolute;left:762.4px;top:820.3px;font-size:14.4px;white-space:nowrap" data-w="144.0"><span style="font-weight:700;color:#ffffff;font-family:Arial,Helvetica,sans-serif">(Commercial Beekeeper)</span></p>
+<p style="position:absolute;left:773.9px;top:212.0px;font-size:10.4px;white-space:nowrap" data-w="63.6"><a class="ixlink" href="../../#/page/sep/44" target="_top" title="Go to page 44"><span style="color:#ffffff;font-family:Arial,Helvetica,sans-serif">ISSN 0046-0294</span></a></p>
+<p style="position:absolute;left:621.5px;top:203.3px;font-size:144.0px;white-space:nowrap" data-w="307.7"><a class="ixlink" href="../../#/page/sep/44" target="_top" title="Go to page 44"><span style="font-weight:700;color:#fac408;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">BEES</span></a><a class="ixlink" href="../../#/page/sep/44" target="_top" title="Go to page 44"><span style="font-weight:700;color:#fac408;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif"> 
+</span></a></p>
+<p style="position:absolute;left:502.8px;top:330.0px;font-size:96.0px;white-space:nowrap" data-w="428.2"><a class="ixlink" href="../../#/page/sep/44" target="_top" title="Go to page 44"><span style="font-weight:700;color:#fac408;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">ON SHOW 
+</span></a></p>
+<p style="position:absolute;left:581.6px;top:428.6px;font-size:41.6px;white-space:nowrap" data-w="337.1"><a class="ixlink" href="../../#/page/sep/44" target="_top" title="Go to page 44"><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Come and say hello
+</span></a></p>
+<p style="position:absolute;left:618.0px;top:468.6px;font-size:41.6px;white-space:nowrap" data-w="300.7"><a class="ixlink" href="../../#/page/sep/44" target="_top" title="Go to page 44"><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">at the VAA stand. 
+</span></a></p>
+<p style="position:absolute;left:654.3px;top:513.8px;font-size:27.2px;white-space:nowrap" data-w="261.2"><a class="ixlink" href="../../#/page/sep/44" target="_top" title="Go to page 44"><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Melbourne Royal Show 
+</span></a></p>
+<p style="position:absolute;left:786.1px;top:530.5px;font-size:60.8px;white-space:nowrap" data-w="123.3"><a class="ixlink" href="../../#/page/sep/44" target="_top" title="Go to page 44"><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">2026</span></a></p>
+<p style="position:absolute;left:51.2px;top:1030.7px;font-size:72.0px;white-space:nowrap" data-w="256.2"><a class="ixlink" href="../../#/page/sep/10" target="_top" title="Go to page 10"><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Organic 
+</span></a></p>
+<p style="position:absolute;left:51.2px;top:1091.5px;font-size:72.0px;white-space:nowrap" data-w="331.3"><a class="ixlink" href="../../#/page/sep/10" target="_top" title="Go to page 10"><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Treatments</span></a></p>
+<p style="position:absolute;left:54.9px;top:1162.9px;font-size:32.0px;white-space:nowrap" data-w="383.8" data-j="1"><a class="ixlink" href="../../#/page/sep/10" target="_top" title="Go to page 10"><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Positive changes announced  
+</span></a></p>
+<p style="position:absolute;left:54.9px;top:1196.7px;font-size:27.2px;white-space:nowrap" data-w="338.9"><a class="ixlink" href="../../#/page/sep/10" target="_top" title="Go to page 10"><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">VAA Chemical Working Group 
+</span></a></p>
+<p style="position:absolute;left:634.9px;top:189.2px;font-size:15.2px;white-space:nowrap" data-w="202.6"><a class="ixlink" href="../../#/page/sep/44" target="_top" title="Go to page 44"><span style="color:#ffffff;font-family:Arial,Helvetica,sans-serif">VOL. 109 | NO. 9 | SEPTEMBER 2026</span></a></p>
+<p style="position:absolute;left:677.8px;top:1022.7px;font-size:72.0px;white-space:nowrap" data-w="245.6"><a class="ixlink" href="../../#/page/sep/16" target="_top" title="Go to page 16"><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Almond 
+</span></a></p>
+<p style="position:absolute;left:602.7px;top:1083.5px;font-size:72.0px;white-space:nowrap" data-w="320.5"><a class="ixlink" href="../../#/page/sep/16" target="_top" title="Go to page 16"><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Pollination </span></a></p>
+<p style="position:absolute;left:708.9px;top:1153.1px;font-size:41.6px;white-space:nowrap" data-w="207.6"><a class="ixlink" href="../../#/page/sep/16" target="_top" title="Go to page 16"><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">’26 wrap up 
+</span></a></p>
+<p style="position:absolute;left:619.8px;top:1196.7px;font-size:27.2px;white-space:nowrap" data-w="287.2"><a class="ixlink" href="../../#/page/sep/16" target="_top" title="Go to page 16"><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Hive audits out of balance</span></a></p>
+<a class="ixlink hot" href="../../#/page/sep/34" target="_top" title="Go to page 34" aria-label="Go to page 34" style="left:44.8px;top:800.0px;width:291.2px;height:224.0px"></a>
+<a class="ixlink hot" href="../../#/page/sep/10" target="_top" title="Go to page 10" aria-label="Go to page 10" style="left:44.8px;top:1024.0px;width:403.2px;height:216.0px"></a>
+<a class="ixlink hot" href="../../#/page/sep/16" target="_top" title="Go to page 16" aria-label="Go to page 16" style="left:592.0px;top:1017.6px;width:336.0px;height:222.4px"></a>
+<a class="ixlink hot" href="../../#/page/sep/44" target="_top" title="Go to page 44" aria-label="Go to page 44" style="left:499.2px;top:192.0px;width:435.2px;height:432.0px"></a>
 </div></div></div>
 <script>
 /* Fit each line to the width it occupied in the PDF: stretch the spaces on
@@ -50,13 +81,18 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
     var ps=document.querySelectorAll('p[data-w]');
     for(var i=0;i<ps.length;i++){
       var p=ps[i];
-      p.style.wordSpacing=''; p.style.letterSpacing='';
+      p.style.wordSpacing=''; p.style.letterSpacing=''; p.style.transform='';
       var target=parseFloat(p.getAttribute('data-w')), nat=p.offsetWidth;
       if(!target||!nat) continue;
       var d=target-nat, stretch=p.hasAttribute('data-j');
       if(Math.abs(d)<0.5) continue;
       if(d>0&&!stretch) continue;
-      if(Math.abs(d)>target*0.18){ continue; } /* too far off to fix by squeezing -- leave it alone rather than crush the spacing */
+      if(Math.abs(d)>target*0.18){
+        /* too far off to fix by spacing: a condensed face set in a substitute.
+           Squeeze the whole line to its measure instead of letting it run off
+           the page (the folio's page number was being clipped on right-hand pages). */
+        if(d<0){ p.style.transformOrigin='0 0'; p.style.transform='scaleX('+(target/nat).toFixed(4)+')'; }
+        continue; }
       var txt=p.textContent||'', sp=(txt.match(/ /g)||[]).length;
       var fs=parseFloat(getComputedStyle(p).fontSize)||12;
       if(sp>0){
@@ -76,6 +112,37 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
   if(document.fonts&&document.fonts.ready) document.fonts.ready.then(fit);
   window.addEventListener('resize',fit);
 })();
+</script>
+
+<script>
+/* An index entry asks the parent reader to jump. Falls back to the href when
+   the page is opened on its own. */
+document.addEventListener('click',function(e){
+  var a=e.target && e.target.closest ? e.target.closest('a.ixlink') : null;
+  if(!a) return;
+  var m=/#\/page\/([^\/]+)\/(\d+)/.exec(a.getAttribute('href')||'');
+  if(!m) return;
+  if(window.parent && window.parent!==window){
+    e.preventDefault();
+    try{ window.parent.postMessage({abj:'page',iss:m[1],p:parseInt(m[2],10)},'*'); }
+    catch(err){ location.href=a.getAttribute('href'); }
+  }
+},true);
+</script>
+
+<script>
+/* A picture with a bigger version asks the parent reader to open its lightbox;
+   on its own the page just opens the picture. */
+document.addEventListener('click',function(e){
+  var a=e.target && e.target.closest ? e.target.closest('a.zoom') : null;
+  if(!a) return;
+  if(window.parent && window.parent!==window){
+    e.preventDefault();
+    var m={abj:'img',src:a.getAttribute('data-src'),alt:a.getAttribute('data-alt')||'',w:+a.getAttribute('data-w')||0,h:+a.getAttribute('data-h')||0};
+    var ans=a.getAttribute('data-answers'); if(ans){ try{ m.answers=JSON.parse(ans); }catch(err){} }
+    try{ window.parent.postMessage(m,'*'); }catch(err){ location.href=a.getAttribute('href'); }
+  }
+},true);
 </script>
 
 <script>

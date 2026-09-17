@@ -8,8 +8,18 @@ html,body{margin:0;padding:0;background:#fff}
 .page{position:relative;width:952px;height:1347px}
 .page img.bg{position:absolute;left:0;top:0;width:952px;height:1347px}
 p{margin:0;position:absolute}
-a{color:inherit}
+a{color:inherit;text-decoration:none}
 a:hover{text-decoration:underline}
+a.blk,a.blk:hover{text-decoration:none}
+a.blk:hover span{background:rgba(249,197,0,.22)}
+a.ixlink{text-decoration:none;color:inherit;cursor:pointer;border-bottom:1px solid rgba(11,74,114,.35)}
+a.ixlink:hover{color:#0b4a72;border-bottom-color:#0b4a72;background:rgba(249,197,0,.18);text-decoration:none}
+a.zoom{position:absolute;display:block;z-index:6;border-radius:3px;transition:box-shadow .12s}
+a.zoom:hover{box-shadow:0 0 0 2px rgba(249,197,0,.85) inset}
+a.zoom::after{content:"";position:absolute;right:6px;bottom:6px;width:26px;height:26px;border-radius:50%;background:rgba(22,19,14,.62) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f9c500' stroke-width='2.4' stroke-linecap='round'><circle cx='10.5' cy='10.5' r='6'/><path d='M15 15l5 5M8 10.5h5M10.5 8v5'/></svg>") center/16px no-repeat;opacity:0;transition:opacity .15s}
+a.zoom:hover::after{opacity:1}
+a.hot{position:absolute;display:block;z-index:4;border:none;border-radius:3px;transition:box-shadow .12s,background .12s}
+a.hot:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,0,.75) inset}
 a.adlink{position:absolute;display:block;z-index:5;text-decoration:none;border-radius:3px;transition:box-shadow .12s,background .12s}
 a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,0,.75) inset}
 @font-face{font-family:'Carlito';src:url('../../fonts/Carlito-Regular.ttf');font-weight:400;font-style:normal}
@@ -26,7 +36,7 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
 <p style="position:absolute;left:54.4px;top:1311.0px;font-size:13.6px;white-space:nowrap" data-w="277.0"><span style="font-family:Arial,Helvetica,sans-serif">16  |  </span><span style="font-family:Arial,Helvetica,sans-serif">Published since 1918 by the VAA – founded in 1892</span></p>
 <p style="position:absolute;left:77.1px;top:616.7px;font-size:16.8px;white-space:nowrap" data-w="384.7"><span style="color:#650038;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">As another almond pollination season draws to a close, </span></p>
 <p style="position:absolute;left:54.4px;top:636.8px;font-size:16.8px;white-space:nowrap" data-w="407.4" data-j="1"><span style="color:#650038;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">beekeepers are doing what we always do — loading trucks, </span></p>
-<p style="position:absolute;left:54.4px;top:656.8px;font-size:16.8px;white-space:nowrap" data-w="407.4" data-j="1"><span style="color:#650038;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">watching the weather, finding the next patch of flowers and </span></p>
+<p style="position:absolute;left:54.4px;top:656.9px;font-size:16.8px;white-space:nowrap" data-w="407.4" data-j="1"><span style="color:#650038;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">watching the weather, finding the next patch of flowers and </span></p>
 <p style="position:absolute;left:54.4px;top:676.7px;font-size:16.8px;white-space:nowrap" data-w="273.6"><span style="color:#650038;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">saying over the UHF, </span><span style="font-weight:700;color:#650038;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">“have a safe one!”</span></p>
 <p style="position:absolute;left:77.1px;top:711.3px;font-size:15.2px;white-space:nowrap" data-w="384.5"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">The 2026 season has again reminded me just how quickly the </span></p>
 <p style="position:absolute;left:54.4px;top:729.3px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">landscape around pollination is changing. Here in Victoria, we </span></p>
@@ -35,27 +45,31 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
 <p style="position:absolute;left:54.4px;top:783.2px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">explaining a second consecutive year with later almond bloom </span></p>
 <p style="position:absolute;left:54.4px;top:801.2px;font-size:15.2px;white-space:nowrap" data-w="407.2" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">isn’t necessarily straightforward. There were also concerns around </span></p>
 <p style="position:absolute;left:54.4px;top:819.2px;font-size:15.2px;white-space:nowrap" data-w="309.1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">the overlap between Nonpareil and its pollinators.</span></p>
-<p style="position:absolute;left:77.1px;top:837.1px;font-size:15.2px;white-space:nowrap" data-w="384.4" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Early reports I’m hearing, however, are of a good to very good </span></p>
-<p style="position:absolute;left:54.4px;top:855.1px;font-size:15.2px;white-space:nowrap" data-w="132.1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">nut set. Time will tell.</span></p>
+<p style="position:absolute;left:77.1px;top:837.2px;font-size:15.2px;white-space:nowrap" data-w="384.4" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Early reports I’m hearing, however, are of a good to very good 
+</span></p>
+<p style="position:absolute;left:54.4px;top:855.2px;font-size:15.2px;white-space:nowrap" data-w="132.1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">nut set. Time will tell.</span></p>
 <p style="position:absolute;left:77.1px;top:909.2px;font-size:15.2px;white-space:nowrap" data-w="384.4" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">From a beekeeper’s perspective, the general quality of </span></p>
 <p style="position:absolute;left:54.4px;top:927.2px;font-size:15.2px;white-space:nowrap" data-w="305.5"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Victorian bees has ranged from good to excellent.</span></p>
 <p style="position:absolute;left:77.1px;top:945.2px;font-size:15.2px;white-space:nowrap" data-w="384.5"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Victorian colonies that went into autumn with a strong nutritional </span></p>
 <p style="position:absolute;left:54.4px;top:963.2px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">profile and wintered well in the Mallee on a host of weeds after all </span></p>
 <p style="position:absolute;left:54.4px;top:981.2px;font-size:15.2px;white-space:nowrap" data-w="407.2" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">the pre-winter rain have generally presented particularly strongly. </span></p>
-<p style="position:absolute;left:54.4px;top:999.1px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Almonds themselves have provided good stimulation. Colonies </span></p>
-<p style="position:absolute;left:54.4px;top:1017.1px;font-size:15.2px;white-space:nowrap" data-w="407.2" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">have bred well, there has been useful nectar coming in and, </span></p>
+<p style="position:absolute;left:54.4px;top:999.2px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Almonds themselves have provided good stimulation. Colonies </span></p>
+<p style="position:absolute;left:54.4px;top:1017.1px;font-size:15.2px;white-space:nowrap" data-w="407.2" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">have bred well, there has been useful nectar coming in and, 
+</span></p>
 <p style="position:absolute;left:54.4px;top:1035.1px;font-size:15.2px;white-space:nowrap" data-w="384.3"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">in general, many bees are leaving the orchards in great shape. </span></p>
 <p style="position:absolute;left:77.1px;top:1053.1px;font-size:15.2px;white-space:nowrap" data-w="384.5"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">There is a lesson in that. The allure of low-nutrition autumn </span></p>
 <p style="position:absolute;left:54.4px;top:1071.1px;font-size:15.2px;white-space:nowrap" data-w="407.2" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">flows can be tempting, but it often catches up with us at almonds. </span></p>
-<p style="position:absolute;left:54.4px;top:1089.0px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">We all know you cannot manufacture a genuinely strong pollination </span></p>
-<p style="position:absolute;left:54.4px;top:1107.0px;font-size:15.2px;white-space:nowrap" data-w="235.8"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">colony in the fortnight before delivery.</span></p>
+<p style="position:absolute;left:54.4px;top:1089.1px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">We all know you cannot manufacture a genuinely strong pollination </span></p>
+<p style="position:absolute;left:54.4px;top:1107.1px;font-size:15.2px;white-space:nowrap" data-w="235.8"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">colony in the fortnight before delivery.</span></p>
 <p style="position:absolute;left:77.1px;top:1161.1px;font-size:15.2px;white-space:nowrap" data-w="384.5"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">And now varroa has added another layer to that preparation. </span></p>
 <p style="position:absolute;left:54.4px;top:1179.1px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Some Victorian mites have already been confirmed resistant to </span></p>
 <p style="position:absolute;left:54.4px;top:1197.1px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">both major synthetic miticide groups.</span><span class="fn" tabindex="0" data-n="1" data-note="Agriculture Victoria. “Varroa mite – current situation.” Agriculture Victoria (Dept. of Energy, Environment and Climate Action)." aria-label="Note 1: Agriculture Victoria. “Varroa mite – current situation.” Agriculture Victoria (Dept. of Energy, Environment and Climate Action)."><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif;vertical-align:super;font-size:.7em">1</span></span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif"> The beekeeper delivering </span></p>
-<p style="position:absolute;left:54.4px;top:1215.1px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">a strong colony today isn’t simply feeding and breeding bees. </span></p>
-<p style="position:absolute;left:54.4px;top:1233.1px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">We are monitoring, treating, recording, checking treatment </span></p>
+<p style="position:absolute;left:54.4px;top:1215.1px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">a strong colony today isn’t simply feeding and breeding bees. 
+</span></p>
+<p style="position:absolute;left:54.4px;top:1233.1px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">We are monitoring, treating, recording, checking treatment 
+</span></p>
 <p style="position:absolute;left:54.4px;top:1251.1px;font-size:15.2px;white-space:nowrap" data-w="407.2" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">efficacy and increasingly working within an integrated pest </span></p>
-<p style="position:absolute;left:54.4px;top:1269.0px;font-size:15.2px;white-space:nowrap" data-w="275.3"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">management program.</span><span class="fn" tabindex="0" data-n="2" data-note="Agriculture Victoria. “Miticide resistance in varroa mites: What Victorian beekeepers need to know.” Agriculture Victoria (Dept. of Energy, Environment and Climate Action)." aria-label="Note 2: Agriculture Victoria. “Miticide resistance in varroa mites: What Victorian beekeepers need to know.” Agriculture Victoria (Dept. of Energy, Environment and Climate Action)."><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif;vertical-align:super;font-size:.7em">2</span></span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif"> Those costs are real.</span></p>
+<p style="position:absolute;left:54.4px;top:1269.1px;font-size:15.2px;white-space:nowrap" data-w="275.3"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">management program.</span><span class="fn" tabindex="0" data-n="2" data-note="Agriculture Victoria. “Miticide resistance in varroa mites: What Victorian beekeepers need to know.” Agriculture Victoria (Dept. of Energy, Environment and Climate Action)." aria-label="Note 2: Agriculture Victoria. “Miticide resistance in varroa mites: What Victorian beekeepers need to know.” Agriculture Victoria (Dept. of Energy, Environment and Climate Action)."><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif;vertical-align:super;font-size:.7em">2</span></span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif"> Those costs are real.</span></p>
 <p style="position:absolute;left:517.0px;top:646.4px;font-size:15.2px;white-space:nowrap" data-w="384.4"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">There has been plenty of discussion about pollination pricing. </span></p>
 <p style="position:absolute;left:494.4px;top:664.7px;font-size:15.2px;white-space:nowrap" data-w="407.2" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Personally, I think some of the adjustment we’re seeing is simply </span></p>
 <p style="position:absolute;left:494.4px;top:683.1px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">a correction towards the true cost of keeping the pollinator alive. </span></p>
@@ -64,41 +78,45 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
 <p style="position:absolute;left:494.4px;top:738.1px;font-size:15.2px;white-space:nowrap" data-w="407.0" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">honey costs money. Queen replacement costs money. And a </span></p>
 <p style="position:absolute;left:494.4px;top:756.4px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">treatment that fails because of resistance can cost considerably </span></p>
 <p style="position:absolute;left:494.4px;top:774.7px;font-size:15.2px;white-space:nowrap" data-w="278.5"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">more than the product sitting inside the hive.</span></p>
-<p style="position:absolute;left:517.0px;top:793.1px;font-size:15.2px;white-space:nowrap" data-w="384.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">At the same time, frame-based pricing is creating a clearer </span></p>
+<p style="position:absolute;left:517.0px;top:793.0px;font-size:15.2px;white-space:nowrap" data-w="384.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">At the same time, frame-based pricing is creating a clearer </span></p>
 <p style="position:absolute;left:494.4px;top:811.4px;font-size:15.2px;white-space:nowrap" data-w="316.6"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">financial reward for quality. I support that principle.</span></p>
 <p style="position:absolute;left:517.0px;top:829.7px;font-size:15.2px;white-space:nowrap" data-w="384.4"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">A beekeeper delivering genuinely strong colonies should be </span></p>
-<p style="position:absolute;left:494.4px;top:848.1px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">rewarded for the additional bees being placed into the orchard </span></p>
-<p style="position:absolute;left:494.4px;top:866.4px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">and hitting the stocking rates required. But it also makes accurate </span></p>
+<p style="position:absolute;left:494.4px;top:848.0px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">rewarded for the additional bees being placed into the orchard </span></p>
+<p style="position:absolute;left:494.4px;top:866.3px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">and hitting the stocking rates required. But it also makes accurate </span></p>
 <p style="position:absolute;left:494.4px;top:884.7px;font-size:15.2px;white-space:nowrap" data-w="216.1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">auditing more important than ever.</span></p>
 <p style="position:absolute;left:517.0px;top:939.4px;font-size:15.2px;white-space:nowrap" data-w="384.4"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">I’ve heard too many reports this season of beekeepers </span></p>
 <p style="position:absolute;left:494.4px;top:957.7px;font-size:15.2px;white-space:nowrap" data-w="407.2" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">disagreeing substantially with third-party audit results. I’m clearly </span></p>
 <p style="position:absolute;left:494.4px;top:976.1px;font-size:15.2px;white-space:nowrap" data-w="62.5"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">not alone.</span></p>
 <p style="position:absolute;left:517.0px;top:994.4px;font-size:15.2px;white-space:nowrap" data-w="384.5"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">AHBIC has publicly raised concerns regarding hive audits where </span></p>
 <p style="position:absolute;left:494.4px;top:1012.7px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">reported colony strength has not aligned with what beekeepers </span></p>
-<p style="position:absolute;left:494.4px;top:1031.1px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">believe they supplied and has encouraged beekeepers to be </span></p>
+<p style="position:absolute;left:494.4px;top:1031.0px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">believe they supplied and has encouraged beekeepers to be </span></p>
 <p style="position:absolute;left:494.4px;top:1049.4px;font-size:15.2px;white-space:nowrap" data-w="244.1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">present during auditing where possible.</span></p>
 <p style="position:absolute;left:517.0px;top:1067.7px;font-size:15.2px;white-space:nowrap" data-w="384.4"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">This matters. Growers deserve to receive what they have paid </span></p>
-<p style="position:absolute;left:494.4px;top:1086.1px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">for. Beekeepers deserve to be paid for what they have supplied. </span></p>
+<p style="position:absolute;left:494.4px;top:1086.0px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">for. Beekeepers deserve to be paid for what they have supplied. </span></p>
 <p style="position:absolute;left:494.4px;top:1104.4px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">And auditors need a transparent and repeatable system that gives </span></p>
 <p style="position:absolute;left:494.4px;top:1122.7px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">both sides confidence. As more dollars become attached to each </span></p>
-<p style="position:absolute;left:494.4px;top:1141.1px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">additional frame of bees, ambiguity is no longer good enough. The </span></p>
-<p style="position:absolute;left:494.4px;top:1159.4px;font-size:15.2px;white-space:nowrap" data-w="147.7"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">balance has to be right. </span></p>
+<p style="position:absolute;left:494.4px;top:1141.0px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">additional frame of bees, ambiguity is no longer good enough. The </span></p>
+<p style="position:absolute;left:494.4px;top:1159.3px;font-size:15.2px;white-space:nowrap" data-w="147.7"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">balance has to be right. </span></p>
 <p style="position:absolute;left:517.0px;top:1214.1px;font-size:15.2px;white-space:nowrap" data-w="384.5"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">There is another question worth asking as frame pricing </span></p>
 <p style="position:absolute;left:494.4px;top:1232.4px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">continues to develop: When stronger colonies create additional </span></p>
 <p style="position:absolute;left:494.4px;top:1250.7px;font-size:15.2px;white-space:nowrap" data-w="407.2" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">value, where does that value ultimately land? Does it flow back </span></p>
 <p style="position:absolute;left:494.4px;top:1269.1px;font-size:15.2px;white-space:nowrap" data-w="407.1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">to the beekeeper carrying the increasing cost of producing and </span></p>
 <p style="position:absolute;left:54.4px;top:426.6px;font-size:41.6px;white-space:nowrap" data-w="376.4"><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">A Changing Landscape</span></p>
-<p style="position:absolute;left:54.4px;top:481.0px;font-size:19.2px;white-space:nowrap" data-w="346.3"><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">By Lindsay Callaway, Commercial Beekeeper </span></p>
+<p style="position:absolute;left:54.4px;top:481.0px;font-size:19.2px;white-space:nowrap" data-w="346.3"><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">By Lindsay Callaway, Commercial Beekeeper
+</span></p>
 <p style="position:absolute;left:54.4px;top:503.4px;font-size:19.2px;white-space:nowrap" data-w="519.0"><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">with Jana Hamilton, Commercial Beekeeper, Far North Queensland</span></p>
 <p style="position:absolute;left:603.2px;top:563.8px;font-size:12.8px;white-space:nowrap" data-w="294.8"><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Unloading the last drop at Lake Powell, by Lindsay Callaway</span></p>
-<p style="position:absolute;left:54.3px;top:172.6px;font-size:88.0px;white-space:nowrap" data-w="334.2"><span style="font-weight:700;color:#ffeacd;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Almond  </span></p>
-<p style="position:absolute;left:55.6px;top:252.6px;font-size:88.0px;white-space:nowrap" data-w="442.9" data-j="1"><span style="font-weight:700;color:#ffeacd;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Pollination  </span></p>
+<p style="position:absolute;left:54.3px;top:172.6px;font-size:88.0px;white-space:nowrap" data-w="334.2"><span style="font-weight:700;color:#ffeacd;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Almond 
+</span></p>
+<p style="position:absolute;left:55.6px;top:252.6px;font-size:88.0px;white-space:nowrap" data-w="442.9" data-j="1"><span style="font-weight:700;color:#ffeacd;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Pollination 
+</span></p>
 <p style="position:absolute;left:51.6px;top:332.6px;font-size:88.0px;white-space:nowrap" data-w="181.1"><span style="font-weight:700;color:#ffeacd;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">2026</span></p>
-<p style="position:absolute;left:54.4px;top:890.6px;font-size:19.2px;white-space:nowrap" data-w="154.7"><span style="font-weight:700;color:#650038;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Bees&#160;in&#160;good&#160;shape</span></p>
-<p style="position:absolute;left:54.4px;top:1142.5px;font-size:19.2px;white-space:nowrap" data-w="228.3"><span style="font-weight:700;color:#650038;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Quality&#160;starts&#160;months&#160;earlier</span></p>
-<p style="position:absolute;left:494.4px;top:627.8px;font-size:19.2px;white-space:nowrap" data-w="351.5"><span style="font-weight:700;color:#650038;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">The&#160;new&#160;cost&#160;of&#160;keeping&#160;the&#160;pollinator&#160;alive</span></p>
-<p style="position:absolute;left:494.4px;top:920.8px;font-size:19.2px;white-space:nowrap" data-w="261.0"><span style="font-weight:700;color:#650038;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">We&#160;need&#160;confidence&#160;in&#160;the&#160;audit</span></p>
-<p style="position:absolute;left:494.4px;top:1195.4px;font-size:19.2px;white-space:nowrap" data-w="295.1"><span style="font-weight:700;color:#650038;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Where&#160;does&#160;the&#160;additional&#160;value&#160;go?</span></p>
+<p style="position:absolute;left:54.4px;top:885.3px;font-size:19.2px;white-space:nowrap" data-w="154.7"><span style="font-weight:700;color:#650038;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Bees in good shape</span></p>
+<p style="position:absolute;left:54.4px;top:1137.2px;font-size:19.2px;white-space:nowrap" data-w="228.3"><span style="font-weight:700;color:#650038;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Quality starts months earlier</span></p>
+<p style="position:absolute;left:494.4px;top:622.5px;font-size:19.2px;white-space:nowrap" data-w="351.5"><span style="font-weight:700;color:#650038;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">The new cost of keeping the pollinator alive</span></p>
+<p style="position:absolute;left:494.4px;top:915.5px;font-size:19.2px;white-space:nowrap" data-w="261.0"><span style="font-weight:700;color:#650038;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">We need confidence in the audit</span></p>
+<p style="position:absolute;left:494.4px;top:1190.2px;font-size:19.2px;white-space:nowrap" data-w="295.1"><span style="font-weight:700;color:#650038;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Where does the additional value go?</span></p>
+<a class="zoom" href="../../assets/sep/big/p16_118.jpg" target="_blank" rel="noopener" data-src="assets/sep/big/p16_118.jpg" data-alt="Almond orchard in bloom" data-w="2041" data-h="1276" title="Click to enlarge" aria-label="Enlarge: Almond orchard in bloom" style="left:-1.9px;top:-1.8px;width:956.0px;height:597.8px"></a>
 </div></div></div>
 <script>
 /* Fit each line to the width it occupied in the PDF: stretch the spaces on
@@ -112,13 +130,18 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
     var ps=document.querySelectorAll('p[data-w]');
     for(var i=0;i<ps.length;i++){
       var p=ps[i];
-      p.style.wordSpacing=''; p.style.letterSpacing='';
+      p.style.wordSpacing=''; p.style.letterSpacing=''; p.style.transform='';
       var target=parseFloat(p.getAttribute('data-w')), nat=p.offsetWidth;
       if(!target||!nat) continue;
       var d=target-nat, stretch=p.hasAttribute('data-j');
       if(Math.abs(d)<0.5) continue;
       if(d>0&&!stretch) continue;
-      if(Math.abs(d)>target*0.18){ continue; } /* too far off to fix by squeezing -- leave it alone rather than crush the spacing */
+      if(Math.abs(d)>target*0.18){
+        /* too far off to fix by spacing: a condensed face set in a substitute.
+           Squeeze the whole line to its measure instead of letting it run off
+           the page (the folio's page number was being clipped on right-hand pages). */
+        if(d<0){ p.style.transformOrigin='0 0'; p.style.transform='scaleX('+(target/nat).toFixed(4)+')'; }
+        continue; }
       var txt=p.textContent||'', sp=(txt.match(/ /g)||[]).length;
       var fs=parseFloat(getComputedStyle(p).fontSize)||12;
       if(sp>0){
@@ -138,6 +161,37 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
   if(document.fonts&&document.fonts.ready) document.fonts.ready.then(fit);
   window.addEventListener('resize',fit);
 })();
+</script>
+
+<script>
+/* An index entry asks the parent reader to jump. Falls back to the href when
+   the page is opened on its own. */
+document.addEventListener('click',function(e){
+  var a=e.target && e.target.closest ? e.target.closest('a.ixlink') : null;
+  if(!a) return;
+  var m=/#\/page\/([^\/]+)\/(\d+)/.exec(a.getAttribute('href')||'');
+  if(!m) return;
+  if(window.parent && window.parent!==window){
+    e.preventDefault();
+    try{ window.parent.postMessage({abj:'page',iss:m[1],p:parseInt(m[2],10)},'*'); }
+    catch(err){ location.href=a.getAttribute('href'); }
+  }
+},true);
+</script>
+
+<script>
+/* A picture with a bigger version asks the parent reader to open its lightbox;
+   on its own the page just opens the picture. */
+document.addEventListener('click',function(e){
+  var a=e.target && e.target.closest ? e.target.closest('a.zoom') : null;
+  if(!a) return;
+  if(window.parent && window.parent!==window){
+    e.preventDefault();
+    var m={abj:'img',src:a.getAttribute('data-src'),alt:a.getAttribute('data-alt')||'',w:+a.getAttribute('data-w')||0,h:+a.getAttribute('data-h')||0};
+    var ans=a.getAttribute('data-answers'); if(ans){ try{ m.answers=JSON.parse(ans); }catch(err){} }
+    try{ window.parent.postMessage(m,'*'); }catch(err){ location.href=a.getAttribute('href'); }
+  }
+},true);
 </script>
 
 <script>

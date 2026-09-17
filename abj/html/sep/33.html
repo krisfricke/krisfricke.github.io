@@ -8,8 +8,18 @@ html,body{margin:0;padding:0;background:#fff}
 .page{position:relative;width:952px;height:1347px}
 .page img.bg{position:absolute;left:0;top:0;width:952px;height:1347px}
 p{margin:0;position:absolute}
-a{color:inherit}
+a{color:inherit;text-decoration:none}
 a:hover{text-decoration:underline}
+a.blk,a.blk:hover{text-decoration:none}
+a.blk:hover span{background:rgba(249,197,0,.22)}
+a.ixlink{text-decoration:none;color:inherit;cursor:pointer;border-bottom:1px solid rgba(11,74,114,.35)}
+a.ixlink:hover{color:#0b4a72;border-bottom-color:#0b4a72;background:rgba(249,197,0,.18);text-decoration:none}
+a.zoom{position:absolute;display:block;z-index:6;border-radius:3px;transition:box-shadow .12s}
+a.zoom:hover{box-shadow:0 0 0 2px rgba(249,197,0,.85) inset}
+a.zoom::after{content:"";position:absolute;right:6px;bottom:6px;width:26px;height:26px;border-radius:50%;background:rgba(22,19,14,.62) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f9c500' stroke-width='2.4' stroke-linecap='round'><circle cx='10.5' cy='10.5' r='6'/><path d='M15 15l5 5M8 10.5h5M10.5 8v5'/></svg>") center/16px no-repeat;opacity:0;transition:opacity .15s}
+a.zoom:hover::after{opacity:1}
+a.hot{position:absolute;display:block;z-index:4;border:none;border-radius:3px;transition:box-shadow .12s,background .12s}
+a.hot:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,0,.75) inset}
 a.adlink{position:absolute;display:block;z-index:5;text-decoration:none;border-radius:3px;transition:box-shadow .12s,background .12s}
 a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,0,.75) inset}
 @font-face{font-family:'Carlito';src:url('../../fonts/Carlito-Regular.ttf');font-weight:400;font-style:normal}
@@ -53,30 +63,31 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
 <p style="position:absolute;left:54.4px;top:670.0px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">and fructose, it includes small amounts of more complex sugars </span></p>
 <p style="position:absolute;left:54.4px;top:687.9px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">such as fructooligosaccharides (FOS), galactooligosaccharides </span></p>
 <p style="position:absolute;left:54.4px;top:705.8px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">(GOS), and potentially specific sugar compounds from the flower </span></p>
-<p style="position:absolute;left:54.4px;top:723.8px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">source such as isomaltose, melezitose, or raffinose, and these </span></p>
+<p style="position:absolute;left:54.4px;top:723.7px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">source such as isomaltose, melezitose, or raffinose, and these </span></p>
 <p style="position:absolute;left:54.4px;top:741.7px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><a href="https://www.frontiersin.org/journals/nutrition/articles/10.3389/fnut.2022.957932/full" target="_blank" rel="noopener"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">more complex sugars tend to be indigestible to human gut enzymes </span></a></p>
 <p style="position:absolute;left:54.4px;top:759.6px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><a href="https://www.frontiersin.org/journals/nutrition/articles/10.3389/fnut.2022.957932/full" target="_blank" rel="noopener"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">but are digestible to beneficial gut flora (a “prebiotic” effect), with </span></a></p>
 <p style="position:absolute;left:54.4px;top:777.5px;font-size:15.2px;white-space:nowrap" data-w="271.3"><a href="https://www.frontiersin.org/journals/nutrition/articles/10.3389/fnut.2022.957932/full" target="_blank" rel="noopener"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">various beneficial health effects for your gut.</span></a></p>
 <p style="position:absolute;left:77.1px;top:795.4px;font-size:15.2px;white-space:nowrap" data-w="384.4"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Be aware there may be other recipe-specific ramifications of </span></p>
-<p style="position:absolute;left:54.4px;top:813.4px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">changing temp or time – for example one of my other signature </span></p>
+<p style="position:absolute;left:54.4px;top:813.3px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">changing temp or time – for example one of my other signature </span></p>
 <p style="position:absolute;left:54.4px;top:831.3px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">dishes is flan, which is cooked in a double boiler, which, because </span></p>
 <p style="position:absolute;left:54.4px;top:849.2px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">it never actually exceeds 1000C, reducing the temperature </span></p>
 <p style="position:absolute;left:54.4px;top:867.1px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">unnecessarily slows the process, but putting foil over the top will </span></p>
 <p style="position:absolute;left:54.4px;top:885.0px;font-size:15.2px;white-space:nowrap" data-w="403.7"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">prevent the honey getting too dark from direct radiant heat on top.</span></p>
-<p style="position:absolute;left:77.1px;top:903.0px;font-size:15.2px;white-space:nowrap" data-w="384.4"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">So in conclusion, sucrose in recipes can often be substituted </span></p>
+<p style="position:absolute;left:77.1px;top:902.9px;font-size:15.2px;white-space:nowrap" data-w="384.4"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">So in conclusion, sucrose in recipes can often be substituted </span></p>
 <p style="position:absolute;left:54.4px;top:920.9px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">with honey. If you’re reading this you are presumably a beekeeper </span></p>
 <p style="position:absolute;left:54.4px;top:938.8px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">and have plentiful honey at your disposal, and if preparing a dish to </span></p>
 <p style="position:absolute;left:54.4px;top:956.7px;font-size:15.2px;white-space:nowrap" data-w="396.3"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">share with others, it’s always nice to showcase the uses of honey.</span></p>
 <p style="position:absolute;left:77.1px;top:974.6px;font-size:15.2px;white-space:nowrap" data-w="289.5" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">If this all seems like a lot of math, it’s really just:</span></p>
 <p style="position:absolute;left:77.1px;top:991.2px;font-size:15.2px;white-space:nowrap" data-w="278.4"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">• amount of honey = amount of sugar x 0.66</span></p>
-<p style="position:absolute;left:77.1px;top:1009.2px;font-size:15.2px;white-space:nowrap" data-w="276.8"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">• liquid = -35ml per cup of sugar substituted</span></p>
+<p style="position:absolute;left:77.1px;top:1009.1px;font-size:15.2px;white-space:nowrap" data-w="276.8"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">• liquid = -35ml per cup of sugar substituted</span></p>
 <p style="position:absolute;left:77.1px;top:1027.1px;font-size:15.2px;white-space:nowrap" data-w="258.4"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">• +1g of baking soda per substituted cup.</span></p>
-<p style="position:absolute;left:54.4px;top:1068.8px;font-size:15.2px;white-space:nowrap" data-w="288.3" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">And to make it even easier I made a calculator at: </span></p>
-<p style="position:absolute;left:54.4px;top:1085.4px;font-size:15.2px;white-space:nowrap" data-w="267.2"><a href="https://krisfricke.github.io/recipe-calculator/" target="_blank" rel="noopener"><span style="font-weight:700;color:#3c2414;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">www.krisfricke.github.io/recipe-calculator</span></a></p>
+<p style="position:absolute;left:54.4px;top:1068.8px;font-size:15.2px;white-space:nowrap" data-w="288.3" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">And to make it even easier I made a calculator at:
+</span></p>
+<p style="position:absolute;left:54.4px;top:1085.4px;font-size:15.2px;white-space:nowrap" data-w="229.9"><a href="https://krisfricke.github.io/recipe-calculator/" target="_blank" rel="noopener"><span style="font-weight:700;color:#3c2414;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">krisfricke.github.io/recipe-calculator</span></a></p>
 <p style="position:absolute;left:512.9px;top:64.2px;font-size:28.8px;white-space:nowrap" data-w="209.5"><span style="font-weight:700;color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Honey Cornbread</span></p>
 <p style="position:absolute;left:513.6px;top:113.9px;font-size:20.0px;white-space:nowrap" data-w="122.6"><span style="font-weight:700;color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">PREPARATION</span></p>
 <p style="position:absolute;left:512.8px;top:141.1px;font-size:20.0px;white-space:nowrap" data-w="371.5" data-j="1"><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Oven 190°C — Ten degrees below the original. </span></p>
-<p style="position:absolute;left:512.8px;top:163.5px;font-size:20.0px;white-space:nowrap" data-w="116.9"><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Grease the tin.</span></p>
+<p style="position:absolute;left:512.9px;top:163.5px;font-size:20.0px;white-space:nowrap" data-w="116.9"><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Grease the tin.</span></p>
 <p style="position:absolute;left:513.6px;top:203.8px;font-size:20.0px;white-space:nowrap" data-w="118.2"><span style="font-weight:700;color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">INGREDIENTS</span></p>
 <p style="position:absolute;left:512.4px;top:230.7px;font-size:20.0px;white-space:nowrap" data-w="149.6"><span style="font-weight:700;color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">230 mL </span><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">whole milk</span></p>
 <p style="position:absolute;left:511.4px;top:258.4px;font-size:16.0px;white-space:nowrap" data-w="171.9"><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">10 mL less than the original</span></p>
@@ -88,35 +99,46 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
 <p style="position:absolute;left:511.8px;top:404.9px;font-size:20.0px;white-space:nowrap" data-w="182.9" data-j="1"><span style="font-weight:700;color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">140 g </span><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">yellow corn meal</span></p>
 <p style="position:absolute;left:511.8px;top:431.8px;font-size:20.0px;white-space:nowrap" data-w="128.8"><span style="font-weight:700;color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">125 g </span><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">plain flour</span></p>
 <p style="position:absolute;left:511.8px;top:458.8px;font-size:20.0px;white-space:nowrap" data-w="156.1"><span style="font-weight:700;color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">14 g </span><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">baking powder</span></p>
-<p style="position:absolute;left:511.6px;top:486.4px;font-size:16.0px;white-space:nowrap" data-w="112.0"><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">≈ 15 ml · not soda</span></p>
-<p style="position:absolute;left:513.6px;top:521.4px;font-size:20.0px;white-space:nowrap" data-w="130.5"><span style="font-weight:700;color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">INSTRUCTIONS</span></p>
-<p style="position:absolute;left:513.2px;top:548.4px;font-size:20.0px;white-space:nowrap" data-w="261.6"><span style="font-weight:700;color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Dissolve </span><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">honey into the milk first </span></p>
-<p style="position:absolute;left:512.6px;top:575.3px;font-size:20.0px;white-space:nowrap" data-w="251.5"><span style="font-weight:700;color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Whisk in </span><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">vegetable oil, then egg</span></p>
-<p style="position:absolute;left:512.6px;top:602.3px;font-size:20.0px;white-space:nowrap" data-w="349.2"><span style="font-weight:700;color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Whisk smooth </span><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">until the oil is fully emulsified</span></p>
-<p style="position:absolute;left:512.6px;top:656.1px;font-size:20.0px;white-space:nowrap" data-w="318.9"><span style="font-weight:700;color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Whisk dry </span><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">ingredients into a larger bowl </span></p>
-<p style="position:absolute;left:512.5px;top:680.3px;font-size:20.0px;white-space:nowrap" data-w="337.1" data-j="1"><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">(yellow corn meal, plain flour, baking soda, </span></p>
-<p style="position:absolute;left:512.7px;top:702.7px;font-size:20.0px;white-space:nowrap" data-w="38.0"><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">salt).</span></p>
-<p style="position:absolute;left:513.0px;top:754.8px;font-size:20.0px;white-space:nowrap" data-w="343.8" data-j="1"><span style="font-weight:700;color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Combine </span><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">wet into dry, stir until no dry flour </span></p>
-<p style="position:absolute;left:513.0px;top:778.9px;font-size:20.0px;white-space:nowrap" data-w="329.9"><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">remains. </span><span style="font-style:italic;color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Lumpy is correct — 15 strokes at </span></p>
-<p style="position:absolute;left:513.0px;top:801.3px;font-size:20.0px;white-space:nowrap" data-w="270.0"><span style="font-style:italic;color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">most, (overmixing makes it tough).</span></p>
-<p style="position:absolute;left:513.3px;top:853.5px;font-size:20.0px;white-space:nowrap" data-w="347.7" data-j="1"><span style="font-weight:700;color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Bake </span><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">into the greased tin • 190°C (−10 °C vs </span></p>
-<p style="position:absolute;left:512.7px;top:877.6px;font-size:20.0px;white-space:nowrap" data-w="351.7" data-j="1"><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">the original). 22–25 min, skewer/knife clean. </span></p>
-<p style="position:absolute;left:510.4px;top:900.0px;font-size:20.0px;white-space:nowrap" data-w="328.1"><span style="font-style:italic;color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Test with a skewer/knife, not by colour —  </span></p>
-<p style="position:absolute;left:513.0px;top:922.4px;font-size:20.0px;white-space:nowrap" data-w="332.3" data-j="1"><span style="font-style:italic;color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">honey browns the crust before the middle  </span></p>
-<p style="position:absolute;left:513.0px;top:944.8px;font-size:20.0px;white-space:nowrap" data-w="219.4"><span style="font-style:italic;color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">is set. </span><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Rest 10 min in the tin.</span></p>
-<p style="position:absolute;left:512.8px;top:998.7px;font-size:20.0px;white-space:nowrap" data-w="331.6" data-j="1"><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Serve with honey and a generous drizzle  </span></p>
-<p style="position:absolute;left:513.0px;top:1021.1px;font-size:20.0px;white-space:nowrap" data-w="119.4"><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">of fresh honey.</span></p>
+<p style="position:absolute;left:511.6px;top:491.2px;font-size:16.0px;white-space:nowrap" data-w="112.0"><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">≈ 15 ml · not soda</span></p>
+<p style="position:absolute;left:513.1px;top:512.6px;font-size:20.0px;white-space:nowrap" data-w="55.9"><span style="font-weight:700;color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">6 g </span><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">salt</span></p>
+<p style="position:absolute;left:513.6px;top:553.2px;font-size:20.0px;white-space:nowrap" data-w="130.5"><span style="font-weight:700;color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">INSTRUCTIONS</span></p>
+<p style="position:absolute;left:513.3px;top:580.1px;font-size:20.0px;white-space:nowrap" data-w="261.7"><span style="font-weight:700;color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Dissolve </span><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">honey into the milk first </span></p>
+<p style="position:absolute;left:512.6px;top:607.0px;font-size:20.0px;white-space:nowrap" data-w="251.5"><span style="font-weight:700;color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Whisk in </span><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">vegetable oil, then egg</span></p>
+<p style="position:absolute;left:512.6px;top:634.0px;font-size:20.0px;white-space:nowrap" data-w="349.2"><span style="font-weight:700;color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Whisk smooth </span><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">until the oil is fully emulsified</span></p>
+<p style="position:absolute;left:512.6px;top:681.5px;font-size:20.0px;white-space:nowrap" data-w="318.9"><span style="font-weight:700;color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Whisk dry </span><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">ingredients into a larger bowl </span></p>
+<p style="position:absolute;left:512.5px;top:705.6px;font-size:20.0px;white-space:nowrap" data-w="358.5" data-j="1"><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">(yellow corn meal, plain flour, baking powder, </span></p>
+<p style="position:absolute;left:512.7px;top:728.0px;font-size:20.0px;white-space:nowrap" data-w="38.0"><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">salt).</span></p>
+<p style="position:absolute;left:513.0px;top:773.7px;font-size:20.0px;white-space:nowrap" data-w="343.7" data-j="1"><span style="font-weight:700;color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Combine </span><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">wet into dry, stir until no dry flour </span></p>
+<p style="position:absolute;left:513.0px;top:797.9px;font-size:20.0px;white-space:nowrap" data-w="329.9"><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">remains. </span><span style="font-style:italic;color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Lumpy is correct — 15 strokes at </span></p>
+<p style="position:absolute;left:513.0px;top:820.3px;font-size:20.0px;white-space:nowrap" data-w="270.0"><span style="font-style:italic;color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">most, (overmixing makes it tough).</span></p>
+<p style="position:absolute;left:513.3px;top:866.0px;font-size:20.0px;white-space:nowrap" data-w="347.7" data-j="1"><span style="font-weight:700;color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Bake </span><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">into the greased tin • 190°C (−10 °C vs </span></p>
+<p style="position:absolute;left:512.6px;top:890.1px;font-size:20.0px;white-space:nowrap" data-w="351.7" data-j="1"><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">the original). 22–25 min, skewer/knife clean.
+</span></p>
+<p style="position:absolute;left:510.4px;top:912.5px;font-size:20.0px;white-space:nowrap" data-w="328.1"><span style="font-style:italic;color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Test with a skewer/knife, not by colour — 
+</span></p>
+<p style="position:absolute;left:513.0px;top:934.9px;font-size:20.0px;white-space:nowrap" data-w="332.3" data-j="1"><span style="font-style:italic;color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">honey browns the crust before the middle 
+</span></p>
+<p style="position:absolute;left:513.0px;top:957.3px;font-size:20.0px;white-space:nowrap" data-w="219.4"><span style="font-style:italic;color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">is set. </span><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Rest 10 min in the tin.</span></p>
+<p style="position:absolute;left:512.8px;top:1004.8px;font-size:20.0px;white-space:nowrap" data-w="331.6" data-j="1"><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Serve with butter and a generous drizzle 
+</span></p>
+<p style="position:absolute;left:513.0px;top:1027.2px;font-size:20.0px;white-space:nowrap" data-w="119.4"><span style="color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">of fresh honey.</span></p>
 <p style="position:absolute;left:53.9px;top:1124.3px;font-size:15.2px;white-space:nowrap" data-w="232.4"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">This article kindly peer reviewed from </span></p>
 <p style="position:absolute;left:54.7px;top:1142.2px;font-size:15.2px;white-space:nowrap" data-w="231.2"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">a professional culinary perspective by </span></p>
 <p style="position:absolute;left:55.0px;top:1160.2px;font-size:15.2px;white-space:nowrap" data-w="238.0" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">certified chef Ben Moore of Ben’s Bees: </span></p>
-<p style="position:absolute;left:55.2px;top:1176.8px;font-size:15.2px;white-space:nowrap" data-w="147.5"><a href="https://www.bensbees.com.au/" target="_blank" rel="noopener"><span style="font-weight:700;color:#3c2414;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">www.bensbees.com.au</span></a></p>
+<p style="position:absolute;left:55.2px;top:1176.8px;font-size:15.2px;white-space:nowrap" data-w="147.5"><a href="https://www.bensbees.com.au" target="_blank" rel="noopener"><span style="font-weight:700;color:#3c2414;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">www.bensbees.com.au</span></a></p>
 <p style="position:absolute;left:54.4px;top:1213.5px;font-size:12.0px;white-space:nowrap" data-w="53.5"><span style="font-weight:700;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">References</span></p>
 <p style="position:absolute;left:54.4px;top:1228.9px;font-size:12.0px;white-space:nowrap" data-w="813.4" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">1. Rasad H, Entezari MH, Ghadiri E, et al. (2018) “</span><span style="font-style:italic;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">The effect of honey consumption compared with sucrose on lipid profile in young healthy subjects (randomized clinical trial).</span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">” </span></p>
 <p style="position:absolute;left:54.4px;top:1243.3px;font-size:12.0px;white-space:nowrap" data-w="184.4"><span style="font-style:italic;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Clinical Nutrition ESPEN</span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">. 2018;26:8–12.</span></p>
 <p style="position:absolute;left:54.4px;top:1257.7px;font-size:12.0px;white-space:nowrap" data-w="790.7"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">2. Schell KR, et al., (2022) “</span><span style="font-style:italic;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">The Potential of Honey as a Prebiotic Food to Re-engineer the Gut Microbiome Toward a Healthy State.</span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">” </span><span style="font-style:italic;color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Frontiers in Nutrition</span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">. 2022;9:957932. </span></p>
 <p style="position:absolute;left:54.4px;top:1272.1px;font-size:12.0px;white-space:nowrap" data-w="148.4"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">doi:10.3389/fnut.2022.957932.</span></p>
-<p style="position:absolute;left:682.6px;top:1090.0px;font-size:15.2px;white-space:nowrap" data-w="68.2"><span style="font-weight:700;color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Full recipe </span></p>
-<p style="position:absolute;left:658.5px;top:1107.9px;font-size:15.2px;white-space:nowrap" data-w="92.5"><a href="https://krisfricke.github.io/recipe-calculator/Honey%20Cornbread.pdf" target="_blank" rel="noopener"><span style="font-weight:700;color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">available here.</span></a></p>
+<p style="position:absolute;left:647.6px;top:1090.2px;font-size:15.2px;white-space:nowrap" data-w="100.0"><a class="blk" href="https://krisfricke.github.io/recipe-calculator/Honey%20Cornbread.pdf" target="_blank" rel="noopener"><span style="font-weight:700;color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Printable honey</span></a></p>
+<p style="position:absolute;left:639.9px;top:1108.1px;font-size:15.2px;white-space:nowrap" data-w="111.4"><a class="blk" href="https://krisfricke.github.io/recipe-calculator/Honey%20Cornbread.pdf" target="_blank" rel="noopener"><span style="font-weight:700;color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">cornbread recipe:</span></a></p>
+<a class="hot" href="https://pubmed.ncbi.nlm.nih.gov/29908688/" target="_blank" rel="noopener" title="pubmed.ncbi.nlm.nih.gov/29908688" aria-label="Link: pubmed.ncbi.nlm.nih.gov/29908688" style="left:181.3px;top:580.4px;width:124.4px;height:18.6px"></a>
+<a class="hot" href="https://www.bensbees.com.au/" target="_blank" rel="noopener" title="bensbees.com.au" aria-label="Link: bensbees.com.au" style="left:222.4px;top:1160.2px;width:67.1px;height:18.6px"></a>
+<a class="hot" href="https://www.bensbees.com.au/" target="_blank" rel="noopener" title="bensbees.com.au" aria-label="Link: bensbees.com.au" style="left:55.2px;top:1176.8px;width:147.5px;height:20.4px"></a>
+<a class="hot" href="https://www.frontiersin.org/journals/nutrition/articles/10.3389/fnut.2022.957932/full" target="_blank" rel="noopener" title="frontiersin.org/journals/nutrition/articles/10.3389/fnut.2022.957932/full" aria-label="Link: frontiersin.org/journals/nutrition/articles/10.3389/fnut.2022.957932/full" style="left:54.4px;top:759.6px;width:407.1px;height:18.6px"></a>
+<a class="hot" href="https://krisfricke.github.io/recipe-calculator/Honey%20Cornbread.pdf" target="_blank" rel="noopener" title="krisfricke.github.io/recipe-calculator/Honey%20Cornbread.pdf" aria-label="Link: krisfricke.github.io/recipe-calculator/Honey%20Cornbread.pdf" style="left:766.1px;top:1058.6px;width:114.2px;height:114.2px"></a>
+<a class="hot" href="https://krisfricke.github.io/recipe-calculator/" target="_blank" rel="noopener" title="krisfricke.github.io/recipe-calculator" aria-label="Link: krisfricke.github.io/recipe-calculator" style="left:355.0px;top:1059.5px;width:114.1px;height:114.2px"></a>
 </div></div></div>
 <script>
 /* Fit each line to the width it occupied in the PDF: stretch the spaces on
@@ -130,13 +152,18 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
     var ps=document.querySelectorAll('p[data-w]');
     for(var i=0;i<ps.length;i++){
       var p=ps[i];
-      p.style.wordSpacing=''; p.style.letterSpacing='';
+      p.style.wordSpacing=''; p.style.letterSpacing=''; p.style.transform='';
       var target=parseFloat(p.getAttribute('data-w')), nat=p.offsetWidth;
       if(!target||!nat) continue;
       var d=target-nat, stretch=p.hasAttribute('data-j');
       if(Math.abs(d)<0.5) continue;
       if(d>0&&!stretch) continue;
-      if(Math.abs(d)>target*0.18){ continue; } /* too far off to fix by squeezing -- leave it alone rather than crush the spacing */
+      if(Math.abs(d)>target*0.18){
+        /* too far off to fix by spacing: a condensed face set in a substitute.
+           Squeeze the whole line to its measure instead of letting it run off
+           the page (the folio's page number was being clipped on right-hand pages). */
+        if(d<0){ p.style.transformOrigin='0 0'; p.style.transform='scaleX('+(target/nat).toFixed(4)+')'; }
+        continue; }
       var txt=p.textContent||'', sp=(txt.match(/ /g)||[]).length;
       var fs=parseFloat(getComputedStyle(p).fontSize)||12;
       if(sp>0){
@@ -156,6 +183,37 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
   if(document.fonts&&document.fonts.ready) document.fonts.ready.then(fit);
   window.addEventListener('resize',fit);
 })();
+</script>
+
+<script>
+/* An index entry asks the parent reader to jump. Falls back to the href when
+   the page is opened on its own. */
+document.addEventListener('click',function(e){
+  var a=e.target && e.target.closest ? e.target.closest('a.ixlink') : null;
+  if(!a) return;
+  var m=/#\/page\/([^\/]+)\/(\d+)/.exec(a.getAttribute('href')||'');
+  if(!m) return;
+  if(window.parent && window.parent!==window){
+    e.preventDefault();
+    try{ window.parent.postMessage({abj:'page',iss:m[1],p:parseInt(m[2],10)},'*'); }
+    catch(err){ location.href=a.getAttribute('href'); }
+  }
+},true);
+</script>
+
+<script>
+/* A picture with a bigger version asks the parent reader to open its lightbox;
+   on its own the page just opens the picture. */
+document.addEventListener('click',function(e){
+  var a=e.target && e.target.closest ? e.target.closest('a.zoom') : null;
+  if(!a) return;
+  if(window.parent && window.parent!==window){
+    e.preventDefault();
+    var m={abj:'img',src:a.getAttribute('data-src'),alt:a.getAttribute('data-alt')||'',w:+a.getAttribute('data-w')||0,h:+a.getAttribute('data-h')||0};
+    var ans=a.getAttribute('data-answers'); if(ans){ try{ m.answers=JSON.parse(ans); }catch(err){} }
+    try{ window.parent.postMessage(m,'*'); }catch(err){ location.href=a.getAttribute('href'); }
+  }
+},true);
 </script>
 
 <script>
