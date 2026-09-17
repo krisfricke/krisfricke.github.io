@@ -975,7 +975,7 @@ function openAuthor(name){
 function setLane(pos){ const t=document.getElementById('track');
   if(pos===-1){ t.classList.remove('right'); t.classList.add('left');
     document.querySelector('.vaagate').classList.add('leaving');
-    setTimeout(function(){ location.href='../../index.html'; },780);   /* slide, then hand over - to the new VAA site in this prototype */
+    setTimeout(function(){ location.href='https://vicbeekeepers.com.au/'; },780);   /* slide, then hand over to the VAA's own site */
     return; }
   t.classList.toggle('right',pos===1); t.classList.toggle('left',pos===-1);
   document.body.classList.toggle('inlane',pos===1);
