@@ -277,6 +277,7 @@ def page_lines(page, issue=''):
             paras.append({'t': CTRL.sub('', ptxt), 'size': round(sz, 1), 'y': round(b['bbox'][1], 1), 'x': round(b['bbox'][0], 1)})
         widths = [l['bbox'][2] - l['bbox'][0] for l in blines]
         maxw = max(widths)
+        bx0 = min(l['bbox'][0] for l in blines)      # the block's own left edge
         for li, l in enumerate(blines):
             if abs(l['dir'][0]) < 0.9:                 # rotated text stays in the picture
                 continue
@@ -316,7 +317,16 @@ def page_lines(page, issue=''):
                 segs.append((t, span_style(s), href, cls))
             if not segs:
                 continue
-            just = len(blines) >= 2 and li < len(blines) - 1 and widths[li] >= 0.985 * maxw
+            # A line is stretched when it fills the block's measure. The first
+            # line of a paragraph is indented, so its own width never reaches
+            # the widest line's; measured from the block's left edge it does,
+            # and it is stretched like its neighbours instead of stopping short
+            # of the right margin. Only paragraph-sized indents count, so
+            # centred credits and display lines are left as they were.
+            indent = x0 - bx0
+            interior = len(blines) >= 2 and li < len(blines) - 1
+            just = interior and (widths[li] >= 0.985 * maxw
+                                 or (2.0 < indent <= 20.0 and x1 - bx0 >= 0.985 * maxw))
             attrs = ' data-w="%.1f"' % ((x1 - x0) * SCALE) + (' data-j="1"' if just else '')
             head = '<p style="position:absolute;left:%.1fpx;top:%.1fpx;font-size:%.1fpx;white-space:nowrap"%s>' % (
                 x0 * SCALE, y0 * SCALE, size * SCALE, attrs)

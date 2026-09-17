@@ -3501,21 +3501,9 @@
 "x": 215.4
 },
 {
-"t": "1. Bee health, resilience and production 2. New and emerging pests and diseases 3. Agricultural integration and income",
+"t": "1. Bee health, resilience and production 2. New and emerging pests and diseases 3. Agricultural integration and income diversification 4. Floral resources and environmental conditions 5. Product differentiation and new products",
 "size": 9.0,
 "y": 210.7,
-"x": 215.4
-},
-{
-"t": "diversification 4. Floral resources and environmental",
-"size": 9.0,
-"y": 247.5,
-"x": 215.4
-},
-{
-"t": "conditions 5. Product differentiation and new products",
-"size": 9.0,
-"y": 271.7,
 "x": 215.4
 },
 {
@@ -3703,22 +3691,10 @@
 "x": 34.0
 },
 {
-"t": "73%",
+"t": "73% are performing alcohol/detergent washing to monitor mites. (2025 Results) 30% are relying on visual inspections of adult bees. (2025 Results)",
 "size": 41.8,
 "y": 120.2,
-"x": 395.2
-},
-{
-"t": "are performing alcohol/detergent washing to monitor mites. (2025 Results) 30%",
-"size": 41.8,
-"y": 131.1,
 "x": 395.1
-},
-{
-"t": "are relying on visual inspections of adult bees. (2025 Results)",
-"size": 15.0,
-"y": 225.4,
-"x": 396.9
 },
 {
 "t": "Register your interest here: Australian Colony Loss Survey 2026 – Register for further information",
@@ -5447,15 +5423,9 @@
 "x": 34.0
 },
 {
-"t": "Honey is, as you know, 13-18% water, we’ll use 15% as a nice rounded approximation. So of the 340g of honey in our cup, only 290g is sugars. But our example recipe called for one cup intending 200g of sugar, which means we need to use a third less honey, so 1 cup of granulated sugar equals 2/3rds of a cup of honey.",
+"t": "Honey is, as you know, 13-18% water, we’ll use 15% as a nice rounded approximation. So of the 340g of honey in our cup, only 290g is sugars. But our example recipe called for one cup intending 200g of sugar, which means we need to use a third less honey, so 1 cup of granulated sugar equals 2/3rds of a cup of honey. Okay but now we need to account for that added moisture itself, because it’s not nothing either. Of the 160ml of honey in the proposed 2/3rds cup, if 15% is water that’s appx 35ml.* Which means for every cup of sugar you’ve replaced with honey you need to reduce liquids by 35ml (ideally water, or milk, for other liquids you may have to further account for what flavour or other effects you’re losing by reducing).",
 "size": 9.5,
 "y": 360.2,
-"x": 34.0
-},
-{
-"t": "Okay but now we need to account for that added moisture itself, because it’s not nothing either. Of the 160ml of honey in the proposed 2/3rds cup, if 15% is water that’s appx 35ml.* Which means for every cup of sugar you’ve replaced with honey you need to reduce liquids by 35ml (ideally water, or milk, for other liquids you may have to further account for what flavour or other effects you’re losing by reducing).",
-"size": 9.5,
-"y": 417.6,
 "x": 34.0
 },
 {
@@ -5471,15 +5441,9 @@
 "x": 309.0
 },
 {
-"t": "And sugar of course can be caramelized and browned, which does happen in any recipe in which it is baked or cooked, but one will note white granulated sugar in the bag never undergoes this, no matter how long it sits at 40 degrees. The reason for this is that sucrose is glucose and fructose melded into one molecule that can’t be browned or caramelized (a “non-reducing sugar”). When heated to 1600C it breaks down (“inverts”) into fructose and glucose (the two sugars that make up the bulk of honey), and fructose begins caramelizing around 1100C (and glucose at around 1600C).",
+"t": "And sugar of course can be caramelized and browned, which does happen in any recipe in which it is baked or cooked, but one will note white granulated sugar in the bag never undergoes this, no matter how long it sits at 40 degrees. The reason for this is that sucrose is glucose and fructose melded into one molecule that can’t be browned or caramelized (a “non-reducing sugar”). When heated to 1600C it breaks down (“inverts”) into fructose and glucose (the two sugars that make up the bulk of honey), and fructose begins caramelizing around 1100C (and glucose at around 1600C). So where does that leave us with practical conversion of recipes? Because honey is more sensitive to browning/caramelisation, the temperature should be reduced by about 150C.",
 "size": 9.5,
 "y": 394.1,
-"x": 309.0
-},
-{
-"t": "So where does that leave us with practical conversion of recipes? Because honey is more sensitive to browning/caramelisation, the temperature should be reduced by about 150C.",
-"size": 9.5,
-"y": 509.3,
 "x": 309.0
 },
 {
@@ -5648,16 +5612,10 @@
 "x": 320.5
 },
 {
-"t": "INGREDIENTS 230 mL whole milk 10 mL less than the original",
+"t": "INGREDIENTS 230 mL whole milk 10 mL less than the original 60 g honey ≈ 42 ml · replaces 50 g sugar",
 "size": 12.5,
 "y": 127.4,
 "x": 319.6
-},
-{
-"t": "60 g honey ≈ 42 ml · replaces 50 g sugar",
-"size": 12.5,
-"y": 174.9,
-"x": 319.8
 },
 {
 "t": "80 mL vegetable oil 50 g egg 1 large 140 g yellow corn meal 125 g plain flour 14 g baking powder",
@@ -6506,16 +6464,10 @@
 "x": 396.9
 },
 {
-"t": "References 1. Herzig, V., Guo, S., Eagles, D.A. et al. (2026) “Spider venom peptides Ht1a and Gg1a are toxic to honeybee parasite varroa destructor by topical application.” npj Drug Discov. 3, 16",
+"t": "References 1. Herzig, V., Guo, S., Eagles, D.A. et al. (2026) “Spider venom peptides Ht1a and Gg1a are toxic to honeybee parasite varroa destructor by topical application.” npj Drug Discov. 3, 16 https://doi.org/10.1038/s44386-026-00050-9 2. Wootton, A., (2025) “Resisting Resistance,” Australian Bee Journal 106 (12), 12-13",
 "size": 7.5,
 "y": 767.4,
 "x": 33.8
-},
-{
-"t": "https://doi.org/10.1038/s44386-026-00050-9 2. Wootton, A., (2025) “Resisting Resistance,” Australian Bee Journal 106 (12), 12-13",
-"size": 7.5,
-"y": 786.1,
-"x": 34.1
 },
 {
 "t": "Spider Venom vs Varroa",
@@ -7221,16 +7173,10 @@
 "x": 215.6
 },
 {
-"t": "Meetings: 4th Wednesday of each month (except June and December). Meeting at 7.00pm. Location: Mornington Park Pavilion,",
+"t": "Meetings: 4th Wednesday of each month (except June and December). Meeting at 7.00pm. Location: Mornington Park Pavilion, 9 Flinders Drive, Mornington, VIC 3931.",
 "size": 9.0,
 "y": 728.4,
 "x": 214.6
-},
-{
-"t": "9 Flinders Drive, Mornington, VIC 3931.",
-"size": 9.0,
-"y": 761.4,
-"x": 215.3
 },
 {
 "t": "Moonee Valley Beekeepers Club Inc. Secretary: Paul Kucera Email: mvbeekeepersclub@gmail.com",
@@ -7571,16 +7517,10 @@
 "x": 215.5
 },
 {
-"t": "Redpath’s Beekeeping Supplies 193 Como Parade East,",
+"t": "Redpath’s Beekeeping Supplies 193 Como Parade East, Parkdale, VIC 3195. Contact: Alan Redpath Phone: 03 9587 5950 Email: redpaths@redpaths.com.au www.redpaths.com.au",
 "size": 9.0,
 "y": 179.3,
 "x": 215.0
-},
-{
-"t": "Parkdale, VIC 3195. Contact: Alan Redpath Phone: 03 9587 5950 Email: redpaths@redpaths.com.au www.redpaths.com.au",
-"size": 9.0,
-"y": 202.0,
-"x": 215.5
 },
 {
 "t": "42  |  Published since 1918 by the VAA – founded in 1892",
