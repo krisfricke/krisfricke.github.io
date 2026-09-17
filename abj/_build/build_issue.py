@@ -26,10 +26,44 @@ PT_MM = 25.4 / 72.0
 ASSET_W, ASSET_H, ASSET_Q = 761, 1076, 76
 PAGE_Q = 84
 
+# Zapf Dingbats is an encoding, not a text font: the PDF stores the code point of
+# the ASCII letter whose slot the symbol occupies, so a bullet square comes out of
+# the text layer as the letter "n". Substituted in the browser it draws a literal n.
+# Only the codes this journal actually uses are listed; anything else is reported
+# by the build so it can be added rather than silently drawn as a letter.
+DINGBAT_FONTS = ('dingbat', 'wingding', 'webding')
+DINGBATS = {
+    'n': '\u25a0',        # a73  black square - the bullet this layout uses
+    'l': '\u25cf',        # a71  black circle
+    'm': '\u274d',        # a72  shadowed white circle
+    'o': '\u274f',        # a74  drop-shadowed white square
+    's': '\u25b2',        # a76  black up-pointing triangle
+    'u': '\u25c6',        # a78  black diamond
+    '4': '\u2713',        # a20  check mark
+    '8': '\u2717',        # a24  ballot X
+}
+_unmapped = set()
+
+def dingbat(t):
+    out = []
+    for ch in t:
+        if ch.isspace():
+            out.append(ch)
+        elif ch in DINGBATS:
+            out.append(DINGBATS[ch])
+        else:
+            _unmapped.add(ch)
+            out.append(ch)
+    return ''.join(out)
+
 SERIF_HINTS = ('times', 'palatino', 'georgia', 'garamond', 'minion', 'book antiqua', 'cambria', 'caslon', 'bodoni')
 
 def fam(fontname):
     f = fontname.lower()
+    if any(h in f for h in DINGBAT_FONTS):
+        # a stack that certainly has the geometric shapes; the symbol itself is
+        # the same in every one of them, so there is nothing to match visually
+        return "'Segoe UI Symbol','Apple Symbols','DejaVu Sans',Arial,sans-serif"
     if any(h in f for h in SERIF_HINTS):
         return "'Times New Roman',Times,serif"
     if 'calibri' in f or 'carlito' in f:
@@ -230,7 +264,8 @@ def page_lines(page, issue=''):
             continue
         ptxt = ''
         for l in blines:
-            t = ''.join(s['text'] for s in l['spans']).strip()
+            t = ''.join(dingbat(s['text']) if any(h in s['font'].lower() for h in DINGBAT_FONTS)
+                        else s['text'] for s in l['spans']).strip()
             if not t:
                 continue
             if ptxt.endswith('-') and t[:1].islower():
@@ -260,6 +295,8 @@ def page_lines(page, issue=''):
                 t = s['text']
                 if not t:
                     continue
+                if any(h in s['font'].lower() for h in DINGBAT_FONTS):
+                    t = dingbat(t)
                 href, cls = None, ''
                 sb = s['bbox']; sa = max(1e-6, (sb[2] - sb[0]) * (sb[3] - sb[1]))
                 for lk in links:
@@ -392,6 +429,8 @@ def build(reader, issue, adir, label, pdf, what='all', ads=None, imgs=None):
         open(os.path.join(hdir, '%d.html' % n), 'w', encoding='utf-8').write(doc_html)
         nhot = sum(1 for l in links if l[3] <= 0.4 * max(1e-6, l[0].width * l[0].height))
         print('p%-3d %3d lines %3d paras %2d links (%d boxes)  %s' % (n, len(lines), len(paras), len(links), nhot, (paras[0]['t'][:50] if paras else '')))
+    if _unmapped:
+        print('!! unmapped dingbat code(s) %r - add them to DINGBATS' % sorted(_unmapped))
     json.dump(text, open(os.path.join(reader, '_build', '%s_text.json' % issue), 'w', encoding='utf-8'), ensure_ascii=False, indent=0)
     print('%d pages -> %s, %s' % (len(doc), hdir, adir_full))
     doc.close()

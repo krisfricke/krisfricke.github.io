@@ -4142,7 +4142,7 @@
 "x": 48.7
 },
 {
-"t": "n  Spotty or irregular",
+"t": "■  Spotty or irregular",
 "size": 10.5,
 "y": 122.3,
 "x": 229.4
@@ -4160,7 +4160,7 @@
 "x": 48.7
 },
 {
-"t": "n  Dark, sunken cappings",
+"t": "■  Dark, sunken cappings",
 "size": 10.5,
 "y": 377.1,
 "x": 229.4
@@ -4178,7 +4178,7 @@
 "x": 48.7
 },
 {
-"t": "n  Decaying larvae form",
+"t": "■  Decaying larvae form",
 "size": 10.5,
 "y": 510.1,
 "x": 229.4
@@ -4196,7 +4196,7 @@
 "x": 48.4
 },
 {
-"t": "n  A distinctive rotten",
+"t": "■  A distinctive rotten",
 "size": 10.5,
 "y": 631.9,
 "x": 229.4
@@ -4220,7 +4220,7 @@
 "x": 48.4
 },
 {
-"t": "n  Protruding pupal",
+"t": "■  Protruding pupal",
 "size": 10.5,
 "y": 244.0,
 "x": 229.4
@@ -4255,17 +4255,17 @@
 "Recognising AFB: common signs",
 "The following signs commonly occur in colonies affected by AFB, \n",
 "although not every infected colony will display all of them. ",
-"n  Spotty or irregular ",
+"■  Spotty or irregular ",
 "brood pattern, with ",
 "perforated brood ",
 "cappings, holes are ",
 "often off-centre.",
 "Photo credit DPIRDWA",
-"n  Dark, sunken cappings ",
+"■  Dark, sunken cappings ",
 "that may appear greasy.",
 "Courtesy The Animal and Plant Health Agency (APHA), ",
 "Crown Copyright",
-"n  Decaying larvae form ",
+"■  Decaying larvae form ",
 "a light to dark brown, ",
 "semi-fluid mass which ",
 "can stretch into a ",
@@ -4273,13 +4273,13 @@
 "when tested with a ",
 "stick (ropiness test).",
 "Photo credit DPIRD",
-"n  A distinctive rotten \n",
+"■  A distinctive rotten \n",
 "or sulphurous odour",
 "Courtesy The Animal and Plant Health Agency (APHA), ",
 "Crown Copyright. Adapted by author.",
 "Courtesy The Animal and Plant Health Agency (APHA), ",
 "Crown Copyright ",
-"n  Protruding pupal ",
+"■  Protruding pupal ",
 "‘tongue’, where \n",
 "brood has developed\n",
 "to the pupal stage ",
@@ -8044,7 +8044,7 @@
 "x": 45.6
 },
 {
-"t": "n  Over ten varieties of Victoria’s best honey",
+"t": "■  Over ten varieties of Victoria’s best honey",
 "size": 14.5,
 "y": 336.2,
 "x": 46.1
@@ -8056,13 +8056,13 @@
 "x": 60.4
 },
 {
-"t": "n  Live honey bee demonstrations",
+"t": "■  Live honey bee demonstrations",
 "size": 14.5,
 "y": 370.4,
 "x": 46.1
 },
 {
-"t": "n  Experienced and passionate beekeepers available",
+"t": "■  Experienced and passionate beekeepers available",
 "size": 14.5,
 "y": 389.7,
 "x": 46.1
@@ -8080,91 +8080,91 @@
 "x": 44.6
 },
 {
-"t": "n  Activist Pty Ltd",
+"t": "■  Activist Pty Ltd",
 "size": 11.0,
 "y": 748.9,
 "x": 46.3
 },
 {
-"t": "n  ASAP Labels",
+"t": "■  ASAP Labels",
 "size": 11.0,
 "y": 762.9,
 "x": 46.3
 },
 {
-"t": "n  Beechworth Honey",
+"t": "■  Beechworth Honey",
 "size": 11.0,
 "y": 776.9,
 "x": 46.3
 },
 {
-"t": "n  Capilano Honey",
+"t": "■  Capilano Honey",
 "size": 11.0,
 "y": 790.9,
 "x": 46.3
 },
 {
-"t": "n  Castlemaine Honey",
+"t": "■  Castlemaine Honey",
 "size": 11.0,
 "y": 804.9,
 "x": 46.3
 },
 {
-"t": "n  Collins Honey",
+"t": "■  Collins Honey",
 "size": 11.0,
 "y": 748.9,
 "x": 163.2
 },
 {
-"t": "n  Desert Breeze Honey",
+"t": "■  Desert Breeze Honey",
 "size": 11.0,
 "y": 762.9,
 "x": 163.2
 },
 {
-"t": "n  Goodes Honey",
+"t": "■  Goodes Honey",
 "size": 11.0,
 "y": 776.9,
 "x": 163.2
 },
 {
-"t": "n  Lintt Taylor",
+"t": "■  Lintt Taylor",
 "size": 11.0,
 "y": 790.9,
 "x": 163.2
 },
 {
-"t": "n  Monson’s Honey & Pollination",
+"t": "■  Monson’s Honey & Pollination",
 "size": 11.0,
 "y": 804.9,
 "x": 163.2
 },
 {
-"t": "n  Mrs C’s Chilli Honey",
+"t": "■  Mrs C’s Chilli Honey",
 "size": 11.0,
 "y": 748.9,
 "x": 322.0
 },
 {
-"t": "n  Pure Peninsula Honey",
+"t": "■  Pure Peninsula Honey",
 "size": 11.0,
 "y": 762.9,
 "x": 322.0
 },
 {
-"t": "n  Raw Honey",
+"t": "■  Raw Honey",
 "size": 11.0,
 "y": 776.9,
 "x": 322.0
 },
 {
-"t": "n  Warral Maldon",
+"t": "■  Warral Maldon",
 "size": 11.0,
 "y": 790.9,
 "x": 322.0
 },
 {
-"t": "n  Whipstick Honey",
+"t": "■  Whipstick Honey",
 "size": 11.0,
 "y": 804.9,
 "x": 322.0
@@ -8198,28 +8198,28 @@
 "BEES \n",
 "ON SHOW",
 "Highlights ",
-"n  Over ten varieties of Victoria’s best honey \n",
+"■  Over ten varieties of Victoria’s best honey \n",
 "produced by Victorian beekeepers.",
-"n  Live honey bee demonstrations",
-"n  Experienced and passionate beekeepers available \n",
+"■  Live honey bee demonstrations",
+"■  Experienced and passionate beekeepers available \n",
 "to answer any questions you have about bees, \n",
 "beekeeping and honey!",
 "Thank you to our Honey Donors and Show Sponsors ",
-"n  Activist Pty Ltd",
-"n  ASAP Labels",
-"n  Beechworth Honey",
-"n  Capilano Honey",
-"n  Castlemaine Honey",
-"n  Collins Honey",
-"n  Desert Breeze Honey",
-"n  Goodes Honey",
-"n  Lintt Taylor",
-"n  Monson’s Honey & Pollination",
-"n  Mrs C’s Chilli Honey",
-"n  Pure Peninsula Honey",
-"n  Raw Honey",
-"n  Warral Maldon",
-"n  Whipstick Honey",
+"■  Activist Pty Ltd",
+"■  ASAP Labels",
+"■  Beechworth Honey",
+"■  Capilano Honey",
+"■  Castlemaine Honey",
+"■  Collins Honey",
+"■  Desert Breeze Honey",
+"■  Goodes Honey",
+"■  Lintt Taylor",
+"■  Monson’s Honey & Pollination",
+"■  Mrs C’s Chilli Honey",
+"■  Pure Peninsula Honey",
+"■  Raw Honey",
+"■  Warral Maldon",
+"■  Whipstick Honey",
 "Sponsor Details",
 "VISIT US: BOOTH 1 TO 3 \n",
 "Find us at the west end of the \n",
