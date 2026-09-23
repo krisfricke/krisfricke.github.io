@@ -30,7 +30,58 @@ p:first-of-type,h2+p{text-indent:0}
 .cta:hover{background:#ffd733}
 .note{font:12px/1.6 system-ui,sans-serif;color:#7a8a96;margin-top:30px}
 @media(max-width:560px){.w{padding:24px 20px 28px}h1{font-size:25px}}
-</style></head><body><div class="w">
+</style>
+
+
+<style>/*TEXTNAV*/
+body{padding-top:56px}
+.tnbar{position:fixed;left:0;right:0;top:0;height:44px;z-index:30;display:flex;align-items:center;gap:14px;
+  padding:0 16px;background:rgba(255,253,248,.94);backdrop-filter:blur(6px);border-bottom:1px solid #d8d0bd;
+  font:13px/1 system-ui,sans-serif;color:#3d6079}
+.tnbar a{color:#0f4b70;text-decoration:none;white-space:nowrap}
+.tnbar a:hover{text-decoration:underline}
+.tnbar .sp{flex:1 1 auto}
+.tnbar .bk{font-weight:600}
+.tnwrap{display:flex;gap:26px;align-items:flex-start;justify-content:center;max-width:1010px;margin:0 auto}
+.tnwrap .w{margin:0;flex:0 1 680px}
+.tnrail{flex:0 0 190px;position:sticky;top:64px;font:13px/1.5 system-ui,sans-serif;color:#274b63}
+.tnrail h3{margin:0 0 8px;font:600 11px/1 system-ui,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#5c7d95}
+.tnrail a{display:block;color:#0f4b70;text-decoration:none;padding:5px 9px;margin-bottom:5px;border-radius:9px;
+  background:rgba(255,253,248,.8);border:1px solid rgba(56,40,26,.14)}
+.tnrail a:hover{background:#fff}
+.tnrail .sep{height:1px;background:rgba(56,40,26,.16);margin:16px 0}
+.tnstep{display:flex;justify-content:space-between;gap:12px;margin:26px auto 0;max-width:680px;
+  font:13px/1.4 system-ui,sans-serif}
+.tnstep a{color:#0f4b70;text-decoration:none;background:rgba(255,253,248,.9);border:1px solid rgba(56,40,26,.18);
+  border-radius:10px;padding:9px 13px;max-width:47%}
+.tnstep a:hover{background:#fff}
+.tnstep b{display:block;font:600 11px/1 system-ui,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#5c7d95;margin-bottom:4px}
+.tncue{position:fixed;left:50%;transform:translateX(-50%);z-index:40;pointer-events:none;opacity:0;transition:opacity .15s;
+  background:rgba(20,50,70,.86);color:#fff;font:12px/1 system-ui,sans-serif;padding:8px 14px;border-radius:14px;white-space:nowrap}
+.tncue.on{opacity:1}
+.tncue.top{top:58px}.tncue.bot{bottom:16px}
+.tncue i{display:inline-block;width:52px;height:3px;background:rgba(255,255,255,.3);border-radius:2px;margin-left:9px;vertical-align:middle}
+.tncue i>span{display:block;height:100%;width:0;background:#f9c500;border-radius:2px}
+@media(max-width:900px){.tnrail{display:none}.tnwrap{display:block}.tnwrap .w{max-width:680px;margin:0 auto}}
+@media print{
+  .tnbar,.tnrail,.tnstep,.tncue,.cta,.note,.tags{display:none!important}
+  body{background:#fff!important;padding:0!important;font:11.5pt/1.5 Georgia,'Times New Roman',serif;color:#000}
+  .tnwrap{display:block;max-width:none}
+  .w{max-width:none!important;margin:0!important;padding:0!important;background:#fff!important;
+     border-radius:0!important;box-shadow:none!important}
+  h1{font-size:20pt}h2{font-size:13pt;color:#000}
+  .bc{color:#444}.meta{color:#444}
+  a{color:#000;text-decoration:none}
+  p{orphans:3;widows:3}
+  h1,h2{break-after:avoid-page}
+  @page{size:A4;margin:18mm 16mm}
+}
+</style>
+</head><body>
+<!--TEXTNAV--><div class="tnbar"><a class="bk" href="../../index.html#/article/may-virus-transmission">&lsaquo; Back to the journal</a><span class="sp"></span><a href="../may-new-bee-book-releases/#text">&uarr; New Bee Book Releases</a><a href="../may-varroa-spread-map/#text">&darr; Varroa Spread Map</a><a href="#" onclick="window.print();return false;">Print</a></div><div class="tncue top">&uarr; keep pulling for the previous article<i><span></span></i></div><div class="tncue bot">&darr; keep pulling for the next article<i><span></span></i></div><!--/TEXTNAV-->
+<div class="tnwrap">
+
+<div class="w">
 <div class="bc"><a href="../../index.html">Australian Bee Journal</a> &nbsp;&rsaquo;&nbsp; <a href="../../index.html#/issue/may">May 2026</a></div>
 <h1>Virus Transmission</h1>
 <div class="meta"><a href="../../index.html#/author/Agrifutures">Agrifutures</a> &middot; Page 14 &middot; May 2026</div>
@@ -70,6 +121,60 @@ p:first-of-type,h2+p{text-indent:0}
 <a class="cta" href="../../index.html#/article/may-virus-transmission">Read this in the journal &rsaquo;</a>
 <div class="note">Published by the Victorian Apiarists' Association. This page is a text version; the journal reader shows the article as laid out.</div>
 </div>
+
+<!--TEXTNAV--><div class="tnrail"><h3>Author</h3><a href="../../index.html#/author/Agrifutures">Agrifutures</a><div class="sep"></div><h3>Topics</h3><a href="../../index.html#/topic/Research">Research</a><a href="../../index.html#/topic/Biosecurity">Biosecurity</a><a href="../../index.html#/topic/viruses">viruses</a><div class="sep"></div><h3>Issue</h3><a href="../../index.html#/issue/may">May 2026</a></div><!--/TEXTNAV--><!--/tnwrap--></div>
+<!--TEXTNAV--><div class="tnstep"><a href="../may-new-bee-book-releases/#text"><b>Previous</b>New Bee Book Releases</a><a href="../may-varroa-spread-map/#text"><b>Next</b>Varroa Spread Map</a></div><!--/TEXTNAV-->
+
+<script>/*TEXTNAV*/
+(function(){
+  var BACK="../../index.html#/article/may-virus-transmission", PREV="../may-new-bee-book-releases/#text", NEXT="../may-varroa-spread-map/#text", NEED=150;
+  function go(u){ if(u) location.href=u; }
+  /* the sky around the sheet, and the left margin, are a way back to the journal */
+  document.addEventListener('click',function(e){
+    if(e.target.closest('a,button,input,select,textarea')) return;
+    if(e.target.closest('.w')) return;
+    if(e.clientX>window.innerWidth*0.78 && e.target.closest('.tnrail')) return;
+    go(BACK);
+  });
+  /* over-pull past either end to step through the issue - the reader's own idiom */
+  var cueT=document.querySelector('.tncue.top'), cueB=document.querySelector('.tncue.bot');
+  var acc=0, dir=0, lock=0;
+  function cue(c,f){ if(!c) return; c.classList.toggle('on',f>0.02); var i=c.querySelector('i>span'); if(i) i.style.width=(Math.min(1,f)*100).toFixed(0)+'%'; }
+  function atTop(){ return (window.scrollY||document.documentElement.scrollTop)<=1; }
+  function atBot(){ var d=document.documentElement; return (window.scrollY||d.scrollTop)+window.innerHeight>=d.scrollHeight-2; }
+  function reset(){ acc=0; dir=0; cue(cueT,0); cue(cueB,0); }
+  addEventListener('wheel',function(e){
+    var now=Date.now(); if(now<lock) return;
+    if(e.deltaY<0 && atTop() && PREV){ if(dir!==-1){acc=0;dir=-1;} acc+=-e.deltaY; cue(cueT,acc/NEED);
+      if(acc>NEED){ lock=now+900; reset(); go(PREV); } return; }
+    if(e.deltaY>0 && atBot() && NEXT){ if(dir!==1){acc=0;dir=1;} acc+=e.deltaY; cue(cueB,acc/NEED);
+      if(acc>NEED){ lock=now+900; reset(); go(NEXT); } return; }
+    reset();
+  },{passive:true});
+  var sx=0,sy=0,st=0;
+  addEventListener('touchstart',function(e){var t=e.touches[0];sx=t.clientX;sy=t.clientY;st=Date.now();},{passive:true});
+  addEventListener('touchmove',function(e){
+    var t=e.touches[0], dy=t.clientY-sy;
+    if(dy<0 && atBot() && NEXT) cue(cueB,-dy/NEED);
+    else if(dy>0 && atTop() && PREV) cue(cueT,dy/NEED);
+    else reset();
+  },{passive:true});
+  addEventListener('touchend',function(e){
+    var t=e.changedTouches[0], dx=t.clientX-sx, dy=t.clientY-sy, quick=Date.now()-st<900;
+    reset();
+    if(quick && dx>70 && Math.abs(dx)>Math.abs(dy)*1.6){ go(BACK); return; }   /* swipe right-ward: back */
+    if(dy<-NEED && atBot() && NEXT){ go(NEXT); return; }
+    if(dy>NEED && atTop() && PREV){ go(PREV); return; }
+  },{passive:true});
+  addEventListener('keydown',function(e){
+    if(/INPUT|TEXTAREA|SELECT/.test((e.target&&e.target.tagName)||'')) return;
+    if(e.key==='Escape'){ go(BACK); }
+    if(e.key==='ArrowLeft'){ go(BACK); }
+    if(e.key==='PageDown'&&atBot()&&NEXT){ e.preventDefault(); go(NEXT); }
+    if(e.key==='PageUp'&&atTop()&&PREV){ e.preventDefault(); go(PREV); }
+  });
+})();
+</script>
 <script>
 /* Send a human visitor into the reader. Crawlers and no-JS visitors keep the text above. */
 (function(){try{

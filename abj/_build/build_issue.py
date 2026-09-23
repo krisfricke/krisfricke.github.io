@@ -72,8 +72,20 @@ def fam(fontname):
 
 CTRL = re.compile('[\x00-\x08\x0b-\x1f\x7f]')   # InDesign leaves a BEL after every bullet: browsers draw it as ?
 
+# Mistakes in the supplied PDF itself, corrected as each span is laid out so that a
+# rebuild does not bring them back. Each entry is an error in the source, not a style
+# preference; keep the match strings long enough that they cannot fire by accident.
+SOURCE_FIX = [
+    ('VOL. 109', 'VOL. 107'),      # September 2026: the masthead volume is 107, not 109
+]
+
+def fixtext(t):
+    for a, b in SOURCE_FIX:
+        if a in t: t = t.replace(a, b)
+    return t
+
 def esc(t):
-    return html.escape(CTRL.sub('', t), quote=False).replace('\xa0', '&#160;')
+    return html.escape(CTRL.sub('', fixtext(t)), quote=False).replace('\xa0', '&#160;')
 
 def span_style(s):
     st = []
@@ -274,7 +286,7 @@ def page_lines(page, issue=''):
                 ptxt = (ptxt + ' ' + t).strip()
         if ptxt:
             sz = max(s['size'] for l in blines for s in l['spans'])
-            paras.append({'t': CTRL.sub('', ptxt), 'size': round(sz, 1), 'y': round(b['bbox'][1], 1), 'x': round(b['bbox'][0], 1)})
+            paras.append({'t': CTRL.sub('', fixtext(ptxt)), 'size': round(sz, 1), 'y': round(b['bbox'][1], 1), 'x': round(b['bbox'][0], 1)})
         widths = [l['bbox'][2] - l['bbox'][0] for l in blines]
         maxw = max(widths)
         bx0 = min(l['bbox'][0] for l in blines)      # the block's own left edge
@@ -400,7 +412,11 @@ def adlinks_html(ads):
     return out
 
 
-def build(reader, issue, adir, label, pdf, what='all', ads=None, imgs=None):
+def build(reader, issue, adir, label, pdf, what='all', ads=None, imgs=None, only=None):
+    """`only`: a set of printed page numbers to (re)write. Text is still read from
+    every page, so <issue>_text.json stays complete for articles.py; but page
+    images and page HTML are written for those pages alone. Use it when part of an
+    issue has hand-built pages that must not be overwritten."""
     ads = ads or {}
     imgs = imgs or {}
     doc = fitz.open(pdf)
@@ -414,8 +430,9 @@ def build(reader, issue, adir, label, pdf, what='all', ads=None, imgs=None):
         page = doc[pno]
         W, H = page.rect.width, page.rect.height
         lines, redact, paras, links = page_lines(page, issue)
-        text[n] = {'paras': paras, 'lines': [CTRL.sub('', tl) for _h, _s, tl in lines]}
-        if what in ('pages', 'all'):
+        text[n] = {'paras': paras, 'lines': [CTRL.sub('', fixtext(tl)) for _h, _s, tl in lines]}
+        write = only is None or n in only
+        if write and what in ('pages', 'all'):
             # the issue-strip image: the whole page, text and all
             pix = page.get_pixmap(matrix=fitz.Matrix(SCALE, SCALE), alpha=False)
             im = Image.frombytes('RGB', (pix.width, pix.height), pix.samples).resize((ASSET_W, ASSET_H), Image.LANCZOS)
@@ -434,11 +451,13 @@ def build(reader, issue, adir, label, pdf, what='all', ads=None, imgs=None):
         scaler = (wmm * 96 / 25.4) / pw
         body = ([render_line(h, s) for h, s, _t in lines] + adlinks_html(ads.get(n, []))
                 + hotspots_html(links, ads.get(n, []), issue, W, H) + zoom_html(imgs.get(n, [])))
-        doc_html = (HEAD % dict(title=html.escape(title), n=n, wmm=wmm, hmm=hmm, scaler=scaler, pw=pw, ph=ph)
-                    + '<img class="bg" src="pg%03d.jpg" alt="">\n' % n + '\n'.join(body) + '\n' + TAIL)
-        open(os.path.join(hdir, '%d.html' % n), 'w', encoding='utf-8').write(doc_html)
+        if write:
+            doc_html = (HEAD % dict(title=html.escape(title), n=n, wmm=wmm, hmm=hmm, scaler=scaler, pw=pw, ph=ph)
+                        + '<img class="bg" src="pg%03d.jpg" alt="">\n' % n + '\n'.join(body) + '\n' + TAIL)
+            open(os.path.join(hdir, '%d.html' % n), 'w', encoding='utf-8').write(doc_html)
         nhot = sum(1 for l in links if l[3] <= 0.4 * max(1e-6, l[0].width * l[0].height))
-        print('p%-3d %3d lines %3d paras %2d links (%d boxes)  %s' % (n, len(lines), len(paras), len(links), nhot, (paras[0]['t'][:50] if paras else '')))
+        print('p%-3d %3d lines %3d paras %2d links (%d boxes) %s %s' % (n, len(lines), len(paras), len(links), nhot,
+              ' ' if write else 'skipped', (paras[0]['t'][:50] if paras else '')))
     if _unmapped:
         print('!! unmapped dingbat code(s) %r - add them to DINGBATS' % sorted(_unmapped))
     json.dump(text, open(os.path.join(reader, '_build', '%s_text.json' % issue), 'w', encoding='utf-8'), ensure_ascii=False, indent=0)

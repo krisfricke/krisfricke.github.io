@@ -19,8 +19,14 @@ import issue_record
 
 SITE = 'https://abj.org.au/reader/'
 DESC_N = 157                      # August: 157 characters of text, then an ellipsis
-FOLIO = re.compile(r'^\d+\s*\|\s*Published since 1918|^VAA AUSTRALIAN BEE JOURNAL\s*\||^INDUSTRY UPDATES FROM THE AHBIC NEWSLETTER$', re.I)
+FOLIO = re.compile(r'^\d+\s*\|\s*Published since 1918|^VAA AUSTRALIAN BEE JOURNAL\s*\|'
+                   r'|^INDUSTRY UPDATES FROM THE AHBIC NEWSLETTER$'
+                   # the running foot of the earlier layout, on both hands of the spread
+                   r'|^\d+\s+Australian Bee Journal$'
+                   r'|^(?:January|February|March|April|May|June|July|August|September|October|November|December)'
+                   r'\s+\d{4}\s+\d+$', re.I)
 NOTE = re.compile(r'^\*\*Kris:|^Natalie:')          # layout notes left in the draft
+JUMP = re.compile(r'^\(?Continued (?:from|on) page\s*\d+\)?$', re.I)   # jump lines, not body text
 
 def slugify(t):
     return re.sub(r'[^a-z0-9]+', '-', t.lower()).strip('-')
@@ -46,7 +52,16 @@ def article_blocks(rec, text):
     pages = [p for p in range(rec['p'], rec['end'] + 1) if p not in (rec.get('skip') or [])]
     title = norm(rec['t'])
     for k, pno in enumerate(pages):
-        paras = [p for p in text[str(pno)]['paras'] if not FOLIO.match(p['t']) and not NOTE.match(p['t'])]
+        paras = [p for p in text[str(pno)]['paras']
+                 if not FOLIO.match(p['t']) and not NOTE.match(p['t']) and not JUMP.match(p['t'])]
+        # `clip`: where an article shares a page with something else that is not a
+        # short item of its own (a boxed Bee Bit under an article's references, say),
+        # keep only what falls within these bounds on that page.
+        cl = (rec.get('clip') or {}).get(str(pno))
+        if cl:
+            paras = [p for p in paras
+                     if p['y'] >= cl.get('ymin', -1e9) and p['y'] <= cl.get('ymax', 1e9)
+                     and p['x'] >= cl.get('xmin', -1e9) and p['x'] <= cl.get('xmax', 1e9)]
         paras.sort(key=lambda p: (p['x'] > 300, p['y']))   # left column, then right
         bs = body_size(paras)
         if rec.get('item'):
