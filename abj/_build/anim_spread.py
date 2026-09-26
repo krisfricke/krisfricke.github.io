@@ -33,6 +33,9 @@ P4 = {
   'drift': [dict(name='petals', ids=list(range(2, 11)))],
   'over': [], 'bg': 'paint', 'shard': True,
   'forage': [dict(cx=80, cy=653, rx=48, ry=48), dict(cx=190, cy=612, rx=58, ry=58)],   # dormant while the shard is on
+  # taken out of the reader's copy of the page for good: the muddy green chamfered box behind the
+  # HiveMeet phone (drawing 125) and the soft shadow that went with it (form XObject Fm1)
+  'remove': dict(drawings=[125], xobjects=['Fm1']),
 }
 P5 = {
   'plants': [
@@ -227,11 +230,32 @@ def cut_drawings(bp, ids):
     bp.parent.update_stream(xref, c)
     return missing
 
+def cut_xobject_calls(bp, names):
+    """Remove `q ... /Name Do Q` from the page content stream for each named form XObject
+    (an image, shading or group placed on the page). Returns the names not found."""
+    bp.clean_contents()
+    xref = bp.get_contents()[0]; c = bp.read_contents(); missing = []
+    for name in names:
+        j = c.find(b'/' + name.encode() + b' Do')
+        if j < 0: missing.append(name); continue
+        s0 = c.rfind(b' q ', 0, j); e0 = c.find(b'Q', j)
+        if s0 < 0 or e0 < 0 or c.count(b' q ', s0 + 1, j): missing.append(name); continue   # nested: leave it alone
+        c = c[:s0 + 1] + c[e0 + 1:]
+    bp.parent.update_stream(xref, c)
+    return missing
+
 def paintout(bp, spec):
     """Take the moving paths out of the background copy of the page, before its raster is made.
     Returns the untouched page's drawings (the overlay is built from these, by index)."""
     drs = bp.get_drawings()
     ids = sorted(moving_ids(spec))
+    rm = spec.get('remove') or {}
+    if rm.get('drawings'):
+        missing = cut_drawings(bp, rm['drawings'])
+        if missing: raise RuntimeError('anim: could not remove drawings %s' % missing)
+    if rm.get('xobjects'):
+        missing = cut_xobject_calls(bp, rm['xobjects'])
+        if missing: raise RuntimeError('anim: could not remove xobjects %s' % missing)
     if spec.get('bg') == 'cut':
         missing = cut_drawings(bp, ids)
         if missing: raise RuntimeError('anim: could not cut drawings %s from the page stream' % missing)
