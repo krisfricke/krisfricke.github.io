@@ -2,7 +2,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Australian Bee Journal, September 2026 &mdash; page 44</title>
 <style>
-html,body{margin:0;padding:0;background:#fff;overflow:hidden}
+html,body{margin:0;padding:0;background:#fff;overflow:hidden} /* a page is a fixed sheet: it never has a reason to scroll, and a sub-pixel overrun must not grow scrollbars */
 .sheet{width:calc(210mm * var(--k,1));height:calc(297mm * var(--k,1));overflow:hidden;position:relative}
 .scaler{transform:scale(calc(0.83372 * var(--k,1)));transform-origin:top left}
 .page{position:relative;width:952px;height:1347px}
@@ -27,6 +27,55 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
 @font-face{font-family:'Carlito';src:url('../../fonts/Carlito-Italic.ttf');font-weight:400;font-style:italic}
 </style></head><body><div class="sheet"><div class="scaler"><div class="page">
 <img class="bg" src="pg044.jpg" alt="">
+<style>
+.anim{position:absolute;left:0;top:0;width:952px;height:1347px;pointer-events:none}
+.anim g{transform-box:view-box}
+.anim .bee{pointer-events:visiblePainted;cursor:inherit}.anim .bee .hit{pointer-events:all}
+@keyframes k-plant{from{transform:rotate(-1.4deg)}to{transform:rotate(1.6deg)}}
+.anim .plant{animation:k-plant 7.400s ease-in-out infinite alternate}
+@keyframes k-head{from{transform:rotate(-2.2deg)}to{transform:rotate(2.6deg)}}
+.anim .head{animation:k-head 4.933s ease-in-out infinite alternate}
+@keyframes k-leaf{from{transform:rotate(-2.8deg)}to{transform:rotate(3.2deg)}}
+.anim .leaf{animation:k-leaf 2.960s ease-in-out infinite alternate}
+@keyframes bob{from{transform:translate(0.0px,-1.6px)}to{transform:translate(0.8px,1.4px)}}
+.anim .bee{animation:bob 2.467s ease-in-out infinite alternate}
+@keyframes k-drift{from{transform:rotate(-0.8deg)}to{transform:rotate(0.8deg)}}
+.anim .drift{animation:k-drift 3.700s ease-in-out infinite alternate}
+@keyframes k-fore{0%,49.99%{transform:rotate(-13.0deg)}50%,100%{transform:rotate(7.0deg)}}
+.anim .bee.always .fore,.anim .bee:hover .fore,.anim .bee.buzz .fore{animation:k-fore 0.200s steps(1,end) infinite}
+@keyframes k-hind{0%,49.99%{transform:rotate(-7.0deg)}50%,100%{transform:rotate(13.0deg)}}
+.anim .bee.always .hind,.anim .bee:hover .hind,.anim .bee.buzz .hind{animation:k-hind 0.200s steps(1,end) infinite}
+.anim .pale{animation-delay:0.00s}
+.anim .pale .head{animation-delay:-1.10s}
+.anim .gold{animation-delay:-0.90s}
+.anim .gold .head{animation-delay:-2.60s}
+.anim .orange{animation-delay:-2.20s}
+.anim .orange .head{animation-delay:-0.40s}
+.anim .pale .leaf:nth-of-type(2){animation-delay:-1.30s}
+.anim .gold .leaf:nth-of-type(2){animation-delay:-0.70s}
+.anim .bee-small{animation-delay:-0.30s}
+.anim .bee-left{animation-delay:-0.80s}
+.anim .bee-right{animation-delay:-1.50s}
+.anim .bee-top{animation-delay:-0.20s}
+.anim .petals{animation-delay:-1.90s}
+.anim .bee-p8{animation-delay:-0.60s}
+.anim .bee-back{animation-delay:-1.10s}
+.anim .pale29{animation-delay:-1.40s}
+.anim .pale29 .head{animation-delay:-0.70s}
+.anim .burst29{animation-delay:-0.30s}
+.anim .burst29 .head{animation-delay:-2.00s}
+.anim .pale29 .leaf:nth-of-type(2){animation-delay:-1.00s}
+.anim .bee-left .fore{animation-delay:-0.05s}
+.anim .bee-left .hind{animation-delay:-0.05s}
+.anim .bee-right .fore{animation-delay:-0.12s}
+.anim .bee-right .hind{animation-delay:-0.12s}
+.anim .bee-top .fore{animation-delay:-0.03s}
+.anim .bee-top .hind{animation-delay:-0.03s}
+.anim.still g{animation-play-state:paused}
+@media (prefers-reduced-motion:reduce){.anim g{animation:none}}
+</style>
+<svg class="anim" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 595.28 841.89" aria-hidden="true"><g class="bee bee-back always" data-anim="bee" data-delay="-1.10" data-ox="498.5" data-oy="287.3" style="transform-origin:498.5px 287.3px"><rect class="hit" x="441.0" y="254.2" width="114.9" height="66.2" fill="none" pointer-events="all"/><path d="M493.20 299.37L482.19 302.31L493.20 305.26" fill="#650038"/><path d="M476.06 314.39L471.72 299.89L483.21 309.74" fill="#6f9479"/><path d="M465.35 295.17L447.02 307.97L469.30 306.01" fill="#3885b7"/><path d="M520.19 287.39L528.09 282.84L538.01 300.03L525.42 300.34L520.19 287.39M542.26 299.92L531.32 280.97L543.43 274.00L549.92 299.73L542.26 299.92M516.45 289.54L520.86 300.45L496.45 301.06L516.45 289.54" fill="#000000"/><g class="hind" data-anim="hind" data-delay="0.00" data-ox="536.0" data-oy="291.6" style="transform-origin:536.0px 291.6px"><path d="M535.36 263.40L484.81 276.17L536.02 291.61L535.36 263.40" fill="#fac408"/></g><g class="fore" data-anim="fore" data-delay="0.00" data-ox="530.8" data-oy="287.9" style="transform-origin:530.8px 287.9px"><path d="M536.02 260.19L483.93 262.17L530.80 287.92L536.02 260.19" fill="#ffe98f"/></g></g></svg>
+<script>/* no work while the spread is off-screen */(function(){var s=document.querySelector("svg.anim");if(!s||!("IntersectionObserver" in window))return;new IntersectionObserver(function(e){s.classList.toggle("still",!e[0].isIntersecting)},{threshold:0}).observe(s);/* no hover on touch: a tap buzzes the bee for a moment */s.querySelectorAll(".bee").forEach(function(b){b.addEventListener("pointerdown",function(e){if(e.pointerType==="mouse")return;b.classList.add("buzz");clearTimeout(b._t);b._t=setTimeout(function(){b.classList.remove("buzz");},1800);});});})();</script>
 <p style="position:absolute;left:61.4px;top:-19.0px;font-size:160.0px;white-space:nowrap" data-w="392.2"><a class="blk" href="https://vicbeekeepers.com.au/Upcoming-Events" target="_blank" rel="noopener"><span style="font-weight:700;color:#fac408;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">BEES 
 </span></a></p>
 <p style="position:absolute;left:61.4px;top:122.2px;font-size:108.8px;white-space:nowrap" data-w="462.1"><a class="blk" href="https://vicbeekeepers.com.au/Upcoming-Events" target="_blank" rel="noopener"><span style="font-weight:700;color:#fac408;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">ON SHOW</span></a></p>

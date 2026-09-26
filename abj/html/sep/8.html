@@ -2,7 +2,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Australian Bee Journal, September 2026 &mdash; page 8</title>
 <style>
-html,body{margin:0;padding:0;background:#fff;overflow:hidden}
+html,body{margin:0;padding:0;background:#fff;overflow:hidden} /* a page is a fixed sheet: it never has a reason to scroll, and a sub-pixel overrun must not grow scrollbars */
 .sheet{width:calc(210mm * var(--k,1));height:calc(297mm * var(--k,1));overflow:hidden;position:relative}
 .scaler{transform:scale(calc(0.83372 * var(--k,1)));transform-origin:top left}
 .page{position:relative;width:952px;height:1347px}
@@ -25,14 +25,57 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
 @font-face{font-family:'Carlito';src:url('../../fonts/Carlito-Regular.ttf');font-weight:400;font-style:normal}
 @font-face{font-family:'Carlito';src:url('../../fonts/Carlito-Bold.ttf');font-weight:700;font-style:normal}
 @font-face{font-family:'Carlito';src:url('../../fonts/Carlito-Italic.ttf');font-weight:400;font-style:italic}
-
-.fn{cursor:help;border-bottom:1px dotted rgba(0,0,0,.35)}
-.fn:hover,.fn:focus{outline:none;background:rgba(249,197,0,.28)}
-.fnpop{position:fixed;z-index:20;display:none;max-width:380px;padding:9px 12px 10px;border-radius:8px;background:#fffdf5;color:#1a1a1a;
-  border:1px solid #c9a95f;box-shadow:0 8px 24px rgba(0,0,0,.22);font:13px/1.45 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;white-space:pre-line;pointer-events:none}
-.fnpop b{color:#6a5a3a;font-weight:700;margin-right:6px}
 </style></head><body><div class="sheet"><div class="scaler"><div class="page">
 <img class="bg" src="pg008.jpg" alt="">
+<style>
+.anim{position:absolute;left:0;top:0;width:952px;height:1347px;pointer-events:none}
+.anim g{transform-box:view-box}
+.anim .bee{pointer-events:visiblePainted;cursor:inherit}.anim .bee .hit{pointer-events:all}
+@keyframes k-plant{from{transform:rotate(-1.4deg)}to{transform:rotate(1.6deg)}}
+.anim .plant{animation:k-plant 7.400s ease-in-out infinite alternate}
+@keyframes k-head{from{transform:rotate(-2.2deg)}to{transform:rotate(2.6deg)}}
+.anim .head{animation:k-head 4.933s ease-in-out infinite alternate}
+@keyframes k-leaf{from{transform:rotate(-2.8deg)}to{transform:rotate(3.2deg)}}
+.anim .leaf{animation:k-leaf 2.960s ease-in-out infinite alternate}
+@keyframes bob{from{transform:translate(0.0px,-1.6px)}to{transform:translate(0.8px,1.4px)}}
+.anim .bee{animation:bob 2.467s ease-in-out infinite alternate}
+@keyframes k-drift{from{transform:rotate(-0.8deg)}to{transform:rotate(0.8deg)}}
+.anim .drift{animation:k-drift 3.700s ease-in-out infinite alternate}
+@keyframes k-fore{0%,49.99%{transform:rotate(-13.0deg)}50%,100%{transform:rotate(7.0deg)}}
+.anim .bee.always .fore,.anim .bee:hover .fore,.anim .bee.buzz .fore{animation:k-fore 0.200s steps(1,end) infinite}
+@keyframes k-hind{0%,49.99%{transform:rotate(-7.0deg)}50%,100%{transform:rotate(13.0deg)}}
+.anim .bee.always .hind,.anim .bee:hover .hind,.anim .bee.buzz .hind{animation:k-hind 0.200s steps(1,end) infinite}
+.anim .pale{animation-delay:0.00s}
+.anim .pale .head{animation-delay:-1.10s}
+.anim .gold{animation-delay:-0.90s}
+.anim .gold .head{animation-delay:-2.60s}
+.anim .orange{animation-delay:-2.20s}
+.anim .orange .head{animation-delay:-0.40s}
+.anim .pale .leaf:nth-of-type(2){animation-delay:-1.30s}
+.anim .gold .leaf:nth-of-type(2){animation-delay:-0.70s}
+.anim .bee-small{animation-delay:-0.30s}
+.anim .bee-left{animation-delay:-0.80s}
+.anim .bee-right{animation-delay:-1.50s}
+.anim .bee-top{animation-delay:-0.20s}
+.anim .petals{animation-delay:-1.90s}
+.anim .bee-p8{animation-delay:-0.60s}
+.anim .bee-back{animation-delay:-1.10s}
+.anim .pale29{animation-delay:-1.40s}
+.anim .pale29 .head{animation-delay:-0.70s}
+.anim .burst29{animation-delay:-0.30s}
+.anim .burst29 .head{animation-delay:-2.00s}
+.anim .pale29 .leaf:nth-of-type(2){animation-delay:-1.00s}
+.anim .bee-left .fore{animation-delay:-0.05s}
+.anim .bee-left .hind{animation-delay:-0.05s}
+.anim .bee-right .fore{animation-delay:-0.12s}
+.anim .bee-right .hind{animation-delay:-0.12s}
+.anim .bee-top .fore{animation-delay:-0.03s}
+.anim .bee-top .hind{animation-delay:-0.03s}
+.anim.still g{animation-play-state:paused}
+@media (prefers-reduced-motion:reduce){.anim g{animation:none}}
+</style>
+<svg class="anim" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 595.28 841.89" aria-hidden="true"><g class="bee bee-p8" data-anim="bee" data-delay="-0.60" data-ox="478.5" data-oy="44.5" style="transform-origin:478.5px 44.5px"><rect class="hit" x="425.7" y="13.8" width="105.5" height="61.3" fill="none" pointer-events="all"/><path d="M473.70 55.46L463.69 58.13L473.70 60.81" fill="#650038"/><path d="M458.11 69.11L454.17 55.93L464.61 64.89" fill="#6f9479"/><path d="M448.38 51.64L431.72 63.28L451.97 61.50" fill="#3885b7"/><path d="M498.23 44.56L505.41 40.43L514.43 56.06L502.99 56.34L498.23 44.56M518.30 55.96L508.35 38.73L519.36 32.39L525.26 55.78L518.30 55.96M494.83 46.52L498.84 56.45L476.65 57.00L494.83 46.52" fill="#000000"/><g class="hind" data-anim="hind" data-delay="0.00" data-ox="512.6" data-oy="48.4" style="transform-origin:512.6px 48.4px"><path d="M512.02 22.76L466.07 34.36L512.62 48.40L512.02 22.76" fill="#fec553"/></g><g class="fore" data-anim="fore" data-delay="0.00" data-ox="507.9" data-oy="45.1" style="transform-origin:507.9px 45.1px"><path d="M512.62 19.84L465.27 21.64L507.88 45.05L512.62 19.84" fill="#ffe98f"/></g></g></svg>
+<script>/* no work while the spread is off-screen */(function(){var s=document.querySelector("svg.anim");if(!s||!("IntersectionObserver" in window))return;new IntersectionObserver(function(e){s.classList.toggle("still",!e[0].isIntersecting)},{threshold:0}).observe(s);/* no hover on touch: a tap buzzes the bee for a moment */s.querySelectorAll(".bee").forEach(function(b){b.addEventListener("pointerdown",function(e){if(e.pointerType==="mouse")return;b.classList.add("buzz");clearTimeout(b._t);b._t=setTimeout(function(){b.classList.remove("buzz");},1800);});});})();</script>
 <p style="position:absolute;left:54.4px;top:1311.0px;font-size:13.6px;white-space:nowrap" data-w="273.0"><span style="font-family:Arial,Helvetica,sans-serif">8  |  </span><span style="font-family:Arial,Helvetica,sans-serif">Published since 1918 by the VAA – founded in 1892</span></p>
 <p style="position:absolute;left:77.1px;top:225.8px;font-size:16.8px;white-space:nowrap" data-w="384.7" data-j="1"><span style="color:#3885b7;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">There is something fitting about this edition of the </span></p>
 <p style="position:absolute;left:54.4px;top:245.8px;font-size:16.8px;white-space:nowrap" data-w="157.8"><span style="color:#3885b7;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Australian Bee Journal.</span></p>
@@ -89,7 +132,7 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
 <p style="position:absolute;left:54.4px;top:1176.0px;font-size:15.2px;white-space:nowrap" data-w="407.2" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">has estimated approximately $1.4 billion in annual farmgate </span></p>
 <p style="position:absolute;left:54.4px;top:1194.0px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">output from highly pollination-dependent crops, increasing </span></p>
 <p style="position:absolute;left:54.4px;top:1211.9px;font-size:15.2px;white-space:nowrap" data-w="407.2" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">to approximately $2.9 billion when crops partially dependent </span></p>
-<p style="position:absolute;left:54.4px;top:1229.8px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">on honey bee pollination are included.</span><span class="fn" tabindex="0" data-n="1" data-note="Victorian Apiarists’ Association. “Request for 3-year Grant Support for Victorian Beekeepers Managing Varroa Mite,” 2026 June 3rd" aria-label="Note 1: Victorian Apiarists’ Association. “Request for 3-year Grant Support for Victorian Beekeepers Managing Varroa Mite,” 2026 June 3rd"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif;vertical-align:super;font-size:.7em">1</span></span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif"> Yet the commercial </span></p>
+<p style="position:absolute;left:54.4px;top:1229.8px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">on honey bee pollination are included.</span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">1</span><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif"> Yet the commercial </span></p>
 <p style="position:absolute;left:54.4px;top:1247.7px;font-size:15.2px;white-space:nowrap" data-w="407.1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">beekeeping industry responsible for maintaining much of that </span></p>
 <p style="position:absolute;left:494.4px;top:227.3px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">pollination capacity is comparatively tiny, currently sitting at </span></p>
 <p style="position:absolute;left:494.4px;top:245.3px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">around 100 commercial beekeepers in Victoria. That imbalance 
@@ -265,35 +308,6 @@ document.addEventListener('click',function(e){
   },{passive:true});
   document.addEventListener('mouseleave',function(){
     try{ parent.postMessage({abj:'pointerleave'},'*'); }catch(err){} });
-})();
-</script>
-<script>
-/* Footnotes as hover text: rest on a superscript that has a note and the note appears beside it;
-   a tap does the same on a touch screen; Esc or moving away hides it. */
-(function(){
-  var pop=null, cur=null;
-  function show(el){
-    if(!pop){ pop=document.createElement('div'); pop.className='fnpop'; pop.setAttribute('role','tooltip'); document.body.appendChild(pop); }
-    var n=el.getAttribute('data-n'); pop.innerHTML=(n?'<b>'+n+'</b>':'')+el.getAttribute('data-note').replace(/[&<>]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;'}[c];});
-    pop.style.display='block'; pop.style.left='0px'; pop.style.top='0px';
-    var r=el.getBoundingClientRect(), pw=pop.offsetWidth, ph=pop.offsetHeight;
-    var x=Math.min(Math.max(6,r.left+r.width/2-pw/2), innerWidth-pw-6), y=r.top-ph-8;
-    if(y<4) y=r.bottom+8;
-    pop.style.left=x+'px'; pop.style.top=y+'px'; cur=el;
-  }
-  function hide(){ if(pop) pop.style.display='none'; cur=null; }
-  var fns=document.querySelectorAll('.fn');
-  for(var i=0;i<fns.length;i++){
-    var el=fns[i];
-    el.addEventListener('mouseenter',function(){ show(this); });
-    el.addEventListener('mouseleave',hide);
-    el.addEventListener('focus',function(){ show(this); });
-    el.addEventListener('blur',hide);
-    el.addEventListener('click',function(e){ e.preventDefault(); e.stopPropagation(); if(cur===this) hide(); else show(this); });
-  }
-  document.addEventListener('keydown',function(e){ if(e.key==='Escape') hide(); });
-  document.addEventListener('click',function(){ hide(); });
-  window.addEventListener('scroll',hide,true);
 })();
 </script>
 </body></html>
