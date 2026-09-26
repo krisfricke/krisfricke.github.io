@@ -2,7 +2,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Australian Bee Journal, September 2026 &mdash; page 19</title>
 <style>
-html,body{margin:0;padding:0;background:#fff;overflow:hidden}
+html,body{margin:0;padding:0;background:#fff;overflow:hidden} /* a page is a fixed sheet: it never has a reason to scroll, and a sub-pixel overrun must not grow scrollbars */
 .sheet{width:calc(210mm * var(--k,1));height:calc(297mm * var(--k,1));overflow:hidden;position:relative}
 .scaler{transform:scale(calc(0.83372 * var(--k,1)));transform-origin:top left}
 .page{position:relative;width:952px;height:1347px}
@@ -27,6 +27,8 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
 @font-face{font-family:'Carlito';src:url('../../fonts/Carlito-Italic.ttf');font-weight:400;font-style:italic}
 </style></head><body><div class="sheet"><div class="scaler"><div class="page">
 <img class="bg" src="pg019.jpg" alt="">
+<div class="anthers" data-mode="gather" aria-hidden="true" style="position:absolute;left:559.7px;top:898.8px;width:166.3px;height:159.9px;border-radius:50%;pointer-events:none"></div>
+<script>/* pollen: tell the reader when the pointer is on a flower or on comb */(function(){var zs=[].slice.call(document.querySelectorAll(".anthers"));if(!zs.length||window.parent===window)return;var cur=null;function say(m){cur=m;try{parent.postMessage({abj:"forage",on:!!m,mode:m||undefined},"*");}catch(e){}}document.addEventListener("mousemove",function(e){var hit=null;for(var i=0;i<zs.length&&!hit;i++){var r=zs[i].getBoundingClientRect(),dx=(e.clientX-r.left-r.width/2)/(r.width/2),dy=(e.clientY-r.top-r.height/2)/(r.height/2);if(dx*dx+dy*dy<=1)hit=zs[i].getAttribute("data-mode");}if(hit!==cur)say(hit);},{passive:true});document.addEventListener("mouseleave",function(){if(cur)say(null);});})();</script>
 <p style="position:absolute;left:77.1px;top:200.6px;font-size:16.8px;white-space:nowrap" data-w="274.4" data-j="1"><span style="color:#650038;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">There is something quite extraordinary </span></p>
 <p style="position:absolute;left:54.4px;top:221.0px;font-size:16.8px;white-space:nowrap" data-w="297.1" data-j="1"><span style="color:#650038;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">about seeing an almond orchard in full </span></p>
 <p style="position:absolute;left:54.4px;top:241.4px;font-size:16.8px;white-space:nowrap" data-w="297.1" data-j="1"><span style="color:#650038;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">bloom for the first time and being a part </span></p>

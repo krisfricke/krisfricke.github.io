@@ -32,6 +32,7 @@ P4 = {
   'bees': [dict(name='bee-small', ids=[116, 117, 118])],
   'drift': [dict(name='petals', ids=list(range(2, 11)))],
   'over': [], 'bg': 'paint', 'shard': True,
+  'forage': [dict(cx=80, cy=653, rx=48, ry=48), dict(cx=190, cy=612, rx=58, ry=58)],   # dormant while the shard is on
 }
 P5 = {
   'plants': [
@@ -43,6 +44,7 @@ P5 = {
   'drift': [],
   'over': [42, 43, 44, 45],          # "Development of practical long-term floral..." prints over the petals
   'bg': 'paint', 'shard': True,
+  'forage': [dict(cx=386, cy=380, rx=75, ry=75)],
 }
 P8 = {  # President's Report: the bee at the top right
   'plants': [], 'drift': [], 'over': [], 'bg': 'cut',
@@ -55,6 +57,7 @@ P29 = {  # Bee Bits: a pale flower on a stem and a gold burst cropped by the pag
     dict(name='burst29', stem=[], leaves=[], head=list(range(1, 15)), nod=(459, 0), base=(459, 0)),
   ],
   'bees': [], 'drift': [], 'over': [], 'bg': 'cut',
+  'forage': [dict(cx=540, cy=55, rx=46, ry=44), dict(cx=459, cy=22, rx=72, ry=46)],
 }
 P44 = {  # back cover: the bee by the headline, wings going the whole time
   'plants': [], 'drift': [], 'over': [], 'bg': 'cut',
@@ -63,7 +66,20 @@ P44 = {  # back cover: the bee by the headline, wings going the whole time
 
 # ---- the motion: one breeze from the left. Periods divide LOOP so a rendered clip loops cleanly.
 LOOP = 14.8
-ANIM = {('sep', 4): P4, ('sep', 5): P5, ('sep', 8): P8, ('sep', 29): P29, ('sep', 44): P44}
+P19 = {  # Almond pollination: nothing lifted; the bee cursor forages on the blossom's anthers
+  'plants': [], 'bees': [], 'drift': [], 'over': [], 'bg': 'cut',
+  'forage': [dict(cx=402, cy=612, rx=52, ry=50)],    # the anther cluster, page points
+}
+def _zones(*zs):   # a page with nothing lifted, only zones for the bee
+    return {'plants': [], 'bees': [], 'drift': [], 'over': [], 'bg': 'cut', 'forage': list(zs)}
+P10 = _zones(dict(cx=225, cy=625, rx=46, ry=40), dict(cx=185, cy=690, rx=72, ry=36))          # Bendigo ad: wattle
+P21 = _zones(dict(cx=455, cy=185, rx=56, ry=52))                                                  # AgriFutures plan cover: wattle
+P30 = _zones(dict(cx=388, cy=565, rx=46, ry=32), dict(cx=515, cy=552, rx=48, ry=48))              # Whirrakee ad: wattle
+P18 = _zones(dict(cx=430, cy=150, rx=82, ry=112, mode='unload'))                                  # Swanpool ad: honeycomb
+P36 = _zones(dict(cx=108, cy=500, rx=72, ry=72, mode='unload'), dict(cx=490, cy=720, rx=72, ry=52, mode='unload'))  # Steritech: the small hexagons
+P38 = _zones(dict(cx=500, cy=730, rx=56, ry=72, mode='unload'))                                   # BeePlas: foundation
+ANIM = {('sep', 4): P4, ('sep', 5): P5, ('sep', 8): P8, ('sep', 10): P10, ('sep', 18): P18, ('sep', 19): P19, ('sep', 21): P21,
+        ('sep', 29): P29, ('sep', 30): P30, ('sep', 36): P36, ('sep', 38): P38, ('sep', 44): P44}
 
 MOTION = {
   # class: (period s, from deg, to deg)   - rotation about the group's origin, ease-in-out, alternate
@@ -288,7 +304,25 @@ def overlay(drs, spec, W, H, pw, ph):
               '/* no hover on touch: a tap buzzes the bee for a moment */'
               's.querySelectorAll(".bee").forEach(function(b){b.addEventListener("pointerdown",function(e){if(e.pointerType==="mouse")return;'
               'b.classList.add("buzz");clearTimeout(b._t);b._t=setTimeout(function(){b.classList.remove("buzz");},1800);});});})();</script>\n')
-    return style + svg + script + (shard_cursor() if SHARD_CURSOR and spec.get('shard') else '')
+    out = (style + svg + script) if g else ''
+    if spec.get('forage'): out += forage_zone(spec['forage'], W, pw)
+    return out + (shard_cursor() if SHARD_CURSOR and spec.get('shard') else '')
+
+def forage_zone(zones, W, pw):
+    """Invisible ellipses over flowers (the bee gathers pollen) or comb (mode 'unload': she empties
+    her baskets), in page pixels so they follow the zoom. The page tests the pointer against them and
+    tells the reader ({abj:'forage', on, mode}). pointer-events stay off, so anything beneath - a
+    photo's enlarge hotspot, an advertiser's link - still works."""
+    k = pw / W
+    divs = ''.join('<div class="anthers" data-mode="%s" aria-hidden="true" style="position:absolute;left:%.1fpx;top:%.1fpx;width:%.1fpx;height:%.1fpx;border-radius:50%%;pointer-events:none"></div>\n'
+                   % (z.get('mode', 'gather'), (z['cx'] - z['rx']) * k, (z['cy'] - z['ry']) * k, 2 * z['rx'] * k, 2 * z['ry'] * k) for z in zones)
+    return divs + ('<script>/* pollen: tell the reader when the pointer is on a flower or on comb */(function(){'
+            'var zs=[].slice.call(document.querySelectorAll(".anthers"));if(!zs.length||window.parent===window)return;var cur=null;'
+            'function say(m){cur=m;try{parent.postMessage({abj:"forage",on:!!m,mode:m||undefined},"*");}catch(e){}}'
+            'document.addEventListener("mousemove",function(e){var hit=null;for(var i=0;i<zs.length&&!hit;i++){var r=zs[i].getBoundingClientRect(),'
+            'dx=(e.clientX-r.left-r.width/2)/(r.width/2),dy=(e.clientY-r.top-r.height/2)/(r.height/2);if(dx*dx+dy*dy<=1)hit=zs[i].getAttribute("data-mode");}'
+            'if(hit!==cur)say(hit);},{passive:true});'
+            'document.addEventListener("mouseleave",function(){if(cur)say(null);});})();</script>\n')
 
 # ---- Barry's suggestion, on this spread only: the brand shard as the pointer instead of the bee.
 # Delete SHARD_CURSOR (or set it False) to go back to the bee here. assets/shard.png and

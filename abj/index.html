@@ -236,6 +236,26 @@ body.inlane .edge.back{display:flex}
 #beecur.perched .hl{transform:rotate(-72deg) scale(.9,.7)}
 #beecur.perched .hr{transform:rotate(72deg) scale(.9,.7)}
 #beecur.perched .legs{transform:scale(1.22,1.06)}
+/* foraging: perched on the anthers, working the flower. Baskets fill with --pollen (0..1) and stay
+   filled for the rest of the visit; the dust only shows while she is on the flower. */
+#beecur .bk{transform-box:fill-box;transform-origin:center;transition:transform .6s ease-out}
+#beecur .bkl{transform:rotate(-28deg) scale(var(--pollen,0))}
+#beecur .bkr{transform:rotate(28deg) scale(var(--pollen,0))}
+#beecur.foraging .bee-body{animation:forage .32s ease-in-out infinite alternate;transform:scale(.95)}
+#beecur.foraging .legs{animation:foragelegs .32s ease-in-out infinite alternate}
+@keyframes forage{from{transform:rotate(-4deg) scale(.95)}to{transform:rotate(4deg) scale(.95) translate(0,1.2px)}}
+@keyframes foragelegs{from{transform:scale(1.22,1.06)}to{transform:scale(1.26,1.1)}}
+#beecur .d{opacity:0}
+#beecur.foraging .d{animation:dust 1.1s ease-out infinite}
+#beecur.foraging .d2{animation-delay:-.3s}#beecur.foraging .d3{animation-delay:-.55s}#beecur.foraging .d4{animation-delay:-.8s}
+@keyframes dust{0%{opacity:0;transform:translate(0,0)}15%{opacity:.9}100%{opacity:0;transform:translate(var(--dx,6px),14px)}}
+#beecur .d1{--dx:-7px}#beecur .d2{--dx:6px}#beecur .d3{--dx:-9px}#beecur .d4{--dx:8px}
+#beecur.foraging.unloading .d{animation-name:unload}
+#beecur.foraging:not(.unloading) .d{animation-name:dust}
+@keyframes unload{0%{opacity:0;transform:translate(0,0)}15%{opacity:.9}100%{opacity:0;transform:translate(calc(var(--dx,6px)*.3),22px)}}
+#beecur.foraging.unloading .bee-body{animation-duration:.5s}
+#beecur.spent .d{animation:none}
+@media (prefers-reduced-motion:reduce){#beecur.foraging .bee-body,#beecur.foraging .legs,#beecur.foraging .d{animation:none}}
 @media(hover:hover){ body.bee-on, body.bee-on *{cursor:none !important} }
 @media(prefers-reduced-motion:reduce){ #beecur{display:none} }
 
@@ -395,6 +415,15 @@ body.editor .edonly{display:inline-block}
     <path d="M33 33 L23 28 L17 20"/><path d="M47 33 L57 28 L63 20"/>
     <path d="M31 39 L19 40 L12 47"/><path d="M49 39 L61 40 L68 47"/>
     <path d="M32 45 L22 54 L18 66"/><path d="M48 45 L58 54 L62 66"/>
+  </g>
+  <!-- pollen baskets (corbiculae) on the hind tibiae: scaled by --pollen, 0 until she has foraged -->
+  <g class="baskets" fill="#f2c24b" stroke="#b8862b" stroke-width=".7">
+    <ellipse class="bk bkl" cx="15.5" cy="61.5" rx="5.6" ry="4"/><ellipse class="bk bkr" cx="64.5" cy="61.5" rx="5.6" ry="4"/>
+  </g>
+  <!-- specks that drift off her while she is working a flower -->
+  <g class="dust" fill="#f2c24b">
+    <circle class="d d1" cx="30" cy="30" r="1.2"/><circle class="d d2" cx="50" cy="30" r="1"/>
+    <circle class="d d3" cx="26" cy="48" r="1.1"/><circle class="d d4" cx="54" cy="48" r="1.3"/>
   </g>
   <g fill="url(#amb)"><polygon points="40.00,47.00 42.10,47.75 43.23,48.50 44.14,49.25 44.94,50.00 45.66,50.75 46.32,51.50 46.93,52.25 47.50,53.00 48.04,53.75 48.54,54.50 49.02,55.25 49.47,56.00 49.90,56.75 50.31,57.50 50.70,58.25 51.07,59.00 51.41,59.75 51.74,60.50 52.06,61.25 52.35,62.00 52.63,62.75 52.88,63.50 53.13,64.25 53.35,65.00 53.56,65.75 53.76,66.50 53.94,67.25 54.10,68.00 54.25,68.75 54.38,69.50 54.50,70.25 54.60,71.00 54.68,71.75 54.75,72.50 54.81,73.25 54.85,74.00 54.88,74.75 54.89,75.50 54.88,76.25 54.87,77.00 54.83,77.75 54.79,78.50 54.72,79.25 54.65,80.00 54.56,80.75 54.45,81.50 54.33,82.25 54.20,83.00 54.05,83.75 53.88,84.50 53.70,85.25 53.51,86.00 53.30,86.75 53.08,87.50 52.85,88.25 52.60,89.00 52.33,89.75 52.05,90.50 51.75,91.25 51.44,92.00 51.11,92.75 50.77,93.50 50.41,94.25 50.03,95.00 49.64,95.75 49.23,96.50 48.79,97.25 48.34,98.00 47.87,98.75 47.37,99.50 46.84,100.25 46.28,101.00 45.68,101.75 45.04,102.50 44.34,103.25 43.56,104.00 42.66,104.75 41.51,105.50 40.00,106.00 40.00,106.00 38.49,105.50 37.34,104.75 36.44,104.00 35.66,103.25 34.96,102.50 34.32,101.75 33.72,101.00 33.16,100.25 32.63,99.50 32.13,98.75 31.66,98.00 31.21,97.25 30.77,96.50 30.36,95.75 29.97,95.00 29.59,94.25 29.23,93.50 28.89,92.75 28.56,92.00 28.25,91.25 27.95,90.50 27.67,89.75 27.40,89.00 27.15,88.25 26.92,87.50 26.70,86.75 26.49,86.00 26.30,85.25 26.12,84.50 25.95,83.75 25.80,83.00 25.67,82.25 25.55,81.50 25.44,80.75 25.35,80.00 25.28,79.25 25.21,78.50 25.17,77.75 25.13,77.00 25.12,76.25 25.11,75.50 25.12,74.75 25.15,74.00 25.19,73.25 25.25,72.50 25.32,71.75 25.40,71.00 25.50,70.25 25.62,69.50 25.75,68.75 25.90,68.00 26.06,67.25 26.24,66.50 26.44,65.75 26.65,65.00 26.87,64.25 27.12,63.50 27.37,62.75 27.65,62.00 27.94,61.25 28.26,60.50 28.59,59.75 28.93,59.00 29.30,58.25 29.69,57.50 30.10,56.75 30.53,56.00 30.98,55.25 31.46,54.50 31.96,53.75 32.50,53.00 33.07,52.25 33.68,51.50 34.34,50.75 35.06,50.00 35.86,49.25 36.77,48.50 37.90,47.75 40.00,47.00"/></g>
   <g fill="url(#drk)"><polygon points="47.50,53.00 48.04,53.75 48.54,54.50 49.02,55.25 49.47,56.00 49.90,56.75 50.31,57.50 50.70,58.25 50.82,58.50 29.18,58.50 29.30,58.25 29.69,57.50 30.10,56.75 30.53,56.00 30.98,55.25 31.46,54.50 31.96,53.75 32.50,53.00"/><polygon points="53.05,64.00 53.28,64.75 53.50,65.50 53.70,66.25 53.88,67.00 54.05,67.75 54.20,68.50 54.34,69.25 54.46,70.00 54.56,70.75 54.60,71.00 25.40,71.00 25.44,70.75 25.54,70.00 25.66,69.25 25.80,68.50 25.95,67.75 26.12,67.00 26.30,66.25 26.50,65.50 26.72,64.75 26.95,64.00"/><polygon points="54.87,77.00 54.83,77.75 54.79,78.50 54.72,79.25 54.65,80.00 54.56,80.75 54.45,81.50 54.33,82.25 54.20,83.00 54.05,83.75 53.88,84.50 53.77,85.00 26.23,85.00 26.12,84.50 25.95,83.75 25.80,83.00 25.67,82.25 25.55,81.50 25.44,80.75 25.35,80.00 25.28,79.25 25.21,78.50 25.17,77.75 25.13,77.00"/><polygon points="52.24,90.00 51.95,90.75 51.65,91.50 51.33,92.25 51.00,93.00 50.65,93.75 50.29,94.50 49.91,95.25 49.50,96.00 49.09,96.75 48.65,97.50 48.19,98.25 47.70,99.00 47.19,99.75 46.65,100.50 46.08,101.25 45.47,102.00 44.81,102.75 44.09,103.50 43.28,104.25 42.32,105.00 40.98,105.75 40.00,106.00 40.00,106.00 39.02,105.75 37.68,105.00 36.72,104.25 35.91,103.50 35.19,102.75 34.53,102.00 33.92,101.25 33.35,100.50 32.81,99.75 32.30,99.00 31.81,98.25 31.35,97.50 30.91,96.75 30.50,96.00 30.09,95.25 29.71,94.50 29.35,93.75 29.00,93.00 28.67,92.25 28.35,91.50 28.05,90.75 27.76,90.00"/></g>
@@ -1208,10 +1237,24 @@ window.addEventListener('message',function(e){
        under her. Deliberately checked BEFORE the movement threshold: coming to
        rest on a link should still fold her, and sub-pixel moves should not
        shake her loose. */
+    if(foraging){ perch(); return; }                                /* on the flower: stay put, keep working */
     if(link===undefined ? clickableAt() : !!link){ perch(); return; }
     if(dx*dx+dy*dy>1){ takeoff(); rearm(); }
   }
-  function hide(){ bee.classList.remove('on'); takeoff(); clearTimeout(landT); landT=null; }
+  /* Foraging. A page reports that the pointer is over a flower's anthers (message {abj:'forage'}).
+     She perches at once and works the flower: a wiggle, a few specks, and her pollen baskets fill
+     over about four seconds. The load stays on her legs for the rest of the visit. */
+  let foraging=false, forageT=null, pollen=0, mode='gather';
+  /* mode 'gather' on a flower fills the baskets; mode 'unload' over comb (the hive) empties them. */
+  function forageOn(m){ m=m||'gather'; if(foraging&&m===mode) return; if(foraging) forageOff(); if(dead||exiting) return;
+    foraging=true; mode=m; perch(); bee.classList.add('foraging'); bee.classList.toggle('unloading',m==='unload'); bee.classList.toggle('spent',m==='unload'&&pollen===0);
+    forageT=setInterval(function(){
+      pollen=(m==='unload') ? Math.max(0,pollen-0.06) : Math.min(1,pollen+0.05);
+      bee.style.setProperty('--pollen',pollen.toFixed(2));
+      if(m==='unload'&&pollen===0) bee.classList.add('spent');           /* baskets empty: she sits and looks, no more specks */
+    },200); }
+  function forageOff(){ if(!foraging) return; foraging=false; bee.classList.remove('foraging','unloading','spent'); clearInterval(forageT); forageT=null; }
+  function hide(){ bee.classList.remove('on'); forageOff(); takeoff(); clearTimeout(landT); landT=null; }
 
   /* Scrolling turns her to face the way the reading is going: up the issue and
      she points up the screen, down the issue and she points down. The pointer
@@ -1246,6 +1289,7 @@ window.addEventListener('message',function(e){
     const m=e.data; if(!m||!m.abj) return;
     if(m.abj==='hello' && e.source){ try{ e.source.postMessage({abj:'bee',on:true},'*'); }catch(err){} return; }
     if(m.abj==='pointerleave'){ hide(); return; }
+    if(m.abj==='forage'){ if(m.on) forageOn(m.mode); else forageOff(); return; }
     if(m.abj!=='pointer') return;
     const frames=document.querySelectorAll('iframe');
     let fr=null; for(const f of frames){ if(f.contentWindow===e.source){ fr=f; break; } }

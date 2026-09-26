@@ -2,7 +2,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Australian Bee Journal, September 2026 &mdash; page 10</title>
 <style>
-html,body{margin:0;padding:0;background:#fff;overflow:hidden}
+html,body{margin:0;padding:0;background:#fff;overflow:hidden} /* a page is a fixed sheet: it never has a reason to scroll, and a sub-pixel overrun must not grow scrollbars */
 .sheet{width:calc(210mm * var(--k,1));height:calc(297mm * var(--k,1));overflow:hidden;position:relative}
 .scaler{transform:scale(calc(0.83372 * var(--k,1)));transform-origin:top left}
 .page{position:relative;width:952px;height:1347px}
@@ -27,6 +27,9 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
 @font-face{font-family:'Carlito';src:url('../../fonts/Carlito-Italic.ttf');font-weight:400;font-style:italic}
 </style></head><body><div class="sheet"><div class="scaler"><div class="page">
 <img class="bg" src="pg010.jpg" alt="">
+<div class="anthers" data-mode="gather" aria-hidden="true" style="position:absolute;left:286.3px;top:935.6px;width:147.1px;height:127.9px;border-radius:50%;pointer-events:none"></div>
+<div class="anthers" data-mode="gather" aria-hidden="true" style="position:absolute;left:180.7px;top:1045.9px;width:230.3px;height:115.1px;border-radius:50%;pointer-events:none"></div>
+<script>/* pollen: tell the reader when the pointer is on a flower or on comb */(function(){var zs=[].slice.call(document.querySelectorAll(".anthers"));if(!zs.length||window.parent===window)return;var cur=null;function say(m){cur=m;try{parent.postMessage({abj:"forage",on:!!m,mode:m||undefined},"*");}catch(e){}}document.addEventListener("mousemove",function(e){var hit=null;for(var i=0;i<zs.length&&!hit;i++){var r=zs[i].getBoundingClientRect(),dx=(e.clientX-r.left-r.width/2)/(r.width/2),dy=(e.clientY-r.top-r.height/2)/(r.height/2);if(dx*dx+dy*dy<=1)hit=zs[i].getAttribute("data-mode");}if(hit!==cur)say(hit);},{passive:true});document.addEventListener("mouseleave",function(){if(cur)say(null);});})();</script>
 <p style="position:absolute;left:54.4px;top:1311.0px;font-size:13.6px;white-space:nowrap" data-w="277.3"><span style="font-family:Arial,Helvetica,sans-serif">10  |  </span><span style="font-family:Arial,Helvetica,sans-serif">Published since 1918 by the VAA – founded in 1892</span></p>
 <p style="position:absolute;left:77.1px;top:299.4px;font-size:15.2px;white-space:nowrap" data-w="384.4" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Since late 2025, the Working Group has been providing </span></p>
 <p style="position:absolute;left:54.4px;top:317.3px;font-size:15.2px;white-space:nowrap" data-w="407.1" data-j="1"><span style="color:#231f20;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">industry advice on the rapidly evolving challenges surrounding </span></p>
