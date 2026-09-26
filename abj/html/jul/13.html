@@ -1,6 +1,10 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1"><style>@page{size:A4;margin:0}</style>
-<link rel="stylesheet" href="../../art_style.css"><style>a.adlink{display:inline-block;line-height:0;text-decoration:none}a.adlink:hover img{outline:2px solid rgba(249,197,0,.85);outline-offset:1px}</style></head><body>
+<link rel="stylesheet" href="../../art_style.css">
+<style>/* inside the reader: a page is a fixed sheet and never scrolls; scale with the reader's zoom like the built pages do */
+html,body{overflow:hidden}.apage{transform-origin:top left}</style>
+<script>addEventListener("message",function(e){var m=e.data;if(m&&m.abj==="zoom"&&isFinite(m.k)&&m.k>0){var p=document.querySelector(".apage");if(p)p.style.transform=m.k===1?"":"scale("+m.k+")";}});</script>
+<style>a.adlink{display:inline-block;line-height:0;text-decoration:none}a.adlink:hover img{outline:2px solid rgba(249,197,0,.85);outline-offset:1px}</style></head><body>
 <div class="apage" id="pg-13">
   <img class="tri m r-20" src="../../assets/tri_gold.png" style="top:4mm;right:26mm">
   <img class="tri s r40" src="../../assets/tri_purple.png" style="top:6.5mm;right:17mm">

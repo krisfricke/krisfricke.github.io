@@ -7167,10 +7167,10 @@
 "x": 215.6
 },
 {
-"t": "Mornington Peninsula Beekeepers Association Vice-President: Bryannah Downward 0401 965 558 Email: admin@mpba.org.au",
+"t": "Mornington Peninsula Beekeepers Association",
 "size": 9.0,
 "y": 666.6,
-"x": 215.6
+"x": 215.9
 },
 {
 "t": "Meetings: 4th Wednesday of each month (except June and December). Meeting at 7.00pm. Location: Mornington Park Pavilion, 9 Flinders Drive, Mornington, VIC 3931.",
@@ -7185,12 +7185,6 @@
 "x": 397.0
 },
 {
-"t": "Meetings: 2nd Tuesday of each month (except January). Meeting at 7.30pm. Location: Hall, 195 Holmes Rd, Moonee Ponds, VIC 3039.",
-"size": 9.0,
-"y": 122.2,
-"x": 396.0
-},
-{
 "t": "North Eastern Apiarists’ Association Inc. Secretary: Moss McCallum Email: secretary.neaa@gmail.com",
 "size": 9.0,
 "y": 160.4,
@@ -7203,10 +7197,10 @@
 "x": 397.1
 },
 {
-"t": "South Gippsland Beekeepers Inc. Secretary: Anna Jones 0411 770 062 Email: secretary@sgbeekeepers.org.au www.southgippslandbeekeepers.org.au",
+"t": "South Gippsland Beekeepers Inc.",
 "size": 9.0,
 "y": 260.4,
-"x": 397.0
+"x": 397.2
 },
 {
 "t": "Meetings: 2nd Thursday of each month. Location: St Peters Anglican Church Hall, cnr McCartin Street & Bruce Street, Leongatha",
@@ -7261,6 +7255,24 @@
 "size": 9.0,
 "y": 715.3,
 "x": 403.8
+},
+{
+"t": "President: Renato Poci Secretary: Rosemary Vernon Email: admin@mpba.org.au",
+"size": 9.0,
+"y": 691.2,
+"x": 215.6
+},
+{
+"t": "President: Ulysses de Vincentis Secretary: Anna Jones 0411 770 062 Email: secretary@sgbeekeepers.org.au www.southgippslandbeekeepers.org.au",
+"size": 9.0,
+"y": 274.0,
+"x": 397.0
+},
+{
+"t": "Meetings: 2nd Tuesday each month (except January) at 7.30pm. Maribyrnong Park Bowls Club, 195 Holmes Rd, Moonee Ponds 3039.",
+"size": 9.0,
+"y": 124.0,
+"x": 396.0
 }
 ],
 "lines": [
@@ -7345,9 +7357,6 @@
 "www.melbournebeekeepersclub.org.au",
 "Mornington Peninsula \n",
 "Beekeepers Association ",
-"Vice-President: Bryannah Downward",
-"0401 965 558",
-"Email: admin@mpba.org.au",
 "Meetings: 4th Wednesday of each month ",
 "(except June and December). Meeting at ",
 "7.00pm. Location: Mornington Park Pavilion, ",
@@ -7355,9 +7364,6 @@
 "Moonee Valley Beekeepers Club Inc. ",
 "Secretary: Paul Kucera",
 "Email: mvbeekeepersclub@gmail.com",
-"Meetings: 2nd Tuesday of each month (except ",
-"January). Meeting at 7.30pm. Location: Hall, ",
-"195 Holmes Rd, Moonee Ponds, VIC 3039.",
 "North Eastern Apiarists’ Association Inc.",
 "Secretary: Moss McCallum",
 "Email: secretary.neaa@gmail.com",
@@ -7367,10 +7373,6 @@
 "Email: northwesternbeeclub@gmail.com",
 "www.nwbeeclub.store",
 "South Gippsland Beekeepers Inc. ",
-"Secretary: Anna Jones",
-"0411 770 062",
-"Email: secretary@sgbeekeepers.org.au",
-"www.southgippslandbeekeepers.org.au",
 "Meetings: 2nd Thursday of each month. ",
 "Location: St Peters Anglican Church Hall, cnr ",
 "McCartin Street & Bruce Street, Leongatha",
@@ -7403,7 +7405,17 @@
 "If any contact details or information \n",
 "on these pages is incorrect please ",
 "advise the editor.",
-"Email: abjeditor@vicbeekeepers.com.au"
+"Email: abjeditor@vicbeekeepers.com.au",
+"President: Renato Poci",
+"Secretary: Rosemary Vernon",
+"Email: admin@mpba.org.au",
+"President: Ulysses de Vincentis",
+"Secretary: Anna Jones 0411 770 062",
+"Email: secretary@sgbeekeepers.org.au",
+"www.southgippslandbeekeepers.org.au",
+"Meetings: 2nd Tuesday each month (except",
+"January) at 7.30pm. Maribyrnong Park Bowls",
+"Club, 195 Holmes Rd, Moonee Ponds 3039."
 ]
 },
 "42": {

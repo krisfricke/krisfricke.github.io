@@ -20,6 +20,10 @@ import html, json, os, re, sys
 import warnings; warnings.filterwarnings("ignore")
 import fitz
 from PIL import Image
+try:
+    import anim_spread            # pages whose art moves (the September flowers): see that file
+except ImportError:
+    anim_spread = None
 
 SCALE = 1.6
 PT_MM = 25.4 / 72.0
@@ -107,7 +111,7 @@ HEAD = '''<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>%(title)s &mdash; page %(n)d</title>
 <style>
-html,body{margin:0;padding:0;background:#fff}
+html,body{margin:0;padding:0;background:#fff;overflow:hidden} /* a page is a fixed sheet: it never has a reason to scroll, and a sub-pixel overrun must not grow scrollbars */
 .sheet{width:calc(%(wmm).0fmm * var(--k,1));height:calc(%(hmm).0fmm * var(--k,1));overflow:hidden;position:relative}
 .scaler{transform:scale(calc(%(scaler).5f * var(--k,1)));transform-origin:top left}
 .page{position:relative;width:%(pw)dpx;height:%(ph)dpx}
@@ -430,6 +434,8 @@ def build(reader, issue, adir, label, pdf, what='all', ads=None, imgs=None, only
         page = doc[pno]
         W, H = page.rect.width, page.rect.height
         lines, redact, paras, links = page_lines(page, issue)
+        anim = anim_spread.ANIM.get((issue, n)) if anim_spread else None
+        anim_drs = page.get_drawings() if anim else None
         text[n] = {'paras': paras, 'lines': [CTRL.sub('', fixtext(tl)) for _h, _s, tl in lines]}
         write = only is None or n in only
         if write and what in ('pages', 'all'):
@@ -440,11 +446,15 @@ def build(reader, issue, adir, label, pdf, what='all', ads=None, imgs=None, only
             # the overlay background: text lifted, pictures and rules kept
             bg = fitz.open(); bg.insert_pdf(doc, from_page=pno, to_page=pno)
             bp = bg[0]
+            if anim:
+                anim_drs = anim_spread.paintout(bp, anim)
             for r in redact:
                 bp.add_redact_annot(r)
             bp.apply_redactions(images=fitz.PDF_REDACT_IMAGE_NONE, graphics=fitz.PDF_REDACT_LINE_ART_NONE,
                                 text=fitz.PDF_REDACT_TEXT_REMOVE)
-            bp.get_pixmap(matrix=fitz.Matrix(SCALE, SCALE), alpha=False).save(os.path.join(hdir, 'pg%03d.jpg' % n), jpg_quality=PAGE_Q)
+            # written via bytes: MuPDF's own save removes-then-creates, which some mounted folders refuse
+            with open(os.path.join(hdir, 'pg%03d.jpg' % n), 'wb') as fh:
+                fh.write(bp.get_pixmap(matrix=fitz.Matrix(SCALE, SCALE), alpha=False).tobytes('jpg', jpg_quality=PAGE_Q))
             bg.close()
         pw, ph = round(W * SCALE), round(H * SCALE)
         wmm, hmm = W * PT_MM, H * PT_MM
@@ -452,8 +462,9 @@ def build(reader, issue, adir, label, pdf, what='all', ads=None, imgs=None, only
         body = ([render_line(h, s) for h, s, _t in lines] + adlinks_html(ads.get(n, []))
                 + hotspots_html(links, ads.get(n, []), issue, W, H) + zoom_html(imgs.get(n, [])))
         if write:
+            moving = anim_spread.overlay(anim_drs, anim, W, H, pw, ph) if anim else ''
             doc_html = (HEAD % dict(title=html.escape(title), n=n, wmm=wmm, hmm=hmm, scaler=scaler, pw=pw, ph=ph)
-                        + '<img class="bg" src="pg%03d.jpg" alt="">\n' % n + '\n'.join(body) + '\n' + TAIL)
+                        + '<img class="bg" src="pg%03d.jpg" alt="">\n' % n + moving + '\n'.join(body) + '\n' + TAIL)
             open(os.path.join(hdir, '%d.html' % n), 'w', encoding='utf-8').write(doc_html)
         nhot = sum(1 for l in links if l[3] <= 0.4 * max(1e-6, l[0].width * l[0].height))
         print('p%-3d %3d lines %3d paras %2d links (%d boxes) %s %s' % (n, len(lines), len(paras), len(links), nhot,

@@ -746,7 +746,7 @@ function build(){
       s.appendChild(d); fitFrames(); return;
     }
     if(isHTML){
-      d.innerHTML='<div class="pframe htmlpage"><iframe loading="lazy" title="'+act.label+' page '+n+'" src="html/'+act.id+'/'+n+'.html"></iframe>'+
+      d.innerHTML='<div class="pframe htmlpage"><iframe loading="lazy" scrolling="no" title="'+act.label+' page '+n+'" src="html/'+act.id+'/'+n+'.html"></iframe>'+
         '</div><div class="rail">'+rail+'</div>';
       s.appendChild(d); fitFrames(); return;
     }
@@ -791,7 +791,7 @@ function lane(title,sub,hits){
       if((iss.html||[]).indexOf(p)>=0){
         /* the same live page as in the issue - selectable text, links, footnotes - with its rail of topics */
         const d=document.createElement('div'); d.className='page';
-        d.innerHTML='<div class="pframe htmlpage"><iframe loading="lazy" title="'+esc(a.t)+' — page '+p+'" src="html/'+iss.id+'/'+p+'.html"></iframe></div>'+
+        d.innerHTML='<div class="pframe htmlpage"><iframe loading="lazy" scrolling="no" title="'+esc(a.t)+' — page '+p+'" src="html/'+iss.id+'/'+p+'.html"></iframe></div>'+
           '<div class="rail">'+readRail(iss,p,onPage(iss.id,p))+'</div>';
         ts.appendChild(d); continue;
       }

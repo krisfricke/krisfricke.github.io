@@ -2,7 +2,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Australian Bee Journal, September 2026 &mdash; page 4</title>
 <style>
-html,body{margin:0;padding:0;background:#fff}
+html,body{margin:0;padding:0;background:#fff;overflow:hidden} /* a page is a fixed sheet: it never has a reason to scroll, and a sub-pixel overrun must not grow scrollbars */
 .sheet{width:calc(210mm * var(--k,1));height:calc(297mm * var(--k,1));overflow:hidden;position:relative}
 .scaler{transform:scale(calc(0.83372 * var(--k,1)));transform-origin:top left}
 .page{position:relative;width:952px;height:1347px}
@@ -27,6 +27,42 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
 @font-face{font-family:'Carlito';src:url('../../fonts/Carlito-Italic.ttf');font-weight:400;font-style:italic}
 </style></head><body><div class="sheet"><div class="scaler"><div class="page">
 <img class="bg" src="pg004.jpg" alt="">
+<style>
+.anim{position:absolute;left:0;top:0;width:952px;height:1347px;pointer-events:none}
+.anim g{transform-box:view-box}
+@keyframes k-plant{from{transform:rotate(-1.4deg)}to{transform:rotate(1.6deg)}}
+.anim .plant{animation:k-plant 7.400s ease-in-out infinite alternate}
+@keyframes k-head{from{transform:rotate(-2.2deg)}to{transform:rotate(2.6deg)}}
+.anim .head{animation:k-head 4.933s ease-in-out infinite alternate}
+@keyframes k-leaf{from{transform:rotate(-2.8deg)}to{transform:rotate(3.2deg)}}
+.anim .leaf{animation:k-leaf 2.960s ease-in-out infinite alternate}
+@keyframes bob{from{transform:translate(0.0px,-1.6px)}to{transform:translate(0.8px,1.4px)}}
+.anim .bee{animation:bob 2.467s ease-in-out infinite alternate}
+@keyframes k-drift{from{transform:rotate(-0.8deg)}to{transform:rotate(0.8deg)}}
+.anim .drift{animation:k-drift 3.700s ease-in-out infinite alternate}
+.anim .pale{animation-delay:0.00s}
+.anim .pale .head{animation-delay:-1.10s}
+.anim .gold{animation-delay:-0.90s}
+.anim .gold .head{animation-delay:-2.60s}
+.anim .orange{animation-delay:-2.20s}
+.anim .orange .head{animation-delay:-0.40s}
+.anim .pale .leaf:nth-of-type(2){animation-delay:-1.30s}
+.anim .gold .leaf:nth-of-type(2){animation-delay:-0.70s}
+.anim .bee-small{animation-delay:-0.30s}
+.anim .bee-left{animation-delay:-0.80s}
+.anim .bee-right{animation-delay:-1.50s}
+.anim .bee-top{animation-delay:-0.20s}
+.anim .petals{animation-delay:-1.90s}
+.anim.still g{animation-play-state:paused}
+@media (prefers-reduced-motion:reduce){.anim g{animation:none}}
+</style>
+<svg class="anim" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 595.28 841.89" aria-hidden="true"><g class="plant pale" data-anim="plant" data-delay="0.00" data-ox="76.0" data-oy="802.0" style="transform-origin:76.0px 802.0px"><path d="M80.87 667.68L71.63 736.27L80.87 754.80L80.87 802.20" fill="none" stroke="#9dcbba" stroke-width="3.46" stroke-linecap="butt" stroke-linejoin="miter"/><g class="leaf" data-anim="leaf" data-delay="0.00" data-ox="78.0" data-oy="714.0" style="transform-origin:78.0px 714.0px"><path d="M36.05 712.12L96.70 730.91L70.58 697.47L36.05 712.12" fill="#9dcbba"/></g><g class="leaf" data-anim="leaf" data-delay="-1.30" data-ox="78.0" data-oy="753.0" style="transform-origin:78.0px 753.0px"><path d="M134.90 751.52L74.25 770.31L100.38 736.87L134.90 751.52" fill="#9dcbba"/></g><g class="head" data-anim="head" data-delay="-1.10" data-ox="78.0" data-oy="664.0" style="transform-origin:78.0px 664.0px"><path d="M84.79 633.30L90.59 667.37L60.13 655.07L84.79 633.30" fill="#ffe98f"/><path d="M124.40 609.14L78.80 648.89L112.54 600.18L124.40 609.14" fill="#ffe98f"/><path d="M92.26 593.05L81.32 652.55L77.40 593.42L92.26 593.05" fill="#ffe98f"/><path d="M126.90 693.65L81.30 653.90L115.04 702.61L126.90 693.65" fill="#ffe98f"/><path d="M95.13 713.88L80.07 655.29L80.29 714.55L95.13 713.88" fill="#ffe98f"/><path d="M143.86 641.43L84.46 652.89L143.61 656.29L143.86 641.43" fill="#ffe98f"/><path d="M33.19 613.31L78.80 653.07L45.05 604.36L33.19 613.31" fill="#ffe98f"/><path d="M31.92 693.65L77.52 653.90L43.78 702.61L31.92 693.65" fill="#ffe98f"/><path d="M17.01 644.35L76.41 655.81L17.25 659.21L17.01 644.35" fill="#ffe98f"/><path d="M59.17 606.24L78.80 650.48L70.80 603.76L59.17 606.24" fill="#ffe98f"/><path d="M132.52 667.08L85.57 655.31L127.32 677.77L132.52 667.08" fill="#ffe98f"/><path d="M136.10 632.88L77.82 649.12L129.25 619.68L136.10 632.88" fill="#ffe98f"/><path d="M28.66 672.09L73.50 653.90L35.29 681.96L28.66 672.09" fill="#ffe98f"/><path d="M23.88 639.03L82.16 655.28L30.73 625.84L23.88 639.03" fill="#ffe98f"/></g></g><g class="plant gold" data-anim="plant" data-delay="-0.90" data-ox="195.0" data-oy="802.0" style="transform-origin:195.0px 802.0px"><path d="M189.08 632.09L200.90 719.92L189.08 743.65L189.08 802.20" fill="none" stroke="#9dcbba" stroke-width="4.43" stroke-linecap="butt" stroke-linejoin="miter"/><g class="leaf" data-anim="leaf" data-delay="0.00" data-ox="195.0" data-oy="691.0" style="transform-origin:195.0px 691.0px"><path d="M246.46 689.00L168.80 713.06L202.26 670.24L246.46 689.00" fill="#9dcbba"/></g><g class="leaf" data-anim="leaf" data-delay="-0.70" data-ox="195.0" data-oy="742.0" style="transform-origin:195.0px 742.0px"><path d="M119.88 739.44L197.55 763.50L164.09 720.68L119.88 739.44" fill="#9dcbba"/></g><g class="head" data-anim="head" data-delay="-2.60" data-ox="195.0" data-oy="630.0" style="transform-origin:195.0px 630.0px"><path d="M184.06 588.06L176.63 631.69L215.64 615.93L184.06 588.06" fill="#fac408"/><path d="M133.34 557.12L191.73 608.03L148.52 545.65L133.34 557.12" fill="#fac408"/><path d="M174.49 536.52L188.50 612.71L193.52 537.00L174.49 536.52" fill="#fac408"/><path d="M130.14 665.35L188.53 614.44L145.32 676.82L130.14 665.35" fill="#fac408"/><path d="M170.81 691.25L190.10 616.22L189.82 692.10L170.81 691.25" fill="#fac408"/><path d="M108.42 598.47L184.48 613.15L108.73 617.50L108.42 598.47" fill="#fac408"/><path d="M250.12 562.47L191.73 613.38L234.94 551.00L250.12 562.47" fill="#fac408"/><path d="M251.75 665.35L193.36 614.44L236.57 676.82L251.75 665.35" fill="#fac408"/><path d="M270.85 602.21L194.79 616.89L270.54 621.24L270.85 602.21" fill="#fac408"/><path d="M216.86 553.42L191.73 610.07L201.97 550.24L216.86 553.42" fill="#fac408"/><path d="M122.94 631.32L183.05 616.25L129.60 645.01L122.94 631.32" fill="#fac408"/><path d="M118.36 587.52L192.98 608.33L127.12 570.63L118.36 587.52" fill="#fac408"/><path d="M255.93 637.74L198.51 614.44L247.44 650.37L255.93 637.74" fill="#fac408"/><path d="M262.05 595.41L187.43 616.21L253.28 578.52L262.05 595.41" fill="#fac408"/></g></g><g class="drift petals" data-anim="drift" data-delay="-1.90" data-ox="442.0" data-oy="546.4" style="transform-origin:442.0px 546.4px"><path d="M420.24 537.12L332.70 516.37L390.17 493.06L420.24 537.12" fill="#ffe98f"/><path d="M352.45 538.40L400.12 549.02L365.18 515.11" fill="#c6671d"/><path d="M328.60 499.73L334.32 527.08L342.82 499.74" fill="#3885b7"/><path d="M430.63 518.43L396.11 574.65L452.50 542.17" fill="#9dcbba"/><path d="M549.67 501.78L479.56 573.66L490.64 507.47L549.67 501.78" fill="#fec553"/><path d="M497.65 546.63L552.12 548.10L505.64 519.66" fill="#c6671d"/><path d="M536.74 599.69L489.36 549.75L555.37 569.28" fill="#ffe98f"/><path d="M455.86 565.06L485.04 573.74L464.07 551.66L455.86 565.06" fill="#9dcbba"/><path d="M457.39 577.80L409.84 588.39L445.78 555.50" fill="#38292e"/></g><g class="bee bee-small" data-anim="bee" data-delay="-0.30" data-ox="286.9" data-oy="648.2" style="transform-origin:286.9px 648.2px"><path d="M289.45 653.46L295.65 649.89L303.44 663.38L293.56 663.63L289.45 653.46M306.77 663.30L298.19 648.43L307.69 642.95L312.79 663.15L306.77 663.30M286.52 655.15L289.98 663.72L270.82 664.20L286.52 655.15" fill="#000000"/><path d="M301.36 634.64L261.69 644.66L301.88 656.77L301.36 634.64" fill="#fec553"/><path d="M301.88 632.12L260.99 633.67L297.78 653.88L301.88 632.12" fill="#ffe98f"/></g></svg>
+<script>/* no work while the spread is off-screen */(function(){var s=document.querySelector("svg.anim");if(!s||!("IntersectionObserver" in window))return;new IntersectionObserver(function(e){s.classList.toggle("still",!e[0].isIntersecting)},{threshold:0}).observe(s);})();</script>
+<style>/* shard pointer, this spread only */
+html.shard,html.shard *,html.bee-on.shard,html.bee-on.shard *{cursor:url("../../assets/shard.png") 34 24,auto !important;cursor:image-set(url("../../assets/shard.png") 1x,url("../../assets/shard@2x.png") 2x) 34 24,auto !important}
+html.shard a[href],html.shard a[href] *,html.bee-on.shard a[href],html.bee-on.shard a[href] *{cursor:url("../../assets/shard.png") 34 24,pointer !important;cursor:image-set(url("../../assets/shard.png") 1x,url("../../assets/shard@2x.png") 2x) 34 24,pointer !important}
+</style>
+<script>(function(){if(!matchMedia("(hover:hover) and (pointer:fine)").matches)return;var h=document.documentElement;h.classList.add("shard");/* the page owns the pointer here: the reader's bee is parked and not fed positions */window.addEventListener("mousemove",function(e){e.stopImmediatePropagation();},{capture:true,passive:true});document.addEventListener("mouseenter",function(){try{parent.postMessage({abj:"pointerleave"},"*");}catch(e){}});})();</script>
 <p style="position:absolute;left:54.4px;top:1311.0px;font-size:13.6px;white-space:nowrap" data-w="273.0"><span style="font-family:Arial,Helvetica,sans-serif">4  |  </span><span style="font-family:Arial,Helvetica,sans-serif">Published since 1918 by the VAA – founded in 1892</span></p>
 <p style="position:absolute;left:329.8px;top:76.9px;font-size:73.6px;white-space:nowrap" data-w="442.1"><span style="font-weight:700;color:#ffffff;font-family:Carlito,Calibri,'Segoe UI',Arial,sans-serif">Be part of the
 </span></p>
