@@ -32,7 +32,7 @@ P4 = {
   'bees': [dict(name='bee-small', ids=[116, 117, 118])],
   'drift': [dict(name='petals', ids=list(range(2, 11)))],
   'over': [], 'bg': 'paint', 'shard': True,
-  'forage': [dict(cx=80, cy=653, rx=48, ry=48), dict(cx=190, cy=612, rx=58, ry=58)],   # dormant while the shard is on
+  'forage': [dict(cx=80, cy=653, rx=48, ry=48), dict(cx=190, cy=612, rx=58, ry=58)],   # live whenever the bee is the pointer (?bee)
   # taken out of the reader's copy of the page for good: the muddy green chamfered box behind the
   # HiveMeet phone (drawing 125) and the soft shadow that went with it (form XObject Fm1)
   'remove': dict(drawings=[125], xobjects=['Fm1']),
@@ -353,7 +353,7 @@ def forage_zone(zones, W, pw):
 # shard@2x.png are the shard from p.10 of the brand guidelines (its own vector: 34.8/105/40.2
 # degrees, level top edge) in PMS 7549 #f9c500, no outline; the hotspot is the sting. The page hides the reader's bee while the
 # pointer is over it, and stops reporting the pointer so the bee is not pulled back.
-SHARD_CURSOR = True
+SHARD_CURSOR = False   # superseded: the shard is now the reader-wide pointer (index.html, ?bee for the bee)
 SHARD_HOT = (34, 24)
 
 def shard_cursor():

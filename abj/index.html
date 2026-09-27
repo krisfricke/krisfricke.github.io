@@ -5,6 +5,12 @@
      Dormant on file:// and localhost, so it only bites once published. -->
 <script src="gate.js?v=3"></script>
 <!-- bump ?v= whenever gate.js changes, or browsers keep serving the old one -->
+<script>/* THE POINTER. The brand shard by default (board's wish); add ?bee to the address for the bee,
+   ?shard to go back. Either sticks for the browser session, so moving about the reader keeps it. */
+(function(){var k='shard';try{var q=location.search;
+  if(/[?&]bee(=|&|$)/.test(q))sessionStorage.setItem('abj-cursor','bee');else if(/[?&]shard(=|&|$)/.test(q))sessionStorage.setItem('abj-cursor','shard');
+  k=sessionStorage.getItem('abj-cursor')||'shard';}catch(e){}
+  window.ABJ_CURSOR=k; if(k==='shard')document.documentElement.className+=' shard';})();</script>
 
 <meta name="description" content="The Australian Bee Journal, published by the Victorian Apiarists' Association since 1918. Read current and past issues, browse by topic and author.">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/vaa/favicon-32.png">
@@ -257,6 +263,10 @@ body.inlane .edge.back{display:flex}
 #beecur.spent .d{animation:none}
 @media (prefers-reduced-motion:reduce){#beecur.foraging .bee-body,#beecur.foraging .legs,#beecur.foraging .d{animation:none}}
 @media(hover:hover){ body.bee-on, body.bee-on *{cursor:none !important} }
+/* the brand shard (html.shard): the sting is the hotspot; over anything clickable the fallback is the hand */
+html.shard,html.shard *{cursor:url("assets/shard.png") 34 24,auto !important;cursor:image-set(url("assets/shard.png") 1x,url("assets/shard@2x.png") 2x) 34 24,auto !important}
+html.shard a,html.shard button,html.shard [role="button"],html.shard .plink,html.shard .brow,html.shard .tg,html.shard .au,html.shard .share,html.shard .txt,
+html.shard a *,html.shard button *{cursor:url("assets/shard.png") 34 24,pointer !important;cursor:image-set(url("assets/shard.png") 1x,url("assets/shard@2x.png") 2x) 34 24,pointer !important}
 @media(prefers-reduced-motion:reduce){ #beecur{display:none} }
 
 /* ---------- free-scrolling ribbon (NO snap) ---------- */
@@ -1173,10 +1183,18 @@ window.addEventListener('message',function(e){
 });
 
 /* ---------- bee follower ---------- */
+/* Pages ask which pointer to draw ({abj:'cursor?'}), and are told again whenever one loads. */
+(function(){
+  var kind=window.ABJ_CURSOR||'shard';
+  function tell(w){ try{ w.postMessage({abj:'cursor',kind:kind},'*'); }catch(e){} }
+  window.addEventListener('message',function(e){ var m=e.data; if(m&&(m.abj==='cursor?'||m.abj==='hello')&&e.source) tell(e.source); });
+  document.addEventListener('load',function(e){ var t=e.target; if(t&&t.tagName==='IFRAME'&&t.contentWindow) tell(t.contentWindow); },true);
+})();
 (function(){
   if(!matchMedia('(hover:hover) and (pointer:fine)').matches) return;                 /* touch: keep the finger */
   if(matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   const bee=document.getElementById('beecur'); if(!bee) return;
+  if(window.ABJ_CURSOR==='shard'){ bee.remove(); return; }                          /* the shard is the pointer: she stays home */
   document.body.classList.add('bee-on');
   /* Phones lie about hover: Android Chrome, a paired stylus and any "desktop site" tab all report
      hover:hover, and the bee then hangs in the middle of a screen with no pointer. Require a FINE

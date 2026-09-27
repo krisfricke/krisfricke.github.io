@@ -78,11 +78,6 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
 <script>/* no work while the spread is off-screen */(function(){var s=document.querySelector("svg.anim");if(!s||!("IntersectionObserver" in window))return;new IntersectionObserver(function(e){s.classList.toggle("still",!e[0].isIntersecting)},{threshold:0}).observe(s);/* no hover on touch: a tap buzzes the bee for a moment */s.querySelectorAll(".bee").forEach(function(b){b.addEventListener("pointerdown",function(e){if(e.pointerType==="mouse")return;b.classList.add("buzz");clearTimeout(b._t);b._t=setTimeout(function(){b.classList.remove("buzz");},1800);});});})();</script>
 <div class="anthers" data-mode="gather" aria-hidden="true" style="position:absolute;left:497.4px;top:487.8px;width:239.9px;height:239.9px;border-radius:50%;pointer-events:none"></div>
 <script>/* pollen: tell the reader when the pointer is on a flower or on comb */(function(){var zs=[].slice.call(document.querySelectorAll(".anthers"));if(!zs.length||window.parent===window)return;var cur=null;function say(m){cur=m;try{parent.postMessage({abj:"forage",on:!!m,mode:m||undefined},"*");}catch(e){}}document.addEventListener("mousemove",function(e){var hit=null;for(var i=0;i<zs.length&&!hit;i++){var r=zs[i].getBoundingClientRect(),dx=(e.clientX-r.left-r.width/2)/(r.width/2),dy=(e.clientY-r.top-r.height/2)/(r.height/2);if(dx*dx+dy*dy<=1)hit=zs[i].getAttribute("data-mode");}if(hit!==cur)say(hit);},{passive:true});document.addEventListener("mouseleave",function(){if(cur)say(null);});})();</script>
-<style>/* shard pointer, this spread only */
-html.shard,html.shard *,html.bee-on.shard,html.bee-on.shard *{cursor:url("../../assets/shard.png") 34 24,auto !important;cursor:image-set(url("../../assets/shard.png") 1x,url("../../assets/shard@2x.png") 2x) 34 24,auto !important}
-html.shard a[href],html.shard a[href] *,html.bee-on.shard a[href],html.bee-on.shard a[href] *{cursor:url("../../assets/shard.png") 34 24,pointer !important;cursor:image-set(url("../../assets/shard.png") 1x,url("../../assets/shard@2x.png") 2x) 34 24,pointer !important}
-</style>
-<script>(function(){if(!matchMedia("(hover:hover) and (pointer:fine)").matches)return;var h=document.documentElement;h.classList.add("shard");/* the page owns the pointer here: the reader's bee is parked and not fed positions */window.addEventListener("mousemove",function(e){e.stopImmediatePropagation();},{capture:true,passive:true});document.addEventListener("mouseenter",function(){try{parent.postMessage({abj:"pointerleave"},"*");}catch(e){}});})();</script>
 <p style="position:absolute;left:525.0px;top:1311.0px;font-size:13.6px;white-space:nowrap" data-w="373.0"><span style="font-family:Arial,Helvetica,sans-serif">VAA AUSTRALIAN BEE JOURNAL  |  </span><span style="font-family:Arial,Helvetica,sans-serif">VOL. 107 No. 09 September 2026</span><span style="font-family:Arial,Helvetica,sans-serif">  |  5</span></p>
 </div></div></div>
 <script>
@@ -169,6 +164,10 @@ document.addEventListener('click',function(e){
   window.addEventListener('message',function(e){ var m=e.data; if(m&&m.abj==='zoom'&&isFinite(m.k)&&m.k>0) setK(m.k); });
 })();
 </script>
+<style>/* the reader's pointer: the brand shard unless the reader says bee (html.shard is set by message) */
+html.shard,html.shard *{cursor:url("../../assets/shard.png") 34 24,auto !important;cursor:image-set(url("../../assets/shard.png") 1x,url("../../assets/shard@2x.png") 2x) 34 24,auto !important}
+html.shard a[href],html.shard a[href] *{cursor:url("../../assets/shard.png") 34 24,pointer !important;cursor:image-set(url("../../assets/shard.png") 1x,url("../../assets/shard@2x.png") 2x) 34 24,pointer !important}</style>
+<script>(function(){if(window.parent===window)return;window.addEventListener('message',function(e){var m=e.data;if(!m||m.abj!=='cursor')return;document.documentElement.classList.toggle('shard',m.kind==='shard');});try{parent.postMessage({abj:'cursor?'},'*');}catch(e){}})();</script>
 <style>html.bee-on,html.bee-on *{cursor:none !important}</style>
 <script>
 /* Report the pointer to the parent reader so its bee can follow across the page,

@@ -153,4 +153,8 @@ a.ixlink{text-decoration:none;color:inherit;cursor:pointer;border-bottom:1px sol
     try{ parent.postMessage({abj:'pointerleave'},'*'); }catch(err){} });
 })();
 </script>
+<style>/* the reader's pointer: the brand shard unless the reader says bee (html.shard is set by message) */
+html.shard,html.shard *{cursor:url("../../assets/shard.png") 34 24,auto !important;cursor:image-set(url("../../assets/shard.png") 1x,url("../../assets/shard@2x.png") 2x) 34 24,auto !important}
+html.shard a[href],html.shard a[href] *{cursor:url("../../assets/shard.png") 34 24,pointer !important;cursor:image-set(url("../../assets/shard.png") 1x,url("../../assets/shard@2x.png") 2x) 34 24,pointer !important}</style>
+<script>(function(){if(window.parent===window)return;window.addEventListener('message',function(e){var m=e.data;if(!m||m.abj!=='cursor')return;document.documentElement.classList.toggle('shard',m.kind==='shard');});try{parent.postMessage({abj:'cursor?'},'*');}catch(e){}})();</script>
 </body></html>
