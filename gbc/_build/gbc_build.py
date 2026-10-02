@@ -246,6 +246,7 @@ document.addEventListener('click',function(e){
   if(window.parent && window.parent!==window){
     e.preventDefault();
     var m={abj:'img',src:a.getAttribute('data-src'),alt:a.getAttribute('data-alt')||'',w:+a.getAttribute('data-w')||0,h:+a.getAttribute('data-h')||0};
+    if(a.getAttribute('data-remote')){ m.fallback=m.src; m.src=a.getAttribute('data-remote'); }
     var ans=a.getAttribute('data-answers'); if(ans){ try{ m.answers=JSON.parse(ans); }catch(err){} }
     try{ window.parent.postMessage(m,'*'); }catch(err){ location.href=a.getAttribute('href'); }
   }
@@ -431,6 +432,52 @@ def hotspots_html(links, ads, issue, W, H):
     return out
 
 
+
+IMG_URL = re.compile(r'\.(jpe?g|png|gif|webp)(\?.*)?$', re.I)
+
+def picture_zooms(page, links, issue, n, adir_full):
+    """The newsletter links each picture to its full-size file on the club's website. In the reader
+    that should open the lightbox, not a new tab: export the embedded picture at its own resolution
+    and return zoom entries for zoom_html; the links are marked covered so they get no hotspot."""
+    out = []
+    imgs = [(x[0], r) for x in page.get_images(full=True) for r in page.get_image_rects(x[0])]
+    k = 0
+    for lk in links:
+        r, target, kind = lk[0], lk[1], lk[2]
+        if kind != 'uri' or not IMG_URL.search(str(target)):
+            continue
+        if r.height < 40 or r.width < 40:
+            # a sliver of the same link (the picture's caption line, or its tail across a page break):
+            # same lightbox picture, reusing an export of the same file from this page if there is one
+            same = [z for z in out if z['remote'] == str(target)]
+            if same:
+                out.append(dict(same[0], rect=(r.x0, r.y0, r.x1, r.y1))); lk[3] = 1e9
+                continue
+        best, ov = None, 0.0
+        for xref, ir in imgs:
+            a = ir.intersect(r).get_area()
+            if a > ov: best, ov = xref, a
+        pix = None
+        if best is not None and ov >= 0.4 * r.get_area():
+            try:
+                pix = fitz.Pixmap(page.parent, best)
+                if pix.n - pix.alpha >= 4: pix = fitz.Pixmap(fitz.csRGB, pix)
+                if pix.alpha: pix = fitz.Pixmap(pix, 0)
+            except Exception:
+                pix = None
+        if pix is None:
+            # the picture is not a plain embedded image (a form, an inline image): take it off the page itself
+            pix = page.get_pixmap(matrix=fitz.Matrix(3, 3), clip=r, alpha=False)
+        k += 1
+        os.makedirs(os.path.join(adir_full, 'img'), exist_ok=True)
+        fn = 'img/p%02d-%d.jpg' % (n, k)
+        with open(os.path.join(adir_full, fn), 'wb') as fh:
+            fh.write(pix.tobytes('jpg', jpg_quality=86))
+        alt = re.sub(r'[_\-]+', ' ', os.path.splitext(os.path.basename(str(target).split('?')[0]))[0]).strip().title()
+        out.append({'rect': (r.x0, r.y0, r.x1, r.y1), 'src': 'assets/%s/%s' % (issue, fn), 'remote': str(target), 'alt': alt, 'w': pix.width, 'h': pix.height})
+        lk[3] = 1e9                                   # covered: no hotspot box as well
+    return out
+
 def zoom_html(imgs):
     """A box over each picture that has a bigger version (from _build/<issue>_imgs.json:
     rect in PDF points, src relative to the reader root, optional answers for a puzzle)."""
@@ -440,6 +487,9 @@ def zoom_html(imgs):
         extra = ''
         if e.get('answers'):
             extra = ' data-answers="%s"' % html.escape(json.dumps(e['answers'], separators=(',', ':')), quote=True)
+        if e.get('remote'):
+            # the lightbox tries the website's full-size picture first and falls back to the embedded copy
+            extra += ' data-remote="%s"' % html.escape(e['remote'], quote=True)
         out.append('<a class="zoom" href="../../%s" target="_blank" rel="noopener" data-src="%s" data-alt="%s" data-w="%d" data-h="%d"%s '
                    'title="Click to enlarge" aria-label="Enlarge: %s" style="left:%.1fpx;top:%.1fpx;width:%.1fpx;height:%.1fpx"></a>'
                    % (e['src'], e['src'], html.escape(e['alt'], quote=True), e['w'], e['h'], extra, html.escape(e['alt'], quote=True),
@@ -501,8 +551,9 @@ def build(reader, issue, adir, label, pdf, what='all', ads=None, imgs=None, only
         pw, ph = round(W * SCALE), round(H * SCALE)
         wmm, hmm = W * PT_MM, H * PT_MM
         scaler = (wmm * 96 / 25.4) / pw
+        zooms = picture_zooms(page, links, issue, n, adir_full) + imgs.get(n, [])
         body = ([render_line(h, s) for h, s, _t in lines] + adlinks_html(ads.get(n, []))
-                + hotspots_html(links, ads.get(n, []), issue, W, H) + zoom_html(imgs.get(n, [])))
+                + hotspots_html(links, ads.get(n, []), issue, W, H) + zoom_html(zooms))
         if write:
             moving = anim_spread.overlay(anim_drs, anim, W, H, pw, ph) if anim else ''
             doc_html = (HEAD % dict(title=html.escape(title), n=n, wmm=wmm, hmm=hmm, scaler=scaler, pw=pw, ph=ph)

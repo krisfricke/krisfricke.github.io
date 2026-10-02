@@ -129,6 +129,9 @@ def main(src, dst):
         "});\n"
         "window.addEventListener('hashchange',route);")
 
+    # ---- lightbox: a picture that fails to load from the website falls back to the copy in the reader ----
+    sub("    img.src=m.src; img.alt=m.alt||''; cap.textContent=m.alt||'';",
+        "    img.onerror=function(){ if(m.fallback&&img.getAttribute('src')!==m.fallback) img.src=m.fallback; };\n    img.src=m.src; img.alt=m.alt||''; cap.textContent=m.alt||'';")
     os.makedirs(dst, exist_ok=True)
     open(os.path.join(dst, 'index.html'), 'w', encoding='utf-8').write(s)
     print('wrote', os.path.join(dst, 'index.html'), len(s), 'bytes')

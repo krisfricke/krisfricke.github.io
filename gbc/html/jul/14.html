@@ -68,7 +68,7 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
 <p style="position:absolute;left:78.6px;top:1159.0px;font-size:18.2px;white-space:nowrap" data-w="425.8"><span style="color:#666666;font-family:Lato,'Proxima Nova','Segoe UI',Arial,sans-serif">brood</span><span style="color:#666666;font-family:Lato,'Proxima Nova','Segoe UI',Arial,sans-serif">,</span><span style="color:#666666;font-family:Lato,'Proxima Nova','Segoe UI',Arial,sans-serif"> the queen is performing up to expectation and</span></p>
 <p style="position:absolute;left:78.6px;top:1182.9px;font-size:18.2px;white-space:nowrap" data-w="453.0" data-j="1"><span style="color:#666666;font-family:Lato,'Proxima Nova','Segoe UI',Arial,sans-serif">should be retained</span><span style="color:#666666;font-family:Lato,'Proxima Nova','Segoe UI',Arial,sans-serif">.</span><span style="color:#666666;font-family:Lato,'Proxima Nova','Segoe UI',Arial,sans-serif"> There is no need to actually sight the</span></p>
 <p style="position:absolute;left:78.6px;top:1206.8px;font-size:18.2px;white-space:nowrap" data-w="55.2"><span style="color:#666666;font-family:Lato,'Proxima Nova','Segoe UI',Arial,sans-serif">queen</span><span style="color:#666666;font-family:Lato,'Proxima Nova','Segoe UI',Arial,sans-serif">.</span></p>
-<a class="hot" href="https://geelongbeekeepersclub.org.au/edit/images/workers-on-comb.jpg" target="_blank" rel="noopener" title="geelongbeekeepersclub.org.au/edit/images/workers-on-comb.jpg" aria-label="Link: geelongbeekeepersclub.org.au/edit/images/workers-on-comb.jpg" style="left:556.6px;top:1018.7px;width:318.7px;height:191.2px"></a>
+<a class="zoom" href="../../assets/jul/img/p14-1.jpg" target="_blank" rel="noopener" data-src="assets/jul/img/p14-1.jpg" data-alt="Workers On Comb" data-w="250" data-h="150" data-remote="https://geelongbeekeepersclub.org.au/edit/images/workers-on-comb.jpg" title="Click to enlarge" aria-label="Enlarge: Workers On Comb" style="left:556.6px;top:1018.7px;width:318.7px;height:191.2px"></a>
 </div></div></div>
 <script>
 /* Fit each line to the width it occupied in the PDF: stretch the spaces on
@@ -140,6 +140,7 @@ document.addEventListener('click',function(e){
   if(window.parent && window.parent!==window){
     e.preventDefault();
     var m={abj:'img',src:a.getAttribute('data-src'),alt:a.getAttribute('data-alt')||'',w:+a.getAttribute('data-w')||0,h:+a.getAttribute('data-h')||0};
+    if(a.getAttribute('data-remote')){ m.fallback=m.src; m.src=a.getAttribute('data-remote'); }
     var ans=a.getAttribute('data-answers'); if(ans){ try{ m.answers=JSON.parse(ans); }catch(err){} }
     try{ window.parent.postMessage(m,'*'); }catch(err){ location.href=a.getAttribute('href'); }
   }

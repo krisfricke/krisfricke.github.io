@@ -76,7 +76,7 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
 <p style="position:absolute;left:78.6px;top:1177.0px;font-size:17.1px;white-space:nowrap" data-w="754.0"><span style="color:#666666;font-family:Lato,'Proxima Nova','Segoe UI',Arial,sans-serif">for assessing winter survival and spring build</span><span style="color:#666666;font-family:Lato,'Proxima Nova','Segoe UI',Arial,sans-serif">-</span><span style="color:#666666;font-family:Lato,'Proxima Nova','Segoe UI',Arial,sans-serif">up without opening the hive excessively</span><span style="color:#666666;font-family:Lato,'Proxima Nova','Segoe UI',Arial,sans-serif">.</span><span style="color:#666666;font-family:Lato,'Proxima Nova','Segoe UI',Arial,sans-serif"> With swarming</span></p>
 <p style="position:absolute;left:78.6px;top:1197.5px;font-size:17.1px;white-space:nowrap" data-w="780.9"><span style="color:#666666;font-family:Lato,'Proxima Nova','Segoe UI',Arial,sans-serif">season approaching</span><span style="color:#666666;font-family:Lato,'Proxima Nova','Segoe UI',Arial,sans-serif">,</span><span style="color:#666666;font-family:Lato,'Proxima Nova','Segoe UI',Arial,sans-serif"> beekeepers were encouraged to remain vigilant about prevention strategies and to</span></p>
 <p style="position:absolute;left:78.6px;top:1217.9px;font-size:17.1px;white-space:nowrap" data-w="576.1"><span style="color:#666666;font-family:Lato,'Proxima Nova','Segoe UI',Arial,sans-serif">share any questions or swarm management experiences with the wider zone</span><span style="color:#666666;font-family:Lato,'Proxima Nova','Segoe UI',Arial,sans-serif">.</span></p>
-<a class="hot" href="https://geelongbeekeepersclub.org.au/edit/enews/MEMBER_ZONES.PNG" target="_blank" rel="noopener" title="geelongbeekeepersclub.org.au/edit/enews/MEMBER_ZONES.PNG" aria-label="Link: geelongbeekeepersclub.org.au/edit/enews/MEMBER_ZONES.PNG" style="left:556.6px;top:123.0px;width:318.7px;height:200.3px"></a>
+<a class="zoom" href="../../assets/sep/img/p22-1.jpg" target="_blank" rel="noopener" data-src="assets/sep/img/p22-1.jpg" data-alt="Member Zones" data-w="415" data-h="261" data-remote="https://geelongbeekeepersclub.org.au/edit/enews/MEMBER_ZONES.PNG" title="Click to enlarge" aria-label="Enlarge: Member Zones" style="left:556.6px;top:123.0px;width:318.7px;height:200.3px"></a>
 </div></div></div>
 <script>
 /* Fit each line to the width it occupied in the PDF: stretch the spaces on
@@ -148,6 +148,7 @@ document.addEventListener('click',function(e){
   if(window.parent && window.parent!==window){
     e.preventDefault();
     var m={abj:'img',src:a.getAttribute('data-src'),alt:a.getAttribute('data-alt')||'',w:+a.getAttribute('data-w')||0,h:+a.getAttribute('data-h')||0};
+    if(a.getAttribute('data-remote')){ m.fallback=m.src; m.src=a.getAttribute('data-remote'); }
     var ans=a.getAttribute('data-answers'); if(ans){ try{ m.answers=JSON.parse(ans); }catch(err){} }
     try{ window.parent.postMessage(m,'*'); }catch(err){ location.href=a.getAttribute('href'); }
   }

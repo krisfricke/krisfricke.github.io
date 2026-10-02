@@ -140,6 +140,7 @@ document.addEventListener('click',function(e){
   if(window.parent && window.parent!==window){
     e.preventDefault();
     var m={abj:'img',src:a.getAttribute('data-src'),alt:a.getAttribute('data-alt')||'',w:+a.getAttribute('data-w')||0,h:+a.getAttribute('data-h')||0};
+    if(a.getAttribute('data-remote')){ m.fallback=m.src; m.src=a.getAttribute('data-remote'); }
     var ans=a.getAttribute('data-answers'); if(ans){ try{ m.answers=JSON.parse(ans); }catch(err){} }
     try{ window.parent.postMessage(m,'*'); }catch(err){ location.href=a.getAttribute('href'); }
   }

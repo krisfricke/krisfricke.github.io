@@ -59,7 +59,7 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
 <p style="position:absolute;left:253.8px;top:1165.8px;font-size:18.2px;white-space:nowrap" data-w="94.1"><span style="color:#666666;font-family:Lato,'Proxima Nova','Segoe UI',Arial,sans-serif">information</span><span style="color:#666666;font-family:Lato,'Proxima Nova','Segoe UI',Arial,sans-serif">.</span></p>
 <p style="position:absolute;left:253.8px;top:1201.1px;font-size:18.2px;white-space:nowrap" data-w="527.7" data-j="1"><span style="font-style:italic;color:#666666;font-family:Lato,'Proxima Nova','Segoe UI',Arial,sans-serif">Sue Moritz will present Module 8 </span><span style="font-style:italic;color:#666666;font-family:Lato,'Proxima Nova','Segoe UI',Arial,sans-serif">-</span><span style="font-style:italic;color:#666666;font-family:Lato,'Proxima Nova','Segoe UI',Arial,sans-serif"> </span><span style="font-style:italic;color:#666666;font-family:Lato,'Proxima Nova','Segoe UI',Arial,sans-serif">"</span><span style="font-style:italic;color:#666666;font-family:Lato,'Proxima Nova','Segoe UI',Arial,sans-serif">Soft</span><span style="font-style:italic;color:#666666;font-family:Lato,'Proxima Nova','Segoe UI',Arial,sans-serif">/</span><span style="font-style:italic;color:#666666;font-family:Lato,'Proxima Nova','Segoe UI',Arial,sans-serif">Organic Chemicals</span><span style="font-style:italic;color:#666666;font-family:Lato,'Proxima Nova','Segoe UI',Arial,sans-serif">"</span><span style="font-style:italic;color:#666666;font-family:Lato,'Proxima Nova','Segoe UI',Arial,sans-serif"> at the</span></p>
 <p style="position:absolute;left:253.8px;top:1225.0px;font-size:18.2px;white-space:nowrap" data-w="262.8"><span style="font-style:italic;color:#666666;font-family:Lato,'Proxima Nova','Segoe UI',Arial,sans-serif">forthcoming September meeting</span><span style="font-style:italic;color:#666666;font-family:Lato,'Proxima Nova','Segoe UI',Arial,sans-serif">.</span></p>
-<a class="hot" href="https://geelongbeekeepersclub.org.au/edit/enews/BEC%20SEP.JPG" target="_blank" rel="noopener" title="geelongbeekeepersclub.org.au/edit/enews/BEC%20SEP.JPG" aria-label="Link: geelongbeekeepersclub.org.au/edit/enews/BEC%20SEP.JPG" style="left:556.6px;top:128.7px;width:318.7px;height:239.0px"></a>
+<a class="zoom" href="../../assets/sep/img/p08-1.jpg" target="_blank" rel="noopener" data-src="assets/sep/img/p08-1.jpg" data-alt="Bec%20Sep" data-w="415" data-h="312" data-remote="https://geelongbeekeepersclub.org.au/edit/enews/BEC%20SEP.JPG" title="Click to enlarge" aria-label="Enlarge: Bec%20Sep" style="left:556.6px;top:128.7px;width:318.7px;height:239.0px"></a>
 </div></div></div>
 <script>
 /* Fit each line to the width it occupied in the PDF: stretch the spaces on
@@ -131,6 +131,7 @@ document.addEventListener('click',function(e){
   if(window.parent && window.parent!==window){
     e.preventDefault();
     var m={abj:'img',src:a.getAttribute('data-src'),alt:a.getAttribute('data-alt')||'',w:+a.getAttribute('data-w')||0,h:+a.getAttribute('data-h')||0};
+    if(a.getAttribute('data-remote')){ m.fallback=m.src; m.src=a.getAttribute('data-remote'); }
     var ans=a.getAttribute('data-answers'); if(ans){ try{ m.answers=JSON.parse(ans); }catch(err){} }
     try{ window.parent.postMessage(m,'*'); }catch(err){ location.href=a.getAttribute('href'); }
   }

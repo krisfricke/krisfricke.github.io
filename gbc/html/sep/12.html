@@ -28,8 +28,8 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
 @font-face{font-family:'Lato';src:url('../../fonts/Lato-BoldItalic.ttf');font-weight:700;font-style:italic}
 </style></head><body><div class="sheet"><div class="scaler"><div class="page">
 <img class="bg" src="pg012.jpg" alt="">
-<a class="hot" href="https://geelongbeekeepersclub.org.au/edit/enews/2026-09-05%202253731%20-%20GBG%20175%20CELEBRATION_A3%20POSTER_PRINT_2B.PNG" target="_blank" rel="noopener" title="geelongbeekeepersclub.org.au/edit/enews/2026-09-05%202253731%20-%20GBG%20175%20CELEBRATION_A3%20POSTER_PRINT_2B.PNG" aria-label="Link: geelongbeekeepersclub.org.au/edit/enews/2026-09-05%202253731%20-%20GBG%20175%20CELEBRATION_A3%20POSTER_PRINT_2B.PNG" style="left:78.6px;top:1149.6px;width:796.7px;height:26.2px"></a>
-<a class="hot" href="https://geelongbeekeepersclub.org.au/edit/enews/2026-09-05%202253731%20-%20GBG%20175%20CELEBRATION_A3%20POSTER_PRINT_2B.PNG" target="_blank" rel="noopener" title="geelongbeekeepersclub.org.au/edit/enews/2026-09-05%202253731%20-%20GBG%20175%20CELEBRATION_A3%20POSTER_PRINT_2B.PNG" aria-label="Link: geelongbeekeepersclub.org.au/edit/enews/2026-09-05%202253731%20-%20GBG%20175%20CELEBRATION_A3%20POSTER_PRINT_2B.PNG" style="left:78.6px;top:45.6px;width:796.7px;height:1123.3px"></a>
+<a class="zoom" href="../../assets/sep/img/p12-1.jpg" target="_blank" rel="noopener" data-src="assets/sep/img/p12-1.jpg" data-alt="2026 09 05%202253731%20 %20Gbg%20175%20Celebration A3%20Poster Print 2B" data-w="837" data-h="1180" data-remote="https://geelongbeekeepersclub.org.au/edit/enews/2026-09-05%202253731%20-%20GBG%20175%20CELEBRATION_A3%20POSTER_PRINT_2B.PNG" title="Click to enlarge" aria-label="Enlarge: 2026 09 05%202253731%20 %20Gbg%20175%20Celebration A3%20Poster Print 2B" style="left:78.6px;top:1149.6px;width:796.7px;height:26.2px"></a>
+<a class="zoom" href="../../assets/sep/img/p12-2.jpg" target="_blank" rel="noopener" data-src="assets/sep/img/p12-2.jpg" data-alt="2026 09 05%202253731%20 %20Gbg%20175%20Celebration A3%20Poster Print 2B" data-w="1495" data-h="2107" data-remote="https://geelongbeekeepersclub.org.au/edit/enews/2026-09-05%202253731%20-%20GBG%20175%20CELEBRATION_A3%20POSTER_PRINT_2B.PNG" title="Click to enlarge" aria-label="Enlarge: 2026 09 05%202253731%20 %20Gbg%20175%20Celebration A3%20Poster Print 2B" style="left:78.6px;top:45.6px;width:796.7px;height:1123.3px"></a>
 </div></div></div>
 <script>
 /* Fit each line to the width it occupied in the PDF: stretch the spaces on
@@ -101,6 +101,7 @@ document.addEventListener('click',function(e){
   if(window.parent && window.parent!==window){
     e.preventDefault();
     var m={abj:'img',src:a.getAttribute('data-src'),alt:a.getAttribute('data-alt')||'',w:+a.getAttribute('data-w')||0,h:+a.getAttribute('data-h')||0};
+    if(a.getAttribute('data-remote')){ m.fallback=m.src; m.src=a.getAttribute('data-remote'); }
     var ans=a.getAttribute('data-answers'); if(ans){ try{ m.answers=JSON.parse(ans); }catch(err){} }
     try{ window.parent.postMessage(m,'*'); }catch(err){ location.href=a.getAttribute('href'); }
   }

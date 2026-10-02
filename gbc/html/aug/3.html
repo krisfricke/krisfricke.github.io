@@ -69,7 +69,7 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
 <a class="ixlink hot" href="../../#/page/aug/24" target="_top" title="Go to page 24" style="left:750.1px;top:140.1px;width:157.2px;height:153.6px"></a>
 <a class="ixlink hot" href="../../#/page/aug/25" target="_top" title="Go to page 25" style="left:91.1px;top:599.9px;width:159.3px;height:13.7px"></a>
 <a class="ixlink hot" href="../../#/page/aug/25" target="_top" title="Go to page 25" style="left:91.1px;top:459.9px;width:159.3px;height:153.6px"></a>
-<a class="hot" href="https://geelongbeekeepersclub.org.au/edit/enews/2023_GEELONG_SHOW_IMG_0907.JPG" target="_blank" rel="noopener" title="geelongbeekeepersclub.org.au/edit/enews/2023_GEELONG_SHOW_IMG_0907.JPG" aria-label="Link: geelongbeekeepersclub.org.au/edit/enews/2023_GEELONG_SHOW_IMG_0907.JPG" style="left:556.6px;top:737.6px;width:318.7px;height:239.0px"></a>
+<a class="zoom" href="../../assets/aug/img/p03-1.jpg" target="_blank" rel="noopener" data-src="assets/aug/img/p03-1.jpg" data-alt="2023 Geelong Show Img 0907" data-w="416" data-h="312" data-remote="https://geelongbeekeepersclub.org.au/edit/enews/2023_GEELONG_SHOW_IMG_0907.JPG" title="Click to enlarge" aria-label="Enlarge: 2023 Geelong Show Img 0907" style="left:556.6px;top:737.6px;width:318.7px;height:239.0px"></a>
 </div></div></div>
 <script>
 /* Fit each line to the width it occupied in the PDF: stretch the spaces on
@@ -141,6 +141,7 @@ document.addEventListener('click',function(e){
   if(window.parent && window.parent!==window){
     e.preventDefault();
     var m={abj:'img',src:a.getAttribute('data-src'),alt:a.getAttribute('data-alt')||'',w:+a.getAttribute('data-w')||0,h:+a.getAttribute('data-h')||0};
+    if(a.getAttribute('data-remote')){ m.fallback=m.src; m.src=a.getAttribute('data-remote'); }
     var ans=a.getAttribute('data-answers'); if(ans){ try{ m.answers=JSON.parse(ans); }catch(err){} }
     try{ window.parent.postMessage(m,'*'); }catch(err){ location.href=a.getAttribute('href'); }
   }

@@ -1152,6 +1152,7 @@ window.addEventListener('keydown',function(e){
   window.addEventListener('message',function(e){
     const m=e&&e.data; if(!m||m.abj!=='img'||!m.src) return;
     close();
+    img.onerror=function(){ if(m.fallback&&img.getAttribute('src')!==m.fallback) img.src=m.fallback; };
     img.src=m.src; img.alt=m.alt||''; cap.textContent=m.alt||'';
     if(m.answers&&m.answers.length){
       ans.style.display=''; ans.textContent='Show the answers';

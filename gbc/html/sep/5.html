@@ -69,8 +69,8 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
 <a class="hot" href="https://www.edmondshoney.com.au/" target="_blank" rel="noopener" title="edmondshoney.com.au" aria-label="Link: edmondshoney.com.au" style="left:348.3px;top:234.5px;width:257.2px;height:67.1px"></a>
 <a class="hot" href="https://meleebee-and-co.myshopify.com/" target="_blank" rel="noopener" title="meleebee-and-co.myshopify.com" aria-label="Link: meleebee-and-co.myshopify.com" style="left:616.9px;top:289.2px;width:258.3px;height:26.2px"></a>
 <a class="hot" href="https://meleebee-and-co.myshopify.com/" target="_blank" rel="noopener" title="meleebee-and-co.myshopify.com" aria-label="Link: meleebee-and-co.myshopify.com" style="left:616.9px;top:234.5px;width:258.3px;height:74.0px"></a>
-<a class="hot" href="https://geelongbeekeepersclub.org.au/edit/enews/NATHAN%20W.JPG" target="_blank" rel="noopener" title="geelongbeekeepersclub.org.au/edit/enews/NATHAN%20W.JPG" aria-label="Link: geelongbeekeepersclub.org.au/edit/enews/NATHAN%20W.JPG" style="left:755.8px;top:430.3px;width:119.5px;height:159.3px"></a>
-<a class="hot" href="https://geelongbeekeepersclub.org.au/edit/logos/BRB-LOGO.PNG" target="_blank" rel="noopener" title="geelongbeekeepersclub.org.au/edit/logos/BRB-LOGO.PNG" aria-label="Link: geelongbeekeepersclub.org.au/edit/logos/BRB-LOGO.PNG" style="left:755.8px;top:1189.4px;width:119.5px;height:93.3px"></a>
+<a class="zoom" href="../../assets/sep/img/p05-1.jpg" target="_blank" rel="noopener" data-src="assets/sep/img/p05-1.jpg" data-alt="Nathan%20W" data-w="196" data-h="261" data-remote="https://geelongbeekeepersclub.org.au/edit/enews/NATHAN%20W.JPG" title="Click to enlarge" aria-label="Enlarge: Nathan%20W" style="left:755.8px;top:430.3px;width:119.5px;height:159.3px"></a>
+<a class="zoom" href="../../assets/sep/img/p05-2.jpg" target="_blank" rel="noopener" data-src="assets/sep/img/p05-2.jpg" data-alt="Brb Logo" data-w="225" data-h="176" data-remote="https://geelongbeekeepersclub.org.au/edit/logos/BRB-LOGO.PNG" title="Click to enlarge" aria-label="Enlarge: Brb Logo" style="left:755.8px;top:1189.4px;width:119.5px;height:93.3px"></a>
 </div></div></div>
 <script>
 /* Fit each line to the width it occupied in the PDF: stretch the spaces on
@@ -142,6 +142,7 @@ document.addEventListener('click',function(e){
   if(window.parent && window.parent!==window){
     e.preventDefault();
     var m={abj:'img',src:a.getAttribute('data-src'),alt:a.getAttribute('data-alt')||'',w:+a.getAttribute('data-w')||0,h:+a.getAttribute('data-h')||0};
+    if(a.getAttribute('data-remote')){ m.fallback=m.src; m.src=a.getAttribute('data-remote'); }
     var ans=a.getAttribute('data-answers'); if(ans){ try{ m.answers=JSON.parse(ans); }catch(err){} }
     try{ window.parent.postMessage(m,'*'); }catch(err){ location.href=a.getAttribute('href'); }
   }

@@ -62,8 +62,8 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
 <p style="position:absolute;left:522.7px;top:941.6px;font-size:18.2px;white-space:nowrap" data-w="312.6"><span style="font-weight:700;color:#666666;font-family:Lato,'Proxima Nova','Segoe UI',Arial,sans-serif">Rob Pytellek from Bellarine Paella can</span></p>
 <p style="position:absolute;left:503.2px;top:965.5px;font-size:18.2px;white-space:nowrap" data-w="351.5"><span style="color:#666666;font-family:Lato,'Proxima Nova','Segoe UI',Arial,sans-serif">catering for your next event</span><span style="color:#666666;font-family:Lato,'Proxima Nova','Segoe UI',Arial,sans-serif">,</span><span style="color:#666666;font-family:Lato,'Proxima Nova','Segoe UI',Arial,sans-serif"> Contact Rob on</span></p>
 <p style="position:absolute;left:619.0px;top:989.4px;font-size:18.2px;white-space:nowrap" data-w="120.0"><span style="font-weight:700;color:#666666;font-family:Lato,'Proxima Nova','Segoe UI',Arial,sans-serif">0439 000 203</span></p>
-<a class="hot" href="https://geelongbeekeepersclub.org.au/edit/sponsor_supplier_images/APIARY%20SUPPLIES.PNG" target="_blank" rel="noopener" title="geelongbeekeepersclub.org.au/edit/sponsor_supplier_images/APIARY%20SUPPLIES.PNG" aria-label="Link: geelongbeekeepersclub.org.au/edit/sponsor_supplier_images/APIARY%20SUPPLIES.PNG" style="left:495.1px;top:601.0px;width:367.6px;height:26.2px"></a>
-<a class="hot" href="https://geelongbeekeepersclub.org.au/edit/sponsor_supplier_images/APIARY%20SUPPLIES.PNG" target="_blank" rel="noopener" title="geelongbeekeepersclub.org.au/edit/sponsor_supplier_images/APIARY%20SUPPLIES.PNG" aria-label="Link: geelongbeekeepersclub.org.au/edit/sponsor_supplier_images/APIARY%20SUPPLIES.PNG" style="left:495.1px;top:69.5px;width:367.6px;height:550.8px"></a>
+<a class="zoom" href="../../assets/jul/img/p27-1.jpg" target="_blank" rel="noopener" data-src="assets/jul/img/p27-1.jpg" data-alt="Apiary%20Supplies" data-w="479" data-h="719" data-remote="https://geelongbeekeepersclub.org.au/edit/sponsor_supplier_images/APIARY%20SUPPLIES.PNG" title="Click to enlarge" aria-label="Enlarge: Apiary%20Supplies" style="left:495.1px;top:601.0px;width:367.6px;height:26.2px"></a>
+<a class="zoom" href="../../assets/jul/img/p27-2.jpg" target="_blank" rel="noopener" data-src="assets/jul/img/p27-2.jpg" data-alt="Apiary%20Supplies" data-w="690" data-h="1034" data-remote="https://geelongbeekeepersclub.org.au/edit/sponsor_supplier_images/APIARY%20SUPPLIES.PNG" title="Click to enlarge" aria-label="Enlarge: Apiary%20Supplies" style="left:495.1px;top:69.5px;width:367.6px;height:550.8px"></a>
 </div></div></div>
 <script>
 /* Fit each line to the width it occupied in the PDF: stretch the spaces on
@@ -135,6 +135,7 @@ document.addEventListener('click',function(e){
   if(window.parent && window.parent!==window){
     e.preventDefault();
     var m={abj:'img',src:a.getAttribute('data-src'),alt:a.getAttribute('data-alt')||'',w:+a.getAttribute('data-w')||0,h:+a.getAttribute('data-h')||0};
+    if(a.getAttribute('data-remote')){ m.fallback=m.src; m.src=a.getAttribute('data-remote'); }
     var ans=a.getAttribute('data-answers'); if(ans){ try{ m.answers=JSON.parse(ans); }catch(err){} }
     try{ window.parent.postMessage(m,'*'); }catch(err){ location.href=a.getAttribute('href'); }
   }

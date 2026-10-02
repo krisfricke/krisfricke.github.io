@@ -72,7 +72,7 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
 <p style="position:absolute;left:78.6px;top:1190.9px;font-size:18.2px;white-space:nowrap" data-w="749.3"><span style="color:#666666;font-family:Lato,'Proxima Nova','Segoe UI',Arial,sans-serif">Formic acid is stronger as it will kill mites under the capping but is cruel as it burns the wounds</span></p>
 <p style="position:absolute;left:78.6px;top:1214.8px;font-size:18.2px;white-space:nowrap" data-w="789.9" data-j="1"><span style="color:#666666;font-family:Lato,'Proxima Nova','Segoe UI',Arial,sans-serif">caused by the developing Varroa in the cells and these bees cluster outside the bee hive and many</span></p>
 <p style="position:absolute;left:78.6px;top:1238.6px;font-size:18.2px;white-space:nowrap" data-w="28.9"><span style="color:#666666;font-family:Lato,'Proxima Nova','Segoe UI',Arial,sans-serif">die</span><span style="color:#666666;font-family:Lato,'Proxima Nova','Segoe UI',Arial,sans-serif">.</span></p>
-<a class="hot" href="https://geelongbeekeepersclub.org.au/edit/enews/John_edmonds.jpg" target="_blank" rel="noopener" title="geelongbeekeepersclub.org.au/edit/enews/John_edmonds.jpg" aria-label="Link: geelongbeekeepersclub.org.au/edit/enews/John_edmonds.jpg" style="left:676.1px;top:123.0px;width:199.2px;height:236.7px"></a>
+<a class="zoom" href="../../assets/sep/img/p10-1.jpg" target="_blank" rel="noopener" data-src="assets/sep/img/p10-1.jpg" data-alt="John Edmonds" data-w="260" data-h="309" data-remote="https://geelongbeekeepersclub.org.au/edit/enews/John_edmonds.jpg" title="Click to enlarge" aria-label="Enlarge: John Edmonds" style="left:676.1px;top:123.0px;width:199.2px;height:236.7px"></a>
 </div></div></div>
 <script>
 /* Fit each line to the width it occupied in the PDF: stretch the spaces on
@@ -144,6 +144,7 @@ document.addEventListener('click',function(e){
   if(window.parent && window.parent!==window){
     e.preventDefault();
     var m={abj:'img',src:a.getAttribute('data-src'),alt:a.getAttribute('data-alt')||'',w:+a.getAttribute('data-w')||0,h:+a.getAttribute('data-h')||0};
+    if(a.getAttribute('data-remote')){ m.fallback=m.src; m.src=a.getAttribute('data-remote'); }
     var ans=a.getAttribute('data-answers'); if(ans){ try{ m.answers=JSON.parse(ans); }catch(err){} }
     try{ window.parent.postMessage(m,'*'); }catch(err){ location.href=a.getAttribute('href'); }
   }

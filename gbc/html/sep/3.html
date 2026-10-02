@@ -87,7 +87,7 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
 <a class="ixlink hot" href="../../#/page/sep/26" target="_top" title="Go to page 26" style="left:585.1px;top:412.1px;width:159.3px;height:153.6px"></a>
 <a class="ixlink hot" href="../../#/page/sep/28" target="_top" title="Go to page 28" style="left:750.1px;top:552.1px;width:157.2px;height:13.7px"></a>
 <a class="ixlink hot" href="../../#/page/sep/28" target="_top" title="Go to page 28" style="left:750.1px;top:412.1px;width:157.2px;height:153.6px"></a>
-<a class="hot" href="https://geelongbeekeepersclub.org.au/edit/guest_speaker_images/MICHAEL%20MCLEAN%20-KERRIMUIR%20PS.JPG" target="_blank" rel="noopener" title="geelongbeekeepersclub.org.au/edit/guest_speaker_images/MICHAEL%20MCLEAN%20-KERRIMUIR%20PS.JPG" aria-label="Link: geelongbeekeepersclub.org.au/edit/guest_speaker_images/MICHAEL%20MCLEAN%20-KERRIMUIR%20PS.JPG" style="left:715.9px;top:861.6px;width:159.3px;height:206.0px"></a>
+<a class="zoom" href="../../assets/sep/img/p03-1.jpg" target="_blank" rel="noopener" data-src="assets/sep/img/p03-1.jpg" data-alt="Michael%20Mclean%20 Kerrimuir%20Ps" data-w="340" data-h="440" data-remote="https://geelongbeekeepersclub.org.au/edit/guest_speaker_images/MICHAEL%20MCLEAN%20-KERRIMUIR%20PS.JPG" title="Click to enlarge" aria-label="Enlarge: Michael%20Mclean%20 Kerrimuir%20Ps" style="left:715.9px;top:861.6px;width:159.3px;height:206.0px"></a>
 </div></div></div>
 <script>
 /* Fit each line to the width it occupied in the PDF: stretch the spaces on
@@ -159,6 +159,7 @@ document.addEventListener('click',function(e){
   if(window.parent && window.parent!==window){
     e.preventDefault();
     var m={abj:'img',src:a.getAttribute('data-src'),alt:a.getAttribute('data-alt')||'',w:+a.getAttribute('data-w')||0,h:+a.getAttribute('data-h')||0};
+    if(a.getAttribute('data-remote')){ m.fallback=m.src; m.src=a.getAttribute('data-remote'); }
     var ans=a.getAttribute('data-answers'); if(ans){ try{ m.answers=JSON.parse(ans); }catch(err){} }
     try{ window.parent.postMessage(m,'*'); }catch(err){ location.href=a.getAttribute('href'); }
   }

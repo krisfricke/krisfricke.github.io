@@ -66,7 +66,7 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
 <p style="position:absolute;left:78.6px;top:1075.8px;font-size:34.1px;white-space:nowrap" data-w="180.9"><span style="font-style:italic;color:#993300;font-family:Lato,'Proxima Nova','Segoe UI',Arial,sans-serif">The Waggle</span></p>
 <p style="position:absolute;left:78.6px;top:1117.1px;font-size:25.0px;white-space:nowrap" data-w="410.4" data-j="1"><span style="color:#666666;font-family:Lato,'Proxima Nova','Segoe UI',Arial,sans-serif">Have a look at the Ballarat Regional</span></p>
 <p style="position:absolute;left:78.6px;top:1144.4px;font-size:25.0px;white-space:nowrap" data-w="272.6"><span style="color:#666666;font-family:Lato,'Proxima Nova','Segoe UI',Arial,sans-serif">Beekeepers&#160;Newsletter</span></p>
-<a class="hot" href="https://geelongbeekeepersclub.org.au/edit/logos/BRB-LOGO.PNG" target="_blank" rel="noopener" title="geelongbeekeepersclub.org.au/edit/logos/BRB-LOGO.PNG" aria-label="Link: geelongbeekeepersclub.org.au/edit/logos/BRB-LOGO.PNG" style="left:715.9px;top:1115.4px;width:159.3px;height:124.1px"></a>
+<a class="zoom" href="../../assets/aug/img/p23-1.jpg" target="_blank" rel="noopener" data-src="assets/aug/img/p23-1.jpg" data-alt="Brb Logo" data-w="220" data-h="172" data-remote="https://geelongbeekeepersclub.org.au/edit/logos/BRB-LOGO.PNG" title="Click to enlarge" aria-label="Enlarge: Brb Logo" style="left:715.9px;top:1115.4px;width:159.3px;height:124.1px"></a>
 </div></div></div>
 <script>
 /* Fit each line to the width it occupied in the PDF: stretch the spaces on
@@ -138,6 +138,7 @@ document.addEventListener('click',function(e){
   if(window.parent && window.parent!==window){
     e.preventDefault();
     var m={abj:'img',src:a.getAttribute('data-src'),alt:a.getAttribute('data-alt')||'',w:+a.getAttribute('data-w')||0,h:+a.getAttribute('data-h')||0};
+    if(a.getAttribute('data-remote')){ m.fallback=m.src; m.src=a.getAttribute('data-remote'); }
     var ans=a.getAttribute('data-answers'); if(ans){ try{ m.answers=JSON.parse(ans); }catch(err){} }
     try{ window.parent.postMessage(m,'*'); }catch(err){ location.href=a.getAttribute('href'); }
   }

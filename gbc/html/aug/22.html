@@ -85,7 +85,7 @@ a.adlink:hover{background:rgba(249,197,0,.13);box-shadow:0 0 0 2px rgba(249,197,
 <p style="position:absolute;left:597.3px;top:1082.9px;font-size:13.7px;white-space:nowrap" data-w="61.2"><span style="color:#666666;font-family:Lato,'Proxima Nova','Segoe UI',Arial,sans-serif">resistance</span></p>
 <p style="position:absolute;left:80.8px;top:1110.3px;font-size:13.7px;white-space:nowrap" data-w="134.6"><span style="color:#666666;font-family:Lato,'Proxima Nova','Segoe UI',Arial,sans-serif">December</span><span style="color:#666666;font-family:Lato,'Proxima Nova','Segoe UI',Arial,sans-serif"> </span><span style="color:#666666;font-family:Lato,'Proxima Nova','Segoe UI',Arial,sans-serif">2026</span><span style="color:#666666;font-family:Lato,'Proxima Nova','Segoe UI',Arial,sans-serif"> </span><span style="color:#666666;font-family:Lato,'Proxima Nova','Segoe UI',Arial,sans-serif">TBA</span></p>
 <p style="position:absolute;left:597.3px;top:1110.3px;font-size:13.7px;white-space:nowrap" data-w="220.5"><span style="color:#666666;font-family:Lato,'Proxima Nova','Segoe UI',Arial,sans-serif">Varroa Module 11 Surviving the wave&#160;</span></p>
-<a class="hot" href="https://geelongbeekeepersclub.org.au/images/BEE.PNG" target="_blank" rel="noopener" title="geelongbeekeepersclub.org.au/images/BEE.PNG" aria-label="Link: geelongbeekeepersclub.org.au/images/BEE.PNG" style="left:795.6px;top:123.0px;width:79.7px;height:86.5px"></a>
+<a class="zoom" href="../../assets/aug/img/p22-1.jpg" target="_blank" rel="noopener" data-src="assets/aug/img/p22-1.jpg" data-alt="Bee" data-w="35" data-h="38" data-remote="https://geelongbeekeepersclub.org.au/images/BEE.PNG" title="Click to enlarge" aria-label="Enlarge: Bee" style="left:795.6px;top:123.0px;width:79.7px;height:86.5px"></a>
 </div></div></div>
 <script>
 /* Fit each line to the width it occupied in the PDF: stretch the spaces on
@@ -157,6 +157,7 @@ document.addEventListener('click',function(e){
   if(window.parent && window.parent!==window){
     e.preventDefault();
     var m={abj:'img',src:a.getAttribute('data-src'),alt:a.getAttribute('data-alt')||'',w:+a.getAttribute('data-w')||0,h:+a.getAttribute('data-h')||0};
+    if(a.getAttribute('data-remote')){ m.fallback=m.src; m.src=a.getAttribute('data-remote'); }
     var ans=a.getAttribute('data-answers'); if(ans){ try{ m.answers=JSON.parse(ans); }catch(err){} }
     try{ window.parent.postMessage(m,'*'); }catch(err){ location.href=a.getAttribute('href'); }
   }
