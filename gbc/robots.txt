@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://krisfricke.github.io/gbc/sitemap.xml
