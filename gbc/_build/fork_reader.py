@@ -29,10 +29,10 @@ COLLECTIONS = {
         issues=[('jul', 'July 2026', '2026-07 Newsletter', 28), ('aug', 'August 2026', '2026-08 Newsletter', 30),
                 ('sep', 'September 2026', '2026-09 Newsletter', 32)],
         header='reader', west_what='newsletter',
-        ext=[('gen', 'general/'), ('abj', '../abj/')]),
+        ext=[('gen', 'beekeeping/'), ('abj', '../abj/')]),
     'gen': dict(
         key='gen', name='GBC website resources', title='Geelong Beekeepers Club · General Beekeeping',
-        reader_url='https://krisfricke.github.io/gbc/general/',
+        reader_url='https://krisfricke.github.io/gbc/beekeeping/',
         issues=[('gen', 'General Beekeeping', 'Resources collection', None)],      # page count read from the build
         header='site', west_what='collection',
         ext=[('news', '../'), ('abj', '../../abj/')]),
@@ -313,7 +313,7 @@ def main(src, dst, key):
             '<a class="mast" href="#" onclick="gotoCover();return false" title="Geelong Beekeepers Club Newsletter"><img src="assets/gbc_logo.png" alt="Geelong Beekeepers Club Inc."></a>')
         sub('.mast img{height:53px;display:block;margin:0}', '.mast img{height:44px;display:block;margin:7px 0 0 10px;border-radius:4px}')
         sub('<a class="t sub" href="https://vicbeekeepers.com.au/join-us" target="_blank" rel="noopener">Subscribe</a>',
-            '<a class="t" href="general/index.html" title="Articles, videos and documents from the club website">Resources</a>\n'
+            '<a class="t" href="beekeeping/index.html" title="Articles, videos and documents from the club website">Resources</a>\n'
             '    <a class="t sub" href="https://geelongbeekeepersclub.org.au/" target="_blank" rel="noopener">Join the club</a>')
     else:
         s = re.sub(r'<div class="chrome">.*?</div>\n</div>\n', SITE_HEADER % dict(title=cfg['title'], site=SITE) + '\n', s, count=1, flags=re.S)

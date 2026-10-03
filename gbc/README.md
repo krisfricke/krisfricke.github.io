@@ -18,7 +18,7 @@ web host (GitHub Pages works: repository root = this folder).
     article/<slug>/        text version of each item (crawlable, "Read as text")
     article/index.html     every item, by issue
     fonts/                 Lato (open licence) stands in for the website's Proxima Nova
-    general/               the General Beekeeping resources collection, same reader (see general/README.md)
+    beekeeping/            the General Beekeeping resources collection, same reader (see beekeeping/README.md)
     print.html             print view: print.html#/<issue> for a whole issue, #/<issue>/<from>-<to> for an article
     sitemap.xml, robots.txt
     _build/                the build scripts and the article catalogue (ignored by GitHub Pages)
@@ -52,7 +52,7 @@ Journal; three toggles at the top of a lane switch each collection on or off. Th
 expected at `../abj/` (true on krisfricke.github.io).
 
 The Australian Bee Journal collection is currently switched off (`const SHOW_ABJ=false;` in
-index.html, general/index.html and _build/fork_reader.py): its toggle is hidden and its articles are
+index.html, beekeeping/index.html and _build/fork_reader.py): its toggle is hidden and its articles are
 not mixed in. Set it to `true` in all three to bring it back; nothing else needs changing.
 
 Tags roll up automatically: the browse-by-topic panel lists every tag in use, and flowering plants
