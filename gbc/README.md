@@ -51,6 +51,10 @@ Topic and author lanes can also draw on the General Beekeeping collection and th
 Journal; three toggles at the top of a lane switch each collection on or off. The ABJ pages are
 expected at `../abj/` (true on krisfricke.github.io).
 
+The Australian Bee Journal collection is currently switched off (`const SHOW_ABJ=false;` in
+index.html, general/index.html and _build/fork_reader.py): its toggle is hidden and its articles are
+not mixed in. Set it to `true` in all three to bring it back; nothing else needs changing.
+
 Tags roll up automatically: the browse-by-topic panel lists every tag in use, and flowering plants
 (the `FLORA` list in index.html) sit together under "Flora". Authors are split on commas and filed
 by surname; organisations file under their own first word.

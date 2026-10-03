@@ -186,8 +186,12 @@ CROSS_JS = r'''
 const EXT=__EXT__;
 const HOME=__HOME__;
 const SRCKEY='gbc_srcs_v1';
+/* The Australian Bee Journal collection is switched off for now: its toggle is hidden and none of its
+   articles are mixed into the topic and author lanes. Everything else is intact - set SHOW_ABJ to true
+   to bring the toggle and the articles straight back. */
+const SHOW_ABJ=false;
 let SRCS=(function(){ try{ const v=JSON.parse(localStorage.getItem(SRCKEY)); if(v&&typeof v==='object') return v; }catch(e){} return {gen:true,news:true,abj:true}; })();
-function srcOn(k){ return k===HOME || SRCS[k]!==false; }
+function srcOn(k){ if(k==='abj'&&!SHOW_ABJ) return false; return k===HOME || SRCS[k]!==false; }
 function toggleSrc(k){ SRCS[k]=!srcOn(k); try{ localStorage.setItem(SRCKEY,JSON.stringify(SRCS)); }catch(e){}
   const h=location.hash; if(h.startsWith('#/topic/')) openTopic(decodeURIComponent(h.slice(8))); else if(h.startsWith('#/author/')) openAuthor(decodeURIComponent(h.slice(9))); }
 function extIssue(src,id){ const c=EXT.find(x=>x.key===src); return c && c.issues.find(i=>i.id===id); }
@@ -204,7 +208,7 @@ function onPageX(a,p){
 }
 function srcBar(){
   const names={gen:'GBC website resources',news:'GBC newsletter',abj:'Australian Bee Journal'};
-  const order=['gen','news','abj'];
+  const order=['gen','news'].concat(SHOW_ABJ?['abj']:[]);
   return '<div class="srcs"><span class="srcl">Show articles from</span>'+order.map(function(k){
     const home=(k===HOME); const on=srcOn(k);
     return '<button class="srcb'+(on?' on':'')+(home?' home':'')+'" role="switch" aria-checked="'+(on?'true':'false')+'" '+(home?'disabled title="This collection is always shown"':'onclick="toggleSrc(\''+k+'\')" title="'+(on?'Hide':'Show')+' articles from the '+names[k]+'"')+'>'+

@@ -10,6 +10,8 @@ the end tie it to the newsletter reader and the Varroa management page.
 Topic and author lanes draw on three collections, with toggles at the top of the lane:
 GBC website resources · GBC newsletter · Australian Bee Journal. The same toggles exist in the
 newsletter reader, so a tag opened there shows the resources too.
+The Australian Bee Journal toggle is currently hidden and its articles left out (`SHOW_ABJ=false`;
+see ../README.md).
 
 ## Layout
 
