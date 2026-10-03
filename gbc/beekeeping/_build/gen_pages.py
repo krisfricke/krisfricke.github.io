@@ -74,6 +74,9 @@ figcaption{font-size:8.4pt;color:#777;margin-top:1mm;font-style:italic}
 .step .pics img{height:30mm;width:auto;display:block;border-radius:2pt}
 .step .pics img.w{height:22mm}
 .step .pics.col{flex-direction:column;width:46mm;gap:2.5mm}.step .pics.col img,.step .pics.col img.w{width:46mm;height:auto}
+.step.wrap{display:block}.step.wrap .row{display:flex;gap:5mm;align-items:flex-start}
+.step .under{display:flex;justify-content:center;align-items:flex-end;gap:14mm;padding-left:16mm;margin-top:5mm}
+.step .under img{width:70mm;height:auto;display:block}
 .poster{text-align:center}
 .poster img{max-width:100%;max-height:228mm;display:block;margin:0 auto}
 .poster.land img{max-height:158mm}
@@ -154,6 +157,10 @@ def linkify(text, links, internal):
     out = re.sub(r'(?<!href=")(?<!">)(https?://[^\s<)]+)', lambda m: '<a href="%s">%s</a>' % (m.group(1), m.group(1)), out)
     return out
 
+# Diagrams set side by side in a row under a step's text instead of stacked beside it, at the same
+# scale with their bottoms aligned so they compare directly: (article slug, step number) -> picture files.
+UNDER = {('winter-packdown', '11'): ['WINTER_PACKDOWN_11B.PNG', 'WINTER_PACKDOWN_11C.PNG']}
+
 def compose_article(reader, item, internal):
     raw = load_raw(item['slug'])
     text, meta = raw['text'], raw['meta']
@@ -207,14 +214,20 @@ def compose_article(reader, item, internal):
                 for g in grp:
                     parts = g.split('|'); n = parts[0].split(':', 1)[1]; t = parts[1]; pics = parts[2].split(',') if len(parts) > 2 else []
                     ph = ''; wide = 0
+                    under = [u.lower() for u in UNDER.get((item['slug'], n.strip()), [])]
+                    uh = ''
                     for pn in pics:
                         p = pic(reader, item['slug'], pn.strip())
-                        if p:
+                        if p and pn.strip().lower() in under:
+                            uh += '<img src="%s">' % img_uri(p); wide += 1
+                            for q in list(pending_imgs):
+                                if os.path.basename(urllib.parse.unquote(q[0])).lower() == pn.strip().lower(): pending_imgs.remove(q)
+                        elif p:
                             im = Image.open(p); ph += '<img class="%s" src="%s">' % ('w' if im.width > im.height else '', img_uri(p)); wide += im.width > im.height
                             for q in list(pending_imgs):          # a step's picture is placed here, not as a lead figure
                                 if os.path.basename(urllib.parse.unquote(q[0])).lower() == pn.strip().lower(): pending_imgs.remove(q)
                     col = ' col' if wide else ''                 # a step with a diagram among its pictures stacks them beside the text
-                    h += '<div class="step"><div class="n">%s</div><div class="txt">%s</div>%s</div>' % (n, linkify(t, links, internal), ('<div class="pics%s">%s</div>' % (col, ph)) if ph else '')
+                    h += '<div class="step%s">%s<div class="n">%s</div><div class="txt">%s</div>%s%s</div>' % (' wrap' if uh else '', '<div class="row">' if uh else '', n, linkify(t, links, internal), ('<div class="pics%s">%s</div>' % (col, ph)) if ph else '', ('</div><div class="under">%s</div>' % uh) if uh else '')
                 body.append(h + '</div>')
             elif tag == 'TABLE':
                 rows = [g.split(':', 1)[1].split('|') for g in grp]
