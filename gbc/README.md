@@ -18,6 +18,7 @@ web host (GitHub Pages works: repository root = this folder).
     article/<slug>/        text version of each item (crawlable, "Read as text")
     article/index.html     every item, by issue
     fonts/                 Lato (open licence) stands in for the website's Proxima Nova
+    print.html             print view: print.html#/<issue> for a whole issue, #/<issue>/<from>-<to> for an article
     sitemap.xml, robots.txt
     _build/                the build scripts and the article catalogue (ignored by GitHub Pages)
 

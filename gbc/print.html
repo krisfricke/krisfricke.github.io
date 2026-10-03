@@ -1,0 +1,48 @@
+<!doctype html><html lang="en-AU"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Print — Geelong Beekeepers Club Newsletter</title>
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
+<style>
+@page{size:A4;margin:0}
+html,body{margin:0;background:#6d6a60;font:14px/1.4 system-ui,sans-serif;color:#222}
+.bar{position:fixed;top:0;left:0;right:0;z-index:5;background:#111;color:#fff;padding:0 16px;height:48px;display:flex;gap:16px;align-items:center}
+.bar .what{font-weight:700;color:#f7c20b}.bar .n{color:#bbb;font-size:12.5px}.bar .sp{flex:1}
+.bar button{background:#f7c20b;color:#111;border:none;border-radius:18px;padding:7px 18px;font-weight:700;cursor:pointer;font:inherit;font-weight:700}
+.bar button:hover{background:#ffd733}.bar a{color:#ddd;text-decoration:none;font-size:13px}.bar a:hover{color:#fff;text-decoration:underline}
+.stack{padding:66px 0 40px;display:flex;flex-direction:column;align-items:center;gap:14px}
+.sheet{width:210mm;height:297mm;background:#fff;box-shadow:0 8px 28px rgba(0,0,0,.45);overflow:hidden;position:relative}
+.sheet iframe{width:210mm;height:297mm;border:0;display:block}
+.none{color:#fff;padding:100px 20px;text-align:center}
+@media print{.bar{display:none}html,body{background:#fff}.stack{padding:0;gap:0;display:block}
+ .sheet{box-shadow:none;page-break-after:always;break-after:page;margin:0}.sheet:last-child{page-break-after:auto;break-after:auto}}
+</style></head><body>
+<div class="bar"><span class="what" id="what">Geelong Beekeepers Club Newsletter</span><span class="n" id="n"></span><span class="sp"></span>
+<button onclick="window.print()">Print</button><a id="back" href="index.html">‹ back to the reader</a></div>
+<div class="stack" id="stack"></div>
+<script>
+const ISS={"jul": {"label": "July 2026", "n": 28}, "aug": {"label": "August 2026", "n": 30}, "sep": {"label": "September 2026", "n": 32}};
+(function(){
+  const m=/^#\/([a-z0-9]+)(?:\/(\d+)(?:-(\d+))?)?/.exec(location.hash||'');
+  const stack=document.getElementById('stack');
+  if(!m||!ISS[m[1]]){ stack.innerHTML='<div class="none">Nothing to print: open this page from a "Print" link in the reader.</div>'; return; }
+  const iss=m[1], info=ISS[iss];
+  let a=m[2]?parseInt(m[2],10):1, b=m[3]?parseInt(m[3],10):(m[2]?a:info.n);
+  a=Math.max(1,Math.min(info.n,a)); b=Math.max(a,Math.min(info.n,b));
+  const what=info.label+(m[2]?(a===b?' · page '+a:' · pages '+a+'–'+b):' · the whole issue');
+  document.getElementById('what').textContent=what;
+  document.getElementById('n').textContent=(b-a+1)+' sheet'+(b-a?'s':'')+' of A4';
+  document.getElementById('back').href='index.html#/page/'+iss+'/'+a;
+  document.title='GBC Newsletter '+info.label+(m[2]?' pp'+a+'-'+b:'');
+  let left=b-a+1, done=false;
+  function ready(){ if(--left>0||done) return; done=true;
+    /* give the pages a moment to draw their fonts, then offer the dialog */
+    setTimeout(function(){ try{ window.print(); }catch(e){} },900); }
+  for(let p=a;p<=b;p++){
+    const d=document.createElement('div'); d.className='sheet';
+    const f=document.createElement('iframe'); f.title=info.label+' page '+p; f.src='html/'+iss+'/'+p+'.html';
+    f.addEventListener('load',ready); f.addEventListener('error',ready);
+    d.appendChild(f); stack.appendChild(d);
+  }
+  /* pages ask how big to draw themselves: at printing size, which is their natural size */
+  window.addEventListener('message',function(e){ const q=e.data; if(q&&q.abj==='hello'&&e.source){ try{ e.source.postMessage({abj:'zoom',k:1},'*'); }catch(err){} } });
+})();
+</script></body></html>

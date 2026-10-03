@@ -19,6 +19,64 @@ READER_URL = 'https://krisfricke.github.io/gbc/'        # where the mock-up will
 ISSUES = [('jul', 'July 2026', '2026-07 Newsletter', 28), ('aug', 'August 2026', '2026-08 Newsletter', 30),
           ('sep', 'September 2026', '2026-09 Newsletter', 32)]
 
+
+def write_print_page(dst):
+    """print.html#/<issue>[/<from>-<to>] lays the live pages out one per A4 sheet and opens the print
+    dialog once they have all loaded. The page documents are already A4 at scale 1, so each one
+    lands on exactly one sheet; the bar at the top is not printed."""
+    iss = {iid: {'label': label, 'n': n} for iid, label, vol, n in ISSUES}
+    page = """<!doctype html><html lang="en-AU"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Print \u2014 Geelong Beekeepers Club Newsletter</title>
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
+<style>
+@page{size:A4;margin:0}
+html,body{margin:0;background:#6d6a60;font:14px/1.4 system-ui,sans-serif;color:#222}
+.bar{position:fixed;top:0;left:0;right:0;z-index:5;background:#111;color:#fff;padding:0 16px;height:48px;display:flex;gap:16px;align-items:center}
+.bar .what{font-weight:700;color:#f7c20b}.bar .n{color:#bbb;font-size:12.5px}.bar .sp{flex:1}
+.bar button{background:#f7c20b;color:#111;border:none;border-radius:18px;padding:7px 18px;font-weight:700;cursor:pointer;font:inherit;font-weight:700}
+.bar button:hover{background:#ffd733}.bar a{color:#ddd;text-decoration:none;font-size:13px}.bar a:hover{color:#fff;text-decoration:underline}
+.stack{padding:66px 0 40px;display:flex;flex-direction:column;align-items:center;gap:14px}
+.sheet{width:210mm;height:297mm;background:#fff;box-shadow:0 8px 28px rgba(0,0,0,.45);overflow:hidden;position:relative}
+.sheet iframe{width:210mm;height:297mm;border:0;display:block}
+.none{color:#fff;padding:100px 20px;text-align:center}
+@media print{.bar{display:none}html,body{background:#fff}.stack{padding:0;gap:0;display:block}
+ .sheet{box-shadow:none;page-break-after:always;break-after:page;margin:0}.sheet:last-child{page-break-after:auto;break-after:auto}}
+</style></head><body>
+<div class="bar"><span class="what" id="what">Geelong Beekeepers Club Newsletter</span><span class="n" id="n"></span><span class="sp"></span>
+<button onclick="window.print()">Print</button><a id="back" href="index.html">\u2039 back to the reader</a></div>
+<div class="stack" id="stack"></div>
+<script>
+const ISS=%s;
+(function(){
+  const m=/^#\\/([a-z0-9]+)(?:\\/(\\d+)(?:-(\\d+))?)?/.exec(location.hash||'');
+  const stack=document.getElementById('stack');
+  if(!m||!ISS[m[1]]){ stack.innerHTML='<div class="none">Nothing to print: open this page from a "Print" link in the reader.</div>'; return; }
+  const iss=m[1], info=ISS[iss];
+  let a=m[2]?parseInt(m[2],10):1, b=m[3]?parseInt(m[3],10):(m[2]?a:info.n);
+  a=Math.max(1,Math.min(info.n,a)); b=Math.max(a,Math.min(info.n,b));
+  const what=info.label+(m[2]?(a===b?' \u00b7 page '+a:' \u00b7 pages '+a+'\u2013'+b):' \u00b7 the whole issue');
+  document.getElementById('what').textContent=what;
+  document.getElementById('n').textContent=(b-a+1)+' sheet'+(b-a?'s':'')+' of A4';
+  document.getElementById('back').href='index.html#/page/'+iss+'/'+a;
+  document.title='GBC Newsletter '+info.label+(m[2]?' pp'+a+'-'+b:'');
+  let left=b-a+1, done=false;
+  function ready(){ if(--left>0||done) return; done=true;
+    /* give the pages a moment to draw their fonts, then offer the dialog */
+    setTimeout(function(){ try{ window.print(); }catch(e){} },900); }
+  for(let p=a;p<=b;p++){
+    const d=document.createElement('div'); d.className='sheet';
+    const f=document.createElement('iframe'); f.title=info.label+' page '+p; f.src='html/'+iss+'/'+p+'.html';
+    f.addEventListener('load',ready); f.addEventListener('error',ready);
+    d.appendChild(f); stack.appendChild(d);
+  }
+  /* pages ask how big to draw themselves: at printing size, which is their natural size */
+  window.addEventListener('message',function(e){ const q=e.data; if(q&&q.abj==='hello'&&e.source){ try{ e.source.postMessage({abj:'zoom',k:1},'*'); }catch(err){} } });
+})();
+</script></body></html>
+""" % json.dumps(iss, ensure_ascii=False)
+    open(os.path.join(dst, 'print.html'), 'w', encoding='utf-8').write(page)
+    print('wrote', os.path.join(dst, 'print.html'))
+
 def main(src, dst):
     s = open(os.path.join(src, 'index.html'), encoding='utf-8').read()
     lines = s.split('\n')
@@ -128,6 +186,21 @@ def main(src, dst):
         "  gotoIndex();\n"
         "});\n"
         "window.addEventListener('hashchange',route);")
+
+
+    # ---- printing: a "Print this article" link in every rail, "Print this issue" under the cover ----
+    sub("    if(!a.cont) rail+='<button class=\"share\" onclick=\"copyArt(\\''+sg+'\\')\" title=\"Copy a link straight to this article\">Share this article</button>';",
+        "    if(!a.cont) rail+='<button class=\"share\" onclick=\"copyArt(\\''+sg+'\\')\" title=\"Copy a link straight to this article\">Share this article</button>';\n"
+        "    if(!a.cont) rail+='<a class=\"txt prt\" href=\"print.html#/'+a.issue+'/'+a.p+'-'+a.end+'\" target=\"_blank\" rel=\"noopener\" title=\"Open the pages of this article ready to print\">Print this article</a>';")
+    sub("'<div class=\"cap\">'+act.label+' · '+act.vol+'</div><div class=\"hint\">▼ scroll down to read — topics appear beside each page</div>';",
+        "'<div class=\"cap\">'+act.label+' · '+act.vol+'</div>'+\n"
+        "    '<a class=\"prt-issue\" href=\"print.html#/'+act.id+'\" target=\"_blank\" rel=\"noopener\" title=\"Open the whole issue ready to print\">&#x1F5A8;&#xFE0E; Print this issue</a>'+\n"
+        "    '<div class=\"hint\">▼ scroll down to read — topics appear beside each page</div>';")
+    sub('.rail .txt::before{content:"\\1F4C4  "}',
+        '.rail .txt::before{content:"\\1F4C4  "}\n.rail .txt.prt::before{content:"\\1F5A8\\FE0E  "}\n'
+        '.cov .prt-issue{display:inline-block;margin-top:12px;background:rgba(255,255,255,.7);border:1px solid #d9b84a;color:#3b2f1a;border-radius:18px;padding:7px 16px;font-size:12.5px;text-decoration:none}\n'
+        '.cov .prt-issue:hover{background:var(--gold);border-color:var(--gold);color:#111}')
+    write_print_page(dst)
 
     # ---- lightbox: a picture that fails to load from the website falls back to the copy in the reader ----
     sub("    img.src=m.src; img.alt=m.alt||''; cap.textContent=m.alt||'';",

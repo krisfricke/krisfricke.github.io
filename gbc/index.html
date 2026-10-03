@@ -372,6 +372,9 @@ body.tagging .rail{width:250px;flex:0 0 250px}
  border:1px solid #d9b84a;border-radius:14px;padding:5px 11px;font-size:11.5px;margin:0 0 7px;
  cursor:pointer;font-family:inherit;position:relative;text-decoration:none;box-sizing:border-box}
 .rail .txt::before{content:"\1F4C4  "}
+.rail .txt.prt::before{content:"\1F5A8\FE0E  "}
+.cov .prt-issue{display:inline-block;margin-top:12px;background:rgba(255,255,255,.7);border:1px solid #d9b84a;color:#3b2f1a;border-radius:18px;padding:7px 16px;font-size:12.5px;text-decoration:none}
+.cov .prt-issue:hover{background:var(--gold);border-color:var(--gold);color:#111}
 .rail .txt:hover{background:#8a6a12;color:#fff;border-color:#8a6a12}
 .plink{cursor:pointer;font-size:11px;opacity:.45;text-decoration:none}
 .plink:hover{opacity:1}
@@ -672,6 +675,7 @@ function readRail(act,n,on){
     const sg=a.slug||(a.issue+'-'+slugify(a.t));
     rail+='<div class="ti'+(a.cont?' co':'')+'">'+(a.cont?'↳ ':'')+esc(a.t)+span+'</div>';
     if(!a.cont) rail+='<button class="share" onclick="copyArt(\''+sg+'\')" title="Copy a link straight to this article">Share this article</button>';
+    if(!a.cont) rail+='<a class="txt prt" href="print.html#/'+a.issue+'/'+a.p+'-'+a.end+'" target="_blank" rel="noopener" title="Open the pages of this article ready to print">Print this article</a>';
     /* index.html spelled out, not just the folder: a file:// directory URL
        shows a listing instead of the page, so this keeps local testing honest */
     if(!a.cont && hasText(a)) rail+='<a class="txt" href="article/'+sg+'/index.html#text" onclick="openText(\''+sg+'\');return false" title="Read this article as reflowable text">Read as text</a>';
@@ -725,7 +729,9 @@ function build(){
   /* cover teasers: boxes over the hero picture that jump to the article (act.teasers, in % of the picture) */
   const tz=(act.teasers||[]).map(t=>'<a class="tz" href="#/page/'+act.id+'/'+t.p+'" title="Go to page '+t.p+'" aria-label="'+esc(t.name||('Go to page '+t.p))+'" style="left:'+t.l+'%;top:'+t.t+'%;width:'+t.w+'%;height:'+t.h+'%"></a>').join('');
   c.innerHTML='<div class="hint">▲ scroll up for past issues</div><div class="covpic"><img src="'+act.cover+'" alt="">'+tz+'</div>'+
-    '<div class="cap">'+act.label+' · '+act.vol+'</div><div class="hint">▼ scroll down to read — topics appear beside each page</div>';
+    '<div class="cap">'+act.label+' · '+act.vol+'</div>'+
+    '<a class="prt-issue" href="print.html#/'+act.id+'" target="_blank" rel="noopener" title="Open the whole issue ready to print">&#x1F5A8;&#xFE0E; Print this issue</a>'+
+    '<div class="hint">▼ scroll down to read — topics appear beside each page</div>';
   s.appendChild(c);
   c.querySelectorAll('a.tz').forEach(a=>{ a.onclick=function(e){ e.preventDefault(); jumpTo(act.id,parseInt(a.getAttribute('href').split('/').pop(),10)); }; });
   act.pages.forEach(function(file,idx){
