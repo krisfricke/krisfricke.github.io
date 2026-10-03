@@ -1,0 +1,36 @@
+{
+"page": "Hive components",
+"text": "General Hive components\nTypical LANGSTROTH hive\n\nThe hive body or boxes holds 8 to 10 frames that are standardized in length. The frames hold the foundation and the honeycomb that is built on it.\n\nHive equipment manufacturers will often produce bodies and supers that vary slightly. The differences between manufacturers are generally 2mm or less.\n\nA 'Queen Excluder' is a screen or mesh of a specific size that allows normal bees to pass through, but because the Queen is slightly larger, she can not pass through.\n\nPlacing a Queen Excluder between a brood box and a honey box means that while the brood box may contain both brood and honey, the honey box above the Queen excluder will only contain honey as the Queen can not get through to lay eggs.\n\nA 'Brood Box' and a 'Honey Box' from a construction point of view are the same physical box. The difference is just in the positioning and function within the hive.\n\nThe 'Brood Box(s)' at the bottom of the hive is where the Queen lays her eggs and the young bees (brood) are raised.\n\n'Honey Box(s)' (sometimes called 'Honey supers') at the top of the hive are where honey is stored. Honey is also stored in the lower Brood box, and if a Queen Excluder isn't used, some brood may be placed in the Honey boxes.\n\nThe following table includes approx interior dimensions.\n\nTABLE:Type|Depth|Interior length|Interior Width\nTABLE:10 Frame Deep body|240 mm|470 mm|370 mm\nTABLE:10 Frame Medium body/super|170 mm|470 mm|370 mm\nTABLE:10 Frame Shallow super / Ideal|144 mm|470 mm|370 mm\nTABLE:8 Frame Deep body|240 mm|470 mm|310 mm\nTABLE:8 Frame Medium body/super|170 mm|470 mm|310 mm\nTABLE:8 Frame Shallow super / Ideal|144 mm|470 mm|310 mm\n\nFLOW Hive\n\nFlow hives are essentially a 'honey extraction system' and are very similar to Langstroth hives as far as base and brood box is concerned. The big difference is in the honey boxes/super's and frames which are a unique design that allows the honey to be extracted by turning a tap and without the need of removing the frame from the hive.\n\nTo extract honey from traditional (Langstroth) hives, the frames are removed from the hive and the wax covering the honeycomb is cut/scraped off and then the honey is spun or dripped out.\n\nTo extract the honey from a Flow hive, a lever is inserted into the honey frame to temporarily shift the position of the plastic comb components allowing the honey to flow out a tube inserted at the bottom.\n\nThe advantage of this system is that the frames remain in the hive and there is minimum disruption to the bees. There are however a few disadvantages to this approach as well. It can be difficult to see if the comb is capped and the majority of the honey ready to extract. If the honey is thick or crystallised it will not flow out, and the frames will need to be removed from the hive and heated to enable the honey to flow.\n\nFlow hives are considerably more expensive than traditional Langstroth hives.\n\nApproximate costs",
+"meta": {
+"h": [
+"1:General Hive components",
+"3:Typical LANGSTROTH hive",
+"3:FLOW Hive"
+],
+"i": [
+[
+"https://geelongbeekeepersclub.org.au/edit/images/langstroth_hive.png",
+902,
+859,
+650,
+"image_right_50",
+"General Hive components"
+],
+[
+"https://geelongbeekeepersclub.org.au/edit/Images/FLOW_HIVE.PNG",
+1077,
+800,
+650,
+"image_right_50",
+"FLOW Hive"
+]
+],
+"f": [],
+"l": [
+[
+"Approximate costs",
+"PAGE:Hive components approximate costs"
+]
+]
+}
+}

@@ -1,0 +1,525 @@
+{
+"marks": {
+"10": [
+[
+45.4,
+400.0,
+549.9,
+687.5
+]
+],
+"28": [
+[
+45.4,
+114.9,
+549.9,
+402.4
+]
+],
+"44": [
+[
+45.4,
+336.0,
+549.9,
+623.5
+]
+],
+"45": [
+[
+45.4,
+159.7,
+549.9,
+447.2
+]
+],
+"46": [
+[
+45.4,
+127.7,
+549.9,
+415.2
+]
+],
+"47": [
+[
+45.4,
+127.7,
+549.9,
+415.2
+]
+],
+"48": [
+[
+45.4,
+127.7,
+549.9,
+415.2
+]
+],
+"49": [
+[
+45.4,
+155.3,
+549.9,
+442.8
+]
+],
+"50": [
+[
+45.4,
+127.7,
+549.9,
+415.2
+]
+],
+"51": [
+[
+45.4,
+127.7,
+549.9,
+415.2
+]
+],
+"52": [
+[
+45.4,
+127.7,
+549.9,
+415.2
+]
+],
+"53": [
+[
+45.4,
+127.7,
+549.9,
+415.2
+]
+],
+"54": [
+[
+45.4,
+127.7,
+549.9,
+415.2
+]
+],
+"55": [
+[
+45.4,
+127.7,
+549.9,
+415.2
+]
+],
+"56": [
+[
+45.4,
+127.7,
+549.9,
+415.2
+]
+],
+"57": [
+[
+45.4,
+127.7,
+549.9,
+415.2
+]
+],
+"58": [
+[
+45.4,
+127.7,
+549.9,
+415.2
+]
+]
+},
+"seq": [
+{
+"slug": "cover",
+"kind": "cover",
+"p": 1,
+"video": null,
+"doc": null
+},
+{
+"slug": "contents",
+"kind": "contents",
+"p": 2,
+"video": null,
+"doc": null
+},
+{
+"slug": "bee-swarms",
+"kind": "article",
+"p": 3,
+"video": null,
+"doc": null
+},
+{
+"slug": "swarm-removal",
+"kind": "article",
+"p": 4,
+"video": null,
+"doc": null
+},
+{
+"slug": "bees-and-water",
+"kind": "article",
+"p": 6,
+"video": null,
+"doc": null
+},
+{
+"slug": "biosecurity",
+"kind": "article",
+"p": 7,
+"video": null,
+"doc": null
+},
+{
+"slug": "latest-alcohol-wash-method",
+"kind": "article",
+"p": 10,
+"video": {
+"kind": "mp4",
+"src": "https://geelongbeekeepersclub.org.au/edit/movie/alcohol wash - tocal nsw dpi.mp4",
+"caption": "Alcohol wash for varroa \u2014 Tocal College / NSW DPI"
+},
+"doc": null
+},
+{
+"slug": "drones-101",
+"kind": "poster",
+"p": 11,
+"video": null,
+"doc": null
+},
+{
+"slug": "life-cycle-of-honey-bee",
+"kind": "poster",
+"p": 12,
+"video": null,
+"doc": null
+},
+{
+"slug": "equipment-hire",
+"kind": "article",
+"p": 13,
+"video": null,
+"doc": null
+},
+{
+"slug": "hive-components",
+"kind": "article",
+"p": 14,
+"video": null,
+"doc": null
+},
+{
+"slug": "hive-components-approximate-costs",
+"kind": "article",
+"p": 16,
+"video": null,
+"doc": null
+},
+{
+"slug": "hive-size-calculator",
+"kind": "article",
+"p": 17,
+"video": null,
+"doc": null
+},
+{
+"slug": "rearing-queens",
+"kind": "article",
+"p": 18,
+"video": null,
+"doc": null
+},
+{
+"slug": "register-as-a-beekeeper",
+"kind": "article",
+"p": 21,
+"video": null,
+"doc": null
+},
+{
+"slug": "requeening-an-aggressive-hive",
+"kind": "article",
+"p": 22,
+"video": null,
+"doc": null
+},
+{
+"slug": "spring-hive-development",
+"kind": "article",
+"p": 24,
+"video": {
+"kind": "yt",
+"id": "3EgHwABJV_k",
+"caption": "Pre-spring inspection"
+},
+"doc": null
+},
+{
+"slug": "7-ways-to-find-the-queen",
+"kind": "article",
+"p": 29,
+"video": null,
+"doc": null
+},
+{
+"slug": "swarm-control-nbu",
+"kind": "pdf",
+"p": 32,
+"video": null,
+"doc": null
+},
+{
+"slug": "shook-swarm-nbu",
+"kind": "pdf",
+"p": 33,
+"video": null,
+"doc": null
+},
+{
+"slug": "total-fire-ban-days",
+"kind": "article",
+"p": 38,
+"video": null,
+"doc": null
+},
+{
+"slug": "what-to-do-when-you-are-queenless",
+"kind": "article",
+"p": 39,
+"video": null,
+"doc": null
+},
+{
+"slug": "winter-packdown",
+"kind": "article",
+"p": 42,
+"video": {
+"kind": "yt",
+"id": "NbywGTsFYWs",
+"caption": "Winter pack down video"
+},
+"doc": null
+},
+{
+"slug": "flow-frame-cleaning",
+"kind": "video",
+"p": 45,
+"video": {
+"kind": "mp4",
+"src": "https://geelongbeekeepersclub.org.au/edit/movie/Flow-Frame_Cleaning.mp4"
+},
+"doc": null
+},
+{
+"slug": "varroa-life-cycle",
+"kind": "video",
+"p": 46,
+"video": {
+"kind": "mp4",
+"src": "https://geelongbeekeepersclub.org.au/edit/movie/varroa life cycle.mp4"
+},
+"doc": null
+},
+{
+"slug": "winter-welfare-for-your-bees",
+"kind": "video",
+"p": 47,
+"video": {
+"kind": "mp4",
+"src": "https://geelongbeekeepersclub.org.au/edit/movie/winter welfare for you bees.mp4"
+},
+"doc": null
+},
+{
+"slug": "vb-1",
+"kind": "video",
+"p": 48,
+"video": {
+"kind": "yt",
+"id": "YIg4qjJ8cH4"
+},
+"doc": null
+},
+{
+"slug": "vb-2",
+"kind": "video",
+"p": 49,
+"video": {
+"kind": "yt",
+"id": "TZNKg6Mx40c"
+},
+"doc": null
+},
+{
+"slug": "vb-3",
+"kind": "video",
+"p": 50,
+"video": {
+"kind": "yt",
+"id": "eE7wKn0uI74"
+},
+"doc": null
+},
+{
+"slug": "vb-4",
+"kind": "video",
+"p": 51,
+"video": {
+"kind": "mp4",
+"src": "https://geelongbeekeepersclub.org.au/edit/movie/alcohol wash - tocal nsw dpi.mp4"
+},
+"doc": null
+},
+{
+"slug": "vb-5",
+"kind": "video",
+"p": 52,
+"video": {
+"kind": "mp4",
+"src": "https://geelongbeekeepersclub.org.au/edit/movie/sugar shake - tocal nsw dpi.mp4"
+},
+"doc": null
+},
+{
+"slug": "vb-6",
+"kind": "video",
+"p": 53,
+"video": {
+"kind": "yt",
+"id": "i0SgirFgFck"
+},
+"doc": null
+},
+{
+"slug": "vb-7",
+"kind": "video",
+"p": 54,
+"video": {
+"kind": "yt",
+"id": "403G94pmewQ"
+},
+"doc": null
+},
+{
+"slug": "vb-8",
+"kind": "video",
+"p": 55,
+"video": {
+"kind": "mp4",
+"src": "https://geelongbeekeepersclub.org.au/edit/movie/cultural control of varroa.mp4"
+},
+"doc": null
+},
+{
+"slug": "vb-9",
+"kind": "video",
+"p": 56,
+"video": {
+"kind": "yt",
+"id": "p82pNZXwVv8"
+},
+"doc": null
+},
+{
+"slug": "vb-10",
+"kind": "video",
+"p": 57,
+"video": {
+"kind": "yt",
+"id": "YHUmK5SlzXU"
+},
+"doc": null
+},
+{
+"slug": "vb-11",
+"kind": "video",
+"p": 58,
+"video": {
+"kind": "yt",
+"id": "M8_8Svz9F5s"
+},
+"doc": null
+},
+{
+"slug": "doc-1",
+"kind": "doc",
+"p": 59,
+"video": null,
+"doc": "AgriFutures Plan Bee Breeding Manual 2025-09.pdf"
+},
+{
+"slug": "doc-2",
+"kind": "doc",
+"p": 60,
+"video": null,
+"doc": "Apiary Code of Practice.pdf"
+},
+{
+"slug": "doc-3",
+"kind": "doc",
+"p": 61,
+"video": null,
+"doc": "Australian Beekeeping Guide.pdf"
+},
+{
+"slug": "doc-4",
+"kind": "doc",
+"p": 62,
+"video": null,
+"doc": "Australian Honey Bee Industry Biosecurity Code of Practice 2025-10.pdf"
+},
+{
+"slug": "doc-5",
+"kind": "doc",
+"p": 63,
+"video": null,
+"doc": "Australian Honey Bee Industry Biosecurity Manual 2025-10.pdf"
+},
+{
+"slug": "doc-6",
+"kind": "doc",
+"p": 64,
+"video": null,
+"doc": "Bait Hives for Honey Bees - Tom Seeley.pdf"
+},
+{
+"slug": "doc-7",
+"kind": "doc",
+"p": 65,
+"video": null,
+"doc": "Bee Friendly Planting Guide.pdf"
+},
+{
+"slug": "doc-8",
+"kind": "doc",
+"p": 66,
+"video": null,
+"doc": "Fifty years among the bees - C C Millar.pdf"
+},
+{
+"slug": "doc-9",
+"kind": "doc",
+"p": 67,
+"video": null,
+"doc": "Queen cells in my hive.pdf"
+},
+{
+"slug": "elsewhere",
+"kind": "links",
+"p": 68,
+"video": null,
+"doc": null
+}
+]
+}

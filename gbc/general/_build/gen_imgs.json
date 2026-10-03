@@ -1,0 +1,386 @@
+{
+"8": [
+{
+"rect": [
+45.4,
+51.0,
+549.9,
+387.1
+],
+"src": "assets/src/biosecurity__BIOSECUIRTY.PNG.png",
+"alt": "Biosecurity",
+"w": 1000,
+"h": 666
+}
+],
+"11": [
+{
+"rect": [
+103.8,
+92.2,
+491.5,
+738.5
+],
+"src": "assets/src/drones-101__DRONES_101_VAA.png",
+"alt": "Drones 101",
+"w": 724,
+"h": 1207
+}
+],
+"14": [
+{
+"rect": [
+327.9,
+102.0,
+549.9,
+313.4
+],
+"src": "assets/src/hive-components__langstroth_hive.png",
+"alt": "Hive components",
+"w": 902,
+"h": 859
+}
+],
+"15": [
+{
+"rect": [
+327.9,
+72.5,
+549.9,
+237.4
+],
+"src": "assets/src/hive-components__FLOW_HIVE.png",
+"alt": "Hive components",
+"w": 1077,
+"h": 800
+}
+],
+"21": [
+{
+"rect": [
+327.9,
+102.0,
+549.9,
+398.0
+],
+"src": "assets/src/register-as-a-beekeeper__2025-02-08_HEIGHTS_HIVE_OPENING_IMG_9437_(PHOTO_SIMON_TAYLOR).png",
+"alt": "Register as a beekeeper",
+"w": 600,
+"h": 800
+}
+],
+"24": [
+{
+"rect": [
+327.9,
+425.5,
+549.9,
+571.9
+],
+"src": "assets/src/spring-hive-development__01.png",
+"alt": "Spring hive development",
+"w": 605,
+"h": 399
+}
+],
+"25": [
+{
+"rect": [
+327.9,
+156.9,
+549.9,
+289.7
+],
+"src": "assets/src/spring-hive-development__02.png",
+"alt": "Spring hive development",
+"w": 771,
+"h": 461
+},
+{
+"rect": [
+327.9,
+420.9,
+549.9,
+554.7
+],
+"src": "assets/src/spring-hive-development__03_SCATTERED_BROOD_-_AGING_QUEEN_-_INFECTION.png",
+"alt": "Spring hive development",
+"w": 702,
+"h": 423
+},
+{
+"rect": [
+327.9,
+639.3,
+549.9,
+770.6
+],
+"src": "assets/src/spring-hive-development__03_AFB_SUNKEN_PERFED_CAP.png",
+"alt": "Spring hive development",
+"w": 421,
+"h": 249
+}
+],
+"26": [
+{
+"rect": [
+45.4,
+131.6,
+267.4,
+264.5
+],
+"src": "assets/src/spring-hive-development__04_MATCHSTICK_TEST.png",
+"alt": "Spring hive development",
+"w": 421,
+"h": 252
+}
+],
+"27": [
+{
+"rect": [
+45.4,
+51.0,
+549.9,
+320.7
+],
+"src": "assets/src/spring-hive-development__05_WELL_DEVELOPED_BROOD_-_CASHMANBEES.png",
+"alt": "Spring hive development",
+"w": 1061,
+"h": 567
+},
+{
+"rect": [
+327.9,
+640.3,
+549.9,
+783.3
+],
+"src": "assets/src/spring-hive-development__05_WHEN_TO_ADD_SUPER.png",
+"alt": "Spring hive development",
+"w": 472,
+"h": 304
+}
+],
+"42": [
+{
+"rect": [
+486.4,
+211.9,
+549.9,
+297.0
+],
+"src": "assets/src/winter-packdown__WINTER_PACKDOWN_02.png",
+"alt": "Winter pack down guide",
+"w": 413,
+"h": 553
+},
+{
+"rect": [
+486.8,
+359.6,
+549.9,
+444.7
+],
+"src": "assets/src/winter-packdown__WINTER_PACKDOWN_04.png",
+"alt": "Winter pack down guide",
+"w": 435,
+"h": 586
+},
+{
+"rect": [
+486.2,
+465.0,
+549.9,
+550.1
+],
+"src": "assets/src/winter-packdown__WINTER_PACKDOWN_05.png",
+"alt": "Winter pack down guide",
+"w": 450,
+"h": 601
+},
+{
+"rect": [
+296.3,
+570.4,
+359.5,
+655.4
+],
+"src": "assets/src/winter-packdown__WINTER_PACKDOWN_06A.png",
+"alt": "Winter pack down guide",
+"w": 430,
+"h": 578
+},
+{
+"rect": [
+365.2,
+570.4,
+428.7,
+655.4
+],
+"src": "assets/src/winter-packdown__WINTER_PACKDOWN_06B.png",
+"alt": "Winter pack down guide",
+"w": 405,
+"h": 542
+},
+{
+"rect": [
+434.4,
+570.4,
+498.1,
+655.4
+],
+"src": "assets/src/winter-packdown__WINTER_PACKDOWN_06C.png",
+"alt": "Winter pack down guide",
+"w": 456,
+"h": 609
+},
+{
+"rect": [
+503.8,
+570.4,
+566.9,
+655.4
+],
+"src": "assets/src/winter-packdown__WINTER_PACKDOWN_06D.png",
+"alt": "Winter pack down guide",
+"w": 468,
+"h": 630
+}
+],
+"43": [
+{
+"rect": [
+486.3,
+60.0,
+549.9,
+145.1
+],
+"src": "assets/src/winter-packdown__WINTER_PACKDOWN_07.png",
+"alt": "Winter pack down guide",
+"w": 434,
+"h": 580
+},
+{
+"rect": [
+423.6,
+165.4,
+486.7,
+250.4
+],
+"src": "assets/src/winter-packdown__WINTER_PACKDOWN_08A.png",
+"alt": "Winter pack down guide",
+"w": 428,
+"h": 576
+},
+{
+"rect": [
+492.4,
+165.4,
+555.6,
+250.4
+],
+"src": "assets/src/winter-packdown__WINTER_PACKDOWN_08B.png",
+"alt": "Winter pack down guide",
+"w": 416,
+"h": 560
+},
+{
+"rect": [
+361.2,
+270.8,
+424.6,
+355.8
+],
+"src": "assets/src/winter-packdown__WINTER_PACKDOWN_09A.png",
+"alt": "Winter pack down guide",
+"w": 335,
+"h": 449
+},
+{
+"rect": [
+430.3,
+270.8,
+493.5,
+355.8
+],
+"src": "assets/src/winter-packdown__WINTER_PACKDOWN_09B.png",
+"alt": "Winter pack down guide",
+"w": 338,
+"h": 455
+},
+{
+"rect": [
+499.1,
+270.8,
+561.3,
+355.8
+],
+"src": "assets/src/winter-packdown__WINTER_PACKDOWN_09C.png",
+"alt": "Winter pack down guide",
+"w": 320,
+"h": 438
+},
+{
+"rect": [
+419.5,
+428.3,
+549.9,
+605.6
+],
+"src": "assets/src/winter-packdown__WINTER_PACKDOWN_11.png",
+"alt": "Winter pack down guide",
+"w": 539,
+"h": 733
+},
+{
+"rect": [
+419.5,
+612.7,
+549.9,
+665.8
+],
+"src": "assets/src/winter-packdown__WINTER_PACKDOWN_11B.png",
+"alt": "Winter pack down guide",
+"w": 799,
+"h": 325
+},
+{
+"rect": [
+419.5,
+672.9,
+549.9,
+768.7
+],
+"src": "assets/src/winter-packdown__WINTER_PACKDOWN_11C.png",
+"alt": "Winter pack down guide",
+"w": 777,
+"h": 571
+}
+],
+"44": [
+{
+"rect": [
+488.6,
+60.0,
+549.9,
+145.1
+],
+"src": "assets/src/winter-packdown__WINTER_PACKDOWN_12.png",
+"alt": "Winter pack down guide",
+"w": 432,
+"h": 599
+},
+{
+"rect": [
+486.5,
+175.8,
+549.9,
+260.8
+],
+"src": "assets/src/winter-packdown__WINTER_PACKDOWN_13.png",
+"alt": "Winter pack down guide",
+"w": 496,
+"h": 665
+}
+]
+}

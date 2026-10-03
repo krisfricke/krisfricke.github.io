@@ -1,0 +1,19 @@
+{
+"page": "Hive size calculator",
+"text": "Calculating the number of bees in your hive\n\nA couple of different methods. Disclaimer - neither are particularly accurate! and at best only an approximate guess.\n\nMethod 1 - Observe the bees seen leaving the hive\nLIST:On a reasonable foraging day, only two thirds of the bees are inside the hive.\nLIST:Count the number of bees leaving the hive in one minute.\nLIST:Arizona University researchers came up with this formula: N = (f / 0.0138) x 3 (where N = the approximate number of bees in the hive)\nLIST:f - foraging rate: count how many bees exit the hive in a single minute during peak foraging hours (typically mid-morning or early afternoon on a warm, clear day).\nLIST:The constant (0.0138) represents a mathematical factor based on typical foraging trip durations and flight frequencies per individual bee on an average day.\nLIST:The multiplier (3) accounts for the general rule of thumb that actively foraging field bees make up roughly one-third of the total adult population in a healthy, established colony.\n\nThe formula can be mathematically simplified to N = f x 217.4. For example, if you observe 56 bees leaving the hive in a minute, the approximate number of bees in the hive is 56 x 217.4 = 12,174.\n\nMethod 2 - Visual estimating\n\nEnter the number of frames in your hive that match the reference photos on the calculator page (frames of roughly 500, 600, 700, 800, 900 and 1,000 bees per side) and the calculator adds them up. For example 3 frames of 500, 5 of 600, 5 of 700, 6 of 800 and 1 of 900 gives an estimate of 41,100 bees. You can print the photos so you have a visual reference while inspecting your hive.\n\nThe interactive calculator lives on the club website.",
+"meta": {
+"h": [
+"1:Calculating the number of bees in your hive",
+"2:Method 1 - Observe the bees seen leaving the hive",
+"2:Method 2 - Visual estimating"
+],
+"i": [],
+"f": [],
+"l": [
+[
+"Open the hive size calculator",
+"https://geelongbeekeepersclub.org.au/Hive_Size_Calculator.asp"
+]
+]
+}
+}

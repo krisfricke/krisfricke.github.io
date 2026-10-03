@@ -1,0 +1,609 @@
+{
+"gen": [
+{
+"t": "Cover",
+"p": 1,
+"end": 1,
+"author": "",
+"tags": [
+"Cover"
+],
+"kind": "cover"
+},
+{
+"t": "In this collection",
+"p": 2,
+"end": 2,
+"author": "",
+"tags": [
+"indexes"
+],
+"kind": "contents"
+},
+{
+"t": "Bee Swarms",
+"p": 3,
+"end": 3,
+"author": "",
+"tags": [
+"Swarming",
+"Bee biology",
+"Public information"
+],
+"kind": "article"
+},
+{
+"t": "Bee Swarm Collection and Removal",
+"p": 4,
+"end": 5,
+"author": "",
+"tags": [
+"Swarming",
+"Swarm collection",
+"Public information"
+],
+"kind": "article"
+},
+{
+"t": "Bees and Water",
+"p": 6,
+"end": 6,
+"author": "",
+"tags": [
+"Hive management",
+"Apiary Code of Practice",
+"Water"
+],
+"kind": "article"
+},
+{
+"t": "Biosecurity",
+"p": 7,
+"end": 9,
+"author": "",
+"tags": [
+"Biosecurity",
+"Notifiable diseases",
+"Agriculture Victoria",
+"AFB",
+"Varroa"
+],
+"kind": "article"
+},
+{
+"t": "Latest Alcohol Wash method",
+"p": 10,
+"end": 10,
+"author": "",
+"tags": [
+"Varroa",
+"Varroa Monitoring",
+"Biosecurity",
+"Videos"
+],
+"kind": "article"
+},
+{
+"t": "Drones 101",
+"p": 11,
+"end": 11,
+"author": "Victorian Apiarists' Association",
+"tags": [
+"Bee biology",
+"Drones",
+"VAA"
+],
+"kind": "poster"
+},
+{
+"t": "Life cycle of honey bee",
+"p": 12,
+"end": 12,
+"author": "Geelong Beekeepers Club",
+"tags": [
+"Bee biology",
+"Brood",
+"Queens"
+],
+"kind": "poster"
+},
+{
+"t": "Equipment Hire",
+"p": 13,
+"end": 13,
+"author": "",
+"tags": [
+"Equipment",
+"Club services",
+"Honey extraction"
+],
+"kind": "article"
+},
+{
+"t": "Hive components",
+"p": 14,
+"end": 15,
+"author": "",
+"tags": [
+"Equipment",
+"Hive components",
+"Flow Hive",
+"New beekeepers"
+],
+"kind": "article"
+},
+{
+"t": "Hive components: approximate costs",
+"p": 16,
+"end": 16,
+"author": "",
+"tags": [
+"Equipment",
+"Hive components",
+"Flow Hive",
+"New beekeepers"
+],
+"kind": "article"
+},
+{
+"t": "Hive size calculator",
+"p": 17,
+"end": 17,
+"author": "",
+"tags": [
+"Hive inspection",
+"Colony strength",
+"Tools"
+],
+"kind": "article"
+},
+{
+"t": "Rearing Queens",
+"p": 18,
+"end": 20,
+"author": "John Edmonds",
+"tags": [
+"Queen rearing",
+"Queens",
+"Grafting"
+],
+"kind": "article"
+},
+{
+"t": "Register as a beekeeper",
+"p": 21,
+"end": 21,
+"author": "",
+"tags": [
+"Registration",
+"New beekeepers",
+"Agriculture Victoria"
+],
+"kind": "article"
+},
+{
+"t": "Requeening an aggressive hive",
+"p": 22,
+"end": 23,
+"author": "Deb Smith",
+"tags": [
+"Queens",
+"Requeening",
+"Hive management",
+"Aggressive bees"
+],
+"kind": "article"
+},
+{
+"t": "Spring hive development",
+"p": 24,
+"end": 28,
+"author": "Gary Montgomery",
+"tags": [
+"In the hive",
+"Spring",
+"Seasonal management",
+"AFB",
+"Nosema",
+"Hive inspection"
+],
+"kind": "article"
+},
+{
+"t": "7 ways to find the queen",
+"p": 29,
+"end": 31,
+"author": "",
+"tags": [
+"Queens",
+"Hive inspection",
+"Requeening"
+],
+"kind": "article"
+},
+{
+"t": "Swarm control when you can't find the queen",
+"p": 32,
+"end": 32,
+"author": "National Bee Unit (UK)",
+"tags": [
+"Swarming",
+"Hive management",
+"Queens"
+],
+"kind": "pdf"
+},
+{
+"t": "Shook swarm",
+"p": 33,
+"end": 37,
+"author": "National Bee Unit (UK)",
+"tags": [
+"Hive management",
+"Diseases",
+"Biosecurity",
+"Varroa"
+],
+"kind": "pdf"
+},
+{
+"t": "Total Fire Ban Days: use of smokers",
+"p": 38,
+"end": 38,
+"author": "",
+"tags": [
+"Fire bans",
+"Smokers",
+"Summer",
+"Regulations"
+],
+"kind": "article"
+},
+{
+"t": "What to do when you are Queenless",
+"p": 39,
+"end": 41,
+"author": "",
+"tags": [
+"Queens",
+"Queenless",
+"Hive management",
+"Brood"
+],
+"kind": "article"
+},
+{
+"t": "Winter pack down guide",
+"p": 42,
+"end": 44,
+"author": "",
+"tags": [
+"In the hive",
+"Winter",
+"Seasonal management",
+"Hive inspection"
+],
+"kind": "article"
+},
+{
+"t": "Flow Frame Cleaning",
+"p": 45,
+"end": 45,
+"author": "Jurg Schutz",
+"tags": [
+"Flow Hive",
+"Equipment",
+"Videos"
+],
+"kind": "video"
+},
+{
+"t": "Varroa Life Cycle",
+"p": 46,
+"end": 46,
+"author": "",
+"tags": [
+"Varroa",
+"Bee biology",
+"Videos"
+],
+"kind": "video"
+},
+{
+"t": "Winter welfare for your bees",
+"p": 47,
+"end": 47,
+"author": "",
+"tags": [
+"Winter",
+"Seasonal management",
+"Videos"
+],
+"kind": "video"
+},
+{
+"t": "What is honey bee biosecurity?",
+"p": 48,
+"end": 48,
+"author": "",
+"tags": [
+"Biosecurity",
+"Varroa",
+"Varroa Monitoring",
+"Small hive beetle",
+"Videos"
+],
+"kind": "video"
+},
+{
+"t": "National Bee Biosecurity Program and Code of Practice",
+"p": 49,
+"end": 49,
+"author": "",
+"tags": [
+"Biosecurity",
+"Varroa",
+"Varroa Monitoring",
+"Small hive beetle",
+"Videos"
+],
+"kind": "video"
+},
+{
+"t": "National Bee Pest Surveillance",
+"p": 50,
+"end": 50,
+"author": "",
+"tags": [
+"Biosecurity",
+"Varroa",
+"Varroa Monitoring",
+"Small hive beetle",
+"Videos"
+],
+"kind": "video"
+},
+{
+"t": "Alcohol wash test for varroa mite",
+"p": 51,
+"end": 51,
+"author": "",
+"tags": [
+"Biosecurity",
+"Varroa",
+"Varroa Monitoring",
+"Small hive beetle",
+"Videos"
+],
+"kind": "video"
+},
+{
+"t": "Sugar shake test for mites (Ag NSW)",
+"p": 52,
+"end": 52,
+"author": "",
+"tags": [
+"Biosecurity",
+"Varroa",
+"Varroa Monitoring",
+"Small hive beetle",
+"Videos"
+],
+"kind": "video"
+},
+{
+"t": "Sugar shake test for mites (Ag Vic)",
+"p": 53,
+"end": 53,
+"author": "",
+"tags": [
+"Biosecurity",
+"Varroa",
+"Varroa Monitoring",
+"Small hive beetle",
+"Videos"
+],
+"kind": "video"
+},
+{
+"t": "Drone uncapping test for varroa mite",
+"p": 54,
+"end": 54,
+"author": "",
+"tags": [
+"Biosecurity",
+"Varroa",
+"Varroa Monitoring",
+"Small hive beetle",
+"Videos"
+],
+"kind": "video"
+},
+{
+"t": "Varroa: cultural control",
+"p": 55,
+"end": 55,
+"author": "",
+"tags": [
+"Biosecurity",
+"Varroa",
+"Varroa Monitoring",
+"Small hive beetle",
+"Videos"
+],
+"kind": "video"
+},
+{
+"t": "Small hive beetle",
+"p": 56,
+"end": 56,
+"author": "",
+"tags": [
+"Biosecurity",
+"Varroa",
+"Varroa Monitoring",
+"Small hive beetle",
+"Videos"
+],
+"kind": "video"
+},
+{
+"t": "Small hive beetle trap / attractant",
+"p": 57,
+"end": 57,
+"author": "",
+"tags": [
+"Biosecurity",
+"Varroa",
+"Varroa Monitoring",
+"Small hive beetle",
+"Videos"
+],
+"kind": "video"
+},
+{
+"t": "Small hive beetle control devices",
+"p": 58,
+"end": 58,
+"author": "",
+"tags": [
+"Biosecurity",
+"Varroa",
+"Varroa Monitoring",
+"Small hive beetle",
+"Videos"
+],
+"kind": "video"
+},
+{
+"t": "Plan Bee: Honey Bee Breeding Manual",
+"p": 59,
+"end": 59,
+"author": "",
+"tags": [
+"Queen rearing",
+"Genetics",
+"Research",
+"Agrifutures",
+"Documents"
+],
+"kind": "doc"
+},
+{
+"t": "Apiary Code of Practice",
+"p": 60,
+"end": 60,
+"author": "",
+"tags": [
+"Apiary Code of Practice",
+"Regulations",
+"Agriculture Victoria",
+"Documents"
+],
+"kind": "doc"
+},
+{
+"t": "Australian Beekeeping Guide",
+"p": 61,
+"end": 61,
+"author": "",
+"tags": [
+"Books",
+"New beekeepers",
+"Hive management",
+"Documents"
+],
+"kind": "doc"
+},
+{
+"t": "Australian Honey Bee Industry Biosecurity Code of Practice",
+"p": 62,
+"end": 62,
+"author": "",
+"tags": [
+"Biosecurity",
+"Regulations",
+"AHBIC",
+"Documents"
+],
+"kind": "doc"
+},
+{
+"t": "Australian Honey Bee Industry Biosecurity Manual",
+"p": 63,
+"end": 63,
+"author": "",
+"tags": [
+"Biosecurity",
+"Pests",
+"Diseases",
+"AHBIC",
+"Documents"
+],
+"kind": "doc"
+},
+{
+"t": "Bait Hives for Honey Bees",
+"p": 64,
+"end": 64,
+"author": "Thomas D. Seeley",
+"tags": [
+"Swarming",
+"Swarm collection",
+"Research",
+"Documents"
+],
+"kind": "doc"
+},
+{
+"t": "Bee Friendly: a planting guide for European honeybees and Australian native pollinators",
+"p": 65,
+"end": 65,
+"author": "Mark Leech",
+"tags": [
+"Flowering",
+"Flora",
+"Pollination",
+"Books",
+"Documents"
+],
+"kind": "doc"
+},
+{
+"t": "Fifty Years Among the Bees",
+"p": 66,
+"end": 66,
+"author": "C. C. Miller",
+"tags": [
+"Books",
+"History",
+"Hive management",
+"Documents"
+],
+"kind": "doc"
+},
+{
+"t": "Queen cells in my hive",
+"p": 67,
+"end": 67,
+"author": "",
+"tags": [
+"Queens",
+"Swarming",
+"Hive inspection",
+"Documents"
+],
+"kind": "doc"
+},
+{
+"t": "Elsewhere on the website",
+"p": 68,
+"end": 68,
+"author": "",
+"tags": [
+"indexes"
+],
+"kind": "links"
+}
+]
+}

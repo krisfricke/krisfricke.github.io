@@ -18,6 +18,7 @@ web host (GitHub Pages works: repository root = this folder).
     article/<slug>/        text version of each item (crawlable, "Read as text")
     article/index.html     every item, by issue
     fonts/                 Lato (open licence) stands in for the website's Proxima Nova
+    general/               the General Beekeeping resources collection, same reader (see general/README.md)
     print.html             print view: print.html#/<issue> for a whole issue, #/<issue>/<from>-<to> for an article
     sitemap.xml, robots.txt
     _build/                the build scripts and the article catalogue (ignored by GitHub Pages)
@@ -45,6 +46,10 @@ https://geelongbeekeepersclub.org.au/.
 
    The first bakes the records into index.html and writes the text pages, sitemap and article
    index; the second turns the contents-page tiles into in-reader page jumps.
+
+Topic and author lanes can also draw on the General Beekeeping collection and the Australian Bee
+Journal; three toggles at the top of a lane switch each collection on or off. The ABJ pages are
+expected at `../abj/` (true on krisfricke.github.io).
 
 Tags roll up automatically: the browse-by-topic panel lists every tag in use, and flowering plants
 (the `FLORA` list in index.html) sit together under "Flora". Authors are split on commas and filed

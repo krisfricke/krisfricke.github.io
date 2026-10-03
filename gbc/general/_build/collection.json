@@ -1,0 +1,559 @@
+{
+"_comment": "The General Beekeeping collection: one record per page-set, in reading order. kind: cover | contents | article | poster | video | doc | links. Tags use the newsletter reader's vocabulary so topics line up across the readers.",
+"id": "gen",
+"label": "General Beekeeping",
+"source_url": "https://geelongbeekeepersclub.org.au/Main.asp?_=General%20Beekeeping",
+"items": [
+{
+"slug": "cover",
+"kind": "cover",
+"t": "Cover",
+"tags": [
+"Cover"
+],
+"author": ""
+},
+{
+"slug": "contents",
+"kind": "contents",
+"t": "In this collection",
+"tags": [
+"indexes"
+],
+"author": ""
+},
+{
+"slug": "bee-swarms",
+"kind": "article",
+"t": "Bee Swarms",
+"tags": [
+"Swarming",
+"Bee biology",
+"Public information"
+],
+"author": ""
+},
+{
+"slug": "swarm-removal",
+"kind": "article",
+"t": "Bee Swarm Collection and Removal",
+"tags": [
+"Swarming",
+"Swarm collection",
+"Public information"
+],
+"author": ""
+},
+{
+"slug": "bees-and-water",
+"kind": "article",
+"t": "Bees and Water",
+"tags": [
+"Hive management",
+"Apiary Code of Practice",
+"Water"
+],
+"author": ""
+},
+{
+"slug": "biosecurity",
+"kind": "article",
+"t": "Biosecurity",
+"tags": [
+"Biosecurity",
+"Notifiable diseases",
+"Agriculture Victoria",
+"AFB",
+"Varroa"
+],
+"author": ""
+},
+{
+"slug": "latest-alcohol-wash-method",
+"kind": "article",
+"t": "Latest Alcohol Wash method",
+"tags": [
+"Varroa",
+"Varroa Monitoring",
+"Biosecurity",
+"Videos"
+],
+"author": "",
+"video": {
+"kind": "mp4",
+"src": "https://geelongbeekeepersclub.org.au/edit/movie/alcohol wash - tocal nsw dpi.mp4",
+"caption": "Alcohol wash for varroa — Tocal College / NSW DPI"
+}
+},
+{
+"slug": "drones-101",
+"kind": "poster",
+"t": "Drones 101",
+"tags": [
+"Bee biology",
+"Drones",
+"VAA"
+],
+"author": "Victorian Apiarists' Association",
+"img": "drones-101__DRONES_101_VAA.png",
+"credit": "Poster: Victorian Apiarists' Association Educational series"
+},
+{
+"slug": "life-cycle-of-honey-bee",
+"kind": "poster",
+"t": "Life cycle of honey bee",
+"tags": [
+"Bee biology",
+"Brood",
+"Queens"
+],
+"author": "Geelong Beekeepers Club",
+"img": "life-cycle-of-honey-bee__LIFE-CYCLE-OF-HONEY-BEE.png",
+"credit": "Chart: Geelong Beekeepers Club",
+"landscape": true
+},
+{
+"slug": "equipment-hire",
+"kind": "article",
+"t": "Equipment Hire",
+"tags": [
+"Equipment",
+"Club services",
+"Honey extraction"
+],
+"author": ""
+},
+{
+"slug": "hive-components",
+"kind": "article",
+"t": "Hive components",
+"tags": [
+"Equipment",
+"Hive components",
+"Flow Hive",
+"New beekeepers"
+],
+"author": ""
+},
+{
+"slug": "hive-components-approximate-costs",
+"kind": "article",
+"t": "Hive components: approximate costs",
+"tags": [
+"Equipment",
+"Hive components",
+"Flow Hive",
+"New beekeepers"
+],
+"author": ""
+},
+{
+"slug": "hive-size-calculator",
+"kind": "article",
+"t": "Hive size calculator",
+"tags": [
+"Hive inspection",
+"Colony strength",
+"Tools"
+],
+"author": ""
+},
+{
+"slug": "rearing-queens",
+"kind": "article",
+"t": "Rearing Queens",
+"tags": [
+"Queen rearing",
+"Queens",
+"Grafting"
+],
+"author": "John Edmonds"
+},
+{
+"slug": "register-as-a-beekeeper",
+"kind": "article",
+"t": "Register as a beekeeper",
+"tags": [
+"Registration",
+"New beekeepers",
+"Agriculture Victoria"
+],
+"author": ""
+},
+{
+"slug": "requeening-an-aggressive-hive",
+"kind": "article",
+"t": "Requeening an aggressive hive",
+"tags": [
+"Queens",
+"Requeening",
+"Hive management",
+"Aggressive bees"
+],
+"author": "Deb Smith"
+},
+{
+"slug": "spring-hive-development",
+"kind": "article",
+"t": "Spring hive development",
+"tags": [
+"In the hive",
+"Spring",
+"Seasonal management",
+"AFB",
+"Nosema",
+"Hive inspection"
+],
+"author": "Gary Montgomery",
+"video": {
+"kind": "yt",
+"id": "3EgHwABJV_k",
+"caption": "Pre-spring inspection"
+}
+},
+{
+"slug": "7-ways-to-find-the-queen",
+"kind": "article",
+"t": "7 ways to find the queen",
+"tags": [
+"Queens",
+"Hive inspection",
+"Requeening"
+],
+"author": ""
+},
+{
+"slug": "swarm-control-nbu",
+"kind": "pdf",
+"t": "Swarm control when you can't find the queen",
+"tags": [
+"Swarming",
+"Hive management",
+"Queens"
+],
+"author": "National Bee Unit (UK)",
+"file": "Swarm Control When you cant find the queen National Bee Unit (UK).pdf"
+},
+{
+"slug": "shook-swarm-nbu",
+"kind": "pdf",
+"t": "Shook swarm",
+"tags": [
+"Hive management",
+"Diseases",
+"Biosecurity",
+"Varroa"
+],
+"author": "National Bee Unit (UK)",
+"file": "Shook Swarm National Bee Unit (UK).pdf"
+},
+{
+"slug": "total-fire-ban-days",
+"kind": "article",
+"t": "Total Fire Ban Days: use of smokers",
+"tags": [
+"Fire bans",
+"Smokers",
+"Summer",
+"Regulations"
+],
+"author": ""
+},
+{
+"slug": "what-to-do-when-you-are-queenless",
+"kind": "article",
+"t": "What to do when you are Queenless",
+"tags": [
+"Queens",
+"Queenless",
+"Hive management",
+"Brood"
+],
+"author": ""
+},
+{
+"slug": "winter-packdown",
+"kind": "article",
+"t": "Winter pack down guide",
+"tags": [
+"In the hive",
+"Winter",
+"Seasonal management",
+"Hive inspection"
+],
+"author": "",
+"video": {
+"kind": "yt",
+"id": "NbywGTsFYWs",
+"caption": "Winter pack down video"
+}
+},
+{
+"slug": "flow-frame-cleaning",
+"kind": "video",
+"t": "Flow Frame Cleaning",
+"tags": [
+"Flow Hive",
+"Equipment",
+"Videos"
+],
+"author": "Jurg Schutz",
+"video": {
+"kind": "mp4",
+"src": "https://geelongbeekeepersclub.org.au/edit/movie/Flow-Frame_Cleaning.mp4"
+},
+"blurb": "How to clean Flow frames, demonstrated by club member Jurg Schutz."
+},
+{
+"slug": "varroa-life-cycle",
+"kind": "video",
+"t": "Varroa Life Cycle",
+"tags": [
+"Varroa",
+"Bee biology",
+"Videos"
+],
+"author": "",
+"video": {
+"kind": "mp4",
+"src": "https://geelongbeekeepersclub.org.au/edit/movie/varroa life cycle.mp4"
+},
+"blurb": "The life cycle of the varroa mite inside the brood cell. Courtesy of the Queensland BeeAware website."
+},
+{
+"slug": "winter-welfare-for-your-bees",
+"kind": "video",
+"t": "Winter welfare for your bees",
+"tags": [
+"Winter",
+"Seasonal management",
+"Videos"
+],
+"author": "",
+"video": {
+"kind": "mp4",
+"src": "https://geelongbeekeepersclub.org.au/edit/movie/winter welfare for you bees.mp4"
+},
+"blurb": "Keeping colonies well through the cold months."
+},
+{
+"slug": "videos-biosecurity",
+"kind": "videos",
+"t": "Biosecurity videos",
+"tags": [
+"Biosecurity",
+"Varroa",
+"Varroa Monitoring",
+"Small hive beetle",
+"Videos"
+],
+"author": "",
+"blurb": "The club's collection of biosecurity videos and YouTube links: the BeeAware series, mite testing methods and small hive beetle control."
+},
+{
+"slug": "documents",
+"kind": "docs",
+"t": "Documents to download",
+"tags": [
+"Documents",
+"Books",
+"Resources"
+],
+"author": ""
+},
+{
+"slug": "elsewhere",
+"kind": "links",
+"t": "Elsewhere on the website",
+"tags": [
+"indexes"
+],
+"author": ""
+}
+],
+"videos_biosecurity": [
+[
+"What is honey bee biosecurity?",
+"BeeAware: Bee Biosecurity Video Series, video 1",
+"yt",
+"YIg4qjJ8cH4"
+],
+[
+"National Bee Biosecurity Program and Code of Practice",
+"BeeAware: Bee Biosecurity Video Series, video 2",
+"yt",
+"TZNKg6Mx40c"
+],
+[
+"National Bee Pest Surveillance",
+"BeeAware: Bee Biosecurity Video Series, video 3",
+"yt",
+"eE7wKn0uI74"
+],
+[
+"Alcohol wash test for varroa mite",
+"Tocal College / NSW DPI",
+"mp4",
+"https://geelongbeekeepersclub.org.au/edit/movie/alcohol wash - tocal nsw dpi.mp4"
+],
+[
+"Sugar shake test for mites (Ag NSW)",
+"Tocal College / NSW DPI",
+"mp4",
+"https://geelongbeekeepersclub.org.au/edit/movie/sugar shake - tocal nsw dpi.mp4"
+],
+[
+"Sugar shake test for mites (Ag Vic)",
+"Agriculture Victoria",
+"yt",
+"i0SgirFgFck"
+],
+[
+"Drone uncapping test for varroa mite",
+"Agriculture Victoria",
+"yt",
+"403G94pmewQ"
+],
+[
+"Varroa: cultural control",
+"Non-chemical varroa control techniques",
+"mp4",
+"https://geelongbeekeepersclub.org.au/edit/movie/cultural control of varroa.mp4"
+],
+[
+"Small hive beetle",
+"Agriculture Victoria",
+"yt",
+"p82pNZXwVv8"
+],
+[
+"Small hive beetle trap / attractant",
+"Agriculture Victoria",
+"yt",
+"YHUmK5SlzXU"
+],
+[
+"Small hive beetle control devices",
+"Agriculture Victoria",
+"yt",
+"M8_8Svz9F5s"
+]
+],
+"documents": [
+{
+"file": "AgriFutures Plan Bee Breeding Manual 2025-09.pdf",
+"t": "Plan Bee: Honey Bee Breeding Manual",
+"pages": 37,
+"kb": 5457,
+"tags": [
+"Queen rearing",
+"Genetics",
+"Research",
+"Agrifutures"
+],
+"blurb": "AgriFutures Australia's manual from the national Plan Bee genetic improvement program: selecting, recording and breeding better bees. September 2025 edition."
+},
+{
+"file": "Apiary Code of Practice.pdf",
+"t": "Apiary Code of Practice",
+"pages": 20,
+"kb": 1920,
+"tags": [
+"Apiary Code of Practice",
+"Regulations",
+"Agriculture Victoria"
+],
+"blurb": "The Victorian Apiary Code of Practice: the rules for keeping bees on urban and rural land, from hive numbers and placement to water, swarm control and nuisance."
+},
+{
+"file": "Australian Beekeeping Guide.pdf",
+"t": "Australian Beekeeping Guide",
+"pages": null,
+"kb": 6418,
+"tags": [
+"Books",
+"New beekeepers",
+"Hive management"
+],
+"blurb": "The RIRDC/AgriFutures guide for beginning and established beekeepers: equipment, handling, seasonal management, pests and diseases, and honey."
+},
+{
+"file": "Australian Honey Bee Industry Biosecurity Code of Practice 2025-10.pdf",
+"t": "Australian Honey Bee Industry Biosecurity Code of Practice",
+"pages": 21,
+"kb": 4161,
+"tags": [
+"Biosecurity",
+"Regulations",
+"AHBIC"
+],
+"blurb": "The national code every registered beekeeper is expected to follow: inspections, record keeping, pest surveillance and reporting. October 2025 revision."
+},
+{
+"file": "Australian Honey Bee Industry Biosecurity Manual 2025-10.pdf",
+"t": "Australian Honey Bee Industry Biosecurity Manual",
+"pages": 88,
+"kb": 15690,
+"tags": [
+"Biosecurity",
+"Pests",
+"Diseases",
+"AHBIC"
+],
+"blurb": "The companion manual to the Code: how to recognise and respond to the pests and diseases of honey bees. October 2025 revision."
+},
+{
+"file": "Bait Hives for Honey Bees - Tom Seeley.pdf",
+"t": "Bait Hives for Honey Bees",
+"pages": 8,
+"kb": 824,
+"tags": [
+"Swarming",
+"Swarm collection",
+"Research"
+],
+"author": "Thomas D. Seeley",
+"blurb": "Tom Seeley's classic Cornell extension bulletin on what swarms look for in a home, and how to build a bait hive that catches them."
+},
+{
+"file": "Bee Friendly Planting Guide.pdf",
+"t": "Bee Friendly: a planting guide for European honeybees and Australian native pollinators",
+"pages": 330,
+"kb": 8254,
+"tags": [
+"Flowering",
+"Flora",
+"Pollination",
+"Books"
+],
+"author": "Mark Leech",
+"blurb": "The RIRDC planting guide by Mark Leech: which trees, shrubs and garden plants feed bees across Australia's regions, and when they flower."
+},
+{
+"file": "Fifty years among the bees - C C Millar.pdf",
+"t": "Fifty Years Among the Bees",
+"pages": 364,
+"kb": 20018,
+"tags": [
+"Books",
+"History",
+"Hive management"
+],
+"author": "C. C. Miller",
+"blurb": "Dr C. C. Miller's 1911 account of a lifetime of comb-honey beekeeping in Illinois — still read for its good sense on bees and on beekeepers."
+},
+{
+"file": "Queen cells in my hive.pdf",
+"t": "Queen cells in my hive",
+"pages": 25,
+"kb": 735,
+"tags": [
+"Queens",
+"Swarming",
+"Hive inspection"
+],
+"blurb": "How to tell swarm cells from supersedure and emergency cells, and what each one is telling you to do."
+}
+],
+"doc_base": "https://geelongbeekeepersclub.org.au/edit/general_beekeeping_documents/"
+}
