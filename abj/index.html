@@ -6,9 +6,10 @@
 <script src="gate.js?v=3"></script>
 <!-- bump ?v= whenever gate.js changes, or browsers keep serving the old one -->
 <script>/* THE POINTER. The brand shard by default (board's wish); add ?bee to the address for the bee.
-   Read from the address only, so a plain address always means the default. In-reader navigation
+   Read from the address; a tab that arrived with ?bee keeps the bee (sessionStorage) as it moves between
+   the reader and its text pages. A plain address in a fresh tab always means the default. In-reader navigation
    changes the #hash, not the query, so ?bee survives it by itself. */
-(function(){var k=/[?&]bee(=|&|$)/.test(location.search)?'bee':'shard';
+(function(){var q=/[?&#]bee(=|&|$)/.test(location.search+location.hash),k='shard';try{if(q)sessionStorage.setItem('abj-bee','1');if(q||sessionStorage.getItem('abj-bee')==='1')k='bee';}catch(e){if(q)k='bee';}
   window.ABJ_CURSOR=k; if(k==='shard')document.documentElement.className+=' shard';})();</script>
 
 <meta name="description" content="The Australian Bee Journal, published by the Victorian Apiarists' Association since 1918. Read current and past issues, browse by topic and author.">

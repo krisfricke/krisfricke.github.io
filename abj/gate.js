@@ -27,6 +27,9 @@
   var forced = location.search.indexOf("gate") >= 0;
   if (forced) sessionStorage.removeItem(KEY);
 
+  /* ?bee or #bee on the URL: the links we hand out (with the bee pointer) skip the gate, and the
+     tab remembers it, so moving between the reader and its text pages never asks. */
+  if (/[?&#]bee(=|&|$)/.test(location.search+location.hash) && !forced) { try { sessionStorage.setItem(KEY, "1"); } catch (e) {} return; }
   if (sessionStorage.getItem(KEY) === "1") return;
 
   /* Dormant when you are working locally, so the gate can live permanently in

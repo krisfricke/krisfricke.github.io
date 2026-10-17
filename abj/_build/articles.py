@@ -124,7 +124,7 @@ def page_html(rec, label, iid, blocks, css):
     meta += 'Page %d &middot; %s' % (rec['p'], esc(label))
     body = '\n'.join('<%s>%s</%s>' % (k, esc(t), k) for k, t in blocks)
     tags = '<div class="tags">' + ' '.join('<a class="tag" href="%s">%s</a>' % (topic_href(t), esc(t)) for t in rec['tags']) + '</div>\n'
-    return ('<!doctype html><html lang="en-AU"><head>\n'
+    return ('<!doctype html><html lang="en-AU"><head>'+"<script>/* ?bee: remember the bee (and skip the mockup gate) for this tab */try{if(/[?&#]bee(=|&|$)/.test(location.search+location.hash)){sessionStorage.setItem('abj-bee','1');sessionStorage.setItem('abj-gate-ok','1');}}catch(e){}</script>"+'\n'
             '<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">\n'
             '<title>%(title)s — %(label)s | Australian Bee Journal</title>\n'
             '<meta name="description" content="%(desc)s">\n'
