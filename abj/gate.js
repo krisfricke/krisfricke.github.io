@@ -16,6 +16,7 @@
 
 (function () {
   "use strict";
+  if (window.ABJ_DELETED) return;   // index.html is showing the "deleted" notice
 
   var KEY  = "abj-gate-ok";                 // remembered for this browser tab
   var WORD = atob("aG9sZ2F0ZQ==");          // not plaintext, not a secret either
