@@ -25,6 +25,10 @@
   .sheet:hover,.sheet:focus-visible{background:rgba(255,236,170,.3);border-color:#fff3c4;outline:none;box-shadow:0 0 0 2px var(--accent) inset}
   .sheet:hover span,.sheet:focus-visible span{opacity:1}
   .sheet span::before{content:"\2193  "}
+  .explore{display:inline-block;margin:4px 0 4px;padding:10px 16px;background:var(--accent);color:#fff8e6;text-decoration:none;font:600 15px/1.2 system-ui,sans-serif;border-radius:3px}
+  .explore:hover,.explore:focus-visible{background:#5e2112}
+  .more{margin-top:34px;padding:16px 18px;border:1px solid var(--line);background:rgba(255,255,255,.35)}
+  .more p{margin:0}
   .cap{font-size:.86rem;color:var(--soft);margin:0 0 26px}
   h2{font-size:1.15rem;margin:26px 0 8px;letter-spacing:.03em}
   ul{margin:0 0 14px;padding-left:20px;max-width:64ch}
@@ -40,6 +44,7 @@
   <p class="sub">A 5-mile hex atlas of an ice-free Antarctica, moved to the Northern Hemisphere</p>
   <p>Take the real bedrock under the Antarctic ice, turn the continent so the Peninsula points north, and slide it up until the south coast sits at the latitude of Sicily. This is what grows there: forest in the south, taiga and tundra through the middle, glaciers in the far north.</p>
   <p class="how"><strong>Click any square on the map to download that sheet.</strong> There are 52 sheets, each 96 &times; 68 hexes (416 &times; 340 miles) at 5 miles per hex, about 4000 &times; 3600 pixels.</p>
+  <p><a class="explore" href="explore/">Explore the whole map in your browser &rarr;</a></p>
   <div class="map">
     <img src="antarctica_hex_index.jpg" width="2278" height="3198" alt="Index map of the relocated, ice-free Antarctica divided into lettered and numbered sheets">
     <a class="sheet" href="sheets/antarctica_hex_C1.jpg" download="antarctica_hex_C1.jpg" title="Download sheet C1" aria-label="Download sheet C1" style="left:29.266%;top:0.000%;width:14.735%;height:8.555%"><span>C1</span></a>
@@ -107,6 +112,9 @@
     <li>Elevation is the GEBCO 2026 sub-ice grid: bedrock as it sits today, with no rebound after the ice is removed and sea level at 0 m.</li>
     <li>Climate, biomes and rivers are modelled from latitude, elevation and distance from the sea. They are plausible, not predictions.</li>
   </ul>
+  <div class="more">
+    <p>If you enjoyed this, please check out my biggest project: <a href="https://krisfricke.github.io/Silk-Road/"><strong>The Silk Road</strong></a>, a game in homage to the classic <i>Oregon Trail</i>, set on the ancient Silk Road. The map-making techniques I developed for that project fed directly into this one.</p>
+  </div>
   <footer>Terrain data: GEBCO Compilation Group (2026), GEBCO 2026 Grid. Map by Kris Fricke. <a href="/">Back to krisfricke.github.io</a></footer>
 </main>
 </body>
