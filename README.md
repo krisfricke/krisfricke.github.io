@@ -10,6 +10,8 @@ hexagon links to the project's own GitHub Pages site.
 |---|---|
 | The Silk Road | [Silk-Road](https://github.com/krisfricke/Silk-Road) |
 | Interstellar Trail | [Interstellar-Trail](https://github.com/krisfricke/Interstellar-Trail) |
+| Solar Run | [Solar-Run](https://github.com/krisfricke/Solar-Run) |
+| Articles | [portfolio](https://github.com/krisfricke/portfolio) |
 | Recipe Calculator | [recipe-calculator](https://github.com/krisfricke/recipe-calculator) |
 | Varroa Modelling | [varroa_interface](https://github.com/krisfricke/varroa_interface) |
 
