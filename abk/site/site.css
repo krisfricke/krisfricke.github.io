@@ -1,0 +1,222 @@
+/* The Australasian Beekeeper website - the comb (every page except the reader) and the reader's
+   way west. One stylesheet for both; the reader only uses the ".abk-" rules at the end.
+   The site is a honeycomb: each page is a cell, the cell you are on is in the middle of the
+   window and its neighbours show at the edges. Hexagons stand point-up, so cells sit beside
+   one another left and right (the magazine, then Resources to its left, then Subscribe) and
+   interlock above and below. */
+@font-face{font-family:'Source Sans 3';src:url(../fonts/SourceSans3-Roman.woff) format('woff');font-weight:200 900;font-style:normal;font-display:swap}
+@font-face{font-family:'Source Sans 3';src:url(../fonts/SourceSans3-Italic.woff) format('woff');font-weight:200 900;font-style:italic;font-display:swap}
+@font-face{font-family:'Source Serif 4';src:url(../fonts/SourceSerif4-Roman.woff) format('woff');font-weight:200 900;font-style:normal;font-display:swap}
+
+:root{--w:600px;--h:693px;--navy:#29384d;--blue:#405a86;--yellow:#ffd400;--yellow2:#ffe45c;--honey:#ffec9e;--honey2:#ffe169;--ink:#231f20;--paper:#fcfbf7;--line:#b9c3d4;--barH:58px;
+  --sans:'Source Sans 3','Segoe UI',Helvetica,Arial,sans-serif;--serif:'Source Serif 4',Georgia,serif;
+  --hexP:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);                       /* regular, point up */
+  --lozP:polygon(13px 0,calc(100% - 13px) 0,100% 50%,calc(100% - 13px) 100%,13px 100%,0 50%)}  /* long hexagon, points left and right */
+
+html.comb,html.comb body{margin:0;height:100%}
+html.comb *{box-sizing:border-box}
+html.comb body{background:linear-gradient(180deg,#8fa5ca 0%,#b6c5df 46%,#dae2f0 100%) fixed;color:var(--ink);
+  font:400 16px/1.42 var(--sans);overflow:hidden;-webkit-text-size-adjust:100%}
+:where(html.comb) a{color:var(--blue)}
+html.comb button{font:inherit}
+.vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---------- the bar: the masthead and the little map of the comb ---------- */
+.bar{position:fixed;top:0;left:0;right:0;height:var(--barH);z-index:50;background:rgba(41,56,77,.97);
+  display:flex;align-items:center;justify-content:space-between;padding:0 18px 0 16px}
+.bar .mast{display:flex;align-items:center;height:100%}
+.bar .mast img{height:34px;width:auto;display:block}
+.flower{position:relative;display:block;flex:0 0 auto}
+.flower .fh{position:absolute;display:block;clip-path:var(--hexP);background:rgba(255,255,255,.32);text-decoration:none;transition:background .15s}
+.flower .fh:hover{background:#fff}
+.flower .fh.on{background:var(--yellow)}
+.flower .fh.rd{background:rgba(255,255,255,.62)}
+.flower .fh.rd:hover{background:#fff}
+
+/* ---------- the sky and the comb ---------- */
+#sky{position:fixed;top:var(--barH);left:0;right:0;bottom:0;overflow-x:hidden;overflow-y:auto;scrollbar-width:thin}
+#plane{position:relative;width:100%;height:var(--planeH,100%);overflow:hidden}
+#comb{position:absolute;left:50%;top:50%;width:0;height:0;transition:transform .32s cubic-bezier(.2,.7,.2,1)}
+html.dragging #comb{transition:none}
+html.dragging,html.dragging *{user-select:none!important;cursor:grabbing!important}
+/* Every cell is the same size and has its place in the honeycomb. The one you are on is in the middle of the
+   window, on paper; the others are a paler yellow and show wherever the window reaches them. site/comb.js
+   gives each cell its place as a transform, so moving is the whole comb sliding as one (--mv: how long).
+   A cell is only its hexagon to the mouse: the corners of its box belong to the cells that show there. */
+.cell{position:absolute;left:0;top:0;width:var(--w);height:var(--h);margin:calc(var(--h)/-2) 0 0 calc(var(--w)/-2);pointer-events:none;
+  transition:transform var(--mv,.62s) cubic-bezier(.45,.02,.2,1);will-change:transform}
+html.still .cell,html.still .peek .lab{transition:none}
+.cell .face{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none;filter:drop-shadow(0 10px 16px rgba(30,45,75,.24))}
+.cell .face polygon{fill:var(--honey);stroke:var(--navy);stroke-width:3;vector-effect:non-scaling-stroke;stroke-linejoin:round;transition:fill .35s}
+.cell.current .face polygon{fill:var(--paper)}
+.cell:not(.current):hover .face polygon{fill:var(--honey2)}
+
+/* a cell you are not on: the whole hexagon is the way to it, with its name and the way it lies. The name is in
+   the middle when the middle is in the window; --lx/--ly (site/comb.js) move it to the nearest spot that is */
+.cell .peek{position:absolute;inset:0;z-index:2;display:block;clip-path:var(--hexP);pointer-events:auto;cursor:pointer;
+  text-decoration:none;color:var(--navy);outline:none;transition:opacity .3s}
+.cell.current .peek{opacity:0;visibility:hidden;pointer-events:none;transition:opacity .2s,visibility 0s .2s}
+.peek .lab{position:absolute;left:50%;top:50%;transform:translate(calc(-50% + var(--lx,0px)),calc(-50% + var(--ly,0px)));
+  display:flex;flex-direction:column;align-items:center;gap:.22em;text-align:center;
+  font:800 20px/1.08 var(--sans);letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;
+  transition:transform var(--mv,.62s) cubic-bezier(.45,.02,.2,1),opacity .25s}
+.peek .lab.sm{font-size:15px;letter-spacing:.08em;white-space:normal;max-width:8.4em}
+.peek .lab.off{opacity:0}
+.peek .ar{font:700 1.45em/1 var(--sans);letter-spacing:0}
+.cell[data-below] .lab{flex-direction:column-reverse}
+.peek:focus-visible .lab{outline:3px solid #fff;outline-offset:.3em}
+
+/* the magazine's cell: this issue's cover */
+.cell.cover .clip{position:absolute;inset:0;clip-path:var(--hexP);overflow:hidden;background:var(--navy)}
+.cell.cover .clip img{position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover;object-position:50% 0}
+.cell.cover .face polygon,.cell.cover:hover .face polygon{fill:none}
+.cell.cover .lab{background:var(--navy);color:#fff;padding:.5em .7em .42em;box-shadow:0 .3em .8em rgba(20,30,50,.4)}
+.cell.cover .lab .ar{color:var(--yellow)}
+.cell.cover:hover .lab{background:var(--yellow);color:var(--navy)}
+.cell.cover:hover .lab .ar{color:var(--navy)}
+html.to-reader .cell.cover .peek{opacity:0;transition:opacity .25s}
+
+/* ---------- what is inside the cell you are on ---------- */
+.cell .in{position:absolute;inset:0;display:flex;flex-direction:column;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .3s .12s}
+.cell.current .in{opacity:1;visibility:visible}
+/* only what can be used answers the mouse; the empty corners of the box are the neighbours' */
+.cell.current .in :is(a,button,input,select,textarea,label,.body){pointer-events:auto}
+.head{flex:0 0 25%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;text-align:center;padding:0 17% 12px}
+.kick{display:inline-block;background:var(--yellow);color:var(--navy);font:900 12px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;padding:5px 11px 4px}
+.head h1{margin:9px 0 0;font:700 clamp(30px,calc(var(--w)*.058),46px)/1.04 var(--serif);color:var(--navy);letter-spacing:-.01em;outline:none}
+.body{flex:0 0 50%;min-height:0;overflow-y:auto;padding:2px 6.5% 0;scrollbar-width:thin;outline:none}
+.foot{flex:0 0 25%;display:flex;flex-direction:column;align-items:center;gap:8px;padding:12px 21% 0;text-align:center}
+.lede{font-size:17px;line-height:1.38;margin:0 0 10px}
+.fine{font-size:13px;line-height:1.35;color:#4c5565;margin:8px 0 0}
+.warn{background:#fff3bf;border-left:4px solid var(--yellow);padding:7px 10px;font-size:14px;margin:8px 0}
+.body h2{font:800 13px/1.2 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--blue);margin:14px 0 6px}
+.body h3{font:700 17px/1.2 var(--sans);color:var(--navy);margin:0}
+.body p{margin:0 0 8px}
+
+/* buttons: hexagons, never boxes */
+.hexbtn{position:relative;display:flex;align-items:center;justify-content:center;width:124px;height:143px;flex:0 0 auto;border:0;padding:0 10px;cursor:pointer;
+  clip-path:var(--hexP);background:var(--navy);color:var(--navy);text-decoration:none;font:900 14.5px/1.1 var(--sans);letter-spacing:.1em;text-transform:uppercase;text-align:center}
+html.comb button.hexbtn{font:900 14.5px/1.1 var(--sans)}      /* a button does not take the page's type by itself */
+.hexbtn::before{content:"";position:absolute;inset:4px;clip-path:var(--hexP);background:var(--yellow);transition:background .15s}
+.hexbtn span{position:relative}
+.hexbtn:hover::before,.hexbtn:focus-visible::before{background:#fff}
+.hexbtn[disabled]{opacity:.55;cursor:default}
+.btn{display:inline-block;clip-path:var(--lozP);background:var(--navy);color:#fff!important;text-decoration:none;border:0;cursor:pointer;
+  font:800 13.5px/1 var(--sans);letter-spacing:.08em;text-transform:uppercase;padding:10px 24px 9px}
+.btn:hover,.btn:focus-visible{background:var(--blue)}
+.btn.gold{background:var(--yellow);color:var(--navy)!important}
+.btn.gold:hover{background:var(--yellow2)}
+.lnk{background:none;border:0;padding:0;color:var(--blue);text-decoration:underline;cursor:pointer;font:inherit}
+
+/* ---------- the subscribe form ---------- */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:0 22px}
+#subform label{display:block;font:700 12.5px/1.2 var(--sans);letter-spacing:.04em;color:var(--navy);margin:0 0 9px}
+#subform label i{font-weight:400;font-style:normal;color:#5d6676}
+#subform input:not([type=checkbox]),#subform select{display:block;width:100%;margin-top:3px;height:36px;border:1.5px solid #93a0b6;border-radius:2px;background:#fff;
+  padding:0 9px;font:400 16px/1 var(--sans);color:var(--ink)}
+#subform input:focus,#subform select:focus{outline:2px solid var(--yellow);outline-offset:0;border-color:var(--navy)}
+#subform .bad{border-color:#b3261e!important;background:#fff6f5}
+#subform .two{display:grid;grid-template-columns:1fr 1fr;gap:0 12px}
+#subform .chk{display:flex;align-items:flex-start;gap:8px;font:400 14.5px/1.3 var(--sans);letter-spacing:0;color:var(--ink);margin-top:4px;cursor:pointer}
+#subform .chk input{width:18px;height:18px;margin:1px 0 0;accent-color:var(--navy);flex:0 0 auto}
+#subform .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.status{min-height:20px;margin:2px 0 0;font-size:14px;font-weight:600;color:var(--blue)}
+.status.err{color:#b3261e}
+
+/* the resources view: the ways on from here */
+.ways{list-style:none;margin:8px 0 6px;padding:0;display:grid;grid-template-columns:1fr;gap:9px}
+.ways a{display:grid;grid-template-columns:30px 1fr;align-items:center;gap:0 6px;clip-path:var(--lozP);background:var(--navy);color:#fff;text-decoration:none;padding:9px 22px 8px 20px;min-height:62px}
+.ways a:hover,.ways a:focus-visible{background:var(--blue)}
+.ways .ar{grid-row:1 / span 2;font:700 24px/1 var(--sans);color:var(--yellow)}
+.ways b{font:800 15px/1.1 var(--sans);letter-spacing:.06em;text-transform:uppercase}
+.ways small{font-size:12.5px;line-height:1.2;color:#d5dcea}
+.you{font-size:14px;color:#3d4758;margin:10px 0 0}
+
+/* ---------- lists: clubs and stores ---------- */
+.row{display:grid;grid-template-columns:62px 1fr;gap:0 12px;align-items:start;padding:9px 0;border-top:1px solid var(--line)}
+.row:first-of-type{border-top:0}
+.row.first h3{font-size:20px}
+.hexdate{width:62px;height:72px;clip-path:var(--hexP);background:var(--navy);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1;text-align:center}
+.hexdate i{font:700 10.5px/1 var(--sans);font-style:normal;letter-spacing:.1em;text-transform:uppercase;color:var(--yellow)}
+.hexdate b{font:800 23px/1 var(--sans);margin:2px 0 1px}
+.hexdate span{font:700 10.5px/1 var(--sans);letter-spacing:.1em;text-transform:uppercase}
+.hexdate.none{background:#aab4c6}
+.hexdate.km{background:var(--yellow);color:var(--navy)}
+.hexdate.km i,.hexdate.km span{color:var(--navy)}
+.row .meta{font-size:14px;color:#3d4758;margin:1px 0 2px}
+.row .when{font-size:15px;font-weight:600;color:var(--navy);margin:0 0 2px}
+.row .when.q{font-weight:400;color:#4c5565}
+.row .links{font-size:14px;margin:0}
+.tags{display:flex;flex-wrap:wrap;gap:4px;margin:3px 0 2px}
+.tags span{font:700 10.5px/1 var(--sans);letter-spacing:.08em;text-transform:uppercase;background:#e6ebf3;color:var(--navy);padding:4px 10px 3px;clip-path:var(--lozP)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 8px}
+.chips button{clip-path:var(--lozP);border:0;background:#dfe5ef;color:var(--navy);font:800 12.5px/1 var(--sans);letter-spacing:.08em;padding:8px 17px 7px;cursor:pointer}
+.chips button:hover{background:var(--yellow2)}
+.chips button.on{background:var(--yellow)}
+.invite{background:#eef2f8;padding:12px 14px;margin:0 0 6px;border-left:4px solid var(--yellow)}
+.invite p{margin:0 0 8px}
+.invite p:last-child{margin:0}
+.search{display:flex;gap:8px;margin:2px 0 8px}
+.search input{flex:1;height:36px;border:1.5px solid #93a0b6;border-radius:2px;padding:0 9px;font:400 16px/1 var(--sans)}
+
+/* contacts (pollination) and the rate table (advertising) */
+.contact{padding:8px 0;border-top:1px solid var(--line)}
+.contact:first-of-type{border-top:0}
+.contact p{margin:2px 0 0;font-size:15px}
+.contact .role{color:#3d4758}
+.rates{width:100%;border-collapse:collapse;font-size:15px;margin:0 0 6px}
+.rates th{text-align:left;font:800 11.5px/1.2 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--blue);padding:3px 6px 4px 0;border-bottom:2px solid var(--navy)}
+.rates td{padding:5px 6px 5px 0;border-bottom:1px solid var(--line);vertical-align:top}
+.rates td:last-child,.rates th:last-child{text-align:right;padding-right:0;white-space:nowrap}
+
+/* ---------- what can be clicked (Kris, 15 Nov 2026): as on the magazine's pages, the bee folds her wings and a
+   yellow line appears round the thing - 2px of #ffd400. A cell you can go to gets it round its hexagon; shapes cut
+   out with clip-path cannot take an outline, so they draw theirs: a yellow ground showing round an inset fill. */
+.cell:not(.current):hover{z-index:3}
+.cell:not(.current):hover .face polygon,.cell:not(.current):has(.peek:focus-visible) .face polygon{stroke:var(--yellow);stroke-width:5}
+.hexbtn:not([disabled]):is(:hover,:focus-visible){background:var(--yellow)}
+:is(.btn,.ways a,.chips button,.flower .fh){isolation:isolate}
+:is(.btn,.ways a,.chips button){position:relative}
+:is(.btn,.ways a,.chips button,.flower .fh):is(:hover,:focus-visible)::before{content:"";position:absolute;inset:2px;z-index:-1;clip-path:var(--lozP);background:var(--fill)}
+:is(.btn,.ways a,.chips button,.flower .fh):is(:hover,:focus-visible){background:var(--yellow)!important;outline:none}
+.btn:is(:hover,:focus-visible),.ways a:is(:hover,:focus-visible){--fill:var(--blue)}
+.btn.gold:is(:hover,:focus-visible),.chips button:is(:hover,:focus-visible){--fill:#fff}
+.flower .fh:is(:hover,:focus-visible)::before{clip-path:var(--hexP);--fill:#fff}
+html.compact #flowerBig .fh.rd:is(:hover,:focus-visible){color:var(--navy)}
+:where(html.comb) :is(a:not([class]):not(.ways a),a.maplink,.lnk):is(:hover,:focus-visible){outline:2px solid var(--yellow);outline-offset:1px;border-radius:2px;background:rgba(255,212,0,.28)}
+.bar .mast{border-radius:3px;outline-offset:5px}
+.bar .mast:is(:hover,:focus-visible){outline:2px solid var(--yellow)}
+
+/* big flower (phones): the map of the comb as a menu */
+#flowerBig{display:none}
+
+/* ---------- phones and narrow windows: one cell at a time, as long as it needs to be ---------- */
+html.compact body{overflow:auto}
+html.compact #sky{position:static;overflow:visible;padding:calc(var(--barH) + 14px) 8px 26px}
+html.compact #plane{height:auto;overflow:visible}
+html.compact #comb{position:static;width:auto;height:auto;transform:none!important}
+html.compact .cell{position:relative;left:auto!important;top:auto!important;margin:0 auto;width:min(100%,540px);height:auto;display:none;pointer-events:auto;filter:drop-shadow(0 8px 14px rgba(30,45,75,.25))}
+html.compact .cell.current{display:block;animation:cellIn .34s cubic-bezier(.2,.7,.2,1)}
+html.compact .cell .face,html.compact .cell .peek{display:none}
+html.compact .cell::before{content:"";position:absolute;inset:0;background:var(--navy);
+  clip-path:polygon(50% 0,100% var(--cap),100% calc(100% - var(--cap)),50% 100%,0 calc(100% - var(--cap)),0 var(--cap))}
+html.compact .cell .in{position:relative;inset:auto;margin:0;background:var(--paper);transition:none;pointer-events:auto;
+  clip-path:polygon(50% 4px,calc(100% - 3px) calc(var(--cap) + 2px),calc(100% - 3px) calc(100% - var(--cap) - 2px),50% calc(100% - 4px),3px calc(100% - var(--cap) - 2px),3px calc(var(--cap) + 2px));
+  padding:calc(var(--cap)*.5) 0 calc(var(--cap)*.42)}
+html.compact .head{flex:none;padding:0 15% 10px}
+html.compact .head h1{font:700 clamp(27px,8.4vw,38px)/1.06 var(--serif)}
+html.compact .body{flex:none;overflow:visible;padding:4px 20px 0}
+html.compact .foot{flex:none;padding:14px 16% 0;min-height:calc(var(--cap)*.9)}
+html.compact .cols,html.compact .ways{grid-template-columns:1fr}
+html.compact #flowerBig{display:block;margin:22px auto 0}
+html.compact #flowerBig .fh{background:rgba(255,255,255,.55);display:flex;align-items:center;justify-content:center;text-align:center;padding:0 3px;
+  color:var(--navy);font:800 1em/1.15 var(--sans);letter-spacing:.07em;text-transform:uppercase}
+html.compact #flowerBig .fh.on{background:var(--yellow)}
+html.compact #flowerBig .fh.rd{background:var(--navy);color:#fff}
+html.compact .bar .flower{display:none}
+html.compact .wherenext{display:block}
+.wherenext{display:none;text-align:center;font:800 12px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--navy);margin:26px 0 0}
+@keyframes cellIn{from{opacity:0;transform:translate(var(--inx,0),var(--iny,0))}to{opacity:1;transform:none}}
+
+@media (prefers-reduced-motion:reduce){#comb.moving{transition:none}.cell .in{transition:none}html.compact .cell.current{animation:none}}
+@media print{.bar,.cell .peek,.flower,#flowerBig,.wherenext{display:none!important}html.comb body{overflow:visible;background:#fff}#sky{position:static;overflow:visible}}

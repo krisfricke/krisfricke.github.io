@@ -1,0 +1,59 @@
+/* The Australasian Beekeeper - what the READER needs of the website: the way west.
+   (The comb's own styles are in site.css; they are kept out of the reader because their
+   class names are not the reader's.)
+   Left of the pages lies the Resources cell and, beyond it, the Subscribe cell. The strip of sky
+   there is the way to them: a band down the very edge with three arrows on it (top, middle,
+   bottom), and a hexagon for each cell. */
+@font-face{font-family:'Source Sans 3';src:url(../fonts/SourceSans3-Roman.woff) format('woff');font-weight:200 900;font-style:normal;font-display:swap}
+
+.abk-west{position:fixed;left:0;top:var(--chromeH,58px);bottom:0;z-index:60;cursor:pointer;
+  background:linear-gradient(90deg,rgba(41,56,77,.10),rgba(41,56,77,0) 70%);transition:background .2s}
+.abk-west:hover{background:linear-gradient(90deg,rgba(41,56,77,.24),rgba(41,56,77,0) 85%)}
+body.inlane .abk-west{display:none}
+
+/* the band: a thin strip down the whole edge with three arrows pointing left - top, middle and bottom -
+   to say there is something over there */
+.abk-band{--chev:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='44' viewBox='0 0 22 44'%3E%3Cpath d='M14.5 12l-8 10 8 10' fill='none' stroke='%23ffd400' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  position:absolute;left:0;top:0;bottom:0;width:22px;background-color:rgba(41,56,77,.30);
+  background-image:var(--chev),var(--chev),var(--chev);background-repeat:no-repeat;
+  background-position:50% 22px,50% 50%,50% calc(100% - 22px);transition:background-color .2s,width .2s}
+.abk-west:hover .abk-band{background-color:rgba(41,56,77,.62);animation:abkNudge .9s ease-in-out infinite}
+@keyframes abkNudge{0%,100%{background-position:50% 22px,50% 50%,50% calc(100% - 22px)}
+  50%{background-position:calc(50% - 3px) 22px,calc(50% - 3px) 50%,calc(50% - 3px) calc(100% - 22px)}}
+
+/* the hexagons: Subscribe!, and under it Resources - the same size and the same yellow */
+.abk-hexes{position:absolute;left:22px;right:0;top:50%;transform:translateY(-50%) scale(var(--hs,1));display:flex;flex-direction:column;align-items:center;gap:10px}
+.abk-hexb{position:relative;display:block;flex:0 0 auto;width:158px;height:182px;text-decoration:none;transition:transform .18s;
+  filter:drop-shadow(0 8px 13px rgba(30,45,75,.3))}
+.abk-hexb:hover,.abk-hexb:focus-visible{transform:translateX(-6px) scale(1.05);outline:none}
+.abk-hexb svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.abk-hexb svg polygon{fill:#ffd400;stroke:#29384d;stroke-width:3;vector-effect:non-scaling-stroke;stroke-linejoin:round;transition:fill .15s}
+/* clickable, as everywhere on the site: a yellow line round it (on a yellow hexagon that needs a white inside) */
+.abk-hexb:is(:hover,:focus-visible) svg polygon{fill:#fff;stroke:#ffd400;stroke-width:5}
+.abk-hexl{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;text-align:center;color:#29384d;
+  font-family:'Source Sans 3','Segoe UI',Helvetica,Arial,sans-serif}
+.abk-hexl em{font:700 22px/1 inherit;font-style:normal}
+.abk-hexl b{font-weight:900;font-size:19px;line-height:1;letter-spacing:.06em;text-transform:uppercase}
+.abk-hexl small{font-weight:600;font-size:11.5px;line-height:1.15;letter-spacing:.06em;text-transform:uppercase;max-width:108px}
+/* a subscriber sees no reminder to subscribe: only Resources is there */
+html.abk-sub .abk-h-sub{display:none}
+
+/* no room beside the pages (a phone, or zoomed in): a narrow band, and one hexagon tucked into the corner */
+.abk-west.slim{width:12px!important;background:none!important}
+.abk-west.slim .abk-band{width:12px;background-size:12px 24px;background-color:rgba(41,56,77,.34)}
+.abk-west.slim .abk-hexes{position:fixed;left:6px;right:auto;top:auto;bottom:10px;transform:none}
+.abk-west.slim .abk-hexb{width:74px;height:85px}
+.abk-west.slim .abk-hexb:hover{transform:translateX(4px)}
+.abk-west.slim .abk-hexl b{font-size:9px;letter-spacing:.03em}
+.abk-west.slim .abk-hexl small,.abk-west.slim .abk-hexl em{display:none}
+html:not(.abk-sub) .abk-west.slim .abk-h-res{display:none}      /* one at a time on a phone: Subscribe, or Resources once subscribed */
+
+/* being pulled, leaving for the west, and arriving back from it */
+html.abk-pull .track{transform:translateX(calc(-33.3334% + var(--pull,0px)))!important;transition:none!important}
+html.abk-pull,html.abk-pull *{user-select:none!important;cursor:grabbing!important}
+html.abk-leave-west .track{transform:translateX(calc(-33.3334% + 9vw + var(--pull,0px)))!important;opacity:0;transition:transform .26s ease-in,opacity .26s ease-in!important}
+html.abk-leave-west .abk-west{opacity:0;transition:opacity .2s}
+html.abk-enter .track{animation:abkIn .46s cubic-bezier(.2,.7,.2,1)}
+@keyframes abkIn{from{transform:translateX(calc(-33.3334% - 7vw));opacity:0}to{transform:translateX(-33.3334%);opacity:1}}
+@media (prefers-reduced-motion:reduce){html.abk-leave-west .track{transition:none!important}html.abk-enter .track{animation:none}.abk-west:hover .abk-band{animation:none}}
+@media print{.abk-west{display:none}}
