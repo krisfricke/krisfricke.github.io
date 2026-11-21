@@ -19,6 +19,9 @@ p.gh,p.gh *{color:transparent!important}
 .it{font-style:italic}
 a{color:inherit;text-decoration:none}
 a:hover{text-decoration:underline}
+/* a link carried by the text shows the reader's cue for "this can be clicked": the yellow line (Kris, 21 Nov 2026) */
+p a[href]:not(.ixlink){border-radius:10px;transition:box-shadow .12s,background .12s}
+p a[href]:not(.ixlink):hover{text-decoration:none;background:rgba(255,212,0,.16);box-shadow:0 0 0 7px rgba(255,212,0,.8)}
 a.ixlink{text-decoration:none;color:inherit;cursor:pointer}
 a.ixlink:hover{background:rgba(255,212,0,.28);text-decoration:none}
 a.zoom{position:absolute;display:block;z-index:6;border-radius:12px;transition:box-shadow .12s}
@@ -33,13 +36,13 @@ a.hot:hover{background:rgba(255,212,0,.13);box-shadow:0 0 0 8px rgba(255,212,0,.
   border:1px solid #c9b25f;box-shadow:0 8px 24px rgba(0,0,0,.22);font:13px/1.45 'Source Sans 3',sans-serif;white-space:normal;pointer-events:none}
 .fnpop b{color:#29384d;font-weight:700;margin-right:6px}
 </style></head><body><div class="sheet"><div class="scaler"><div class="page">
-<img class="bg" src="pg010.webp" alt="">
+<img class="bg" src="pg010.webp?v=1728970740" alt="">
 <p class="gh" style="left:1435.01px;top:230.81px;font-size:128.00px" data-b="340.32" data-w="1039.36"><span class="w7">NEWS </span><span class="w4">&amp; LETTERS</span></p>
 <p class="gh" style="left:589.61px;top:2850.21px;font-size:76.80px" data-b="2915.91" data-w="711.71"><span class="w7">Dates for your diary</span></p>
 <p class="gh" style="left:359.11px;top:3005.06px;font-size:64.00px" data-b="3059.82" data-w="1204.47"><span class="w7">North-West Tasmanian Beekeepers Field</span></p>
 <p class="gh" style="left:902.66px;top:3088.26px;font-size:64.00px" data-b="3143.02" data-w="117.38"><span class="w7">Day</span></p>
 <p class="gh" style="left:671.37px;top:3171.46px;font-size:64.00px" data-b="3226.22" data-w="579.97"><span class="w3">2024, November 9th</span></p>
-<p class="gh" style="left:430.34px;top:3254.66px;font-size:64.00px" data-b="3309.42" data-w="1062.02"><span class="w7">Website</span><span class="w4">: https://www.facebook.com/</span></p>
+<p class="gh" style="left:430.34px;top:3254.66px;font-size:64.00px" data-b="3309.42" data-w="1062.02"><span class="w7">Website</span><span class="w4">: </span><a href="https://www.facebook.com/" target="_blank" rel="noopener"><span class="w4">https://www.facebook.com/</span></a></p>
 <p class="gh" style="left:573.64px;top:3337.86px;font-size:64.00px" data-b="3392.62" data-w="775.42"><span class="w3">events/1071879044563843</span></p>
 <p class="gh" style="left:397.06px;top:3519.82px;font-size:64.00px" data-b="3574.57" data-w="1128.64"><span class="w7">International Sustainable Beekeeping</span></p>
 <p class="gh" style="left:791.24px;top:3603.02px;font-size:64.00px" data-b="3657.77" data-w="340.22"><span class="w7">Conference</span></p>
@@ -51,7 +54,7 @@ a.hot:hover{background:rgba(255,212,0,.13);box-shadow:0 0 0 8px rgba(255,212,0,.
 <p class="gh" style="left:494.47px;top:4158.34px;font-size:64.00px" data-b="4213.10" data-w="933.89"><span class="w4">49th World Beekeeping Congress</span></p>
 <p class="gh" style="left:607.88px;top:4241.54px;font-size:64.00px" data-b="4296.30" data-w="707.01"><span class="w3">2025 September 23-27th</span></p>
 <p class="gh" style="left:637.26px;top:4324.74px;font-size:64.00px" data-b="4379.50" data-w="648.19"><span class="w4">Copenhagen, Denmark</span></p>
-<p class="gh" style="left:422.92px;top:4407.94px;font-size:64.00px" data-b="4462.70" data-w="1076.93"><span class="w7">Website</span><span class="w4">: https://apimondia2025.com/</span></p>
+<p class="gh" style="left:422.92px;top:4407.94px;font-size:64.00px" data-b="4462.70" data-w="1076.93"><span class="w7">Website</span><span class="w4">: </span><a href="https://apimondia2025.com/" target="_blank" rel="noopener"><span class="w4">https://apimondia2025.com/</span></a></p>
 <p class="gh" style="left:502.54px;top:4609.42px;font-size:64.00px" data-b="4664.17" data-w="845.18"><span class="w7">5th Australian Bee Congress</span></p>
 <p class="gh" style="left:663.88px;top:4692.62px;font-size:64.00px" data-b="4747.37" data-w="522.50"><span class="w3">2026 June 19-21st</span></p>
 <p class="gh" style="left:530.06px;top:4775.82px;font-size:64.00px" data-b="4830.57" data-w="790.14"><span class="w4">Adelaide Convention Centre</span></p>
@@ -63,8 +66,8 @@ a.hot:hover{background:rgba(255,212,0,.13);box-shadow:0 0 0 8px rgba(255,212,0,.
 <p class="gh" style="left:340.76px;top:1113.38px;font-size:63.04px" data-b="1167.31" data-w="854.57"><span class="w3">negative test results (the blue).</span></p>
 <p class="gh" style="left:340.76px;top:1190.18px;font-size:63.04px" data-b="1244.11" data-w="854.41"><span class="w3">The map is updated every Friday</span></p>
 <p class="gh" style="left:340.76px;top:1266.98px;font-size:63.04px" data-b="1320.91" data-w="619.93"><span class="w4">and can be found here:</span></p>
-<p class="gh" style="left:427.77px;top:1399.35px;font-size:57.60px" data-b="1448.63" data-w="733.25"><span class="w4">https://www.dpi.nsw.gov.au/</span></p>
-<p class="gh" style="left:352.32px;top:1463.34px;font-size:57.60px" data-b="1512.62" data-w="831.40"><span class="w3">emergencies/biosecurity/current-</span></p>
+<p class="gh" style="left:427.77px;top:1399.35px;font-size:57.60px" data-b="1448.63" data-w="733.25"><a href="https://www.dpi.nsw.gov.au/emergencies/biosecurity/current-" target="_blank" rel="noopener"><span class="w4">https://www.dpi.nsw.gov.au/</span></a></p>
+<p class="gh" style="left:352.32px;top:1463.34px;font-size:57.60px" data-b="1512.62" data-w="831.40"><a href="https://www.dpi.nsw.gov.au/emergencies/biosecurity/current-" target="_blank" rel="noopener"><span class="w3">emergencies/biosecurity/current-</span></a></p>
 <p class="gh" style="left:342.76px;top:1527.34px;font-size:57.60px" data-b="1576.61" data-w="850.52"><span class="w3">situation/varroa-mite-emergency-</span></p>
 <p class="gh" style="left:655.64px;top:1591.33px;font-size:57.60px" data-b="1640.61" data-w="224.70"><span class="w3">response</span></p>
 <p class="gh" style="left:2220.81px;top:936.85px;font-size:75.65px" data-b="1001.56" data-w="976.72"><span class="w7">5th Australian Bee Congress</span></p>
