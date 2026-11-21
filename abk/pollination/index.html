@@ -91,7 +91,7 @@
       <p class="lede">Every article in the magazine is filed by topic.</p>
       <p><a class="btn gold" href="../index.html#/topics">Browse the magazine by topic</a></p>
       <h2>Some of the topics</h2>
-      <p class="topics"><a href="../index.html#/topic/research">Research</a><a href="../index.html#/topic/beginners">Beginners</a><a href="../index.html#/topic/seasonal%20management">Seasonal management</a></p>
+      <p class="topics"><a href="../index.html#/topic/research">Research</a><a href="../index.html#/topic/beginners">Articles for beginning beekeepers</a><a href="../index.html#/topic/seasonal%20management">Seasonal management</a></p>
       <h2>Pages of their own</h2>
       <ul class="ways compass">
         <li><a href="../varroa/index.html" data-go="varroa"><span class="ar">↖</span><b>Varroa</b><small>The mite, and how it is controlled</small></a></li>
@@ -132,7 +132,14 @@
       <h2>Elsewhere</h2>
       <p class="links"><a href="https://www.aussiebee.com.au/" target="_blank" rel="noopener">aussiebee.com.au</a><a href="https://www.nativebeehives.com/" target="_blank" rel="noopener">nativebeehives.com</a><a href="https://www.anba.org.au/" target="_blank" rel="noopener">anba.org.au</a></p>
       <h2>Upcoming events</h2>
-      <p class="links"><a href="https://www.australiannativebee.org.au/events" target="_blank" rel="noopener">australiannativebee.org.au/events</a></p>
+      <!-- read from the ANBA events list on 21 Nov 2026; an event that has passed takes itself off (comb.js renderNative) -->
+      <ul class="events" id="native-events">
+        <li data-date="2026-11-22"><b>22 Nov 2026, 14:30</b><a href="https://www.australiannativebee.org.au/event-6883060" target="_blank" rel="noopener">Native Bee Mini Expo - Sydney</a><small>Building 4/30 Shoreline Dr, Rhodes NSW 2138</small></li>
+        <li data-date="2026-12-05"><b>5 Dec 2026, 08:30 - 12:00</b><a href="https://www.australiannativebee.org.au/event-6884854" target="_blank" rel="noopener">Rockhampton Branch December meeting &amp; Xmas break up</a><small>Rockhampton Men’s Shed, Darumbal Road, CQ University Campus, North Rockhampton QLD 4701</small></li>
+        <li data-date="2026-12-12"><b>12 Dec 2026, 13:30 - 16:00</b><a href="https://www.australiannativebee.org.au/event-6866391" target="_blank" rel="noopener">Hive split at Coffs Botanic Gardens</a><small>North Coast Regional Botanic Garden</small></li>
+      </ul>
+      <p id="native-none" hidden>None listed here just now.</p>
+      <p class="fine">From the ANBA events list as it stood on 21 November 2026. <a href="https://www.australiannativebee.org.au/events" target="_blank" rel="noopener">The full, current list</a></p>
     </div>
     <footer class="foot"></footer>
   </div>
@@ -190,6 +197,17 @@
   </div>
 </section>
 
+<!-- ======================= HONEY SALES (Kris, 21 Nov 2026): farm gate locations near the visitor; a beekeeper lists theirs ======================= -->
+<section class="cell" id="cell-honey" aria-labelledby="h-honey">
+  <svg class="face" viewBox="0 0 100 115.47" preserveAspectRatio="none" aria-hidden="true"><polygon points="50,0.5 99.6,29.1 99.6,86.4 50,115 0.4,86.4 0.4,29.1"/></svg>
+  <a class="peek" href="../honey/index.html" data-go="honey"><span class="lab"><span class="ar"></span><span class="pl">Honey sales</span></span></a>
+  <div class="in">
+    <header class="head"><span class="kick">Farm gate locations</span><h1 id="h-honey">Honey sales</h1></header>
+    <div class="body" id="honey-body" tabindex="0"><p class="lede">Finding honey near you…</p></div>
+    <footer class="foot"><button type="button" class="hexbtn" data-honey="open"><span>List your honey</span></button></footer>
+  </div>
+</section>
+
 <!-- ======================= ADVERTISING ======================= -->
 <section class="cell" id="cell-advertise" aria-labelledby="h-advertise">
   <svg class="face" viewBox="0 0 100 115.47" preserveAspectRatio="none" aria-hidden="true"><polygon points="50,0.5 99.6,29.1 99.6,86.4 50,115 0.4,86.4 0.4,29.1"/></svg>
@@ -231,6 +249,32 @@
 <p class="wherenext">Where next?</p>
 <nav class="flower" id="flowerBig" aria-label="Pages of this site"></nav>
 </main>
+
+<!-- a beekeeper lists the place they sell honey from: (A) subscribing, if they have not; (B) the listing -->
+<dialog id="honey-dlg" aria-labelledby="honey-dlg-h">
+  <form id="honeyform" novalidate>
+    <h2 id="honey-dlg-h">List your honey</h2>
+    <fieldset id="honey-sub">
+      <legend>First, subscribe (it’s free)</legend>
+      <p class="fine">Listings are for subscribers. We’ll email you once a month, when the new issue of the magazine is out.</p>
+      <div class="two"><label>Your name<input name="name" autocomplete="name"></label><label>Email<input name="email" type="email" autocomplete="email" inputmode="email"></label></div>
+    </fieldset>
+    <fieldset>
+      <legend>Where you sell honey</legend>
+      <label>Name of the place <i>(farm, stall or shop)</i><input name="place" required></label>
+      <label>Address<input name="address" autocomplete="street-address" required></label>
+      <div class="two">
+        <label>State<select name="state"><option value=""></option><option>VIC</option><option>NSW</option><option>QLD</option><option>SA</option><option>WA</option><option>TAS</option><option>ACT</option><option>NT</option></select></label>
+        <label>Postcode<input name="postcode" inputmode="numeric" maxlength="4" required></label>
+      </div>
+      <div class="two"><label>Phone<input name="phone" type="tel" autocomplete="tel"></label><label>Hours<input name="hours" placeholder="e.g. Sat 9-1, or honesty box"></label></div>
+      <label>Types of honey sold<input name="honey" placeholder="e.g. yellow box, ironbark, creamed"></label>
+    </fieldset>
+    <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <p class="status" id="honey-note" role="status"></p>
+    <p class="acts"><button type="submit" class="btn gold" id="honey-send">Send listing</button><button type="button" class="btn" data-honey="close">Close</button></p>
+  </form>
+</dialog>
 
 <noscript><style>#sky{position:static}#plane{height:auto}#comb{position:static}.cell,.cell .in{pointer-events:auto}.cell{position:static;margin:20px auto;height:auto;width:min(94%,640px)}.cell .face,.cell .peek{display:none}.cell .in{position:static;opacity:1;visibility:visible;background:#fcfbf7;padding:20px}html.comb body{overflow:auto}</style></noscript>
 <script src="../site/comb.js"></script>

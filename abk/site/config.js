@@ -29,6 +29,12 @@ window.ABK_CONFIG = {
      subscriber is recognised on any device, whether or not they signed up on it. */
   subscriberParam: "sub",
 
+  /* Honey sales: how far round a visitor honey sellers are listed, and where a beekeeper's listing is sent. With
+     endpoint "" the listing opens as an e-mail to emails.editor in the beekeeper's own e-mail program; put a form
+     service's address here to have it sent straight from the page (fields: honey_place, honey_address, honey_state,
+     honey_postcode, honey_phone, honey_hours, honey_honey, name, email). Listings are added by hand to
+     data/honey.js: {"name", "address", "lat", "lon", "hours", "phone", "honey": ["yellow box", ...]}. */
+  honey: { radiusKm: 50, endpoint: "" },
   emails: { advertising: "advertising@theabk.com.au", editor: "editor@theabk.com.au" },
 
   /* ---- FINDING THE NEAREST CLUB AND STORE --------------------------------------------

@@ -14,22 +14,25 @@
   var ABK = window.ABK, cfg = ABK.cfg || {}, ROOT = ABK.root;
 
   /* The honeycomb. q across, r down (each row down is shifted half a cell to the right).
-                    Varroa     Native bees
-              Clubs     INFORMATION    About
-        SUBSCRIBE   WEBSITE HUB   THE MAGAZINE
-              Supplies   Pollination   Advertise
+                              Varroa     Native bees
+                        Clubs     INFORMATION
+        About    SUBSCRIBE   WEBSITE HUB   THE MAGAZINE
+            Honey sales   Supplies   Pollination   Advertise
      (Kris's plan, 21 Nov 2026.) The hub is directly left of the magazine and Subscribe directly left of the hub,
      so west of the magazine is always the same cell: a subscriber stops there, a visitor is carried across it
-     to Subscribe. The hub touches Subscribe, Clubs, Information, the magazine, Supplies and Pollination, and says
-     which way each lies. Information (up and to the right of the hub, up and to the left of the magazine) leads
-     up to Varroa and Native bees. */
+     to Subscribe. The hub says which way everything lies.
+     THE COMB GOES ROUND. Left of About is the magazine again, and down-left of About is Advertise; up from
+     Native bees are Pollination (up-left) and Advertise (up-right); and so on. It is four cells round from side
+     to side, and four rows round from top to bottom (LAT). The two short rows leave four places empty: that way
+     there is only sky. */
   var CELLS = [
     { id: 'reader',      q: 0,  r: 0,  path: 'index.html',             title: 'The magazine',        peek: 'The magazine' },
     { id: 'hub',         q: -1, r: 0,  path: 'hub/index.html',         title: 'Website hub',         peek: 'Website hub' },
     { id: 'subscribe',   q: -2, r: 0,  path: 'subscribe/index.html',   title: 'Subscribe',           peek: 'Subscribe' },
     { id: 'clubs',       q: -1, r: -1, path: 'clubs/index.html',       title: 'Beekeeping clubs',    peek: 'Clubs' },
     { id: 'info',        q: 0,  r: -1, path: 'information/index.html', title: 'Information resources', peek: 'Information' },
-    { id: 'about',       q: 1,  r: -1, path: 'about/index.html',       title: 'About',               peek: 'About' },
+    { id: 'about',       q: -3, r: 0,  path: 'about/index.html',       title: 'About',               peek: 'About' },
+    { id: 'honey',       q: -3, r: 1,  path: 'honey/index.html',       title: 'Honey sales',         peek: 'Honey sales' },
     { id: 'varroa',      q: 0,  r: -2, path: 'varroa/index.html',      title: 'Varroa',              peek: 'Varroa' },
     { id: 'native',      q: 1,  r: -2, path: 'native-bees/index.html', title: 'Native bees',         peek: 'Native bees' },
     { id: 'supplies',    q: -2, r: 1,  path: 'supplies/index.html',    title: 'Beekeeping supplies', peek: 'Supplies' },
@@ -47,12 +50,28 @@
   function node(id) { return document.getElementById('cell-' + id); }
   function peekName(c) { return c.id === 'subscribe' ? (ABK.isSub() ? 'My details' : 'Subscribe') : c.peek; }
   function titleOf(c) { return c.id === 'subscribe' ? (ABK.isSub() ? 'Your details' : 'Subscribe') : c.title; }
+  /* Round the comb: a place and the same place 4 cells across, or 4 rows down and 2 back, are one place. */
+  CELLS.forEach(function (k) { k.wq = k.q; k.wr = k.r; });       /* where each cell is drawn just now (wq, wr) */
+  function dist(dq, dr) { return (Math.abs(dq) + Math.abs(dr) + Math.abs(dq + dr)) / 2; }
+  function at(q, r) {                                     /* the cell at a place, the long way round included; null = sky */
+    for (var i = 0; i < CELLS.length; i++) {
+      var k = CELLS[i], j = (r - k.r) / 4;
+      if (j === Math.round(j) && (q - k.q + 2 * j) % 4 === 0) return k;
+    }
+    return null;
+  }
+  function image(k, C) {                                  /* where cell k is drawn when the middle of the window is the place C: the nearest way round */
+    var best = null, bd = 1e9;
+    for (var j = -2; j <= 2; j++) for (var i = -2; i <= 2; i++) {
+      var q = k.q + 4 * i - 2 * j, r = k.r + 4 * j;
+      var d = dist(q - C.q, r - C.r) - (k.wq === q && k.wr === r ? 0.01 : 0);       /* as near either way: it stays where it is */
+      if (d < bd) { bd = d; best = { q: q, r: r }; }
+    }
+    return best;
+  }
   function neighbour(dir) {
     var c = cell(cur);
-    for (var k in DIRS) if (DIRS[k] === dir) {
-      var p = k.split(','), q = c.q + (+p[0]), r = c.r + (+p[1]);
-      for (var i = 0; i < CELLS.length; i++) if (CELLS[i].q === q && CELLS[i].r === r) return CELLS[i].id;
-    }
+    for (var k in DIRS) if (DIRS[k] === dir) { var p = k.split(','), n = at(c.q + (+p[0]), c.r + (+p[1])); return n ? n.id : null; }
     return null;
   }
 
@@ -82,21 +101,31 @@
     G.planeW = (pl && pl.clientWidth) || W; G.seenH = Math.min(G.planeH, H - B);
     place(false); labels(); paintFlower();
   }
-  function steps(a, b) { var dq = a.q - b.q, dr = a.r - b.r; return (Math.abs(dq) + Math.abs(dr) + Math.abs(dq + dr)) / 2; }
+  function put(k, C) {
+    var e = node(k.id); if (!e) return;
+    e.style.transform = 'translate(' + ((k.wq - C.q + (k.wr - C.r) / 2) * G.dx).toFixed(1) + 'px,' + ((k.wr - C.r) * G.dy).toFixed(1) + 'px)';
+  }
   /* the comb, with the given cell (or the one you are on) in the middle of the window */
   function place(animate, centre) {
     if (G.compact) return;
-    var c = cell(centre || cur), root = document.documentElement;
+    var c = cell(centre || cur), root = document.documentElement, was = G.c;
+    var to = was ? image(c, was) : { q: c.q, r: c.r };          /* the cell's nearest self: perhaps round the edge of the comb */
     /* a longer way takes a little longer and is still one movement: the cells between go past */
-    G.mv = animate ? 0.62 + 0.4 * Math.max(0, (G.at ? steps(cell(G.at), c) : 1) - 1) : 0;
+    G.mv = animate ? 0.62 + 0.4 * Math.max(0, (was ? dist(to.q - was.q, to.r - was.r) : 1) - 1) : 0;
     root.style.setProperty('--mv', (G.mv || 0.62).toFixed(2) + 's');
+    /* every cell takes the place nearest the new middle. One that has to come round from the other side does
+       so first, in one jump, out beyond the edge of the window; then the whole comb slides. */
+    var jump = [];
+    CELLS.forEach(function (k) { var p = image(k, to); if (p.q !== k.wq || p.r !== k.wr) { k.wq = p.q; k.wr = p.r; jump.push(k); } });
+    if (animate && was && jump.length) {
+      root.classList.add('still'); jump.forEach(function (k) { put(k, was); }); void document.body.offsetWidth;
+    }
     root.classList.toggle('still', !animate);
-    CELLS.forEach(function (k) {
-      var e = node(k.id); if (!e) return;
-      var x = (k.q - c.q + (k.r - c.r) / 2) * G.dx, y = (k.r - c.r) * G.dy;
-      e.style.transform = 'translate(' + x.toFixed(1) + 'px,' + y.toFixed(1) + 'px)';
-    });
-    G.at = c.id;
+    CELLS.forEach(function (k) { put(k, to); });
+    /* count from the comb's own numbering again: the same picture, with the middle cell at its own place */
+    var sq = to.q - c.q, sr = to.r - c.r;
+    CELLS.forEach(function (k) { k.wq -= sq; k.wr -= sr; });
+    G.c = { q: c.q, r: c.r }; G.at = c.id;
   }
   /* A cell's name goes in the middle of its hexagon when the middle is in the window, and otherwise as near
      the middle as the window lets it be: the nearest spot to the centre where the whole name is inside both
@@ -106,11 +135,11 @@
     if (G.compact) return;
     /* "the window" is the part of the plane in view when the sky is centred on the middle cell (it only
        scrolls when the window is too short for a cell) */
-    var c = cell(cur), PW = G.planeW, PH = G.planeH, M = 14, pad = 12, hw = G.w / 2, hh = G.h / 2, s = hh / G.w;
+    var c = G.c || cell(cur), PW = G.planeW, PH = G.planeH, M = 14, pad = 12, hw = G.w / 2, hh = G.h / 2, s = hh / G.w;
     var top = (PH - G.seenH) / 2, bot = (PH + G.seenH) / 2;
     CELLS.forEach(function (k) {
       var e = node(k.id), lab = e && $('.peek .lab', e); if (!lab || k.id === cur) return;
-      var cx = PW / 2 + (k.q - c.q + (k.r - c.r) / 2) * G.dx, cy = PH / 2 + (k.r - c.r) * G.dy, spot = null, small;
+      var cx = PW / 2 + (k.wq - c.q + (k.wr - c.r) / 2) * G.dx, cy = PH / 2 + (k.wr - c.r) * G.dy, spot = null, small;
       for (small = 0; small < 2 && !spot; small++) {
         lab.classList.toggle('sm', !!small);
         var lw = lab.offsetWidth, lh = lab.offsetHeight;
@@ -131,27 +160,27 @@
     });
   }
   function centreSky() { var sky = $('#sky'); if (sky && !G.compact) sky.scrollTop = Math.max(0, (G.planeH - sky.clientHeight) / 2); }
-  function arrowTo(c, k) {                                /* which way cell k lies from cell c */
-    var d = DIRS[(k.q - c.q) + ',' + (k.r - c.r)];
+  function arrowTo(c, k) {                                /* which way cell k lies (as it is drawn) from the middle c */
+    var dq = k.wq - c.q, dr = k.wr - c.r, d = DIRS[dq + ',' + dr];
     if (d) return ARROW[d];
-    var a = Math.atan2((k.r - c.r) * 0.8660254, k.q - c.q + (k.r - c.r) / 2) * 180 / Math.PI;
+    var a = Math.atan2(dr * 0.8660254, dq + dr / 2) * 180 / Math.PI;
     return ['→', '↘', '↓', '↙', '←', '↖', '↑', '↗'][((Math.round(a / 45) % 8) + 8) % 8];
   }
   function mark() {
-    var c = cell(cur);
+    var c = G.c || cell(cur);
     CELLS.forEach(function (k) {
       var e = node(k.id); if (!e) return;
-      var d = k.id === cur ? '' : (DIRS[(k.q - c.q) + ',' + (k.r - c.r)] || 'far');
+      var d = k.id === cur ? '' : (DIRS[(k.wq - c.q) + ',' + (k.wr - c.r)] || 'far');
       e.classList.toggle('current', k.id === cur);
       e.setAttribute('data-dir', d);
-      e.toggleAttribute('data-below', k.r > c.r);          /* a cell below has its arrow under its name */
+      e.toggleAttribute('data-below', k.wr > c.r);         /* a cell below has its arrow under its name */
       var a = $('.peek .ar', e), p = $('.peek .pl', e), pk = $('.peek', e);
       if (a) a.textContent = k.id === cur ? '' : arrowTo(c, k);
       if (p) p.textContent = peekName(k);
       if (pk && k.id !== 'reader') pk.title = titleOf(k);
       if (pk) pk.tabIndex = k.id === cur ? -1 : 0;
     });
-    document.title = titleOf(c) + ' | The Australasian Beekeeper';
+    document.title = titleOf(cell(cur)) + ' | The Australasian Beekeeper';
     paintFlower();
   }
   function go(id, o) {
@@ -166,7 +195,7 @@
       e.style.setProperty('--inx', (c.q + c.r / 2 > prev.q + prev.r / 2 ? 46 : c.q + c.r / 2 < prev.q + prev.r / 2 ? -46 : 0) + 'px');
       e.style.setProperty('--iny', (c.r > prev.r ? 34 : c.r < prev.r ? -34 : 0) + 'px');
     }
-    mark(); place(o.animate !== false); labels(); centreSky();
+    place(o.animate !== false); mark(); labels(); centreSky();
     if (G.compact) window.scrollTo(0, 0);
     if (o.push !== false) { try { history.pushState({ cell: id }, '', ABK.url(ROOT + c.path)); } catch (err) {} }
     render(id);
@@ -565,12 +594,120 @@
     $('#hub-forget').addEventListener('click', function () { form.reset(); form.removeAttribute('data-filled'); status(''); ABK.set(null); });
   }
 
+  /* ---------------------------------------------------------------- Honey sales (Kris, 21 Nov 2026) */
+  /* Places where beekeepers sell their own honey, within cfg.honey.radiusKm (50) of the visitor. The visitor need not
+     be a subscriber: where they are comes from their subscription's address if they have one, else from this
+     device (the browser asks them) or a postcode they type, kept for this visit only. "List your honey" opens a
+     form for a beekeeper: it subscribes them if they are not yet, and sends the listing to the editor (to
+     cfg.honey.endpoint if one is set, otherwise as an e-mail their own program sends). Listings are added by
+     hand to data/honey.js. */
+  var HERE = null; try { HERE = JSON.parse(sessionStorage.getItem('abk_here') || 'null'); } catch (e) {}
+  function honeyRow(h, d) {
+    var bits = [];
+    if (h.hours) bits.push(esc(h.hours));
+    if (h.phone) bits.push('<a href="tel:' + esc(String(h.phone).replace(/[^0-9+]/g, '')) + '">' + esc(h.phone) + '</a>');
+    return '<article class="row"><div class="hexdate km"><b>' + (d < 10 ? Math.round(d * 10) / 10 : Math.round(d)) + '</b><span>km</span></div><div>' +
+      '<h3>' + esc(h.name) + '</h3>' +
+      (h.address ? '<p class="meta">' + mapLink(h.address, h.address, { name: h.name }) + '</p>' : '') +
+      (bits.length ? '<p class="when q">' + bits.join(' · ') + '</p>' : '') +
+      ((h.honey || []).length ? '<div class="tags">' + h.honey.map(function (x) { return '<span>' + esc(x) + '</span>'; }).join('') + '</div>' : '') +
+      '</div></article>';
+  }
+  function renderHoney() {
+    var el = $('#honey-body'); if (!el) return;
+    load('honey').catch(function () { return { sellers: [] }; }).then(function (H) {
+      var s = ABK.get() || {}, here = typeof s.lat === 'number' ? s : HERE, R = (cfg.honey && cfg.honey.radiusKm) || 50;
+      var html = '<p class="lede">Honey straight from the beekeeper: farm gates, stalls and shops where beekeepers sell their own honey.</p>';
+      if (!here) {
+        html += '<p class="find"><button type="button" class="btn gold" data-honey="geo">Use my location</button><span>or</span>' +
+          '<input id="honey-pc" inputmode="numeric" maxlength="4" placeholder="Postcode" aria-label="Your postcode">' +
+          '<button type="button" class="btn" data-honey="pc">Find</button></p><p class="status" id="honey-status" role="status"></p>' +
+          '<p class="fine">Your location is used only to work out what is within ' + R + '&nbsp;km of you. It stays in this browser.</p>';
+      } else {
+        var near = ((H && H.sellers) || []).filter(function (h) { return typeof h.lat === 'number'; })
+          .map(function (h) { return { h: h, d: km(here, h) }; }).filter(function (x) { return x.d <= R; }).sort(function (a, b) { return a.d - b.d; });
+        html += '<h2>Within ' + R + ' km of ' + (here === HERE ? esc(HERE.label || 'you') : whereText(s)) + '</h2>';
+        html += near.length ? near.map(function (x) { return honeyRow(x.h, x.d); }).join('')
+          : '<p>No honey sellers are listed within ' + R + '&nbsp;km yet.</p>';
+        if (here === HERE) html += '<p class="fine"><button type="button" class="lnk" data-honey="reset">Somewhere else</button></p>';
+      }
+      html += '<p class="fine">Do you sell your own honey? Press <b>List your honey</b> below to add your farm gate.</p>';
+      el.innerHTML = html;
+    });
+  }
+  function honeyHere(p, label) { HERE = { lat: p.lat, lon: p.lon, label: label }; try { sessionStorage.setItem('abk_here', JSON.stringify(HERE)); } catch (e) {} renderHoney(); }
+  function bindHoney() {
+    var dlg = $('#honey-dlg'), form = $('#honeyform'); if (!dlg || !form) return;
+    function note(t, bad) { var e = $('#honey-note'); e.textContent = t || ''; e.classList.toggle('err', !!bad); }
+    document.addEventListener('click', function (e) {
+      var t = e.target.closest && e.target.closest('[data-honey]'); if (!t) return;
+      var what = t.getAttribute('data-honey'), st = $('#honey-status');
+      if (what === 'geo') {
+        if (!navigator.geolocation) { st.textContent = 'This browser cannot give its location. Try your postcode.'; return; }
+        st.textContent = 'Finding you…';
+        navigator.geolocation.getCurrentPosition(function (p) { honeyHere({ lat: p.coords.latitude, lon: p.coords.longitude }, 'where you are'); },
+          function () { st.textContent = 'This device would not give its location. Try your postcode.'; }, { maximumAge: 6e5, timeout: 12000 });
+      } else if (what === 'pc') {
+        var pc = ($('#honey-pc').value || '').trim();
+        if (!/^\d{4}$/.test(pc)) { st.textContent = 'A postcode has four figures.'; return; }
+        st.textContent = 'Finding ' + pc + '…';
+        locate({ postcode: pc }).then(function (p) { honeyHere(p, pc); }).catch(function () { st.textContent = 'That postcode was not found.'; });
+      } else if (what === 'reset') { HERE = null; try { sessionStorage.removeItem('abk_here'); } catch (e2) {} renderHoney(); }
+      else if (what === 'open') {
+        var sub = ABK.isSub();
+        $('#honey-sub').hidden = sub; $('#honey-sub').querySelectorAll('input').forEach(function (i) { i.required = !sub; });
+        note(''); if (dlg.showModal) dlg.showModal(); else dlg.setAttribute('open', '');
+      } else if (what === 'close') { if (dlg.close) dlg.close(); else dlg.removeAttribute('open'); }
+    });
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var f = function (n) { return (form.elements[n] && form.elements[n].value || '').trim(); }, sub = ABK.isSub(), s = ABK.get() || {};
+      if (form.elements.website && form.elements.website.value) return;                       /* a robot filled the hidden field */
+      if (!sub && (!f('name') || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(f('email')))) { note('Please give your name and a working email address.', true); return; }
+      if (!f('place') || !f('address') || !/^\d{4}$/.test(f('postcode'))) { note('Please give the name of the place, its address and its postcode.', true); return; }
+      var who = { name: sub ? (s.name || '') : f('name'), email: sub ? (s.email || '') : f('email') };
+      var L = { place: f('place'), address: f('address'), state: f('state'), postcode: f('postcode'), phone: f('phone'), hours: f('hours'), honey: f('honey') };
+      var btn = $('#honey-send'); btn.disabled = true; note('Sending…');
+      /* (A) subscribe, if they have not already */
+      var step = sub ? Promise.resolve() : send({ name: who.name, email: who.email, street: '', state: L.state, postcode: L.postcode, print: false }, false).then(function (r) {
+        var t = ABK.get() || {}; t.on = true; t.ts = Date.now(); t.name = who.name; t.email = who.email; t.state = L.state; t.postcode = L.postcode;
+        if (r && r.preview) t.preview = true; ABK.set(t);
+      });
+      /* (B) the listing, to the editor */
+      step.then(function () {
+        var hc = cfg.honey || {};
+        if (hc.endpoint) {
+          var pairs = []; Object.keys(L).forEach(function (k) { pairs.push(encodeURIComponent('honey_' + k) + '=' + encodeURIComponent(L[k])); });
+          pairs.push('name=' + encodeURIComponent(who.name), 'email=' + encodeURIComponent(who.email));
+          return fetch(hc.endpoint, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: pairs.join('&') })
+            .then(function () { return 'Thank you. Your listing has gone to the editor and will appear here once it has been added.'; });
+        }
+        var body = ['Honey sales listing for The Australasian Beekeeper website', '', 'Place: ' + L.place, 'Address: ' + L.address + ', ' + [L.state, L.postcode].filter(Boolean).join(' '),
+          'Phone: ' + L.phone, 'Hours: ' + L.hours, 'Honey sold: ' + L.honey, '', 'From: ' + who.name + ' <' + who.email + '>'].join('\n');
+        location.href = 'mailto:' + ((cfg.emails && cfg.emails.editor) || '') + '?subject=' + encodeURIComponent('Honey sales listing: ' + L.place) + '&body=' + encodeURIComponent(body);
+        return 'Your email program should now be open with the listing ready to send to the editor. It will appear here once it has been added.';
+      }).then(function (msg) { note(msg); form.reset(); })
+        .catch(function (err) { note((err && err.message) || 'That did not go through. Please try again.', true); })
+        .then(function () { btn.disabled = false; });
+    });
+  }
+  /* Native bees: an event that has passed is taken off the list */
+  function renderNative() {
+    var today = new Date(); today.setHours(0, 0, 0, 0); var left = 0;
+    document.querySelectorAll('#native-events li[data-date]').forEach(function (li) {
+      var gone = new Date(li.getAttribute('data-date') + 'T23:59:59') < today; li.hidden = gone; if (!gone) left++;
+    });
+    var none = $('#native-none'); if (none) none.hidden = left > 0;
+  }
+
   function render(id) {
     if (id === 'subscribe') renderSubscribe();
     else if (id === 'hub') renderHub();
     else if (id === 'clubs') renderClubs();
     else if (id === 'supplies') renderSupplies();
     else if (id === 'advertise') renderAds();
+    else if (id === 'honey') renderHoney();
+    else if (id === 'native') renderNative();
   }
 
   /* ---------------------------------------------------------------- getting about */
@@ -603,9 +740,9 @@
   /* which cell the point (in the window) is on, by the hexagons themselves; null in the sky between them */
   function under(x, y) {
     var pl = $('#plane'); if (!pl || G.compact) return null;
-    var r = pl.getBoundingClientRect(), c = cell(cur), ox = r.left + r.width / 2, oy = r.top + G.planeH / 2, s = G.h / (2 * G.w), hit = null;
+    var r = pl.getBoundingClientRect(), c = G.c || cell(cur), ox = r.left + r.width / 2, oy = r.top + G.planeH / 2, s = G.h / (2 * G.w), hit = null;
     CELLS.forEach(function (k) {
-      var dx = Math.abs(x - ox - (k.q - c.q + (k.r - c.r) / 2) * G.dx), dy = Math.abs(y - oy - (k.r - c.r) * G.dy);
+      var dx = Math.abs(x - ox - (k.wq - c.q + (k.wr - c.r) / 2) * G.dx), dy = Math.abs(y - oy - (k.wr - c.r) * G.dy);
       if (dx <= G.w / 2 && dy + dx * s <= G.h / 2) hit = k;
     });
     return hit;
@@ -643,7 +780,7 @@
       if (Math.abs(accY) < 60) return;                        /* one notch of a wheel is enough; a touchpad gathers to it */
       accY = 0;
       var c = cell(cur), on = under(e.clientX, e.clientY), to = null;
-      if (on && on.id !== cur && (on.r - c.r) * dir > 0) to = on.id;
+      if (on && on.id !== cur && (on.wr - c.r) * dir > 0) to = on.id;
       else {
         var pl = $('#plane').getBoundingClientRect(), west = e.clientX < pl.left + pl.width / 2;
         to = dir < 0 ? (neighbour(west ? 'nw' : 'ne') || neighbour(west ? 'ne' : 'nw')) : (neighbour(west ? 'sw' : 'se') || neighbour(west ? 'se' : 'sw'));
@@ -697,7 +834,7 @@
     cur = document.body.getAttribute('data-start') || fromPath();
     if (!cell(cur) || cur === 'reader') cur = 'subscribe';
     var arrive = null; try { arrive = sessionStorage.getItem('abk_arrive'); sessionStorage.removeItem('abk_arrive'); } catch (e) {}
-    bindHub(); mark(); layout(); render(cur); centreSky();
+    bindHub(); bindHoney(); layout(); mark(); labels(); render(cur); centreSky();
     try { history.replaceState({ cell: cur }, ''); } catch (e) {}
     /* Come in from the magazine: the comb starts with the magazine's cell in the middle and slides east to
        west until this cell is. The hub is one cell over; Subscribe is two, so the hub goes past on the way. */

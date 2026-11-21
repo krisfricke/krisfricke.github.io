@@ -140,6 +140,28 @@ html.comb button.hexbtn{font:900 14.5px/1.1 var(--sans)}      /* a button does n
 .ways.compass .ar{font-size:21px}
 .ways.compass b{font-size:14px}
 .ways.compass small{font-size:11.5px;line-height:1.15}
+/* events (Native bees) */
+.events{list-style:none;margin:0 0 6px;padding:0}
+.events li{padding:6px 0;border-top:1px solid var(--line);display:grid;gap:1px}
+.events li:first-child{border-top:0}
+.events b{font:800 12px/1.2 var(--sans);letter-spacing:.06em;text-transform:uppercase;color:var(--blue)}
+.events a{font-weight:600}
+.events small{font-size:13px;color:#4c5565}
+/* Honey sales: finding where you are; the form a beekeeper lists a place with */
+.find{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.find input{width:6.5em;height:34px;border:1.5px solid #93a0b6;border-radius:2px;padding:0 9px;font:400 16px/1 var(--sans)}
+#honey-dlg{border:3px solid var(--navy);border-radius:4px;background:var(--paper);color:var(--ink);padding:18px 20px 14px;width:min(94vw,560px);max-height:92vh;overflow:auto;font:400 16px/1.4 var(--sans)}
+#honey-dlg::backdrop{background:rgba(41,56,77,.55)}
+#honey-dlg h2{margin:0 0 8px;font:700 26px/1.1 var(--serif);color:var(--navy)}
+#honey-dlg fieldset{border:0;border-top:2px solid var(--navy);margin:10px 0 0;padding:8px 0 0}
+#honey-dlg legend{font:800 12.5px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--blue);padding:0 8px 0 0}
+#honey-dlg label{display:block;font:700 12.5px/1.2 var(--sans);letter-spacing:.04em;color:var(--navy);margin:0 0 8px}
+#honey-dlg label i{font-weight:400;font-style:normal;color:#5d6676}
+#honey-dlg input:not(.hp),#honey-dlg select{display:block;width:100%;margin-top:3px;height:36px;border:1.5px solid #93a0b6;border-radius:2px;background:#fff;padding:0 9px;font:400 16px/1 var(--sans);color:var(--ink)}
+#honey-dlg input:focus,#honey-dlg select:focus{outline:2px solid var(--yellow);outline-offset:0;border-color:var(--navy)}
+#honey-dlg .two{display:grid;grid-template-columns:1fr 1fr;gap:0 12px}
+#honey-dlg .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+#honey-dlg .acts{display:flex;gap:10px;margin:8px 0 0}
 /* topics of the magazine (links into the reader) and links to other sites */
 .topics{display:flex;flex-wrap:wrap;gap:6px;margin:2px 0 8px}
 .topics a{clip-path:var(--lozP);background:#dfe5ef;color:var(--navy);text-decoration:none;font:800 12.5px/1 var(--sans);letter-spacing:.06em;text-transform:uppercase;padding:9px 18px 8px;position:relative;isolation:isolate}
