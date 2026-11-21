@@ -3,11 +3,11 @@
       this browser only, under one key; see ABK.get()).
    2. Data files (data/*.js) hand themselves in through ABK_DATA(), so the site works from a web
       server and also opened straight from a folder.
-   3. In the reader: the way west. Left of the pages lies the Resources cell and, beyond it, the
+   3. In the reader: the way west. Left of the pages lies the Website hub (once called Resources) and, beyond it, the
       Subscribe cell: a band down the left edge with three arrows on it, a hexagon for each cell,
       and "pulling" the page that way (dragging it with the mouse, the left arrow, a sideways
-      scroll, a swipe). West means Subscribe for a visitor - the comb glides across Resources to
-      reach it - and Resources for a subscriber.
+      scroll, a swipe). West means Subscribe for a visitor - the comb glides across the hub to
+      reach it - and the hub for a subscriber.
    Loaded after site/config.js. No dependencies. Every link is to an index.html by name, never to
    a bare folder, so nothing depends on a server choosing the index page. */
 (function () {
@@ -70,7 +70,7 @@
     var track = document.getElementById('track');
     if (!track) return;
     var HEX = '<svg viewBox="0 0 100 115.47" preserveAspectRatio="none" aria-hidden="true"><polygon points="50,1 99,29.4 99,86.1 50,114.5 1,86.1 1,29.4"/></svg>';
-    var SUB = ROOT + 'subscribe/index.html', RES = ROOT + 'resources/index.html';
+    var SUB = ROOT + 'subscribe/index.html', RES = ROOT + 'hub/index.html';
     var strip = document.createElement('div');
     strip.id = 'abkWest'; strip.className = 'abk-west';
     strip.innerHTML =
@@ -78,12 +78,12 @@
       '<span class="abk-hexes">' +
         '<a class="abk-hexb abk-h-sub" href="' + SUB + '" title="Subscribe – it’s free">' + HEX +
           '<span class="abk-hexl"><em>←</em><b>Subscribe!</b><small>Free · a monthly email when the new issue is out</small></span></a>' +
-        '<a class="abk-hexb abk-h-res" href="' + RES + '" title="Resources: clubs, supplies, pollination">' + HEX +
-          '<span class="abk-hexl"><em>←</em><b>Resources</b><small>Clubs · supplies · pollination</small></span></a>' +
+        '<a class="abk-hexb abk-h-res" href="' + RES + '" title="Website hub: clubs, supplies, topics and more">' + HEX +
+          '<span class="abk-hexl"><em>←</em><b>Website hub</b><small>Clubs · supplies · topics</small></span></a>' +
       '</span>';
     document.body.appendChild(strip);
-    function target() { return ABK.isSub() ? RES : SUB; }           /* what lies west: Subscribe, or Resources once subscribed */
-    function label() { strip.title = ABK.isSub() ? 'Resources: clubs, supplies, pollination' : 'Subscribe – it’s free'; }
+    function target() { return ABK.isSub() ? RES : SUB; }           /* what lies west: Subscribe, or the hub once subscribed */
+    function label() { strip.title = ABK.isSub() ? 'Website hub: clubs, supplies, topics and more' : 'Subscribe – it’s free'; }
 
     /* the strip is the sky to the left of the pages; with no room there, the band and one hexagon in the corner */
     function first() {                                              /* what the sky is to the left of: a page, or a cover in Past issues */

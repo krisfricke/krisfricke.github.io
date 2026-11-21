@@ -14,18 +14,24 @@
   var ABK = window.ABK, cfg = ABK.cfg || {}, ROOT = ABK.root;
 
   /* The honeycomb. q across, r down (each row down is shifted half a cell to the right).
-              Clubs       About
-        SUBSCRIBE   RESOURCES   THE MAGAZINE
+                    Varroa     Native bees
+              Clubs     INFORMATION    About
+        SUBSCRIBE   WEBSITE HUB   THE MAGAZINE
               Supplies   Pollination   Advertise
-     Resources is directly left of the magazine and Subscribe directly left of Resources, so west of the
-     magazine is always the same cell: a subscriber stops there, a visitor is carried across it to
-     Subscribe. Resources touches every other cell but Advertise: it is the hub. */
+     (Kris's plan, 21 Nov 2026.) The hub is directly left of the magazine and Subscribe directly left of the hub,
+     so west of the magazine is always the same cell: a subscriber stops there, a visitor is carried across it
+     to Subscribe. The hub touches Subscribe, Clubs, Information, the magazine, Supplies and Pollination, and says
+     which way each lies. Information (up and to the right of the hub, up and to the left of the magazine) leads
+     up to Varroa and Native bees. */
   var CELLS = [
     { id: 'reader',      q: 0,  r: 0,  path: 'index.html',             title: 'The magazine',        peek: 'The magazine' },
-    { id: 'resources',   q: -1, r: 0,  path: 'resources/index.html',   title: 'Resources',           peek: 'Resources' },
+    { id: 'hub',         q: -1, r: 0,  path: 'hub/index.html',         title: 'Website hub',         peek: 'Website hub' },
     { id: 'subscribe',   q: -2, r: 0,  path: 'subscribe/index.html',   title: 'Subscribe',           peek: 'Subscribe' },
     { id: 'clubs',       q: -1, r: -1, path: 'clubs/index.html',       title: 'Beekeeping clubs',    peek: 'Clubs' },
-    { id: 'about',       q: 0,  r: -1, path: 'about/index.html',       title: 'About',               peek: 'About' },
+    { id: 'info',        q: 0,  r: -1, path: 'information/index.html', title: 'Information resources', peek: 'Information' },
+    { id: 'about',       q: 1,  r: -1, path: 'about/index.html',       title: 'About',               peek: 'About' },
+    { id: 'varroa',      q: 0,  r: -2, path: 'varroa/index.html',      title: 'Varroa',              peek: 'Varroa' },
+    { id: 'native',      q: 1,  r: -2, path: 'native-bees/index.html', title: 'Native bees',         peek: 'Native bees' },
     { id: 'supplies',    q: -2, r: 1,  path: 'supplies/index.html',    title: 'Beekeeping supplies', peek: 'Supplies' },
     { id: 'pollination', q: -1, r: 1,  path: 'pollination/index.html', title: 'Pollination',         peek: 'Pollination' },
     { id: 'advertise',   q: 0,  r: 1,  path: 'advertise/index.html',   title: 'Advertising',         peek: 'Advertise' }
@@ -466,7 +472,7 @@
     var m = $('#ads-mail'); if (m) m.href = 'mailto:' + cfg.emails.advertising + '?subject=Advertising%20in%20The%20Australasian%20Beekeeper';
   }
 
-  /* ---------------------------------------------------------------- Subscribe, and Resources */
+  /* ---------------------------------------------------------------- Subscribe, and the Website hub */
   function field(n) { return $('#subform [name=' + n + ']'); }
   function status(t, bad) { var e = $('#hub-status'); e.textContent = t || ''; e.classList.toggle('err', !!bad); }
   /* the Subscribe cell: the form. For a subscriber it is "Your details", filled in, and saves changes. */
@@ -484,19 +490,13 @@
     }
     if (!sub) form.removeAttribute('data-filled');
   }
-  /* the Resources cell: open to everyone; a subscriber is greeted, a visitor is told what subscribing adds */
-  function renderResources() {
-    var s = ABK.get() || {}, sub = !!s.on, bits = [];
-    $('#res-kick').textContent = sub ? (s.name ? 'Welcome, ' + s.name.split(' ')[0] : 'You’re subscribed') : 'For beekeepers';
-    $('#res-lede').textContent = sub ? 'Thank you for subscribing. We’ll email you each month when the new issue is out. These are yours to use:'
-      : 'Find a beekeeping club, a supplier, or who to talk to about pollination work.';
-    if (s.email) bits.push(esc(s.email));
-    if (s.postcode) bits.push(esc([s.state, s.postcode].filter(Boolean).join(' ')));
-    $('#res-you').innerHTML = sub
-      ? (bits.length ? 'Subscribed as ' + bits.join(' · ') + '. ' : '') + '<a href="' + ROOT + 'subscribe/index.html" data-go="subscribe">' + (s.email ? 'Update my details' : 'Add my details') + '</a>'
-      : 'Subscribe (it’s free) with your address, and Clubs and Supplies will show the ones nearest you.';
-    $('#res-preview').hidden = !sub || !!(cfg.subscribe && cfg.subscribe.endpoint) || !s.preview;
-    $('#res-go').style.display = sub ? 'none' : '';     /* a subscriber needs no button: the magazine is just to the right */
+  /* the Website hub: open to everyone. West is Subscribe for a visitor and "My details" for a subscriber. */
+  function renderHub() {
+    var s = ABK.get() || {}, sub = !!s.on;
+    $('#wh-kick').textContent = sub ? (s.name ? 'Welcome, ' + s.name.split(' ')[0] : 'You’re subscribed') : 'The Australasian Beekeeper';
+    $('#wh-sub').textContent = sub ? 'My details' : 'Subscribe';
+    $('#wh-subnote').textContent = sub ? 'Change your details' : 'Free: one email a month';
+    $('#wh-preview').hidden = !sub || !!(cfg.subscribe && cfg.subscribe.endpoint) || !s.preview;
   }
   /* Sending. With no endpoint set (site/config.js) nothing is sent: preview mode. */
   function send(d, update) {
@@ -555,19 +555,19 @@
         if (d.postcode && typeof s.lat !== 'number') locate(d).then(function (p) {
           var t = ABK.get() || s; t.lat = p.lat; t.lon = p.lon; t.place = p.place || 'postcode'; delete t.lost; ABK.set(t);
         }).catch(function () { var t = ABK.get() || s; t.lost = d.postcode; ABK.set(t); });      /* not a postcode we know */
-        if (cur === 'subscribe') go('resources');                           /* subscribed: on to what it opens */
+        if (cur === 'subscribe') go('hub');                           /* subscribed: on to what it opens */
       }).catch(function (err) { status((err && err.message) || 'That did not go through. Please try again.', true); })
         .then(function () { btn.disabled = false; });
     });
     $('#hub-already').addEventListener('click', function () {
-      var s = ABK.get() || {}; s.on = true; s.via = 'self'; s.ts = Date.now(); ABK.set(s); go('resources');
+      var s = ABK.get() || {}; s.on = true; s.via = 'self'; s.ts = Date.now(); ABK.set(s); go('hub');
     });
     $('#hub-forget').addEventListener('click', function () { form.reset(); form.removeAttribute('data-filled'); status(''); ABK.set(null); });
   }
 
   function render(id) {
     if (id === 'subscribe') renderSubscribe();
-    else if (id === 'resources') renderResources();
+    else if (id === 'hub') renderHub();
     else if (id === 'clubs') renderClubs();
     else if (id === 'supplies') renderSupplies();
     else if (id === 'advertise') renderAds();
@@ -700,7 +700,7 @@
     bindHub(); mark(); layout(); render(cur); centreSky();
     try { history.replaceState({ cell: cur }, ''); } catch (e) {}
     /* Come in from the magazine: the comb starts with the magazine's cell in the middle and slides east to
-       west until this cell is. Resources is one cell over; Subscribe is two, so Resources goes past on the way. */
+       west until this cell is. The hub is one cell over; Subscribe is two, so the hub goes past on the way. */
     if (arrive === 'from-reader' && !G.compact) {
       place(false, 'reader');
       void document.body.offsetWidth;                         /* the starting position is taken in before the move begins */
