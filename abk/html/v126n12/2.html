@@ -20,16 +20,16 @@ p.gh,p.gh *{color:transparent!important}
 a{color:inherit;text-decoration:none}
 a:hover{text-decoration:underline}
 /* a link carried by the text shows the reader's cue for "this can be clicked": the yellow line (Kris, 21 Nov 2026) */
-p a[href]:not(.ixlink){border-radius:10px;transition:box-shadow .12s,background .12s}
-p a[href]:not(.ixlink):hover{text-decoration:none;background:rgba(255,212,0,.16);box-shadow:0 0 0 7px rgba(255,212,0,.8)}
+p a[href]{border-radius:10px;transition:background .12s}
+p a[href]:hover{text-decoration:none;background:rgba(255,212,0,.22);outline:10px solid #ffd400;outline-offset:3px}
 a.ixlink{text-decoration:none;color:inherit;cursor:pointer}
 a.ixlink:hover{background:rgba(255,212,0,.28);text-decoration:none}
 a.zoom{position:absolute;display:block;z-index:6;border-radius:12px;transition:box-shadow .12s}
-a.zoom:hover{box-shadow:0 0 0 8px rgba(255,212,0,.9) inset}
+a.zoom:hover{box-shadow:0 0 0 10px #ffd400 inset}
 a.zoom::after{content:"";position:absolute;right:24px;bottom:24px;width:104px;height:104px;border-radius:50%;background:rgba(41,56,77,.72) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffd400' stroke-width='2.4' stroke-linecap='round'><circle cx='10.5' cy='10.5' r='6'/><path d='M15 15l5 5M8 10.5h5M10.5 8v5'/></svg>") center/64px no-repeat;opacity:0;transition:opacity .15s}
 a.zoom:hover::after{opacity:1}
 a.hot{position:absolute;display:block;z-index:4;border:none;border-radius:12px;transition:box-shadow .12s,background .12s}
-a.hot:hover{background:rgba(255,212,0,.13);box-shadow:0 0 0 8px rgba(255,212,0,.75) inset}
+a.hot:hover{background:rgba(255,212,0,.13);box-shadow:0 0 0 10px #ffd400 inset}
 .fn{cursor:help;border-bottom:4px dotted rgba(0,0,0,.35)}
 .fn:hover,.fn:focus{outline:none;background:rgba(255,212,0,.35)}
 .fnpop{position:fixed;z-index:20;display:none;max-width:380px;padding:9px 12px 10px;border-radius:8px;background:#fffdf5;color:#1a1a1a;
